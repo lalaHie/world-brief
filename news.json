@@ -2,24 +2,68 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 17:00",
+      "updated": "2026-11-19 19:50",
       "stories": [
         {
+          "category": "台灣",
+          "title": "施振榮在APEC倡議AI普惠與半導體供應鏈韌性",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611190317.aspx",
+          "published": "2026-11-19 18:19",
+          "summary": "台灣領袖代表施振榮在深圳APEC經濟領袖會議呼籲，人工智慧發展應以造福人類為目標。",
+          "background": "總統府表示，施振榮在峰會期間與各國代表交流科技創新、人才培育及產業轉型經驗。",
+          "detail": [
+            "總統府表示，施振榮在峰會期間與各國代表交流科技創新、人才培育及產業轉型經驗。",
+            "他強調半導體供應穩定對AI永續發展的重要性，並表示台灣將持續與國際夥伴合作。"
+          ],
+          "article": [
+            "台灣領袖代表施振榮在深圳APEC經濟領袖會議呼籲，人工智慧發展應以造福人類為目標。",
+            "總統府表示，施振榮在峰會期間與各國代表交流科技創新、人才培育及產業轉型經驗。",
+            "他強調半導體供應穩定對AI永續發展的重要性，並表示台灣將持續與國際夥伴合作。"
+          ],
+          "keyPoints": [
+            "台灣領袖代表施振榮在深圳APEC經濟領袖會議呼籲，人工智慧發展應以造福人類為目標。",
+            "總統府表示，施振榮在峰會期間與各國代表交流科技創新、人才培育及產業轉型經驗。",
+            "他強調半導體供應穩定對AI永續發展的重要性，並表示台灣將持續與國際夥伴合作。"
+          ],
+          "impact": "台灣在全球半導體產業的角色與國際科技合作受到關注。",
+          "watch": "關注後續APEC合作項目及台灣相關政策。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/%E6%96%BD%E6%8C%AF%E6%A6%AE%E4%BB%A3%E8%A1%A8.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:施振榮代表.jpg",
+            "caption": "施振榮APEC代表肖像（2026年11月12日資料照）",
+            "credit": "總統府",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "kind": "related"
+          }
+        },
+        {
           "category": "國際",
-          "title": "APEC 深圳峰會：大國政治成為焦點",
-          "original": "APEC serves as a backdrop as big power politics eclipse talk of open trade, AI",
+          "title": "美中俄深圳三方峰會告一段落，聚焦戰爭與外交協商",
           "source": "Associated Press",
           "lang": "EN",
-          "url": "https://apnews.com/article/bb61e50e4b0bb0b975b0695dc4f7b64a",
-          "summary": "亞太經濟合作會議在深圳舉行。各國領袖討論貿易及科技合作，但主要大國間的外交互動也成為關注焦點。",
-          "impact": "觀察全球貿易規則、科技合作及地緣政治的後續變化。",
-          "published": "2026-11-19",
-          "background": "APEC 匯集亞太經濟體，主要討論貿易、投資與跨境經濟合作。此次會議於深圳舉行，大國領袖的外交互動與經貿議程同時受到關注。",
+          "url": "https://apnews.com/article/3d0f8ed366d6084e1cfe12a4d8020c55",
+          "published": "2026-11-19 18:12",
+          "summary": "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
+          "background": "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
           "detail": [
-            "中國國家主席習近平在會議中呼籲各國維持開放的經貿與技術發展環境。",
-            "峰會也凸顯各國在國際關係、產業競爭及技術政策上的不同考量。"
+            "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
+            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
           ],
-          "watch": "後續留意峰會共同聲明、各國雙邊會談，以及貿易和科技議題是否形成具體合作成果。",
+          "article": [
+            "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
+            "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
+            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
+          ],
+          "keyPoints": [
+            "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
+            "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
+            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
+          ],
+          "impact": "三國對話可能影響後續外交斡旋及全球安全局勢。",
+          "watch": "觀察正式會後聲明及後續外交安排。",
           "image": {
             "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Shenzhen_Skyline_from_Futian_District2.jpg",
             "source": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_from_Futian_District2.jpg",
@@ -29,17 +73,78 @@
             "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
             "kind": "related"
           },
+          "original": "The Latest: Trump meets Putin and Xi for historic talks in China"
+        },
+        {
+          "category": "科技",
+          "title": "台積電完成近5億美元Anthropic股權投資",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611190254.aspx",
+          "published": "2026-11-19 16:46",
+          "summary": "台積電公告，子公司以每股83美元取得Anthropic普通股約602.4萬股，交易總額近5億美元。",
+          "background": "台積電董事會11月10日已核准相關投資額度，此次交易採Anthropic的首次公開發行價格。",
+          "detail": [
+            "台積電董事會11月10日已核准相關投資額度，此次交易採Anthropic的首次公開發行價格。",
+            "公告指出持股比例約0.03%，主要目的為股權投資。"
+          ],
           "article": [
-            "亞太經濟合作會議在深圳舉行。各國領袖討論貿易及科技合作，但主要大國間的外交互動也成為關注焦點。",
-            "中國國家主席習近平在會議中呼籲各國維持開放的經貿與技術發展環境。",
-            "峰會也凸顯各國在國際關係、產業競爭及技術政策上的不同考量。",
-            "APEC 匯集亞太經濟體，主要討論貿易、投資與跨境經濟合作。此次會議於深圳舉行，大國領袖的外交互動與經貿議程同時受到關注。"
+            "台積電公告，子公司以每股83美元取得Anthropic普通股約602.4萬股，交易總額近5億美元。",
+            "台積電董事會11月10日已核准相關投資額度，此次交易採Anthropic的首次公開發行價格。",
+            "公告指出持股比例約0.03%，主要目的為股權投資。"
           ],
           "keyPoints": [
-            "亞太經合會在深圳舉行。",
-            "經貿及科技合作與大國外交同受關注。",
-            "習近平呼籲維持開放的貿易與技術環境。"
-          ]
+            "台積電公告，子公司以每股83美元取得Anthropic普通股約602.4萬股，交易總額近5億美元。",
+            "台積電董事會11月10日已核准相關投資額度，此次交易採Anthropic的首次公開發行價格。",
+            "公告指出持股比例約0.03%，主要目的為股權投資。"
+          ],
+          "impact": "此交易顯示晶圓代工業者與AI生態系的資本連結加深。",
+          "watch": "留意台積電其他AI投資及公司後續公告。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "科技",
+          "title": "歐盟執委會遭網路攻擊，個資影響仍待釐清",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
+          "published": "2026-11-19 16:03",
+          "summary": "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
+          "background": "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
+          "detail": [
+            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
+            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+          ],
+          "article": [
+            "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
+            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
+            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+          ],
+          "keyPoints": [
+            "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
+            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
+            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+          ],
+          "impact": "公共機構資訊安全與個人資料保護受到關注。",
+          "watch": "等待官方調查結果及受影響人員通知。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Berlaymont_building_Brussels.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_Brussels.jpg",
+            "caption": "布魯塞爾歐盟執委會總部（2017年資料照片）",
+            "credit": "KenSwe72",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "kind": "related"
+          },
+          "original": "EU Commission targeted in cyberattack, Politico reports"
         },
         {
           "category": "國際",
@@ -79,6 +184,76 @@
         },
         {
           "category": "財經",
+          "title": "金管會宣布11月20日起再收緊放空限制",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611190182.aspx",
+          "published": "2026-11-19 14:44",
+          "summary": "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
+          "background": "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
+          "detail": [
+            "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+          ],
+          "article": [
+            "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
+            "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+          ],
+          "keyPoints": [
+            "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
+            "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+          ],
+          "impact": "新規會影響交易機制與市場流動性，並非保證股市回升。",
+          "watch": "觀察實施後市場反應與監管機關公告。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Taiwan_Stock_Exchange_Press_Conference_Room_in_1st_Floor,_Taipei_101_20160422.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taiwan_Stock_Exchange_Press_Conference_Room_in_1st_Floor,_Taipei_101_20160422.jpg",
+            "caption": "台灣證券交易所簡報室（2016 年資料照片）",
+            "credit": "玄史生",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "自然災害",
+          "title": "斐濟與東加面臨聖嬰乾旱危機",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611190174.aspx",
+          "published": "2026-11-19 14:32",
+          "summary": "南太平洋的斐濟及東加因嚴重乾旱面臨供水危機，斐濟宣布全國進入災難狀態。",
+          "background": "法新社報導指出，聖嬰現象改變降雨分布，長期缺水已影響當地農業及民生。",
+          "detail": [
+            "法新社報導指出，聖嬰現象改變降雨分布，長期缺水已影響當地農業及民生。",
+            "東加宣布為期27天的緊急狀態，以協調救助和水資源供應。"
+          ],
+          "article": [
+            "南太平洋的斐濟及東加因嚴重乾旱面臨供水危機，斐濟宣布全國進入災難狀態。",
+            "法新社報導指出，聖嬰現象改變降雨分布，長期缺水已影響當地農業及民生。",
+            "東加宣布為期27天的緊急狀態，以協調救助和水資源供應。"
+          ],
+          "keyPoints": [
+            "南太平洋的斐濟及東加因嚴重乾旱面臨供水危機，斐濟宣布全國進入災難狀態。",
+            "法新社報導指出，聖嬰現象改變降雨分布，長期缺水已影響當地農業及民生。",
+            "東加宣布為期27天的緊急狀態，以協調救助和水資源供應。"
+          ],
+          "impact": "水資源及糧食供應面臨壓力，凸顯島國對氣候異常的脆弱性。",
+          "watch": "留意降雨展望、供水救援與健康影響。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Samoa%2C_Tonga_and_Fiji_Map.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Samoa,_Tonga_and_Fiji_Map.png",
+            "caption": "斐濟、東加及薩摩亞位置示意圖（2022年，非災情照片）",
+            "credit": "Samoanalama",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "財經",
           "title": "台股下跌 1,768 點，失守年線",
           "source": "中央社",
           "lang": "中文",
@@ -111,6 +286,42 @@
             "加權指數收 38,426.89 點，下跌 4.4%。",
             "主要科技及半導體類股承壓。",
             "金管會預定 11 月 20 日實施新的放空限制。"
+          ]
+        },
+        {
+          "category": "台灣",
+          "title": "台加貿易協議可望近期簽署",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611190145.aspx",
+          "summary": "加拿大總理表示，與台灣的貿易合作協議有望在近期完成。",
+          "impact": "雙邊經貿關係與產業合作值得追蹤。",
+          "published": "2026-11-19 13:41",
+          "background": "台灣與加拿大早在一年多前完成貿易合作架構協議的協商，正式簽署仍待加拿大內部程序。",
+          "detail": [
+            "加拿大總理卡尼在深圳表示，希望近期能完成簽署。",
+            "行政院經貿談判辦公室表示，台灣方面正等候加拿大完成相關程序，期待進一步深化經貿往來。"
+          ],
+          "watch": "以雙方政府正式公告的簽署時間及協議條文為準。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mark_Carney_portrait_May_2025.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg",
+            "caption": "加拿大總理卡尼（2025 年資料照片）",
+            "credit": "Daniel Torok / White House",
+            "license": "美國政府公眾領域",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg",
+            "kind": "related"
+          },
+          "article": [
+            "加拿大總理表示，與台灣的貿易合作協議有望在近期完成。",
+            "加拿大總理卡尼在深圳表示，希望近期能完成簽署。",
+            "行政院經貿談判辦公室表示，台灣方面正等候加拿大完成相關程序，期待進一步深化經貿往來。",
+            "台灣與加拿大早在一年多前完成貿易合作架構協議的協商，正式簽署仍待加拿大內部程序。"
+          ],
+          "keyPoints": [
+            "台加已完成貿易合作協議協商。",
+            "加拿大總理期盼近期正式簽署。",
+            "目前仍待加拿大完成國內程序。"
           ]
         },
         {
@@ -150,39 +361,75 @@
           ]
         },
         {
-          "category": "台灣",
-          "title": "台加貿易協議可望近期簽署",
+          "category": "財經",
+          "title": "聯準會10月會議紀錄：多數決策者預期仍需升息",
           "source": "中央社",
           "lang": "中文",
-          "url": "https://www.cna.com.tw/news/aipl/202611190145.aspx",
-          "summary": "加拿大總理表示，與台灣的貿易合作協議有望在近期完成。",
-          "impact": "雙邊經貿關係與產業合作值得追蹤。",
-          "published": "2026-11-19 13:41",
-          "background": "台灣與加拿大早在一年多前完成貿易合作架構協議的協商，正式簽署仍待加拿大內部程序。",
+          "url": "https://www.cna.com.tw/news/aopl/202611190023.aspx",
+          "published": "2026-11-19 08:10",
+          "summary": "美國聯準會公布10月利率會議紀錄，幾乎所有與會官員認為進一步升息可能適當。",
+          "background": "官員主要關注通膨仍高及勞動市場情勢，並就政策調整進行討論。",
           "detail": [
-            "加拿大總理卡尼在深圳表示，希望近期能完成簽署。",
-            "行政院經貿談判辦公室表示，台灣方面正等候加拿大完成相關程序，期待進一步深化經貿往來。"
+            "官員主要關注通膨仍高及勞動市場情勢，並就政策調整進行討論。",
+            "會議紀錄反映當時的判斷，並不等同下一次會議已決定升息。"
           ],
-          "watch": "以雙方政府正式公告的簽署時間及協議條文為準。",
+          "article": [
+            "美國聯準會公布10月利率會議紀錄，幾乎所有與會官員認為進一步升息可能適當。",
+            "官員主要關注通膨仍高及勞動市場情勢，並就政策調整進行討論。",
+            "會議紀錄反映當時的判斷，並不等同下一次會議已決定升息。"
+          ],
+          "keyPoints": [
+            "美國聯準會公布10月利率會議紀錄，幾乎所有與會官員認為進一步升息可能適當。",
+            "官員主要關注通膨仍高及勞動市場情勢，並就政策調整進行討論。",
+            "會議紀錄反映當時的判斷，並不等同下一次會議已決定升息。"
+          ],
+          "impact": "利率預期可能影響全球借貸成本與金融市場。",
+          "watch": "觀察後續美國通膨、就業數據與正式利率決議。",
           "image": {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mark_Carney_portrait_May_2025.jpg",
-            "source": "https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg",
-            "caption": "加拿大總理卡尼（2025 年資料照片）",
-            "credit": "Daniel Torok / White House",
-            "license": "美國政府公眾領域",
-            "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg",
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/US_Federal_Reserve_Eccles_Building_1937.jpg/960px-US_Federal_Reserve_Eccles_Building_1937.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:US_Federal_Reserve_Eccles_Building_1937.jpg",
+            "caption": "美國聯準會 Eccles 大樓（1937 年歷史照片）",
+            "credit": "Federal Reserve",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "國際",
+          "title": "APEC 深圳峰會：大國政治成為焦點",
+          "original": "APEC serves as a backdrop as big power politics eclipse talk of open trade, AI",
+          "source": "Associated Press",
+          "lang": "EN",
+          "url": "https://apnews.com/article/bb61e50e4b0bb0b975b0695dc4f7b64a",
+          "summary": "亞太經濟合作會議在深圳舉行。各國領袖討論貿易及科技合作，但主要大國間的外交互動也成為關注焦點。",
+          "impact": "觀察全球貿易規則、科技合作及地緣政治的後續變化。",
+          "published": "2026-11-19",
+          "background": "APEC 匯集亞太經濟體，主要討論貿易、投資與跨境經濟合作。此次會議於深圳舉行，大國領袖的外交互動與經貿議程同時受到關注。",
+          "detail": [
+            "中國國家主席習近平在會議中呼籲各國維持開放的經貿與技術發展環境。",
+            "峰會也凸顯各國在國際關係、產業競爭及技術政策上的不同考量。"
+          ],
+          "watch": "後續留意峰會共同聲明、各國雙邊會談，以及貿易和科技議題是否形成具體合作成果。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Shenzhen_Skyline_from_Futian_District2.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_from_Futian_District2.jpg",
+            "caption": "深圳福田區天際線（2016 年資料照片，非本次會議現場）",
+            "credit": "Huangdan2060",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
             "kind": "related"
           },
           "article": [
-            "加拿大總理表示，與台灣的貿易合作協議有望在近期完成。",
-            "加拿大總理卡尼在深圳表示，希望近期能完成簽署。",
-            "行政院經貿談判辦公室表示，台灣方面正等候加拿大完成相關程序，期待進一步深化經貿往來。",
-            "台灣與加拿大早在一年多前完成貿易合作架構協議的協商，正式簽署仍待加拿大內部程序。"
+            "亞太經濟合作會議在深圳舉行。各國領袖討論貿易及科技合作，但主要大國間的外交互動也成為關注焦點。",
+            "中國國家主席習近平在會議中呼籲各國維持開放的經貿與技術發展環境。",
+            "峰會也凸顯各國在國際關係、產業競爭及技術政策上的不同考量。",
+            "APEC 匯集亞太經濟體，主要討論貿易、投資與跨境經濟合作。此次會議於深圳舉行，大國領袖的外交互動與經貿議程同時受到關注。"
           ],
           "keyPoints": [
-            "台加已完成貿易合作協議協商。",
-            "加拿大總理期盼近期正式簽署。",
-            "目前仍待加拿大完成國內程序。"
+            "亞太經合會在深圳舉行。",
+            "經貿及科技合作與大國外交同受關注。",
+            "習近平呼籲維持開放的貿易與技術環境。"
           ]
         }
       ]
