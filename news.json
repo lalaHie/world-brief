@@ -2,7 +2,7 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 19:50",
+      "updated": "2026-11-19 20:51",
       "stories": [
         {
           "category": "台灣",
@@ -41,29 +41,31 @@
         },
         {
           "category": "國際",
-          "title": "美中俄深圳三方峰會告一段落，聚焦戰爭與外交協商",
+          "title": "美中俄深圳三方峰會發布和平宣言，聯合國改革及能源供應成焦點",
           "source": "Associated Press",
           "lang": "EN",
           "url": "https://apnews.com/article/3d0f8ed366d6084e1cfe12a4d8020c55",
           "published": "2026-11-19 18:12",
-          "summary": "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
+          "summary": "三國會談結束後公布宣言，提出聯合國改革、增加石油產品供應及降低核風險的對話方向。",
           "background": "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
           "detail": [
-            "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
-            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
+            "會談約90分鐘。中央社19:17引述新華社公布的宣言，AP亦引述中俄官方說法，指三方支持聯合國改革、增加精煉石油產品供應並就減低核風險持續對話。",
+            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。"
           ],
           "article": [
             "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
             "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
-            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
+            "會談約90分鐘。中央社19:17引述新華社公布的宣言，AP亦引述中俄官方說法，指三方支持聯合國改革、增加精煉石油產品供應並就減低核風險持續對話。",
+            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。"
           ],
           "keyPoints": [
-            "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
-            "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
-            "據中央社引述塔斯社，會談約持續90分鐘。AP報導指出，各方討論俄烏戰事、伊朗及國際安全議題，但重大成果仍待確認。"
+            "三方會談歷時約90分鐘。",
+            "宣言提出聯合國改革及增加能源供應。",
+            "承諾就降低核風險進行外交對話。",
+            "未公布俄烏或伊朗戰事的具體解決方案。"
           ],
           "impact": "三國對話可能影響後續外交斡旋及全球安全局勢。",
-          "watch": "觀察正式會後聲明及後續外交安排。",
+          "watch": "關注各國後續實施措施及外交談判；宣言本身不等於全面和平協議。",
           "image": {
             "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Shenzhen_Skyline_from_Futian_District2.jpg",
             "source": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_from_Futian_District2.jpg",
@@ -73,7 +75,49 @@
             "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
             "kind": "related"
           },
-          "original": "The Latest: Trump meets Putin and Xi for historic talks in China"
+          "original": "The Latest: Trump meets Putin and Xi for historic talks in China",
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611190336.aspx",
+              "published": "2026-11-19 19:17"
+            }
+          ]
+        },
+        {
+          "category": "財經",
+          "title": "台灣第三季製造業產值年增43.09%",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611190261.aspx",
+          "published": "2026-11-19 16:55",
+          "summary": "經濟部19日公布，今年第三季製造業產值為新台幣7兆5079億元，較去年同期增加43.09%。",
+          "background": "AI應用需求及半導體投資帶動資訊電子業生產，部分傳統產業也因供應鏈擴產受益。",
+          "detail": [
+            "AI應用需求及半導體投資帶動資訊電子業生產，部分傳統產業也因供應鏈擴產受益。",
+            "製造業產值已連續11季年增，但各產業成長幅度並不一致。"
+          ],
+          "article": [
+            "經濟部19日公布，今年第三季製造業產值為新台幣7兆5079億元，較去年同期增加43.09%。",
+            "AI應用需求及半導體投資帶動資訊電子業生產，部分傳統產業也因供應鏈擴產受益。",
+            "製造業產值已連續11季年增，但各產業成長幅度並不一致。"
+          ],
+          "keyPoints": [
+            "第三季產值7兆5079億元。",
+            "年增43.09%。",
+            "連續11季正成長。"
+          ],
+          "impact": "顯示台灣製造業受AI投資帶動，也需關注產業集中風險。",
+          "watch": "後續產值、出口與各產業景氣。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "科技",
@@ -183,27 +227,65 @@
           ]
         },
         {
+          "category": "政治",
+          "title": "美國國會委員會報告關注台海風險，行政院回應",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611190192.aspx",
+          "published": "2026-11-19 14:54",
+          "summary": "美中經濟暨安全檢討委員會18日公布年度報告，認為未來24個月兩岸關係可能面臨更高不確定性。",
+          "background": "報告關注北京對台施壓與台灣安全情勢，相關判斷屬風險評估，而非確定預測。",
+          "detail": [
+            "報告關注北京對台施壓與台灣安全情勢，相關判斷屬風險評估，而非確定預測。",
+            "行政院19日表示，將持續與美方保持密切合作，並感謝委員會對台灣情勢的重視。"
+          ],
+          "article": [
+            "美中經濟暨安全檢討委員會18日公布年度報告，認為未來24個月兩岸關係可能面臨更高不確定性。",
+            "報告關注北京對台施壓與台灣安全情勢，相關判斷屬風險評估，而非確定預測。",
+            "行政院19日表示，將持續與美方保持密切合作，並感謝委員會對台灣情勢的重視。"
+          ],
+          "keyPoints": [
+            "美國國會委員會發布年度報告。",
+            "報告對未來兩年台海風險提出警示。",
+            "行政院表示將持續台美合作。"
+          ],
+          "impact": "影響台灣安全政策與國際外交議程。",
+          "watch": "關注各方正式政策與外交回應。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/US_Capitol_Building.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:US_Capitol_Building.jpg",
+            "caption": "美國國會大廈（2005 年資料照片）",
+            "credit": "Edbrown05",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        },
+        {
           "category": "財經",
           "title": "金管會宣布11月20日起再收緊放空限制",
           "source": "中央社",
           "lang": "中文",
           "url": "https://www.cna.com.tw/news/afe/202611190182.aspx",
           "published": "2026-11-19 14:44",
-          "summary": "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
+          "summary": "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。 證期局盤點共有1,028檔股票於20日適用限制。",
           "background": "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
           "detail": [
             "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
-            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。",
+            "證期局盤點顯示，19日共有557檔上市與471檔上櫃股票達限制條件，合計1,028檔，超過上市櫃股票半數。"
           ],
           "article": [
             "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
             "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
-            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。",
+            "證期局盤點顯示，19日共有557檔上市與471檔上櫃股票達限制條件，合計1,028檔，超過上市櫃股票半數。"
           ],
           "keyPoints": [
             "台股近期大幅震盪，金管會宣布11月20日起調整放空相關措施。",
             "個股當日收盤跌幅達3.5%以上，次一交易日不得以低於前日收盤價的價格放空。",
-            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。"
+            "每日盤中借券賣出委託數量上限亦由過去30個營業日平均成交量的3%調降至1%。",
+            "首日適用股票1,028檔。"
           ],
           "impact": "新規會影響交易機制與市場流動性，並非保證股市回升。",
           "watch": "觀察實施後市場反應與監管機關公告。",
@@ -215,7 +297,14 @@
             "license": "CC0 1.0",
             "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
             "kind": "related"
-          }
+          },
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/afe/202611190335.aspx",
+              "published": "2026-11-19 19:04"
+            }
+          ]
         },
         {
           "category": "自然災害",
@@ -325,6 +414,77 @@
           ]
         },
         {
+          "category": "財經",
+          "title": "韓國年度出口首度突破1兆美元",
+          "source": "Yonhap",
+          "lang": "EN",
+          "url": "https://en.yna.co.kr/view/AEN20261119003900320",
+          "published": "2026-11-19 13:33",
+          "summary": "韓國產業通商資源部19日宣布，今年累計出口首次突破1兆美元。",
+          "background": "韓聯社指出，全球AI基礎設施投資推動半導體與電腦產品需求，記憶體價格也帶動出口金額。",
+          "detail": [
+            "韓聯社指出，全球AI基礎設施投資推動半導體與電腦產品需求，記憶體價格也帶動出口金額。",
+            "韓國在美國、中國、德國之後成為第四個達成此里程碑的國家，但全年表現仍須待統計期結束。"
+          ],
+          "article": [
+            "韓國產業通商資源部19日宣布，今年累計出口首次突破1兆美元。",
+            "韓聯社指出，全球AI基礎設施投資推動半導體與電腦產品需求，記憶體價格也帶動出口金額。",
+            "韓國在美國、中國、德國之後成為第四個達成此里程碑的國家，但全年表現仍須待統計期結束。"
+          ],
+          "keyPoints": [
+            "累計出口突破1兆美元。",
+            "半導體與電腦為主要動能。",
+            "全年出口仍未結算。"
+          ],
+          "impact": "顯示AI投資推升亞洲電子供應鏈及國際貿易規模。",
+          "watch": "留意全年出口與產業需求變化。",
+          "original": "S. Korea's exports top US$1 tln for 1st time on strong chip demand",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Korea_busan_pusan_harbour_cargo_container_terminal.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:Korea_busan_pusan_harbour_cargo_container_terminal.JPG",
+            "caption": "韓國釜山貨櫃碼頭（2007年資料照片）",
+            "credit": "Martin Pueschel Eastberliner",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "科技",
+          "title": "日月光規劃投資2,489億元擴充高雄高階測試產能",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611190122.aspx",
+          "published": "2026-11-19 12:47",
+          "summary": "日月光投控旗下日月光半導體宣布在高雄仁武產業園區舉行新廠動土典禮。",
+          "background": "計畫由台灣福雷電子執行，預計投入新台幣2,489億元，擴大高階測試產能。",
+          "detail": [
+            "計畫由台灣福雷電子執行，預計投入新台幣2,489億元，擴大高階測試產能。",
+            "新廠規劃2028至2029年分期完成，實際進度仍取決於工程及產業需求。"
+          ],
+          "article": [
+            "日月光投控旗下日月光半導體宣布在高雄仁武產業園區舉行新廠動土典禮。",
+            "計畫由台灣福雷電子執行，預計投入新台幣2,489億元，擴大高階測試產能。",
+            "新廠規劃2028至2029年分期完成，實際進度仍取決於工程及產業需求。"
+          ],
+          "keyPoints": [
+            "規劃投資2,489億元。",
+            "新廠位於高雄仁武。",
+            "預計2028至2029年分期完成。"
+          ],
+          "impact": "反映先進封裝與測試產業對AI需求的長期布局。",
+          "watch": "關注建廠進度、產能與公司正式公告。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Kaohsiung_ASE_Group_headquarters.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaohsiung_ASE_Group_headquarters.jpg",
+            "caption": "日月光高雄楠梓總部（2021年資料照片，非仁武新廠）",
+            "credit": "人人生來平等",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
           "category": "科技",
           "title": "Anthropic 估值達 1.5 兆美元",
           "source": "中央社",
@@ -394,6 +554,47 @@
             "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "kind": "related"
           }
+        },
+        {
+          "category": "國際",
+          "title": "台裔美國眾議員劉雲平當選民主黨團主席",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611190014.aspx",
+          "published": "2026-11-19 05:44",
+          "summary": "美國眾議員劉雲平（Ted Lieu）於美東時間18日當選眾院民主黨團主席，成為首位獲此職務的亞裔美國人。",
+          "background": "他出身台灣，長期代表加州選區，這次當選使他進入眾院民主黨核心領導層。",
+          "detail": [
+            "他出身台灣，長期代表加州選區，這次當選使他進入眾院民主黨核心領導層。",
+            "劉雲平辦公室聲明確認選舉結果，表示將協助黨團成員推動政策與選民服務。"
+          ],
+          "article": [
+            "美國眾議員劉雲平（Ted Lieu）於美東時間18日當選眾院民主黨團主席，成為首位獲此職務的亞裔美國人。",
+            "他出身台灣，長期代表加州選區，這次當選使他進入眾院民主黨核心領導層。",
+            "劉雲平辦公室聲明確認選舉結果，表示將協助黨團成員推動政策與選民服務。"
+          ],
+          "keyPoints": [
+            "首位亞裔眾院民主黨團主席。",
+            "在民主黨眾院領導層排名第四。",
+            "官方辦公室已確認當選。"
+          ],
+          "impact": "提升亞裔政治代表性，也反映美國國會領導層改組。",
+          "watch": "關注新會期正式領導層及政策安排。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Rep_Ted_Lieu.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Rep_Ted_Lieu.jpg",
+            "caption": "劉雲平2015年官方肖像（資料照片）",
+            "credit": "US Congress",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          },
+          "relatedSources": [
+            {
+              "source": "劉雲平議員辦公室",
+              "url": "https://lieu.house.gov/media-center/press-releases/rep-ted-lieu-makes-history-first-asian-american-caucus-chair"
+            }
+          ]
         },
         {
           "category": "國際",
