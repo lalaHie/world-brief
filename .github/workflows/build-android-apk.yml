@@ -29,7 +29,7 @@ jobs:
         run: |
           sdkmanager="$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}/cmdline-tools" -type f -name sdkmanager | sort | tail -n 1)"
           test -n "$sdkmanager"
-          yes | "$sdkmanager" --licenses
+          yes | "$sdkmanager" --licenses >/dev/null || true
           "$sdkmanager" "platforms;android-37" "build-tools;36.0.0"
 
       - name: Build debug APK
