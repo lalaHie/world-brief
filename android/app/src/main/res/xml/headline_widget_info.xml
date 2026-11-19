@@ -1,5 +1,5 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:description="在主畫面查看世界晨報最新頭條"
+    android:description="@string/widget_description"
     android:initialLayout="@layout/widget_headline"
     android:minWidth="250dp"
     android:minHeight="160dp"
