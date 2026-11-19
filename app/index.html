@@ -80,17 +80,17 @@
         const signature=dates.map(date=>date+':'+(editions[date]?.updated||'')).join('|');
         if(stories.length&&signature===feedSignature)return;
         stories=dates.flatMap(date=>(editions[date].stories||[]).map((s,i)=>({
-          id:`\u0024{date}-\u0024{i}-\u0024{s.url||s.title}`,date,time:(s.published||'').slice(11,16),category:s.category||'其他',region:s.country||s.location||'世界',title:s.title,summary:s.summary||'',original:s.original||'',source:s.source||'來源未標示',lang:s.lang||'中文',url:s.url||'#',image:s.image||null,article:s.article||[],detail:s.detail||[],background:s.background||'',impact:s.impact||'',watch:s.watch||''
-        }))).sort((a,b)=>`\u0024{b.date} \u0024{b.time}`.localeCompare(`\u0024{a.date} \u0024{a.time}`));
+          id:`${date}-${i}-${s.url||s.title}`,date,time:(s.published||'').slice(11,16),category:s.category||'其他',region:s.country||s.location||'世界',title:s.title,summary:s.summary||'',original:s.original||'',source:s.source||'來源未標示',lang:s.lang||'中文',url:s.url||'#',image:s.image||null,article:s.article||[],detail:s.detail||[],background:s.background||'',impact:s.impact||'',watch:s.watch||''
+        }))).sort((a,b)=>`${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
         feedUpdated=editions[dates[0]]?.updated||'';feedSignature=signature;
         localStorage.setItem('worldBriefNewsCache',JSON.stringify({stories,feedUpdated,feedSignature}));
-        label.textContent=feedUpdated?`新聞更新：\u0024{feedUpdated}（台灣時間）`:'新聞已更新';
+        label.textContent=feedUpdated?`新聞更新：${feedUpdated}（台灣時間）`:'新聞已更新';
         render();
         const requestedStory=new URLSearchParams(location.search).get('story');
         if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}
       }catch(error){
         const cached=localStorage.getItem('worldBriefNewsCache');
-        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';feedSignature=old.feedSignature||'';if(!silent)label.textContent=`目前顯示上次載入的新聞\u0024{feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
+        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';feedSignature=old.feedSignature||'';if(!silent)label.textContent=`目前顯示上次載入的新聞${feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
         if(!silent||!stories.length){stories=[];label.textContent='無法連線更新新聞';render()}
       }
     }
