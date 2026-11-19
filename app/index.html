@@ -41,7 +41,7 @@
     const FEED_URL='https://lalahie.github.io/world-brief/news.json';
     const categoryOrder=['全部','國際','台灣','政治','財經','科技','軍事','社會','環境','自然災害','科學','健康','文化','體育','其他'];
     const app=document.getElementById('app'), list=document.getElementById('storyList'), chips=document.getElementById('categories');
-    let stories=[],activeCategory='全部',tab='home',ascending=false,searchTerm='',feedUpdated='';
+    let stories=[],activeCategory='全部',tab='home',ascending=false,searchTerm='',feedUpdated='',feedSignature='',lastFeedCheck=0;
     const saved=new Set(JSON.parse(localStorage.getItem('worldBriefSaved')||'[]'));
     const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
     const pad=n=>String(n).padStart(2,'0');
@@ -70,25 +70,28 @@
       document.getElementById('articleContent').innerHTML=`<div class="article-label">${esc(s.category)}　·　${esc(s.region||'世界')}</div><h1 class="article-title">${esc(s.title)}</h1>${original}<div class="article-meta">${esc(s.date)}　${esc(s.time||'')}　｜　${esc(s.source)}${s.lang==='EN'?' · 英文來源，繁中編譯':''}</div>${image}<div class="article-body">${paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</div>${s.impact?`<div class="why-box"><strong>為什麼值得關注</strong><p>${esc(s.impact)}</p></div>`:''}${s.watch?`<div class="why-box"><strong>後續觀察</strong><p>${esc(s.watch)}</p></div>`:''}<a class="source-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">查看原始報導　↗</a>`;
       document.getElementById('articleOverlay').classList.add('open');
     }
-    async function loadNews(){
-      const label=document.getElementById('updateLabel');label.textContent='正在更新新聞…';
+    async function loadNews(silent=false){
+      const now=Date.now();if(silent&&now-lastFeedCheck<60000)return;lastFeedCheck=now;
+      const label=document.getElementById('updateLabel');if(!silent)label.textContent='正在更新新聞…';
       try{
-        const response=await fetch(FEED_URL,{cache:'no-store'});if(!response.ok)throw new Error('Feed unavailable');
+        const response=await fetch(FEED_URL+'?ts='+now,{cache:'no-store'});if(!response.ok)throw new Error('Feed unavailable');
         const archive=await response.json();const editions=archive.editions||{};
         const dates=Object.keys(editions).sort().reverse();
+        const signature=dates.map(date=>date+':'+(editions[date]?.updated||'')).join('|');
+        if(stories.length&&signature===feedSignature)return;
         stories=dates.flatMap(date=>(editions[date].stories||[]).map((s,i)=>({
-          id:`${date}-${i}-${s.url||s.title}`,date,time:(s.published||'').slice(11,16),category:s.category||'其他',region:s.country||s.location||'世界',title:s.title,summary:s.summary||'',original:s.original||'',source:s.source||'來源未標示',lang:s.lang||'中文',url:s.url||'#',image:s.image||null,article:s.article||[],detail:s.detail||[],background:s.background||'',impact:s.impact||'',watch:s.watch||''
-        }))).sort((a,b)=>`${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
-        feedUpdated=editions[dates[0]]?.updated||'';
-        localStorage.setItem('worldBriefNewsCache',JSON.stringify({stories,feedUpdated}));
-        label.textContent=feedUpdated?`新聞更新：${feedUpdated}（台灣時間）`:'新聞已更新';
+          id:`\u0024{date}-\u0024{i}-\u0024{s.url||s.title}`,date,time:(s.published||'').slice(11,16),category:s.category||'其他',region:s.country||s.location||'世界',title:s.title,summary:s.summary||'',original:s.original||'',source:s.source||'來源未標示',lang:s.lang||'中文',url:s.url||'#',image:s.image||null,article:s.article||[],detail:s.detail||[],background:s.background||'',impact:s.impact||'',watch:s.watch||''
+        }))).sort((a,b)=>`\u0024{b.date} \u0024{b.time}`.localeCompare(`\u0024{a.date} \u0024{a.time}`));
+        feedUpdated=editions[dates[0]]?.updated||'';feedSignature=signature;
+        localStorage.setItem('worldBriefNewsCache',JSON.stringify({stories,feedUpdated,feedSignature}));
+        label.textContent=feedUpdated?`新聞更新：\u0024{feedUpdated}（台灣時間）`:'新聞已更新';
         render();
         const requestedStory=new URLSearchParams(location.search).get('story');
         if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}
       }catch(error){
         const cached=localStorage.getItem('worldBriefNewsCache');
-        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';label.textContent=`目前顯示上次載入的新聞${feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
-        stories=[];label.textContent='無法連線更新新聞';render();
+        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';feedSignature=old.feedSignature||'';if(!silent)label.textContent=`目前顯示上次載入的新聞\u0024{feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
+        if(!silent||!stories.length){stories=[];label.textContent='無法連線更新新聞';render()}
       }
     }
     document.getElementById('sortToggle').addEventListener('click',()=>{ascending=!ascending;render()});
@@ -102,6 +105,8 @@
     document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n===b));if(tab==='settings')document.getElementById('settingsOverlay').classList.add('open');if(tab==='categories'){activeCategory='全部';document.getElementById('categories').scrollIntoView({behavior:'smooth',block:'nearest'})}render();window.scrollTo({top:0,behavior:'smooth'})}));
     const time=document.getElementById('reminderTime');time.value=localStorage.getItem('worldBriefReminderTime')||'05:00';time.addEventListener('change',e=>localStorage.setItem('worldBriefReminderTime',e.target.value));
     loadNews();
+    setInterval(()=>{if(document.visibilityState==='visible')loadNews(true)},5*60*1000);
+    document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')loadNews(true)});
     if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
   </script>
 </body>
