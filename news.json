@@ -2,7 +2,7 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 21:52",
+      "updated": "2026-11-19 22:57",
       "stories": [
         {
           "category": "環境",
@@ -35,6 +35,42 @@
             "source": "https://commons.wikimedia.org/wiki/File:Antalya,_Turkey_skyline_19_February_2022.jpg",
             "caption": "土耳其安塔利亞市景（2022年2月19日資料照，非COP31會場）",
             "credit": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "科技",
+          "title": "美國晶片出口規範收緊，傳台積電與三星暫停部分對中出貨",
+          "original": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/china/tsmc-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole-2026-11-19/",
+          "published": "2026-11-19 20:48",
+          "summary": "路透社及金融時報引述知情人士指出，美國的新出口管制要求已影響部分中國晶片設計商的訂單，台積電與三星據報暫停部分出貨。",
+          "background": "美國近年持續加強對先進半導體的出口限制，晶圓代工業者須依適用規範確認許可要求。",
+          "detail": [
+            "金融時報報導，兩家代工業者在申請許可期間暫緩部分處理器交付。",
+            "路透社亦引述消息人士指出，部分原先獲准的先進製程訂單受到影響。"
+          ],
+          "article": [
+            "國際半導體供應鏈再度面臨出口政策變動。據路透社與金融時報19日報導，台積電及三星部分中國客戶的晶片訂單受到新規影響。",
+            "消息人士表示，相關產品交付將視美國商務部的許可程序而定。目前報導涉及特定訂單，並不代表兩家公司全面停止對中國供貨。",
+            "中國科技業原已面對部分零組件價格上升與供應限制。新措施可能增加產品規劃及供應鏈調整的不確定性。"
+          ],
+          "keyPoints": [
+            "消息來自外媒引述知情人士。",
+            "影響範圍為部分晶片及訂單。",
+            "後續取決於出口許可審查。"
+          ],
+          "impact": "可能影響先進半導體供應、客戶交付時程與代工企業合規成本。",
+          "watch": "關注企業正式說明及主管機關後續許可決定。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
             "license": "CC BY 2.0",
             "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
             "kind": "related"
@@ -161,6 +197,42 @@
               "published": "2026-11-19 19:17"
             }
           ]
+        },
+        {
+          "category": "國際",
+          "title": "丹麥國會批准美國與格陵蘭安全協議",
+          "original": "Denmark approves security deal with US and Greenland, seeking to finally ease tensions with Trump",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/a392abbba5c2f1bccbbb372e3d38769d",
+          "published": "2026-11-19 17:41",
+          "summary": "丹麥國會通過三方安全協議，盼緩和格陵蘭地位爭議及跨大西洋關係緊張。",
+          "background": "格陵蘭是丹麥王國自治領地，其戰略地位與未來政治安排長期受到國際關注。",
+          "detail": [
+            "中央社報導，出席表決的109名丹麥議員均投下贊成票。",
+            "格陵蘭議會已於11月初批准協議；新安排補充1951年既有協定。"
+          ],
+          "article": [
+            "丹麥國會19日批准今年9月由丹麥、美國與格陵蘭簽署的安全協議，為歷經數月的外交爭議帶來新的進展。",
+            "格陵蘭議會本月初已批准協議。中央社引述法新社指出，丹麥國會這次共有109名議員出席，全數支持。",
+            "美聯社與路透社均報導，協議旨在強化北極及北大西洋的安全合作，並降低美國與丹麥因格陵蘭未來地位產生的緊張。"
+          ],
+          "keyPoints": [
+            "丹麥出席表決議員全數贊成。",
+            "格陵蘭議會已先行批准。",
+            "協議涉及北極區域安全合作。"
+          ],
+          "impact": "有助緩和盟友間的外交摩擦，但長期合作仍取決於執行及當地民意。",
+          "watch": "關注三方後續協商與格陵蘭自治政府的立場。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Nuuk%2C_Greenland_%28P-070650-00-33%29.jpg/960px-Nuuk%2C_Greenland_%28P-070650-00-33%29.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Nuuk,_Greenland_(P-070650-00-33).jpg",
+            "caption": "格陵蘭努克歷史街區全景（2026年9月5日資料照片，非表決現場）",
+            "credit": "Aurore Martignoni／© European Union, 2026",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -594,6 +666,41 @@
             "credit": "人人生來平等",
             "license": "CC BY-SA 4.0",
             "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "國發會通過嘉義海淡廠草案，預計2032年供水",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611190082.aspx",
+          "published": "2026-11-19 11:39",
+          "summary": "國發會審議通過嘉義海水淡化廠工程計畫草案，擬投入約287億元，預計每日新增10萬立方公尺水源。",
+          "background": "嘉義高科技產業發展使穩定供水需求增加，海水淡化可補充受降雨波動影響的水源。",
+          "detail": [
+            "依國發會及媒體報導，計畫包含中央公共建設預算與民間投資，草案仍須報行政院核定。",
+            "工程涉及海域及陸域設施、輸水管線與地方協調，政府將設立跨部會協調機制。"
+          ],
+          "article": [
+            "國發會19日審查通過嘉義海水淡化廠工程計畫草案，預計民國121年（2032年）開始產水，後續仍須行政院核定。",
+            "全案規劃投資約287億元，預計每日可增加10萬立方公尺供水量，服務公共用水與產業需求。",
+            "主管機關表示，工程執行牽涉不同單位，將參考其他海淡廠經驗，並與地方居民及農漁業團體溝通。"
+          ],
+          "keyPoints": [
+            "草案已通過國發會審查。",
+            "規劃每日供水10萬立方公尺。",
+            "預計2032年產水，仍待行政院核定。"
+          ],
+          "impact": "若順利完成，將改善嘉義地區供水來源多元性，但仍需評估環境與營運成本。",
+          "watch": "關注行政院核定、環境及地方溝通、工程與促參進度。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Reverse_osmosis_desalination_plant.JPG/960px-Reverse_osmosis_desalination_plant.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:Reverse_osmosis_desalination_plant.JPG",
+            "caption": "西班牙巴塞隆納附近的El Prat海水淡化廠（2010年7月29日示意照片，非嘉義計畫現場）",
+            "credit": "James Grellier",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
             "kind": "related"
           }
         },
