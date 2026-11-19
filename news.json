@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 06:56",
+      "updated": "2026-11-20 07:55",
       "stories": [
         {
           "category": "財經",
@@ -2904,6 +2904,52 @@
             "source": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange,_Wall_Street,_New_York_City.jpg",
             "caption": "紐約證券交易所外觀（2017年4月19日資料照片）",
             "credit": "Francesca.hyanna19",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "財經",
+          "title": "國際油價近乎持平，美國原油期貨收近三個月低點",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611200011.aspx",
+          "published": "2026-11-20 05:07",
+          "summary": "國際油價19日收盤變動不大，布倫特原油每桶91.98美元，美國西德州中級原油83.21美元。中東航運風險與全球供應過剩預期相互抵銷。",
+          "background": "國際能源市場同時受到區域緊張局勢、庫存變化及需求預期影響。",
+          "detail": [
+            "中央社引述路透社指出，布倫特原油上漲0.03%，西德州中級原油下跌0.06%，後者為8月26日以來最低收盤價。",
+            "華爾街日報亦報導，中東運輸不確定性與供應增加的預期，使油價在波動後接近平盤。"
+          ],
+          "article": [
+            "國際原油期貨19日收盤變動有限。布倫特原油收在每桶91.98美元，西德州中級原油收在83.21美元。",
+            "路透社指出，美國原油庫存增加及全球供應可能過剩的預期，抵銷了中東航運受阻消息所帶來的價格上行壓力。部分運輸受阻相關說法尚待獨立確認。",
+            "能源市場後續仍取決於實際供給、需求與航運情況。西德州中級原油觸及近三個月最低收盤水準，反映市場仍對供應與需求平衡存在疑慮。"
+          ],
+          "keyPoints": [
+            "布倫特原油收91.98美元。",
+            "西德州中級原油收83.21美元。",
+            "西德州中級原油為8月26日以來最低收盤。",
+            "供應預期和航運風險互相抵銷。"
+          ],
+          "impact": "原油價格與供應穩定度可能影響燃料成本及全球通膨前景。",
+          "watch": "關注能源供應、庫存數據及油價後續變化。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/business/energy/oil-prices-steady-supply-surplus-softens-sentiment-though-gulf-war-supports-2026-11-19/"
+            },
+            {
+              "source": "WSJ",
+              "url": "https://www.wsj.com/business/energy-oil/oil-prices-mixed-as-traders-weigh-supply-outlook-middle-east-shipping-risks-224e2724"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Oil_Tanker_in_New_York_Harbour.jpg/960px-Oil_Tanker_in_New_York_Harbour.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Oil_Tanker_in_New_York_Harbour.jpg",
+            "caption": "紐約港油輪（2018年1月19日示意照片，非本次運輸事件現場）",
+            "credit": "Paul Harrison",
             "license": "CC BY-SA 4.0",
             "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
             "kind": "related"
