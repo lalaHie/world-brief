@@ -2864,8 +2864,55 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 00:55",
+      "updated": "2026-11-20 01:52",
       "stories": [
+        {
+          "category": "財經",
+          "title": "Anthropic正式登陸那斯達克，首筆成交價較IPO定價高34%",
+          "original": "Anthropic shares open 34% above IPO price in Nasdaq debut after record listing",
+          "source": "Euronews",
+          "lang": "EN",
+          "url": "https://www.euronews.com/2026/11/19/anthropic-shares-open-34-above-ipo-price-in-nasdaq-debut-after-record-listing",
+          "published": "2026-11-20 01:08",
+          "summary": "AI公司Anthropic正式開始股票交易，首筆成交價111.50美元，較83美元IPO定價高約34%，開盤估值約2兆美元。",
+          "background": "Anthropic先前透過首次公開募股募集約813億美元，發行定價對應約1.5兆美元估值。此次正式交易為IPO定價後的新進展。",
+          "detail": [
+            "Euronews、美聯社及路透社均報導，首筆交易價格為111.50美元，高於發行價83美元。",
+            "路透社報導，開盤後股價曾回落至約100美元；此為盤中行情而非收盤數字。"
+          ],
+          "article": [
+            "Claude開發商Anthropic於美國時間19日正式在那斯達克開始交易，股票代號ANT，首筆成交價為111.50美元，較發行定價上漲約34%。",
+            "此前公司以每股83美元定價，首次公開募股規模約813億美元。正式交易開始後，市場對公司的估值一度達約2兆美元。",
+            "路透社指出，股價開盤後有所回落，其他AI相關股票表現亦不一致。投資者仍關注大規模AI投資能否轉化為長期盈利，因此首日價格波動不代表長期表現。"
+          ],
+          "keyPoints": [
+            "IPO發行定價每股83美元。",
+            "首筆成交價111.50美元。",
+            "開盤估值約2兆美元。",
+            "募股規模約813億美元。"
+          ],
+          "impact": "上市後的交易表現將成為市場評估生成式AI企業估值的重要參考。",
+          "watch": "關注首日收盤行情、財務表現及AI產業投資情緒。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/legal/transactional/view-anthropic-set-soar-debut-will-ai-peers-follow-2026-11-19/"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Dario_Amodei_in_2023.jpg/960px-Dario_Amodei_in_2023.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_in_2023.jpg",
+            "caption": "Anthropic執行長Dario Amodei（2023年5月24日倫敦資料照，非上市現場）",
+            "credit": "Simon Walker / No 10 Downing Street，UK Prime Minister",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "國際",
           "title": "烏克蘭盟友柏林峰會，德國總理承諾2027年持續支持",
