@@ -2864,8 +2864,92 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 04:49",
+      "updated": "2026-11-20 05:53",
       "stories": [
+        {
+          "category": "財經",
+          "title": "美股全面重挫，道瓊下跌逾1,100點、那斯達克跌逾2%",
+          "original": "How major US stock indexes fared Thursday 11/19/2026",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/2f178054aea79d282e5ccf8d62f26a28",
+          "published": "2026-11-20 05:50",
+          "summary": "美國股市19日收盤大跌，道瓊工業指數下跌1,101點，標普500及那斯達克指數均下跌約2%以上，AI企業Anthropic上市未能扭轉整體市場跌勢。",
+          "background": "投資者近期對AI產業估值、資本支出及利率前景的疑慮增加，主要科技股承受賣壓。",
+          "detail": [
+            "美聯社收盤數據顯示，道瓊收49,097.06點，標普500收7,175.83點，那斯達克收23,879.20點。",
+            "路透社亦確認主要指數全面下挫，市場同時關注聯準會利率政策及後續通膨數據。"
+          ],
+          "article": [
+            "美國股市在19日交易結束時再次走低。美聯社報導，道瓊工業指數下跌約2.2%，標普500指數跌約2%，那斯達克綜合指數跌約2.3%。",
+            "儘管Anthropic首日交易價格高於IPO定價，大盤仍未因此反轉。美聯社指出，標普500成分股超過九成收跌，顯示跌勢並非侷限於少數科技股。",
+            "市場關注AI相關企業的估值及資本支出，聯準會利率前景亦為投資人評估風險的重要因素。未來行情仍取決於經濟數據與企業獲利。"
+          ],
+          "keyPoints": [
+            "道瓊下跌約1,101點。",
+            "標普500下跌約2%。",
+            "那斯達克下跌約2.3%。",
+            "成分股跌勢廣泛。"
+          ],
+          "impact": "美股走勢可能影響全球市場風險情緒及亞洲科技股。",
+          "watch": "關注後續通膨數據、聯準會政策訊號與亞洲市場反應。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/business/nasdaq-futures-jump-anthropics-record-ipo-pricing-fuels-hopes-strong-debut-2026-11-19/"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/New_York_Stock_Exchange%2C_Wall_Street%2C_New_York_City.jpg/960px-New_York_Stock_Exchange%2C_Wall_Street%2C_New_York_City.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange,_Wall_Street,_New_York_City.jpg",
+            "caption": "紐約證券交易所外觀（2017年4月19日資料照片）",
+            "credit": "Francesca.hyanna19",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "國際",
+          "title": "基輔遭攻擊傳民眾死亡，荷蘭與奧地利使館受損",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611200009.aspx",
+          "published": "2026-11-20 04:07",
+          "summary": "烏克蘭基輔19日遭俄方攻擊，當地政府通報至少1人死亡，荷蘭及奧地利使館建物受損。荷蘭政府已召見俄羅斯大使。",
+          "background": "事件發生於國際領袖就俄烏和平談判展開外交磋商之際，凸顯當地平民及外交人員仍面臨安全風險。",
+          "detail": [
+            "中央社引述法新社報導，基輔當地政府確認一人死亡；兩國使館及文化資產亦受到波及。",
+            "路透社證實，荷蘭政府因使館受損召見俄羅斯大使，荷蘭外交部表示其派駐人員無人受傷。"
+          ],
+          "article": [
+            "烏克蘭首都基輔19日發生攻擊事件。中央社引述當地政府指出，事件造成至少一人死亡。",
+            "荷蘭及奧地利使館亦確認建築受到波及。路透社報導，荷蘭政府已召見俄羅斯大使，表達對事件的關切。",
+            "在美中俄峰會與烏克蘭盟友柏林會議召開的背景下，這起事件引發對平民、外交人員及文化資產安全的關注。"
+          ],
+          "keyPoints": [
+            "基輔當局通報至少1人死亡。",
+            "荷蘭及奧地利使館受損。",
+            "荷蘭政府召見俄羅斯大使。"
+          ],
+          "impact": "事件可能加深外交緊張並凸顯戰事對民眾安全的持續影響。",
+          "watch": "關注民眾救援、外交回應與和平斡旋進展。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/netherlands-summons-russian-ambassador-kyiv-embassy-hit-2026-11-19/"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Kyiv_Ukraine.jpg/500px-Kyiv_Ukraine.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kyiv_Ukraine.jpg",
+            "caption": "烏克蘭基輔街景（2025年10月28日資料照片，非本次事件現場）",
+            "credit": "Creation3987!GO",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "國際",
           "title": "沙烏地阿拉伯首都利雅德金融區遭攻擊，當局稱無人受傷",
