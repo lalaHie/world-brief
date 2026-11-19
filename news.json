@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 05:53",
+      "updated": "2026-11-20 06:56",
       "stories": [
         {
           "category": "財經",
@@ -2951,6 +2951,52 @@
           }
         },
         {
+          "category": "科技",
+          "title": "AMD股價盤中重挫約8%，中國供應鏈合規疑慮引發關注",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611200008.aspx",
+          "published": "2026-11-20 03:57",
+          "summary": "晶片廠AMD股價19日盤中重挫約8%，外媒報導一份做空機構發布的報告對其中國相關商業關係提出疑慮，AMD表示遵守美國出口管制規定。",
+          "background": "美國近期收緊先進半導體產品出口規範，市場對晶片企業合規風險高度敏感。",
+          "detail": [
+            "路透社報導，Hunterbrook Media發布報告，質疑AMD與中國相關企業的商業關係可能引起主管機關關注。",
+            "AMD發言人回覆路透社表示，公司遵守適用法規並設有合規程序。相關指控尚非主管機關的違規認定。"
+          ],
+          "article": [
+            "美國晶片公司AMD於19日交易時段股價大幅下跌。中央社與路透社報導，一份由做空機構發布的報告引發投資人對其中國相關業務的疑慮。",
+            "AMD表示遵守美國出口管制法律，並持續執行合規管理。報告所提出的疑慮仍有待查證，不能將其視為監管機關已確認違規。",
+            "此次股價波動發生於美國科技股整體下跌之際。投資者同時關注先進晶片出口政策及企業未來營收的不確定性。"
+          ],
+          "keyPoints": [
+            "AMD股價盤中下跌約8%。",
+            "疑慮源自做空機構報告。",
+            "AMD表示遵守適用出口管制法規。",
+            "尚無正式違規認定。"
+          ],
+          "impact": "可能影響半導體產業估值及市場對企業合規風險的評估。",
+          "watch": "關注AMD正式說明、主管機關是否採取行動及後續營運表現。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/china/amd-shares-slide-report-says-china-links-could-invite-us-scrutiny-2026-11-19/"
+            },
+            {
+              "source": "WSJ",
+              "url": "https://www.wsj.com/livecoverage/anthropic-ipo-stock-market-today-11-19-2026/card/amd-sheds-67-billion-as-anthropic-debuts-kcfCndmmwbmDF1H0hhoD"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/AMD_headquarter_20240318.jpg/960px-AMD_headquarter_20240318.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:AMD_headquarter_20240318.jpg",
+            "caption": "AMD美國總部（2024年3月19日資料照片）",
+            "credit": "Lijiaxuan",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
           "category": "國際",
           "title": "沙烏地阿拉伯首都利雅德金融區遭攻擊，當局稱無人受傷",
           "source": "中央社",
@@ -3008,21 +3054,24 @@
           "background": "Anthropic先前透過首次公開募股募集約813億美元，發行定價對應約1.5兆美元估值。此次正式交易為IPO定價後的新進展。",
           "detail": [
             "Euronews、美聯社及路透社均報導，首筆交易價格為111.50美元，高於發行價83美元。",
-            "路透社報導，開盤後股價曾回落至約100美元；此為盤中行情而非收盤數字。"
+            "路透社報導，開盤後股價曾回落至約100美元；此為盤中行情而非收盤數字。",
+            "20日凌晨收盤後，路透社及美聯社報導，Anthropic首日收在每股97.17美元，較83美元發行價上漲約17.1%，低於111.50美元首筆成交價。"
           ],
           "article": [
             "Claude開發商Anthropic於美國時間19日正式在那斯達克開始交易，股票代號ANT，首筆成交價為111.50美元，較發行定價上漲約34%。",
             "此前公司以每股83美元定價，首次公開募股規模約813億美元。正式交易開始後，市場對公司的估值一度達約2兆美元。",
-            "路透社指出，股價開盤後有所回落，其他AI相關股票表現亦不一致。投資者仍關注大規模AI投資能否轉化為長期盈利，因此首日價格波動不代表長期表現。"
+            "路透社指出，股價開盤後有所回落，其他AI相關股票表現亦不一致。投資者仍關注大規模AI投資能否轉化為長期盈利，因此首日價格波動不代表長期表現。",
+            "20日凌晨收盤後，路透社及美聯社報導，Anthropic首日收在每股97.17美元，較83美元發行價上漲約17.1%，低於111.50美元首筆成交價。"
           ],
           "keyPoints": [
             "IPO發行定價每股83美元。",
             "首筆成交價111.50美元。",
             "開盤估值約2兆美元。",
-            "募股規模約813億美元。"
+            "募股規模約813億美元。",
+            "首日收盤97.17美元，較發行價上漲約17.1%。"
           ],
           "impact": "上市後的交易表現將成為市場評估生成式AI企業估值的重要參考。",
-          "watch": "關注首日收盤行情、財務表現及AI產業投資情緒。",
+          "watch": "關注後續交易行情、財務表現及AI產業投資情緒。",
           "relatedSources": [
             {
               "source": "Reuters",
@@ -3031,6 +3080,10 @@
             {
               "source": "AP",
               "url": "https://apnews.com/article/b6a74b8949021207dc162fcc876c4649"
+            },
+            {
+              "source": "Reuters／Boursorama",
+              "url": "https://www.boursorama.com/bourse/actualites/les-actions-americaines-s-effondrent-tandis-qu-anthropic-s-envole-lors-de-son-entree-en-bourse-d18cfba557468e65943bea4f9c1df02d"
             }
           ],
           "image": {
