@@ -212,7 +212,16 @@
           "keyPoints": [
             "外銷訂單累計金額提前刷新全年紀錄。",
             "這項統計反映海外客戶對台灣產品的需求規模。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kaohsiung_international_container_terminal.jpg/500px-Kaohsiung_international_container_terminal.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaohsiung_international_container_terminal.jpg",
+            "caption": "高雄國際貨櫃碼頭（2018 年資料照片）",
+            "credit": "Eric Deng",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -274,7 +283,16 @@
           "keyPoints": [
             "台綜院估計半導體業全年用電將突破500億度。",
             "9月電力景氣指標維持熱絡狀態。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Taichung_Power_Plant.jpg/960px-Taichung_Power_Plant.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taichung_Power_Plant.jpg",
+            "caption": "台中發電廠（2011 年資料照片）",
+            "credit": "阿爾特斯／Luuva",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -297,7 +315,16 @@
           "keyPoints": [
             "川普表示美俄正在就戰事進行談判，並稱接近協議。",
             "相關聲明仍應與實際談判進展區分。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Kyiv_Ukraine.jpg/500px-Kyiv_Ukraine.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kyiv_Ukraine.jpg",
+            "caption": "烏克蘭基輔街景（2025 年資料照片，非本次事件現場）",
+            "credit": "Creation3987!GO",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -327,7 +354,16 @@
           "keyPoints": [
             "中央銀行在颱風影響期間仍提供5.85億美元外幣資金。",
             "金融基礎設施在災害期間持續運作。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Champi_2026-10-20_1300Z.png/500px-Champi_2026-10-20_1300Z.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Champi_2026-10-20_1300Z.png",
+            "caption": "颱風薔琵（2026 年 10 月 20 日衛星影像）",
+            "credit": "Japan Meteorological Agency / Himawari-9",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -350,7 +386,16 @@
           "keyPoints": [
             "台經院公布9月製造業測驗點達逾四年半新高，同時提醒仍有風險。",
             "製造業信心與外部景氣變動受到關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -380,7 +425,16 @@
           "keyPoints": [
             "9月工業生產指數較去年同期增加19.17%，已連續31個月成長。",
             "需求熱絡的科技產業是重要背景。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -410,7 +464,16 @@
           "keyPoints": [
             "美國加強對中國科技投資的限制，北京呼籲美方不要過度擴張國安概念。",
             "政策爭議延續兩國在科技與經濟安全方面的競爭。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/USA-China.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:USA-China.JPG",
+            "caption": "美國與中國旗幟（2006 年示意照片）",
+            "credit": "Jayzel68",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -433,7 +496,16 @@
           "keyPoints": [
             "加薩局勢與美伊停火是外交行程的重點。",
             "聯合國持續參與區域外交斡旋。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/United_Nations_headquarters.jpg/500px-United_Nations_headquarters.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:United_Nations_headquarters.jpg",
+            "caption": "聯合國紐約總部（2016 年資料照片）",
+            "credit": "Breezelily",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -502,7 +574,16 @@
           "keyPoints": [
             "外交部指出中國跨國鎮壓超越政治恫嚇，外館將更新應變計畫。",
             "政府報告關注外交及經濟壓力等問題。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG/960px-The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "caption": "中華民國外交部大樓（2008 年資料照片）",
+            "credit": "竹筍弟弟",
+            "license": "作者允許不受限制使用",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -525,7 +606,16 @@
           "keyPoints": [
             "中央銀行指出外資近四個月淨匯出543億美元。",
             "跨境資金流動是匯率走勢的重要因素。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg/960px-Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "caption": "中央銀行第一總行大樓（右，2014 年資料照片）",
+            "credit": "CEphoto, Uwe Aranas",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -587,7 +677,16 @@
           "keyPoints": [
             "9月證券劃撥存款接近4.7兆元、外匯存款首次突破10兆元。",
             "兩項存款指標均反映金融資金配置。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg/960px-Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "caption": "中央銀行第一總行大樓（右，2014 年資料照片）",
+            "credit": "CEphoto, Uwe Aranas",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -617,7 +716,16 @@
           "keyPoints": [
             "兩名央行理事對連續維持利率不變有異議，關注通膨風險。",
             "會議紀錄顯示政策討論存在不同觀點。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg/960px-Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "caption": "中央銀行第一總行大樓（右，2014 年資料照片）",
+            "credit": "CEphoto, Uwe Aranas",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "科技",
@@ -640,7 +748,16 @@
           "keyPoints": [
             "科技產業財報引發市場疑慮，外資撤出伴隨新台幣貶值。",
             "AI投資回報與支出受到投資人檢視。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/960px-Nvidia_HQ.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Nvidia_HQ.jpg",
+            "caption": "輝達總部（2005 年資料照片）",
+            "credit": "Kevin McCarthy",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -670,7 +787,16 @@
           "keyPoints": [
             "台灣半導體產業協會估計今年產值可能成長40.9%。",
             "這是產業組織的預估，非全年確定結果。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -732,7 +858,16 @@
           "keyPoints": [
             "出口與投資表現超出預期，第三季經濟成長率創48年同期新高。",
             "強勁的經濟指標受到市場和政策部門關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Taipei_Skyline.jpg/960px-Taipei_Skyline.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Skyline.jpg",
+            "caption": "台北市天際線（2015 年資料照片）",
+            "credit": "Pang yu liu",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -755,7 +890,16 @@
           "keyPoints": [
             "美國、日本及韓國外交部長強調台海和平穩定的重要。",
             "三國外交對話涉及區域安全問題。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/North_Lawn.jpg/960px-North_Lawn.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:North_Lawn.jpg",
+            "caption": "美國白宮（2020 年資料照片）",
+            "credit": "Kurt Kaiser",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -785,7 +929,16 @@
           "keyPoints": [
             "盧比歐表示，川普尚未決定是否採取新一輪軍事行動。",
             "美方仍表示願意尋求外交途徑結束衝突。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Teheran_view.jpg/960px-Teheran_view.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Teheran_view.jpg",
+            "caption": "伊朗德黑蘭市景（2006 年資料照片）",
+            "credit": "Shahram Sharif",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -809,7 +962,16 @@
             "伊朗外交部長表示協商仍持續，尚未取得最終結論。"
           ],
           "impact": "中東外交局勢與國際能源供應的變化。",
-          "watch": "談判是否取得具體進展。"
+          "watch": "談判是否取得具體進展。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Doha_Skyline.jpg/960px-Doha_Skyline.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Doha_Skyline.jpg",
+            "caption": "卡達多哈市景（2006 年資料照片，非會談現場）",
+            "credit": "Martin Belam",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -839,7 +1001,16 @@
           "keyPoints": [
             "日經亞洲引述消息人士指出，台日正在研擬廣泛經濟協議，最快可能於年底簽署。",
             "報導中的時間仍屬消息人士預估，尚非正式簽署。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_Taiwan_and_Japan.png/960px-Flag_of_Taiwan_and_Japan.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Taiwan_and_Japan.png",
+            "caption": "台灣與日本旗幟（2024 年示意圖）",
+            "credit": "宜蘭第一公民",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -869,7 +1040,16 @@
           "keyPoints": [
             "美國選民將改選眾議院435席，以及參議院35席。",
             "部分選區郵寄投票計票可能需要較長時間。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/US_Capitol_Building.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:US_Capitol_Building.jpg",
+            "caption": "美國國會大廈（2005 年資料照片）",
+            "credit": "Edbrown05",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -899,7 +1079,16 @@
           "keyPoints": [
             "報導指出民主黨取得參眾兩院控制權。",
             "選舉結果較以往部分選舉更快明朗。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/US_Capitol_Building.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:US_Capitol_Building.jpg",
+            "caption": "美國國會大廈（2005 年資料照片）",
+            "credit": "Edbrown05",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -922,7 +1111,16 @@
           "keyPoints": [
             "市場在計票結果顯示民主黨勝選後出現波動，美股期貨下跌。",
             "投資人關注人工智慧及其他產業政策可能改變。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Facade_of_New_York_Stock_Exchange.jpg/960px-Facade_of_New_York_Stock_Exchange.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Facade_of_New_York_Stock_Exchange.jpg",
+            "caption": "紐約證券交易所外觀（2008 年資料照片）",
+            "credit": "Donatingpictures",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -946,7 +1144,16 @@
             "德國總理梅爾茨呼籲俄方認真參與停火與和平協商。"
           ],
           "impact": "民生能源供應及外交和平進程。",
-          "watch": "人道救援、供電恢復與談判結果。"
+          "watch": "人道救援、供電恢復與談判結果。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Kyiv_Ukraine.jpg/500px-Kyiv_Ukraine.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kyiv_Ukraine.jpg",
+            "caption": "烏克蘭基輔街景（2025 年資料照片，非本次事件現場）",
+            "credit": "Creation3987!GO",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -976,7 +1183,16 @@
           "keyPoints": [
             "民主黨籍奧索夫在期中選舉保住參議院席次。",
             "其連任引起對民主黨未來政治布局的討論。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Senator_Jon_Ossoff_Official_Portrait.jpg/500px-Senator_Jon_Ossoff_Official_Portrait.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Senator_Jon_Ossoff_Official_Portrait.jpg",
+            "caption": "美國參議員 Jon Ossoff（2021 年官方肖像）",
+            "credit": "U.S. Senate Photographic Studio",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1084,7 +1300,16 @@
           "keyPoints": [
             "以色列總統赫佐格表示，將優先授權反對派領袖艾森科特籌組新政府。",
             "選舉未使任何陣營單獨過半，因此聯合政府協商受到關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Gadi_Eisenkot_%28R_H_3639%29.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Gadi_Eisenkot_(R_H_3639).jpg",
+            "caption": "以色列政治人物 Gadi Eisenkot（2022 年肖像）",
+            "credit": "Ronen Horesh / Knesset Archives",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "自然災害",
@@ -1107,7 +1332,16 @@
           "keyPoints": [
             "日本中部發生規模5.7地震，報導指至少24人受傷，新幹線曾暫停運行。",
             "地震影響部分交通及建物。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sismograma.jpg/960px-Sismograma.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Sismograma.jpg",
+            "caption": "1908 年地震波紀錄示例（歷史資料，非日本本次地震）",
+            "credit": "原作者不詳／Wikimedia Commons",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1137,7 +1371,16 @@
           "keyPoints": [
             "財政部公布10月出口967.6億美元，較去年同期增加58.9%。",
             "資通訊產品與電子零組件出口同步刷新月度紀錄。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kaohsiung_international_container_terminal.jpg/500px-Kaohsiung_international_container_terminal.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaohsiung_international_container_terminal.jpg",
+            "caption": "高雄國際貨櫃碼頭（2018 年資料照片）",
+            "credit": "Eric Deng",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1160,7 +1403,16 @@
           "keyPoints": [
             "財政部表示全年出口規模有望超過日本並更新歷史高點。",
             "這是基於當時預測，須待全年數據確定。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kaohsiung_international_container_terminal.jpg/500px-Kaohsiung_international_container_terminal.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaohsiung_international_container_terminal.jpg",
+            "caption": "高雄國際貨櫃碼頭（2018 年資料照片）",
+            "credit": "Eric Deng",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1190,7 +1442,16 @@
           "keyPoints": [
             "賴總統表示台灣正穩健向自主發射衛星的目標前進。",
             "太空產業發展及衛星自主能力受到關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Formosat-1.jpg/960px-Formosat-1.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Formosat-1.jpg",
+            "caption": "福衛一號展品（2011 年資料照片，非本次發射）",
+            "credit": "Peellden",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1213,7 +1474,16 @@
           "keyPoints": [
             "因人工智慧相關需求旺盛，渣打將台灣2026年經濟成長預測上修至12.8%。",
             "該數字是金融機構預測，非確定成長率。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Taipei_Skyline.jpg/960px-Taipei_Skyline.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Skyline.jpg",
+            "caption": "台北市天際線（2015 年資料照片）",
+            "credit": "Pang yu liu",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1243,7 +1513,16 @@
           "keyPoints": [
             "台積電規劃投資Anthropic與OpenAI，並公布營收及擴產相關消息。",
             "投資安排反映半導體與人工智慧生態系之間的關係。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -1266,7 +1545,16 @@
           "keyPoints": [
             "俄烏在阿布達比進行第二日會談，雙方同意進行大規模換俘。",
             "會談進展不等於戰事已經結束。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Skyline_Abu_Dhabi.jpg/960px-Skyline_Abu_Dhabi.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Skyline_Abu_Dhabi.jpg",
+            "caption": "阿布達比天際線（2016 年資料照片，非會談現場）",
+            "credit": "Kimmyuandooo",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1296,7 +1584,16 @@
           "keyPoints": [
             "全球領袖在亞洲外交對話中關注人工智慧、貿易與核裁軍。",
             "議題反映各國對區域合作及全球安全的不同關切。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/United_Nations_headquarters.jpg/500px-United_Nations_headquarters.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:United_Nations_headquarters.jpg",
+            "caption": "聯合國紐約總部（2016 年資料照片）",
+            "credit": "Breezelily",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "政治",
@@ -1319,7 +1616,16 @@
           "keyPoints": [
             "面對可能的川習APEC會晤，外交部表示台美存在合作框架。",
             "政府對外說明其掌握的雙邊互動狀況。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG/960px-The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "caption": "中華民國外交部大樓（2008 年資料照片）",
+            "credit": "竹筍弟弟",
+            "license": "作者允許不受限制使用",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_Building_of_The_Ministry_of_Foreign_Affairs_of_the_Republic_of_China.JPG",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1349,7 +1655,16 @@
           "keyPoints": [
             "中央社晨間報導指出黃仁勳辭任執行長，財務長克瑞斯任臨時執行長。",
             "人事變動引起科技業及投資人關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/960px-Nvidia_HQ.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Nvidia_HQ.jpg",
+            "caption": "輝達總部（2005 年資料照片）",
+            "credit": "Kevin McCarthy",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1411,7 +1726,16 @@
           "keyPoints": [
             "白宮表示美中俄領袖峰會將於11月19日舉行。",
             "此為預定外交行程，相關議題及成果仍待會後確認。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/North_Lawn.jpg/960px-North_Lawn.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:North_Lawn.jpg",
+            "caption": "美國白宮（2020 年資料照片）",
+            "credit": "Kurt Kaiser",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "國際",
@@ -1434,7 +1758,16 @@
           "keyPoints": [
             "美中在川習APEC會晤前舉行首次貿易委員會會議。",
             "這是雙邊經貿對話的一部分。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/USA-China.JPG",
+            "source": "https://commons.wikimedia.org/wiki/File:USA-China.JPG",
+            "caption": "美國與中國旗幟（2006 年示意照片）",
+            "credit": "Jayzel68",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1464,7 +1797,16 @@
           "keyPoints": [
             "東南亞國協峰會展開，南海相關議題受到關注。",
             "美國總統預定參與區域外交行程。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Sekret_ASEAN_2.jpg/960px-Sekret_ASEAN_2.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Sekret_ASEAN_2.jpg",
+            "caption": "東協秘書處（2022 年資料照片，非本次峰會）",
+            "credit": "Langley16",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1487,7 +1829,16 @@
           "keyPoints": [
             "美國10月生產者物價相關指標攀升，市場關注聯準會12月利率決策。",
             "通膨指標與貨幣政策預期密切相關。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/US_Federal_Reserve_Eccles_Building_1937.jpg/960px-US_Federal_Reserve_Eccles_Building_1937.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:US_Federal_Reserve_Eccles_Building_1937.jpg",
+            "caption": "美國聯準會 Eccles 大樓（1937 年歷史照片）",
+            "credit": "Federal Reserve",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
@@ -1517,7 +1868,16 @@
           "keyPoints": [
             "美方宣布限制中國取得先進人工智慧晶片的新政策。",
             "政策延續美中科技競爭與出口管制議題。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg/960px-Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Building_of_Taiwan_Semiconductor_Manufacturing_Fab_12B_at_night.jpg",
+            "caption": "台積電 Fab 12B 廠房（2015 年資料照片）",
+            "credit": "曾成訓",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1579,7 +1939,16 @@
           "keyPoints": [
             "預定三方會談的議題包括貿易、俄烏局勢及核武相關外交議題。",
             "峰會前各國的外交立場受到關注。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Shenzhen_Skyline_from_Futian_District2.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_from_Futian_District2.jpg",
+            "caption": "深圳福田區天際線（2016 年資料照片，非本次會議現場）",
+            "credit": "Huangdan2060",
+            "license": "CC BY 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1641,7 +2010,16 @@
           "keyPoints": [
             "APEC峰會晚宴前，中日領導人握手互動。",
             "外交場合的互動受到關注，但不等同於政策已改變。"
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takaichi_Sanae_2025.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Takaichi_Sanae_2025.jpg",
+            "caption": "日本首相高市早苗（2025 年官方肖像）",
+            "credit": "日本內閣廣報室",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+            "kind": "related"
+          }
         },
         {
           "category": "財經",
@@ -1664,7 +2042,16 @@
           "keyPoints": [
             "受外資持續賣出台股等因素影響，新台幣面臨貶值壓力。",
             "匯市走勢與股市資金移動有關。"
-          ]
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg/960px-Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Central-Bank-of-the-Republic-of-China-01.jpg",
+            "caption": "中央銀行第一總行大樓（右，2014 年資料照片）",
+            "credit": "CEphoto, Uwe Aranas",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
