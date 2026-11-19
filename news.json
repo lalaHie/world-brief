@@ -2,8 +2,44 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 20:51",
+      "updated": "2026-11-19 21:52",
       "stories": [
+        {
+          "category": "環境",
+          "title": "COP31氣候調適資金談判受聖嬰現象推升壓力",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/sustainability/cop/el-nino-raises-stakes-cop31-wrestles-over-finance-2026-11-19/",
+          "published": "2026-11-19 21:01",
+          "summary": "土耳其安塔利亞舉行的COP31氣候會議正討論如何增加開發中國家的氣候調適資金，聖嬰現象帶來的乾旱及其他極端天氣風險使相關需求更加急迫。",
+          "background": "路透社引述聯合國數據，開發中國家每年調適資金需求約3,000億美元，而2024年取得的公部門及私人資金合計約360億美元。",
+          "detail": [
+            "路透社引述聯合國數據，開發中國家每年調適資金需求約3,000億美元，而2024年取得的公部門及私人資金合計約360億美元。",
+            "提前投入防災與民生保護可降低未來損失，談判焦點仍在資金來源、規模及執行安排。"
+          ],
+          "article": [
+            "土耳其安塔利亞舉行的COP31氣候會議正討論如何增加開發中國家的氣候調適資金，聖嬰現象帶來的乾旱及其他極端天氣風險使相關需求更加急迫。",
+            "路透社引述聯合國數據，開發中國家每年調適資金需求約3,000億美元，而2024年取得的公部門及私人資金合計約360億美元。",
+            "提前投入防災與民生保護可降低未來損失，談判焦點仍在資金來源、規模及執行安排。"
+          ],
+          "keyPoints": [
+            "COP31持續討論氣候調適資金。",
+            "聯合國估計開發中國家每年需要約3,000億美元。",
+            "2024年取得資金約360億美元。"
+          ],
+          "impact": "資金缺口可能影響氣候脆弱國家及早因應災害的能力。",
+          "watch": "關注會議最終協議、具體承諾及資金落實方式。",
+          "original": "El Nino raises the stakes as COP31 wrestles over finance",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Antalya%2C_Turkey_skyline_19_February_2022.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Antalya,_Turkey_skyline_19_February_2022.jpg",
+            "caption": "土耳其安塔利亞市景（2022年2月19日資料照，非COP31會場）",
+            "credit": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "台灣",
           "title": "施振榮在APEC倡議AI普惠與半導體供應鏈韌性",
@@ -38,6 +74,48 @@
             "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
             "kind": "related"
           }
+        },
+        {
+          "category": "財經",
+          "title": "IEA發布2026世界能源展望，能源供應衝擊恐改變長期投資方向",
+          "source": "Associated Press",
+          "lang": "EN",
+          "url": "https://apnews.com/article/a53b5522e557afd5370c08aee351032b",
+          "published": "2026-11-19 18:13",
+          "summary": "國際能源總署（IEA）19日發布2026年世界能源展望，指出重大供應衝擊正重塑各國能源政策及投資選擇。",
+          "background": "報告強調能源安全與可負擔性受到更大重視，太陽能及核能等多元能源可能獲得更多支持，部分經濟體也可能維持燃煤作為備援。",
+          "detail": [
+            "報告強調能源安全與可負擔性受到更大重視，太陽能及核能等多元能源可能獲得更多支持，部分經濟體也可能維持燃煤作為備援。",
+            "IEA表示危機持續時間及各國政策回應，將影響長期能源結構。報告列出情境，並非對未來作出唯一確定預測。"
+          ],
+          "article": [
+            "國際能源總署（IEA）19日發布2026年世界能源展望，指出重大供應衝擊正重塑各國能源政策及投資選擇。",
+            "報告強調能源安全與可負擔性受到更大重視，太陽能及核能等多元能源可能獲得更多支持，部分經濟體也可能維持燃煤作為備援。",
+            "IEA表示危機持續時間及各國政策回應，將影響長期能源結構。報告列出情境，並非對未來作出唯一確定預測。"
+          ],
+          "keyPoints": [
+            "IEA發布2026年世界能源展望。",
+            "能源安全及可負擔性成為政策重點。",
+            "危機持續時間將影響投資方向。"
+          ],
+          "impact": "關係全球能源價格、電力轉型與企業成本。",
+          "watch": "追蹤能源供需、政府政策及報告各情境的後續變化。",
+          "original": "There is no going back 'to the way it was before' the Iran war's energy shock, IEA says",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Taichung_Power_Plant.jpg/960px-Taichung_Power_Plant.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taichung_Power_Plant.jpg",
+            "caption": "台中發電廠（2011 年資料照片）",
+            "credit": "阿爾特斯／Luuva",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          },
+          "relatedSources": [
+            {
+              "source": "IEA",
+              "url": "https://www.iea.org/news/as-an-unprecedented-shock-reshapes-the-energy-world-its-duration-will-determine-the-scale-of-the-change"
+            }
+          ]
         },
         {
           "category": "國際",
@@ -450,6 +528,41 @@
           }
         },
         {
+          "category": "政治",
+          "title": "普發現金2萬元提案擬於20日三讀，行政院提出財政疑慮",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611190142.aspx",
+          "published": "2026-11-19 13:32",
+          "summary": "國民黨立法院黨團提出普發現金2萬元方案，力拚11月20日於立法院會完成三讀。",
+          "background": "行政院19日表示財政安排不應受選舉因素左右，並對提案的預算安排提出疑慮。",
+          "detail": [
+            "行政院19日表示財政安排不應受選舉因素左右，並對提案的預算安排提出疑慮。",
+            "目前仍屬立法提案階段，是否通過、發放條件及時程尚未確定。"
+          ],
+          "article": [
+            "國民黨立法院黨團提出普發現金2萬元方案，力拚11月20日於立法院會完成三讀。",
+            "行政院19日表示財政安排不應受選舉因素左右，並對提案的預算安排提出疑慮。",
+            "目前仍屬立法提案階段，是否通過、發放條件及時程尚未確定。"
+          ],
+          "keyPoints": [
+            "提案金額為每人2萬元。",
+            "國民黨團力拚20日三讀。",
+            "尚未確定通過或發放。"
+          ],
+          "impact": "若通過將涉及政府財政支出及民眾所得。",
+          "watch": "留意20日院會表決結果與正式預算、執行規定。",
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Legislative_Yuan_Building_and_cityscape.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Legislative_Yuan_Building_and_cityscape.jpg",
+            "caption": "立法院建築與周遭景觀（2024年6月26日資料照）",
+            "credit": "Yu tptw",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
           "category": "科技",
           "title": "日月光規劃投資2,489億元擴充高雄高階測試產能",
           "source": "中央社",
@@ -483,6 +596,47 @@
             "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
             "kind": "related"
           }
+        },
+        {
+          "category": "科技",
+          "title": "輝達展開執行長接班搜尋，媒體報導已接觸安謀執行長",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611193001.aspx",
+          "published": "2026-11-19 11:34",
+          "summary": "彭博引述知情人士報導，輝達董事會委託獵才公司尋找長期執行長，據報已接觸安謀（Arm）執行長哈斯。",
+          "background": "此消息出現在黃仁勳辭任後的接班過渡期，代理執行長克瑞斯目前負責公司營運。",
+          "detail": [
+            "此消息出現在黃仁勳辭任後的接班過渡期，代理執行長克瑞斯目前負責公司營運。",
+            "安謀方面婉拒置評，輝達未立即回應，尚無正式接班人任命公告。"
+          ],
+          "article": [
+            "彭博引述知情人士報導，輝達董事會委託獵才公司尋找長期執行長，據報已接觸安謀（Arm）執行長哈斯。",
+            "此消息出現在黃仁勳辭任後的接班過渡期，代理執行長克瑞斯目前負責公司營運。",
+            "安謀方面婉拒置評，輝達未立即回應，尚無正式接班人任命公告。"
+          ],
+          "keyPoints": [
+            "輝達據報已啟動接班搜尋。",
+            "安謀執行長哈斯被報導為接觸對象。",
+            "尚無正式人事任命。"
+          ],
+          "impact": "領導層變動可能影響AI晶片產業策略及合作夥伴預期。",
+          "watch": "以輝達正式公告為準，持續觀察接班進度。",
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/960px-Nvidia_HQ.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Nvidia_HQ.jpg",
+            "caption": "輝達總部（2005 年資料照片）",
+            "credit": "Kevin McCarthy",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          },
+          "relatedSources": [
+            {
+              "source": "Bloomberg",
+              "url": "https://news.bloomberglaw.com/business-and-practice/nvidia-sizes-up-arm-ceo-haas-in-search-for-huang-successor"
+            }
+          ]
         },
         {
           "category": "科技",
