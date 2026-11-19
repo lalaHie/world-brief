@@ -83,9 +83,11 @@
         localStorage.setItem('worldBriefNewsCache',JSON.stringify({stories,feedUpdated}));
         label.textContent=feedUpdated?`新聞更新：${feedUpdated}（台灣時間）`:'新聞已更新';
         render();
+        const requestedStory=new URLSearchParams(location.search).get('story');
+        if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}
       }catch(error){
         const cached=localStorage.getItem('worldBriefNewsCache');
-        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';label.textContent=`目前顯示上次載入的新聞${feedUpdated?' · 更新於 '+feedUpdated:''}`;render();return}catch{}}
+        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';label.textContent=`目前顯示上次載入的新聞${feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
         stories=[];label.textContent='無法連線更新新聞';render();
       }
     }

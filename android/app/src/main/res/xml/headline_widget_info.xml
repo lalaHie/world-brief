@@ -1,0 +1,11 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="在主畫面查看世界晨報最新頭條"
+    android:initialLayout="@layout/widget_headline"
+    android:minWidth="250dp"
+    android:minHeight="160dp"
+    android:previewLayout="@layout/widget_headline"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="4"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="3600000"
+    android:widgetCategory="home_screen" />
