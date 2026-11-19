@@ -2,7 +2,7 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 22:57",
+      "updated": "2026-11-19 23:48",
       "stories": [
         {
           "category": "環境",
@@ -73,6 +73,48 @@
             "credit": "曾成訓",
             "license": "CC BY 2.0",
             "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "國際",
+          "title": "國際法院認定緬甸對洛興雅人犯下種族滅絕",
+          "original": "Top UN court finds Myanmar committed genocide against Muslim Rohingya",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/asia-pacific/top-un-court-finds-myanmar-committed-state-sponsored-genocide-against-muslim-2026-11-19/",
+          "published": "2026-11-19 20:02",
+          "summary": "聯合國國際法院19日裁定，緬甸2017年對洛興雅族群的暴行構成種族滅絕，並負有賠償及協助流離失所者安全返鄉的義務。",
+          "background": "甘比亞於2019年依種族滅絕罪公約向國際法院提起訴訟。緬甸此前否認種族滅絕指控。",
+          "detail": [
+            "法院認定緬甸應對2017年發生於若開邦北部的暴行承擔國家責任。",
+            "賠償細節將另行決定，判決如何落實仍存在不確定性。"
+          ],
+          "article": [
+            "荷蘭海牙的國際法院19日就甘比亞控告緬甸一案作出判決，確認緬甸對若開邦北部洛興雅族群犯下種族滅絕，違反相關國際公約。",
+            "路透社與中央社報導，法院根據2017年的暴行及相關證據認定，緬甸須承擔國家責任。此次裁決與針對個人刑責的刑事審判不同。",
+            "法院要求緬甸承擔賠償義務，並允許受影響居民安全、有尊嚴地返回原居地。具體賠償及執行仍待後續處理。"
+          ],
+          "keyPoints": [
+            "甘比亞2019年提起訴訟。",
+            "國際法院19日確認緬甸違反種族滅絕罪公約。",
+            "判決要求賠償及保障安全返鄉。"
+          ],
+          "impact": "判決具有重要國際法與人權意義，但難民能否實際返鄉仍有待觀察。",
+          "watch": "關注緬甸政府回應、賠償程序與難民保障。",
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611190371.aspx"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Peace_Palace_The_Hague.jpg/960px-Peace_Palace_The_Hague.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Peace_Palace_The_Hague.jpg",
+            "caption": "荷蘭海牙和平宮、國際法院所在地（2009年8月19日資料照片）",
+            "credit": "Iamthestig",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
             "kind": "related"
           }
         },
@@ -164,19 +206,22 @@
           "background": "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
           "detail": [
             "會談約90分鐘。中央社19:17引述新華社公布的宣言，AP亦引述中俄官方說法，指三方支持聯合國改革、增加精煉石油產品供應並就減低核風險持續對話。",
-            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。"
+            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。",
+            "峰會後，普丁向媒體表示俄方接受美方提出的妥協方案，並提議與歐洲代表進一步磋商烏克蘭和平談判。此為俄方單方面說法，並非俄烏已達成停火或和平協議。"
           ],
           "article": [
             "川普、習近平與普丁在深圳舉行歷史性的三方會談，會談已結束。",
             "此次會議安排在APEC峰會場邊，三國領袖此前亦有雙邊交流。",
             "會談約90分鐘。中央社19:17引述新華社公布的宣言，AP亦引述中俄官方說法，指三方支持聯合國改革、增加精煉石油產品供應並就減低核風險持續對話。",
-            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。"
+            "宣言另表達對國際刑事法院管轄權的立場，但未提及俄烏戰事或伊朗戰事的具體解決方案。",
+            "峰會後，普丁向媒體表示俄方接受美方提出的妥協方案，並提議與歐洲代表進一步磋商烏克蘭和平談判。此為俄方單方面說法，並非俄烏已達成停火或和平協議。"
           ],
           "keyPoints": [
             "三方會談歷時約90分鐘。",
             "宣言提出聯合國改革及增加能源供應。",
             "承諾就降低核風險進行外交對話。",
-            "未公布俄烏或伊朗戰事的具體解決方案。"
+            "未公布俄烏或伊朗戰事的具體解決方案。",
+            "普丁會後稱接受美方妥協方案，和平協議尚未達成。"
           ],
           "impact": "三國對話可能影響後續外交斡旋及全球安全局勢。",
           "watch": "關注各國後續實施措施及外交談判；宣言本身不等於全面和平協議。",
@@ -195,6 +240,16 @@
               "source": "中央社",
               "url": "https://www.cna.com.tw/news/aopl/202611190336.aspx",
               "published": "2026-11-19 19:17"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/china/putin-says-russia-invited-europeans-moscow-clarify-position-ukraine-talks-2026-11-19/",
+              "published": "2026-11-19 22:15"
+            },
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611190383.aspx",
+              "published": "2026-11-19 21:55"
             }
           ]
         },
@@ -301,6 +356,48 @@
             "credit": "曾成訓",
             "license": "CC BY 2.0",
             "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "產假延長至14週、育兒留停放寬新制明年元旦上路",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611190247.aspx",
+          "published": "2026-11-19 16:38",
+          "summary": "行政院長卓榮泰宣布育兒及產假新制將於2027年1月1日實施，軍公教人員與勞工一體適用。",
+          "background": "立法院日前三讀性別平等工作法及就業保險法修正，擴大職場育兒支持。",
+          "detail": [
+            "產假由8週增加至14週，陪產檢及陪產假由7日增至14日。",
+            "育兒留職停薪適用期限放寬至子女滿9歲前，雙親符合條件時可延長津貼給付。"
+          ],
+          "article": [
+            "行政院19日說明育兒支持新制，確定相關修法將於2027年元旦施行。行政院長卓榮泰表示，軍公教與勞工將一體適用。",
+            "依行政院公告，產假將由8週延長至14週，陪產檢及陪產假增為14日，育兒留職停薪適用子女年齡放寬至滿9歲前。",
+            "就業保險的相關津貼亦將調整，若父母雙方均符合並領滿6個月津貼，可各再領3個月。新制旨在分擔家庭育兒負擔。"
+          ],
+          "keyPoints": [
+            "2027年1月1日實施。",
+            "產假14週、陪產檢及陪產假14日。",
+            "育兒留停放寬至子女滿9歲前。",
+            "符合條件的雙親可各多領3個月津貼。"
+          ],
+          "impact": "涉及受僱者育兒權益及雇主人力安排。",
+          "watch": "關注勞動部後續申請規範及各類人員適用細節。",
+          "relatedSources": [
+            {
+              "source": "行政院",
+              "url": "https://www.ey.gov.tw/Page/9277F759E41CCD91/719d0cf2-564f-4894-a0fd-31e12081cbe7"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Cho_Jung-tai_20240530.jpg/960px-Cho_Jung-tai_20240530.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Cho_Jung-tai_20240530.jpg",
+            "caption": "行政院長卓榮泰（2024年5月30日資料照片，非本次記者會）",
+            "credit": "行政院",
+            "license": "政府網站資料開放宣告",
+            "licenseUrl": "https://english.ey.gov.tw/Page/46BE60176FCCEFB8",
             "kind": "related"
           }
         },
