@@ -5,7 +5,7 @@
 ## 安裝與預覽
 
 1. 使用 Android Studio 開啟 `android/` 資料夾。
-2. 安裝 Android SDK Platform 37、Build Tools 36.0.0 和 JDK 17。
+2. 安裝 Android SDK Platform 36、Build Tools 36.0.0 和 JDK 17。
 3. 在此資料夾執行 `./gradlew assembleDebug`（Windows 使用 `gradlew.bat assembleDebug`），或在 Android Studio 同步並執行。
 4. 安裝 `app/build/outputs/apk/debug/app-debug.apk` 到手機。
 5. 在 Android 主畫面長按空白處，選擇「小工具」→「世界晨報頭條」，將卡片加入主畫面。
