@@ -2864,8 +2864,54 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 02:50",
+      "updated": "2026-11-20 04:49",
       "stories": [
+        {
+          "category": "國際",
+          "title": "沙烏地阿拉伯首都利雅德金融區遭攻擊，當局稱無人受傷",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611200006.aspx",
+          "published": "2026-11-20 02:12",
+          "summary": "沙烏地阿拉伯當局證實，葉門青年運動發動的攻擊造成利雅德金融區建築受損，依當局說法，未接獲人員受傷通報。",
+          "background": "沙烏地阿拉伯與葉門青年運動之間的緊張局勢持續，區域安全及經濟活動受到關注。",
+          "detail": [
+            "中央社與路透社均報導，沙國民防部門證實利雅德有建築遭受財物損失，當時沒有傷亡通報。",
+            "金融時報亦報導事件，顯示中東局勢的不確定性持續影響市場對區域投資風險的評估。"
+          ],
+          "article": [
+            "中央社20日凌晨報導，沙烏地阿拉伯當局證實首都利雅德的金融區發生攻擊事件，有建築受損。",
+            "路透社引述沙國官方通訊社的消息指出，民防部門確認出現財物損失，但截至報導時未接獲人員受傷通報。",
+            "此次事件使外界更加關注中東區域緊張局勢及對一般民眾安全、商業活動與能源市場的影響。後續實際損失仍須等待當局公布。"
+          ],
+          "keyPoints": [
+            "事件發生於利雅德。",
+            "沙國當局確認財物受損。",
+            "截至報導時未通報人員受傷。",
+            "區域安全及經濟風險受到關注。"
+          ],
+          "impact": "可能增加區域商業活動與能源市場的不確定性。",
+          "watch": "關注當地民眾安全、官方損失評估及國際外交降溫努力。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/middle-east/houthi-missile-threat-towards-riyadh-causes-damage-saudi-led-coalition-says-2026-11-19/"
+            },
+            {
+              "source": "Financial Times",
+              "url": "https://www.ft.com/content/05ed47a5-7cc1-402f-ad0d-826ba09a05c8"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Riyadh_Skyline.jpg/960px-Riyadh_Skyline.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Riyadh_Skyline.jpg",
+            "caption": "沙烏地阿拉伯首都利雅德市景（2018年2月8日資料照片，非本次事件現場）",
+            "credit": "B.alotaby",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "財經",
           "title": "Anthropic正式登陸那斯達克，首筆成交價較IPO定價高34%",
