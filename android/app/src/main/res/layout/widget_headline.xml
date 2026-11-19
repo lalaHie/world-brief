@@ -11,10 +11,11 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
-        <View
+        <TextView
             android:layout_width="4dp"
             android:layout_height="20dp"
-            android:background="@drawable/widget_accent_bar" />
+            android:background="@drawable/widget_accent_bar"
+            android:importantForAccessibility="no" />
         <TextView
             android:id="@+id/widget_brand"
             android:layout_width="0dp"
