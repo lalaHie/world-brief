@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f0e7" />
+  <meta name="description" content="用繁體中文掌握世界晨間大事。" />
+  <title>世界晨報</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <style>
+    :root{--paper:#f5f0e7;--card:#fffdf8;--ink:#172b35;--muted:#697780;--line:#e6dfd3;--teal:#176b68;--teal-soft:#e2efeb;--gold:#df9b4d;--red:#ba5547;--shadow:0 12px 35px #20343b0c}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased}
+    button,input{font:inherit} button{cursor:pointer} .app{max-width:520px;min-height:100dvh;margin:auto;padding:0 18px 100px;position:relative}
+    .topbar{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}.brandmark{height:36px;width:36px;border-radius:12px;background:var(--teal);display:grid;place-items:center;color:#fff;font-size:20px}.top-actions{display:flex;gap:8px}.icon-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font-size:18px}
+    .date-row{display:flex;justify-content:space-between;align-items:flex-end;margin:13px 0 18px}.eyebrow{font-size:11px;letter-spacing:.14em;color:var(--muted);font-weight:750}.date{font-size:13px;color:var(--muted);margin-top:5px}.edition{font-size:11px;color:var(--teal);background:var(--teal-soft);padding:7px 10px;border-radius:999px;font-weight:750}
+    .hero{border-radius:28px;padding:24px 22px 20px;background:linear-gradient(135deg,#164e53,#1c7972);color:white;min-height:204px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#f6c77c22;right:-42px;top:-60px;box-shadow:0 0 0 24px #f6c77c0b,0 0 0 52px #f6c77c08}.hero-copy{position:relative;z-index:1;max-width:300px}.hero-kicker{font-size:11px;letter-spacing:.14em;color:#d5e7dc;font-weight:700}.hero h1{font-size:29px;line-height:1.2;margin:9px 0 8px;letter-spacing:-.04em}.hero p{font-size:13px;line-height:1.7;color:#e1eee8;margin:0}.hero-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;position:relative;z-index:1}.hero-foot span{font-size:11px;color:#d7e9df}.hero-foot button{border:0;border-radius:999px;padding:9px 13px;background:#fff;color:var(--teal);font-size:12px;font-weight:800}
+    .section-head{display:flex;justify-content:space-between;align-items:center;margin:27px 0 13px}.section-head h2{font-size:18px;margin:0;letter-spacing:-.03em}.quiet-btn{border:0;background:transparent;color:var(--teal);font-weight:750;font-size:12px;padding:6px}
+    .chips{display:flex;gap:8px;overflow:auto;scrollbar-width:none;margin:0 -18px;padding:0 18px 4px}.chips::-webkit-scrollbar{display:none}.chip{border:1px solid var(--line);background:#fffaf2;color:#5c686c;border-radius:999px;padding:8px 13px;white-space:nowrap;font-size:12px;font-weight:700}.chip.active{background:var(--ink);border-color:var(--ink);color:white}
+    .story-list{display:grid;gap:11px}.story-media{height:175px;position:relative;overflow:hidden;border-radius:13px;background:#e6ece8;margin:-2px -2px 3px}.story-media img{width:100%;height:100%;object-fit:cover;display:block}.story-media span{position:absolute;bottom:0;left:0;right:0;padding:6px 9px;background:#10252bbd;color:#fff;font-size:10px;line-height:1.4}.article-image{margin:17px 0;border-radius:15px;overflow:hidden;background:#e7ece8}.article-image img{width:100%;max-height:280px;object-fit:cover;display:block}.article-image figcaption{font-size:10px;color:var(--muted);padding:8px 10px;line-height:1.45}.story{width:100%;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:20px;padding:15px 15px 14px;box-shadow:0 2px 4px #20343b04;transition:transform .15s,box-shadow .15s;color:inherit}.story:active{transform:scale(.985)}.story-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.story-meta{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)}.dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}.tag{color:var(--teal);font-weight:750}.save{border:0;background:transparent;font-size:18px;color:#879195;padding:0 2px}.save.saved{color:var(--gold)}.story h3{font-size:16px;line-height:1.48;letter-spacing:-.02em;margin:0 0 7px}.story p{font-size:12px;line-height:1.65;color:var(--muted);margin:0}.story-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid #f0ebe2;color:#778187;font-size:11px}.source{font-weight:750;color:#55676b}.story-date{display:block;color:var(--muted);font-size:11px;margin:0 0 6px}.empty{padding:36px 16px;text-align:center;color:var(--muted);background:var(--card);border-radius:20px;border:1px dashed var(--line);font-size:13px;line-height:1.7}
+    .bottom-nav{position:fixed;z-index:5;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,1fr);background:#fffdf8ed;backdrop-filter:blur(14px);border-top:1px solid #e6dfd3}.nav-item{border:0;background:none;color:#849096;display:grid;justify-items:center;gap:3px;font-size:10px;font-weight:700}.nav-item .nav-icon{font-size:20px;line-height:1.1}.nav-item.active{color:var(--teal)}
+    .overlay{position:fixed;inset:0;background:#0e252c66;z-index:10;display:none;align-items:flex-end;justify-content:center}.overlay.open{display:flex}.sheet{width:min(520px,100%);height:min(91dvh,800px);overflow:auto;background:var(--paper);border-radius:26px 26px 0 0;padding:13px 20px calc(28px + env(safe-area-inset-bottom));animation:rise .22s ease}@keyframes rise{from{transform:translateY(30px);opacity:.7}to{transform:none;opacity:1}}.sheet-handle{width:38px;height:4px;border-radius:99px;background:#d8d1c6;margin:0 auto 16px}.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:21px}.sheet-head h2{font-size:18px;margin:0}.close-btn{width:34px;height:34px;border:0;background:#eae4d9;border-radius:50%;font-size:18px;color:var(--ink)}.article-label{font-size:11px;letter-spacing:.12em;color:var(--teal);font-weight:800}.article-title{font-size:25px;line-height:1.4;letter-spacing:-.035em;margin:10px 0}.article-en{font-family:Georgia,serif;font-size:15px;line-height:1.5;color:#788184;margin:0 0 16px}.article-meta{font-size:11px;color:var(--muted);padding-bottom:17px;border-bottom:1px solid var(--line)}.article-body{font-size:15px;line-height:1.9;margin:20px 0}.article-body p{margin:0 0 14px}.why-box{background:var(--teal-soft);border-radius:18px;padding:15px 16px;margin:18px 0}.why-box strong{font-size:12px;color:var(--teal)}.why-box p{font-size:13px;line-height:1.7;margin:7px 0 0;color:#344d4f}.source-link{display:block;text-decoration:none;border:1px solid var(--line);background:var(--card);padding:13px 15px;border-radius:14px;color:var(--teal);font-size:13px;font-weight:750}.settings-group{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:3px 15px;margin:12px 0}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;border-bottom:1px solid #eee8dd}.setting-row:last-child{border:0}.setting-copy strong{display:block;font-size:13px}.setting-copy small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.setting-row input[type=time]{border:1px solid var(--line);border-radius:10px;background:#fffaf2;padding:7px;color:var(--ink)}.toggle{appearance:none;width:42px;height:25px;border-radius:99px;background:#d4d9d6;position:relative;transition:.2s;flex:none}.toggle:before{content:"";position:absolute;width:19px;height:19px;border-radius:50%;background:#fff;left:3px;top:3px;box-shadow:0 1px 3px #0002;transition:.2s}.toggle:checked{background:var(--teal)}.toggle:checked:before{left:20px}.note{background:#fff3dd;color:#805a2e;padding:12px 14px;border-radius:14px;font-size:11px;line-height:1.65;margin-top:15px}.search-wrap{display:none;margin:0 0 12px}.search-wrap.open{display:block}.search-input{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:14px;background:var(--card);outline:none;color:var(--ink)}.search-input:focus{border-color:var(--teal)}.demo-footer{text-align:center;font-size:10px;color:#899294;margin:22px 0 4px}
+    @media(min-width:600px){body{padding:20px 0}.app{border-radius:28px;background:var(--paper);box-shadow:0 24px 90px #19363a16;min-height:calc(100dvh - 40px)}.bottom-nav{bottom:20px;border-radius:0 0 28px 28px}}
+  </style>
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar"><div class="brand"><span class="brandmark">晨</span><span>世界晨報</span></div><div class="top-actions"><button class="icon-btn" id="searchToggle" aria-label="搜尋新聞">⌕</button><button class="icon-btn" id="refreshNews" aria-label="更新新聞">↻</button><button class="icon-btn" id="settingsOpen" aria-label="設定">⚙</button></div></header>
+    <div class="date-row"><div><div class="eyebrow">WORLD BRIEF · 每小時更新</div><div class="date" id="todayDate"></div></div><span class="edition">早晨版</span></div>
+    <section class="hero"><div class="hero-copy"><div class="hero-kicker">GOOD MORNING, WORLD</div><h1>早安，世界。</h1><p>用繁體中文掌握世界各地的重要消息。</p></div><div class="hero-foot"><span>國際 · 台灣 · 財經 · 科技 · 更多分類</span><button id="readBrief">閱讀今日焦點　→</button></div></section>
+    <div class="section-head"><div><h2 id="sectionTitle">全部新聞</h2><div class="date" id="updateLabel">正在載入最新新聞…</div></div><button class="quiet-btn" id="sortToggle">日期：新→舊</button></div>
+    <div class="search-wrap" id="searchWrap"><input id="searchInput" class="search-input" type="search" placeholder="搜尋標題、摘要或分類" /></div>
+    <nav class="chips" id="categories" aria-label="新聞分類"></nav>
+    <section class="story-list" id="storyList"></section>
+    <div class="demo-footer">新聞資料更新中 · 報導均附原始來源</div>
+  </main>
+  <nav class="bottom-nav" aria-label="主要導覽"><button class="nav-item active" data-tab="home"><span class="nav-icon">⌂</span><span>今日</span></button><button class="nav-item" data-tab="categories"><span class="nav-icon">▤</span><span>分類</span></button><button class="nav-item" data-tab="saved"><span class="nav-icon">♡</span><span>收藏</span></button><button class="nav-item" data-tab="settings"><span class="nav-icon">⚙</span><span>設定</span></button></nav>
+  <div class="overlay" id="articleOverlay" role="dialog" aria-modal="true" aria-label="新聞內容"><article class="sheet"><div class="sheet-handle"></div><div class="sheet-head"><span class="article-label">新聞詳情</span><button class="close-btn" data-close="articleOverlay" aria-label="關閉">×</button></div><div id="articleContent"></div></article></div>
+  <div class="overlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-label="晨報設定"><section class="sheet"><div class="sheet-handle"></div><div class="sheet-head"><h2>晨報設定</h2><button class="close-btn" data-close="settingsOverlay" aria-label="關閉">×</button></div><div class="eyebrow">每日為你整理世界大事</div><div class="settings-group"><div class="setting-row"><div class="setting-copy"><strong>每日晨報推播</strong><small>尚待接上背景推播服務</small></div><input class="toggle" id="notifyToggle" type="checkbox" disabled /></div><div class="setting-row"><div class="setting-copy"><strong>提醒時間</strong><small>預設為台灣時間早上 5:00</small></div><input type="time" id="reminderTime" value="05:00" /></div><div class="setting-row"><div class="setting-copy"><strong>新聞語言</strong><small>繁體中文（台灣）</small></div><span class="tag">繁中　⌄</span></div><div class="setting-row"><div class="setting-copy"><strong>自動載入圖片</strong><small>使用 Wi-Fi 或行動網路</small></div><input class="toggle" type="checkbox" checked /></div></div><div class="note">新聞內容每小時從世界日報載入。每日定時推播尚未接上服務；提醒時間先作為偏好設定保存。</div></section></div>
+  <script>
+    const FEED_URL='https://lalahie.github.io/world-brief/news.json';
+    const categoryOrder=['全部','國際','台灣','政治','財經','科技','軍事','社會','環境','自然災害','科學','健康','文化','體育','其他'];
+    const app=document.getElementById('app'), list=document.getElementById('storyList'), chips=document.getElementById('categories');
+    let stories=[],activeCategory='全部',tab='home',ascending=false,searchTerm='',feedUpdated='';
+    const saved=new Set(JSON.parse(localStorage.getItem('worldBriefSaved')||'[]'));
+    const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    const pad=n=>String(n).padStart(2,'0');
+    const taipei=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',weekday:'long'}).format(new Date());
+    document.getElementById('todayDate').textContent=taipei;
+    function renderCategories(){
+      const names=[...new Set([...categoryOrder,...stories.map(s=>s.category).filter(Boolean)])];
+      chips.innerHTML=names.map(c=>`<button class="chip ${c===activeCategory?'active':''}" data-category="${esc(c)}">${esc(c)}</button>`).join('');
+      chips.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{activeCategory=b.dataset.category;tab='home';document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.tab==='home'));render()}));
+    }
+    function render(){
+      renderCategories();
+      document.getElementById('sortToggle').textContent=ascending?'日期：舊→新':'日期：新→舊';
+      document.getElementById('sectionTitle').textContent=tab==='saved'?'我的收藏':tab==='categories'?'分類新聞':'全部新聞';
+      const filtered=stories.filter(s=>(activeCategory==='全部'||s.category===activeCategory)&&(tab!=='saved'||saved.has(s.id))&&(!searchTerm||`${s.title} ${s.summary} ${s.category} ${s.region} ${s.source}`.toLowerCase().includes(searchTerm.toLowerCase()))).sort((a,b)=>ascending?`${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`):`${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
+      if(!filtered.length){list.innerHTML=`<div class="empty">${stories.length?'沒有找到符合條件的新聞。試試其他關鍵字或分類。':'目前無法載入新聞，請確認網路連線後重新整理。'}</div>`;return}
+      list.innerHTML=filtered.map(s=>`<article class="story" data-id="${esc(s.id)}"><div class="story-date">${esc(s.date.replaceAll('-',' / '))}</div>${s.image?.url?`<div class="story-media"><img src="${esc(s.image.url)}" alt="${esc(s.image.caption||s.title)}" loading="lazy" referrerpolicy="no-referrer"><span>${esc(s.image.caption||'新聞相關圖片')} · ${esc(s.image.credit||s.source||'來源')}</span></div>`:''}<div class="story-top"><div class="story-meta"><span class="dot"></span><span class="tag">${esc(s.category)}</span><span>·</span><span>${esc(s.region||'國際')}</span><span>·</span><span>${esc(s.time||'')}</span></div><button class="save ${saved.has(s.id)?'saved':''}" data-save="${esc(s.id)}" aria-label="收藏新聞">${saved.has(s.id)?'★':'☆'}</button></div><h3>${esc(s.title)}</h3><p>${esc(s.summary)}</p><div class="story-bottom"><span class="source">${esc(s.source)}${s.lang==='EN'?' · 英文來源／繁中編譯':''}</span><span>閱讀報導　→</span></div></article>`).join('');
+      list.querySelectorAll('.story').forEach(el=>el.addEventListener('click',e=>{if(e.target.closest('[data-save]'))return;openStory(el.dataset.id)}));
+      list.querySelectorAll('[data-save]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const id=b.dataset.save;saved.has(id)?saved.delete(id):saved.add(id);localStorage.setItem('worldBriefSaved',JSON.stringify([...saved]));render()}));
+    }
+    function openStory(id){
+      const s=stories.find(x=>x.id===id);if(!s)return;
+      const paragraphs=Array.isArray(s.article)&&s.article.length?s.article:[s.summary,...(s.detail||[]),s.background].filter(Boolean);
+      const image=s.image?.url?`<figure class="article-image"><img src="${esc(s.image.url)}" alt="${esc(s.image.caption||s.title)}"><figcaption>${esc(s.image.caption||'新聞相關圖片')} · 圖片來源：${esc(s.image.credit||s.source)} · ${esc(s.image.license||'授權資訊見來源')}</figcaption></figure>`:'';
+      const original=s.original?`<p class="article-en">${esc(s.original)}</p>`:'';
+      document.getElementById('articleContent').innerHTML=`<div class="article-label">${esc(s.category)}　·　${esc(s.region||'世界')}</div><h1 class="article-title">${esc(s.title)}</h1>${original}<div class="article-meta">${esc(s.date)}　${esc(s.time||'')}　｜　${esc(s.source)}${s.lang==='EN'?' · 英文來源，繁中編譯':''}</div>${image}<div class="article-body">${paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</div>${s.impact?`<div class="why-box"><strong>為什麼值得關注</strong><p>${esc(s.impact)}</p></div>`:''}${s.watch?`<div class="why-box"><strong>後續觀察</strong><p>${esc(s.watch)}</p></div>`:''}<a class="source-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">查看原始報導　↗</a>`;
+      document.getElementById('articleOverlay').classList.add('open');
+    }
+    async function loadNews(){
+      const label=document.getElementById('updateLabel');label.textContent='正在更新新聞…';
+      try{
+        const response=await fetch(FEED_URL,{cache:'no-store'});if(!response.ok)throw new Error('Feed unavailable');
+        const archive=await response.json();const editions=archive.editions||{};
+        const dates=Object.keys(editions).sort().reverse();
+        stories=dates.flatMap(date=>(editions[date].stories||[]).map((s,i)=>({
+          id:`${date}-${i}-${s.url||s.title}`,date,time:(s.published||'').slice(11,16),category:s.category||'其他',region:s.country||s.location||'世界',title:s.title,summary:s.summary||'',original:s.original||'',source:s.source||'來源未標示',lang:s.lang||'中文',url:s.url||'#',image:s.image||null,article:s.article||[],detail:s.detail||[],background:s.background||'',impact:s.impact||'',watch:s.watch||''
+        }))).sort((a,b)=>`${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
+        feedUpdated=editions[dates[0]]?.updated||'';
+        localStorage.setItem('worldBriefNewsCache',JSON.stringify({stories,feedUpdated}));
+        label.textContent=feedUpdated?`新聞更新：${feedUpdated}（台灣時間）`:'新聞已更新';
+        render();
+        const requestedStory=new URLSearchParams(location.search).get('story');
+        if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}
+      }catch(error){
+        const cached=localStorage.getItem('worldBriefNewsCache');
+        if(cached){try{const old=JSON.parse(cached);stories=old.stories||[];feedUpdated=old.feedUpdated||'';label.textContent=`目前顯示上次載入的新聞${feedUpdated?' · 更新於 '+feedUpdated:''}`;render();const requestedStory=new URLSearchParams(location.search).get('story');if(requestedStory){const match=stories.find(item=>item.url===requestedStory);if(match)openStory(match.id)}return}catch{}}
+        stories=[];label.textContent='無法連線更新新聞';render();
+      }
+    }
+    document.getElementById('sortToggle').addEventListener('click',()=>{ascending=!ascending;render()});
+    document.getElementById('refreshNews').addEventListener('click',loadNews);
+    document.getElementById('searchToggle').addEventListener('click',()=>{document.getElementById('searchWrap').classList.toggle('open');if(document.getElementById('searchWrap').classList.contains('open'))document.getElementById('searchInput').focus()});
+    document.getElementById('searchInput').addEventListener('input',e=>{searchTerm=e.target.value;render()});
+    document.getElementById('readBrief').addEventListener('click',()=>document.querySelector('.story')?.scrollIntoView({behavior:'smooth',block:'center'}));
+    document.getElementById('settingsOpen').addEventListener('click',()=>document.getElementById('settingsOverlay').classList.add('open'));
+    document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.close).classList.remove('open')));
+    document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')}));
+    document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n===b));if(tab==='settings')document.getElementById('settingsOverlay').classList.add('open');if(tab==='categories'){activeCategory='全部';document.getElementById('categories').scrollIntoView({behavior:'smooth',block:'nearest'})}render();window.scrollTo({top:0,behavior:'smooth'})}));
+    const time=document.getElementById('reminderTime');time.value=localStorage.getItem('worldBriefReminderTime')||'05:00';time.addEventListener('change',e=>localStorage.setItem('worldBriefReminderTime',e.target.value));
+    loadNews();
+    if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+  </script>
+</body>
+</html>
