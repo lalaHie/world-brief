@@ -2861,6 +2861,59 @@
         }
       ],
       "archiveNote": "歷史補建：以當日有原始來源的重大新聞選輯為主，非完整即時新聞紀錄。"
+    },
+    "2026-11-20": {
+      "date": "2026-11-20",
+      "updated": "2026-11-20 00:55",
+      "stories": [
+        {
+          "category": "國際",
+          "title": "烏克蘭盟友柏林峰會，德國總理承諾2027年持續支持",
+          "original": "Ukraine’s allies meet in Berlin with air defence, energy and financial support on the agenda – Europe live",
+          "source": "The Guardian",
+          "lang": "EN",
+          "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
+          "published": "2026-11-20 00:50",
+          "summary": "烏克蘭盟友在柏林舉行峰會，德國總理梅爾茨會後表示，盟國將於2027年繼續支持烏克蘭，並強調歐洲須參與和平進程。",
+          "background": "德國、法國及英國共同召集此次會議，同日美中俄領袖在深圳舉行三方會談；歐洲各國關注烏克蘭和平談判與自身安全。",
+          "detail": [
+            "路透社報導，此次會議有多國歐洲領袖及美國特使出席。與會各方討論後續援助及外交協調。",
+            "衛報即時報導引述梅爾茨會後談話，他表示支持將延續至下一年，並認為必須先實現烏克蘭和平，才能討論更廣泛安全安排。"
+          ],
+          "article": [
+            "烏克蘭總統澤倫斯基與多國盟友在柏林會晤，討論未來援助、和平外交與歐洲安全。美國特使亦赴柏林參與相關會議。",
+            "德國總理梅爾茨在會後表明，盟國計畫於2027年維持對烏克蘭的支持。此項表態反映歐洲希望在談判期間持續協助烏克蘭，並確保歐洲參與外交協調。",
+            "這場會議與深圳美中俄峰會同日舉行。梅爾茨認為，應優先解決烏克蘭戰爭，再處理更廣泛的安全安排；各方尚未公布最終和平協議。"
+          ],
+          "keyPoints": [
+            "德國、法國及英國共同召集柏林會議。",
+            "美國特使出席相關會議。",
+            "梅爾茨表示2027年將繼續支持烏克蘭。",
+            "和平談判及安全安排尚待協商。"
+          ],
+          "impact": "會議凸顯歐洲持續參與和平斡旋以及維持對烏克蘭支持的意願。",
+          "watch": "關注2027年各國具體承諾、外交談判與烏克蘭方面回應。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/china/ukraines-european-allies-meet-berlin-show-support-2026-11-19/"
+            },
+            {
+              "source": "德國聯邦政府",
+              "url": "https://www.bundesregierung.de/breg-de/aktuelles/koalition-der-willigen-in-berlin-2461162"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Friedrich_Merz_June_2025.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Friedrich_Merz_June_2025.jpg",
+            "caption": "德國總理梅爾茨（2025年6月5日資料照片，非柏林峰會現場）",
+            "credit": "The White House",
+            "license": "公眾領域（美國聯邦政府作品）",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        }
+      ]
     }
   }
 }
