@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 11:48",
+      "updated": "2026-11-20 12:49",
       "stories": [
         {
           "category": "財經",
@@ -2905,6 +2905,48 @@
             "credit": "Suicasmo",
             "license": "CC0 1.0",
             "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "普發現金2萬元案出現變數，民眾黨團表態不支持",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611200066.aspx",
+          "published": "2026-11-20 11:12",
+          "summary": "國民黨團原擬20日推動普發2萬元特別條例三讀，民眾黨團表示應先完備法制化，對草案持反對立場。",
+          "background": "行政院已提出2027年普發1萬元的預算規劃；國民黨團另提出2萬元特別條例草案。",
+          "detail": [
+            "中央社指出，民眾黨團總召陳清龍表達反對立場，強調應兼顧財政負擔與法制規範。",
+            "聯合新聞網報導朝野協商未達共識。民眾黨團尚未公布具體投票方式，草案仍未完成三讀。"
+          ],
+          "article": [
+            "立法院20日預定處理國民黨團提出的普發現金2萬元相關草案。民眾黨團在院會前表態不支持現行方案，使立法進度出現變數。",
+            "民眾黨團主張應先完善制度，並考量財政負擔。朝野對發放金額、財源及法律程序仍有不同意見。",
+            "行政院另有每人1萬元的預算規劃，目前同樣涉及預算審議程序。兩項方案的最終結果及實際入帳時間仍待確認。"
+          ],
+          "keyPoints": [
+            "國民黨團提案普發2萬元。",
+            "民眾黨團20日表示反對現行方案。",
+            "朝野協商未達共識。",
+            "尚未確認三讀通過。"
+          ],
+          "impact": "可能影響普發現金相關立法進度及政府財政規劃。",
+          "watch": "關注立法院會表決結果及後續正式公告。",
+          "relatedSources": [
+            {
+              "source": "聯合新聞網",
+              "url": "https://udn.com/news/story/6656/9890725"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Legislative_Yuan_Building_and_cityscape.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Legislative_Yuan_Building_and_cityscape.jpg",
+            "caption": "立法院建築與周遭景觀（2024年6月26日資料照）",
+            "credit": "Yu tptw",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
             "kind": "related"
           }
         },
@@ -2951,6 +2993,53 @@
             "credit": "The White House／Shealah Craighead",
             "license": "公眾領域",
             "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "環境",
+          "title": "COP31氣候談判進入最後階段，化石燃料措辭成爭議焦點",
+          "original": "UN climate talks enter crunch time with no deal in sight",
+          "source": "AFP／Yahoo News",
+          "lang": "EN",
+          "url": "https://malaysia.news.yahoo.com/un-climate-talks-enter-crunch-020142914.html",
+          "published": "2026-11-20 10:01",
+          "summary": "COP31氣候會議20日進入預定最後一天，修訂草案刪除限制化石燃料使用的相關措辭，各國對減碳及氣候資金仍有分歧，可能延長談判。",
+          "background": "COP31於土耳其安塔利亞舉行，各國討論減排、氣候調適及財務支援等議題。",
+          "detail": [
+            "法新社20日報導，最後階段談判仍未取得共識，化石燃料相關文字引發爭議。",
+            "路透社指出，修訂版草案亦未保留部分氣候調適資金目標；目前文字並非最終協議。"
+          ],
+          "article": [
+            "聯合國COP31氣候會議在土耳其安塔利亞進入預定最後一天。法新社報導，各國仍就氣候政策主要議題存在分歧。",
+            "路透社指出，修訂草案刪除化石燃料相關措辭，部分氣候調適資金安排亦有變動，令部分與會者擔憂減排及資金承諾不足。",
+            "這些協議內容尚未定案，後續仍可能修改。談判結果將影響各國未來氣候政策協調與對脆弱國家的支持。"
+          ],
+          "keyPoints": [
+            "COP31進入預定最後一天。",
+            "修訂草案移除部分化石燃料措辭。",
+            "氣候資金仍有爭議。",
+            "最終協議尚未達成。"
+          ],
+          "impact": "可能影響全球減碳方向及開發中國家的調適資金。",
+          "watch": "關注最終協議文字及會議是否延長。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/sustainability/cop/cop31-negotiators-publish-revised-deal-text-with-no-mention-fossil-fuels-2026-11-19/"
+            },
+            {
+              "source": "UNFCCC",
+              "url": "https://unfccc.int/sites/default/files/resource/Thursday%20Update%20from%20the%20COP31%20Presidency%20and%20Presidency%20of%20Negotiations%20on%20Organization%20of%20Work_REV.pdf"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Antalya%2C_Turkey_skyline_19_February_2022.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Antalya,_Turkey_skyline_19_February_2022.jpg",
+            "caption": "土耳其安塔利亞市景（2022年2月19日資料照，非COP31會場）",
+            "credit": "Sharon Hahn Darlin",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
             "kind": "related"
           }
         },
