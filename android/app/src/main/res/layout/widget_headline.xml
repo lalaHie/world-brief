@@ -11,11 +11,11 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="4dp"
-            android:layout_height="20dp"
-            android:background="@drawable/widget_accent_bar"
-            android:importantForAccessibility="no" />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/brand_logo"
+            android:contentDescription="世界晨報" />
         <TextView
             android:id="@+id/widget_brand"
             android:layout_width="0dp"
