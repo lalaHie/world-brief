@@ -40,6 +40,7 @@
   <div class="overlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-label="晨報設定"><section class="sheet"><div class="sheet-handle"></div><div class="sheet-head"><h2>晨報設定</h2><button class="close-btn" data-close="settingsOverlay" aria-label="關閉">×</button></div><div class="eyebrow">每日為你整理世界大事</div><div class="settings-group"><div class="setting-row"><div class="setting-copy"><strong>每日晨報推播</strong><small>尚待接上背景推播服務</small></div><input class="toggle" id="notifyToggle" type="checkbox" disabled /></div><div class="setting-row"><div class="setting-copy"><strong>提醒時間</strong><small>預設為台灣時間早上 5:00</small></div><input type="time" id="reminderTime" value="05:00" /></div><div class="setting-row"><div class="setting-copy"><strong>新聞語言</strong><small>繁體中文（台灣）</small></div><span class="tag">繁中　⌄</span></div><div class="setting-row"><div class="setting-copy"><strong>自動載入圖片</strong><small>使用 Wi-Fi 或行動網路</small></div><input class="toggle" type="checkbox" checked /></div></div><div class="note">新聞內容每小時從世界日報載入。每日定時推播尚未接上服務；提醒時間先作為偏好設定保存。</div></section></div>
   <script>
     const FEED_URL='https://lalahie.github.io/world-brief/news.json';
+    const nativeMode=new URLSearchParams(location.search).has('native');
     const categoryOrder=['全部','國際','台灣','政治','財經','科技','軍事','社會','環境','自然災害','科學','健康','文化','體育','其他'];
     const app=document.getElementById('app'), list=document.getElementById('storyList'), chips=document.getElementById('categories'), categoryGrid=document.getElementById('categoryGrid');
     let stories=[],activeCategory='全部',tab='home',ascending=false,searchTerm='',feedUpdated='',feedSignature='',lastFeedCheck=0;
@@ -109,7 +110,7 @@
       }catch(error){return false}
     }
     async function loadBundledSeed(){
-      if(location.hostname!=='appassets.androidplatform.net'||stories.length)return false;
+      if(!nativeMode||stories.length)return false;
       try{
         const response=await fetch('./news.json',{cache:'force-cache'});
         if(!response.ok)throw new Error('Bundled news unavailable');
@@ -163,7 +164,7 @@
     bootNews();
     setInterval(()=>{if(document.visibilityState==='visible')loadNews({silent:true})},60*60*1000);
     document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')loadNews({silent:true})});
-    if('serviceWorker'in navigator&&location.protocol.startsWith('http')&&location.hostname!=='appassets.androidplatform.net')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+    if('serviceWorker'in navigator&&location.protocol.startsWith('http')&&!nativeMode)navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
   </script>
 </body>
 </html>

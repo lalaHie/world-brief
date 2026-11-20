@@ -20,7 +20,8 @@ import java.io.InputStream;
 import java.util.Locale;
 
 public final class MainActivity extends Activity {
-    private static final String APP_URL = "https://appassets.androidplatform.net/assets/app/index.html";
+    private static final String APP_URL = "https://lalahie.github.io/world-brief/app/";
+    private static final String APP_PATH = "/world-brief/app/";
     public static final String EXTRA_STORY_URL = "tw.worldbrief.app.STORY_URL";
     private WebView webView;
 
@@ -55,14 +56,16 @@ public final class MainActivity extends Activity {
             @Override
             public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if (!"appassets.androidplatform.net".equals(uri.getHost())) return super.shouldInterceptRequest(view, request);
+                if (!"lalahie.github.io".equals(uri.getHost())) return super.shouldInterceptRequest(view, request);
                 String path = uri.getPath();
-                if (path == null || !path.startsWith("/assets/") || path.contains("..")) return super.shouldInterceptRequest(view, request);
-                String assetPath = path.substring("/assets/".length());
+                if (path == null || !path.startsWith(APP_PATH) || path.contains("..")) return super.shouldInterceptRequest(view, request);
+                String relative = path.substring(APP_PATH.length());
+                String assetPath = "app/" + (relative.isEmpty() ? "index.html" : relative);
                 try {
                     InputStream stream = getAssets().open(assetPath);
                     String extension = MimeTypeMap.getFileExtensionFromUrl(assetPath).toLowerCase(Locale.ROOT);
                     String mime = "svg".equals(extension) ? "image/svg+xml" : MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                    if ("webmanifest".equals(extension)) mime = "application/manifest+json";
                     if (mime == null) mime = "application/octet-stream";
                     return new WebResourceResponse(mime, "UTF-8", stream);
                 } catch (IOException error) {
@@ -83,9 +86,9 @@ public final class MainActivity extends Activity {
     }
 
     private void loadApp(String storyUrl) {
-        String url = APP_URL;
+        String url = APP_URL + "?native=1";
         if (storyUrl != null && !storyUrl.isEmpty()) {
-            url += "?story=" + Uri.encode(storyUrl);
+            url += "&story=" + Uri.encode(storyUrl);
         }
         webView.loadUrl(url);
     }
