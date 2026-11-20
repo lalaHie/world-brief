@@ -2864,8 +2864,49 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 14:50",
+      "updated": "2026-11-20 15:53",
       "stories": [
+        {
+          "category": "台灣",
+          "title": "賴清德接見法國國會訪團，盼深化海纜安全與科技合作",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611200097.aspx",
+          "published": "2026-11-20 12:26",
+          "summary": "總統賴清德20日接見法國國民議會與電信監管機關聯合訪團，表示期盼台法加強海底電纜安全、風險管理及科技合作。",
+          "background": "海底電纜承載跨國通訊，基礎設施韌性與國際合作近年受到各國關注。",
+          "detail": [
+            "總統府表示，訪團由法國國民議會副議長蒲韻珼率領，成員包括議員和電信監管機關代表。",
+            "賴總統提出深化台法基礎設施保護及研發、投資合作意願。會談並未宣布具體新協定。"
+          ],
+          "article": [
+            "賴清德20日上午接見法國國民議會與電信監管機關代表聯合訪團，就台法交流及科技相關合作交換意見。",
+            "根據總統府說明，賴清德盼兩國加強海底電纜防護與風險管理，提升跨國通訊基礎設施的韌性。",
+            "雙方也關注投資、研究開發及供應鏈合作。後續是否形成具體合作安排，仍待相關機關進一步說明。"
+          ],
+          "keyPoints": [
+            "賴清德20日接見法國跨領域訪團。",
+            "海纜安全與科技合作為交流重點。",
+            "盼深化風險管理及投資研發合作。"
+          ],
+          "impact": "有助促進台法通訊及科技領域交流。",
+          "watch": "關注雙方後續官方合作公告。",
+          "relatedSources": [
+            {
+              "source": "總統府",
+              "url": "https://www.president.gov.tw/News/40493"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/President_Lai_Ching-te_2024-10-01.jpg/960px-President_Lai_Ching-te_2024-10-01.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:President_Lai_Ching-te_2024-10-01.jpg",
+            "caption": "總統賴清德（2024年10月1日資料照片，非本次訪團會面）",
+            "credit": "總統府",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "科技",
           "title": "美國晶片出口新規生效，台積電回應將遵循適用法規",
@@ -2990,6 +3031,52 @@
             "source": "https://commons.wikimedia.org/wiki/File:Legislative_Yuan_Building_and_cityscape.jpg",
             "caption": "立法院建築與周遭景觀（2024年6月26日資料照）",
             "credit": "Yu tptw",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "體育",
+          "title": "射箭亞洲盃台灣反曲弓女團擊敗韓國，晉級金牌戰",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aspt/202611200064.aspx",
+          "published": "2026-11-20 11:09",
+          "summary": "杭州射箭亞洲盃台灣女子反曲弓團體由郭紫穎、李采璇與王芯柔出賽，20日準決賽以5比3擊敗韓國，將與中國隊爭金。",
+          "background": "2026年杭州射箭亞洲盃於11月15日開賽，台灣隊參與多項團體及個人競賽。",
+          "detail": [
+            "中央社報導，台灣女子隊在準決賽擊敗韓國取得金牌戰資格。",
+            "東森新聞報導，金牌戰預定於21日下午2時25分（台灣時間）舉行。台灣男子反曲弓團體則獲得第4名。"
+          ],
+          "article": [
+            "台灣女子反曲弓射箭隊在杭州舉行的亞洲盃取得重要進展。郭紫穎、李采璇與王芯柔20日在團體準決賽以5比3擊敗韓國隊。",
+            "台灣隊因此晉級金牌戰，將迎戰地主中國。根據媒體公布的賽程，決賽預定21日下午2時25分進行。",
+            "同一賽事中，台灣男子反曲弓團體在銅牌戰後獲第4名。女子隊的最終名次仍待決賽結果確認。"
+          ],
+          "keyPoints": [
+            "女子反曲弓團體以5比3擊敗韓國。",
+            "台灣女團晉級金牌戰。",
+            "預定21日與中國隊爭金。",
+            "男子團體獲第4名。"
+          ],
+          "impact": "台灣隊確定取得女子團體決賽資格，展現國際競賽實力。",
+          "watch": "關注21日金牌戰及官方賽果。",
+          "relatedSources": [
+            {
+              "source": "東森新聞",
+              "url": "https://news.ebc.net.tw/news/sport/581632"
+            },
+            {
+              "source": "聯合新聞網",
+              "url": "https://udn.com/news/story/7005/9890846"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/20260424_West_Lake_and_Hangzhou_Skyline.jpg/960px-20260424_West_Lake_and_Hangzhou_Skyline.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:20260424_West_Lake_and_Hangzhou_Skyline.jpg",
+            "caption": "賽事主辦城市杭州西湖市景（2026年4月24日資料照片，非賽事現場）",
+            "credit": "Windmemories",
             "license": "CC BY-SA 4.0",
             "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
             "kind": "related"
