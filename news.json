@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 09:48",
+      "updated": "2026-11-20 10:54",
       "stories": [
         {
           "category": "財經",
@@ -2877,18 +2877,21 @@
           "background": "前一交易日台股收38,426.89點、下跌1,768.02點；美股隔夜全面走低，市場持續關注AI相關股票及全球利率前景。",
           "detail": [
             "聯合新聞網及其他台灣媒體報導，加權指數20日開低，早盤一度跌破37,000點。",
-            "金管會新增限制部分股票平盤下放空的措施自20日起實施，市場仍出現波動。早盤點位並非當日收盤結果。"
+            "金管會新增限制部分股票平盤下放空的措施自20日起實施，市場仍出現波動。早盤點位並非當日收盤結果。",
+            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。"
           ],
           "article": [
             "台北股市20日延續前一交易日的跌勢，開盤下跌780.76點，早盤賣壓進一步加重，一度跌至36,988.35點。",
             "聯合新聞網報導，隔夜美國主要股價指數全面下挫，科技及AI相關股票的市場情緒持續受到考驗，台股亦受影響。",
-            "由於當日交易尚未結束，早盤點位可能繼續變動。投資人關注權值股表現以及金融主管機關相關措施的後續影響。"
+            "由於當日交易尚未結束，早盤點位可能繼續變動。投資人關注權值股表現以及金融主管機關相關措施的後續影響。",
+            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。"
           ],
           "keyPoints": [
             "開盤下跌780.76點。",
             "早盤低點一度為36,988.35點。",
             "前一交易日收盤下跌1,768.02點。",
-            "目前為早盤行情，非收盤結果。"
+            "目前為早盤行情，非收盤結果。",
+            "中央社後續報導早盤跌幅逾1,600點。"
           ],
           "impact": "股市持續波動可能影響投資信心及亞洲科技產業估值。",
           "watch": "關注當日收盤、成交量及金管會相關市場措施。",
@@ -2900,6 +2903,11 @@
             {
               "source": "NOWnews／Yahoo",
               "url": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E8%B7%8C%E7%A0%B438k-%E9%96%8B%E7%9B%A4%E9%87%8D%E6%8C%AB780%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C60%E5%85%83-010956782.html"
+            },
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/afe/202611200034.aspx",
+              "published": "2026-11-20 09:15"
             }
           ],
           "image": {
@@ -2907,6 +2915,142 @@
             "source": "https://commons.wikimedia.org/wiki/File:Taiwan_Stock_Exchange_Press_Conference_Room_in_1st_Floor,_Taipei_101_20160422.jpg",
             "caption": "台灣證券交易所簡報室（2016年4月22日資料照片，非本日行情畫面）",
             "credit": "玄史生",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "財經",
+          "title": "中國11月貸款市場報價利率連續18個月維持不變",
+          "original": "Confirmed: PBOC leaves Loan Prime Rates unchanged in November",
+          "source": "FXStreet",
+          "lang": "EN",
+          "url": "https://www.fxstreet.com/news/confirmed-pboc-leaves-loan-prime-rates-unchanged-in-november-202611200103",
+          "published": "2026-11-20 09:03",
+          "summary": "中國11月貸款市場報價利率維持1年期3.0%、5年期以上3.5%。",
+          "background": "LPR是中國銀行貸款定價參考指標，關係企業及家庭融資成本。",
+          "detail": [
+            "中國人民銀行授權公布11月LPR，兩項利率均未調整。",
+            "路透社先前調查多數市場人士預期維持不變。"
+          ],
+          "article": [
+            "中國20日公布11月貸款市場報價利率，1年期3.0%，5年期以上3.5%，均維持不變。",
+            "這次決定與多數市場人士預期一致，是連續第18個月維持現行水準。",
+            "經濟成長及消費情況仍受關注，未來政策將取決於經濟及金融數據。"
+          ],
+          "keyPoints": [
+            "1年期LPR為3.0%。",
+            "5年期以上LPR為3.5%。",
+            "連續18個月未調整。"
+          ],
+          "impact": "影響市場對中國融資成本及貨幣政策預期。",
+          "watch": "關注經濟數據與人行後續政策。",
+          "relatedSources": [
+            {
+              "source": "中國青年網",
+              "url": "https://news.youth.cn/jsxw/202611/t20261120_16975768.htm"
+            },
+            {
+              "source": "InvestingLive",
+              "url": "https://investinglive.com/central-banks/china-holds-loan-prime-rates-for-an-18th-month-as-the-overnight-rate-takes-over/"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Beijing_PBC_NewHQ.jpg/960px-Beijing_PBC_NewHQ.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Beijing_PBC_NewHQ.jpg",
+            "caption": "中國人民銀行北京總部（2025年10月27日資料照片）",
+            "credit": "Boubloub",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "科技",
+          "title": "加州檢察長向輝達發調查傳票，釐清資訊與投資人揭露疑慮",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611200029.aspx",
+          "published": "2026-11-20 08:55",
+          "summary": "加州檢察長邦塔對輝達發出調查傳票，釐清前執行長相關事件是否涉及機密資訊外流及投資人資訊揭露問題。",
+          "background": "輝達前執行長黃仁勳近期離職，引發治理與合規疑慮。",
+          "detail": [
+            "加州司法部19日公布調查傳票，要求公司提供資料。",
+            "中央社及美聯社均報導此事，調查傳票並不等於已認定違法。"
+          ],
+          "article": [
+            "美國加州檢察長邦塔19日證實，已向輝達發出調查傳票。",
+            "根據加州司法部聲明，調查將聚焦機密資訊保護及公司是否妥善向投資人揭露風險。",
+            "調查仍在進行，相關指控尚非司法認定。市場也關注輝達管理階層變動與後續治理措施。"
+          ],
+          "keyPoints": [
+            "加州已發出調查傳票。",
+            "調查涉及資訊保護及風險揭露。",
+            "尚未認定違法。"
+          ],
+          "impact": "可能影響公司治理及投資人信心。",
+          "watch": "關注官方調查結果及輝達正式說明。",
+          "relatedSources": [
+            {
+              "source": "加州司法部",
+              "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-serves-investigative-subpoena-nvidia"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/94c179f5aed88c49b7f77670eae40013"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nvidia_HQ.jpg/960px-Nvidia_HQ.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Nvidia_HQ.jpg",
+            "caption": "輝達當時總部（2005年5月26日資料照片）",
+            "credit": "Kevin McCarthy",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "科技",
+          "title": "摩根大通、Visa與Mastercard確認第三方資安事件",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aopl/202611200028.aspx",
+          "published": "2026-11-20 08:43",
+          "summary": "三家金融機構確認涉及第三方服務商的資安事件，部分客戶聯絡資訊可能受影響，實際範圍仍待調查。",
+          "background": "金融服務機構使用外部供應商處理部分業務，第三方事件可能影響客戶資料保護。",
+          "detail": [
+            "路透社引述摩根大通表示，部分行銷資料可能受到影響。",
+            "美聯社指出Visa及Mastercard確認事件，支付功能未受影響。"
+          ],
+          "article": [
+            "中央社20日報導摩根大通、Visa與Mastercard涉及第三方資安事件。",
+            "摩根大通表示將通知受影響客戶，部分聯絡資料可能外洩。美聯社報導支付功能未受到影響。",
+            "影響範圍仍待確認。客戶宜透過金融機構官方管道查詢通知，留意可疑訊息。"
+          ],
+          "keyPoints": [
+            "事件涉及第三方供應商。",
+            "部分聯絡資料可能受影響。",
+            "支付功能未受影響。"
+          ],
+          "impact": "凸顯金融業供應鏈資安及客戶資料保護的重要性。",
+          "watch": "關注正式通知與調查結果。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/legal/government/jpmorgan-says-third-party-vendors-targeted-cyberattack-2026-11-19/"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/8470d475450721b66858bdace47091c0"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/JPMorgan_Chase_Headquarters_New_York_City.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:JPMorgan_Chase_Headquarters_New_York_City.jpg",
+            "caption": "摩根大通紐約總部（2025年7月12日資料照片）",
+            "credit": "Wobbanight",
             "license": "CC0 1.0",
             "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
             "kind": "related"
