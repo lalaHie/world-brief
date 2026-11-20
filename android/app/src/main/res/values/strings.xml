@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">世界晨報</string>
-    <string name="widget_description">在主畫面查看世界晨報最新頭條</string>
+    <string name="widget_description">世界晨報：可調整大小，顯示今日、台灣或國際新聞</string>
 </resources>
