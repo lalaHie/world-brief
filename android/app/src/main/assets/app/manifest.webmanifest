@@ -1,0 +1,12 @@
+{
+  "name": "世界晨報",
+  "short_name": "世界晨報",
+  "description": "用繁體中文掌握世界晨間大事",
+  "lang": "zh-Hant-TW",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e7",
+  "theme_color": "#176b68",
+  "icons": [{ "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

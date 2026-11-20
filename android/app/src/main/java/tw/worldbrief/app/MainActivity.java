@@ -6,14 +6,21 @@ import android.net.Uri;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.MimeTypeMap;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.WindowInsets;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Locale;
+
 public final class MainActivity extends Activity {
-    private static final String APP_URL = "https://lalahie.github.io/world-brief/app/";
+    private static final String APP_URL = "https://appassets.androidplatform.net/assets/app/index.html";
     public static final String EXTRA_STORY_URL = "tw.worldbrief.app.STORY_URL";
     private WebView webView;
 
@@ -44,7 +51,25 @@ public final class MainActivity extends Activity {
         });
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                Uri uri = request.getUrl();
+                if (!"appassets.androidplatform.net".equals(uri.getHost())) return super.shouldInterceptRequest(view, request);
+                String path = uri.getPath();
+                if (path == null || !path.startsWith("/assets/") || path.contains("..")) return super.shouldInterceptRequest(view, request);
+                String assetPath = path.substring("/assets/".length());
+                try {
+                    InputStream stream = getAssets().open(assetPath);
+                    String extension = MimeTypeMap.getFileExtensionFromUrl(assetPath).toLowerCase(Locale.ROOT);
+                    String mime = "svg".equals(extension) ? "image/svg+xml" : MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                    if (mime == null) mime = "application/octet-stream";
+                    return new WebResourceResponse(mime, "UTF-8", stream);
+                } catch (IOException error) {
+                    return new WebResourceResponse("text/plain", "UTF-8", 404, "Not Found", null, null);
+                }
+            }
+        });
         webView.setWebChromeClient(new WebChromeClient());
         setContentView(root);
         loadApp(getIntent() == null ? null : getIntent().getStringExtra(EXTRA_STORY_URL));
