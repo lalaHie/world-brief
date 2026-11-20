@@ -3996,10 +3996,10 @@
         {
           "category": "國際",
           "title": "俄軍大規模空襲烏克蘭至少8死，基輔及交通能源設施受損",
-          "source": "中央社；Reuters",
+          "source": "Reuters；中央社（基輔後續）",
           "lang": "EN",
-          "url": "https://www.cna.com.tw/news/aopl/202611200009.aspx",
-          "published": "2026-11-20 04:07",
+          "url": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/",
+          "published": "2026-11-20 08:41",
           "summary": "俄羅斯20日對烏克蘭發動大規模飛彈與無人機攻擊，Reuters報導至少8人死亡，基輔與利維夫均有傷亡及設施受損；另有飛行物進入波蘭領空，波蘭當局正調查。各地傷亡數字仍可能更新。",
           "background": "俄方總統普丁此前表示將回應克里米亞大橋遇襲。這波攻擊波及烏克蘭多地，並引發波蘭境內墜落物及領空安全事件。",
           "detail": [
@@ -4022,6 +4022,10 @@
           "impact": "攻擊加重烏克蘭民眾與能源交通設施的安全風險，波蘭境內墜落物也提高戰事外溢及北約東翼警戒壓力。",
           "watch": "關注各地傷亡更新、能源供應與交通修復、波蘭調查結論及北約後續回應。",
           "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611200009.aspx"
+            },
             {
               "source": "Reuters",
               "url": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/"
