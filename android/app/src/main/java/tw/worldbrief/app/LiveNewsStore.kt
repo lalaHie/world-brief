@@ -123,15 +123,19 @@ object LiveNewsStore {
         if (enabled.isEmpty()) return@coroutineScope LiveEdition(emptyList(), taipei("yyyy-MM-dd HH:mm").format(Date()))
         val batches = enabled.map { feed -> async(Dispatchers.IO) { runCatching { readFeed(feed, international) } } }.awaitAll()
         require(batches.any { it.isSuccess }) { "所有即時來源暫時無法連線" }
-        val seen = mutableSetOf<String>()
         val news = batches.flatMap { it.getOrDefault(emptyList()) }.sortedByDescending { it.date + it.time }
             .distinctBy { it.url.substringBefore('?') }
-            .filter { seen.add(it.title.replace(Regex("[\\p{P}\\s]"), "")) }.take(100)
+            .groupBy { it.title.replace(Regex("[\\p{P}\\s]"), "").lowercase() }
+            .values.map { group ->
+                val first = group.first()
+                first.copy(relatedSources = group.drop(1).map { SourceLink(it.source, it.url) }.distinctBy { it.url })
+            }.take(100)
         val result = LiveEdition(news, taipei("yyyy-MM-dd HH:mm").format(Date()), batches.count { it.isFailure })
         val array = JSONArray()
         news.forEach { n -> array.put(JSONObject().put("id", n.id).put("date", n.date).put("time", n.time)
             .put("category", n.category).put("title", n.title).put("summary", n.summary).put("source", n.source)
-            .put("url", n.url).put("image", n.image).put("caption", n.caption).put("language", n.language)) }
+            .put("url", n.url).put("image", n.image).put("caption", n.caption).put("language", n.language)
+            .put("relatedSources", JSONArray().apply { n.relatedSources.forEach { link -> put(JSONObject().put("source", link.source).put("url", link.url)) } })) }
         context.getSharedPreferences(if (international) "live-world" else "live-news", Context.MODE_PRIVATE).edit()
             .putString("items", array.toString()).putString("updated", result.updated).apply()
         result
@@ -142,9 +146,13 @@ object LiveNewsStore {
             val a = JSONArray(prefs.getString("items", "[]"))
             val news = (0 until a.length()).map { i ->
                 val n = a.getJSONObject(i)
+                val links = n.optJSONArray("relatedSources")
+                val related = (0 until (links?.length() ?: 0)).mapNotNull { index ->
+                    links?.optJSONObject(index)?.let { SourceLink(it.optString("source"), it.optString("url")) }
+                }
                 News(n.getString("id"), n.getString("date"), n.getString("time"), n.getString("category"),
                     n.getString("title"), n.optString("summary"), n.getString("source"), n.getString("url"),
-                    n.optString("image"), n.optString("caption"), body = listOf(n.optString("summary")), language = n.optString("language", "zh"), isLive = true)
+                    n.optString("image"), n.optString("caption"), body = listOf(n.optString("summary")), language = n.optString("language", "zh"), isLive = true, relatedSources = related)
             }
             LiveEdition(news, prefs.getString("updated", "").orEmpty())
         }.getOrDefault(LiveEdition(emptyList(), ""))
