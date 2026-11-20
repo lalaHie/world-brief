@@ -2864,8 +2864,58 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 20:54",
+      "updated": "2026-11-20 21:48",
       "stories": [
+        {
+          "category": "軍事",
+          "title": "俄軍攻烏期間多枚飛彈與無人機落入波蘭，華沙啟動調查",
+          "original": "Warsaw says a Russian missile crash in Poland is a provocation as Ukraine allies hold drills",
+          "source": "美聯社；原始資料：波蘭國防部、盧布林地區檢察官辦公室",
+          "lang": "EN",
+          "url": "https://apnews.com/article/433e18f00cbd37a2a9da94e60fce0e07",
+          "published": "2026-11-20 16:31",
+          "summary": "波蘭國防部表示，俄羅斯大規模空襲烏克蘭期間有三個飛行物進入波蘭領空，疑為兩枚飛彈及一架噴射式無人機，無人受傷。檢方已對墜落物展開調查，來源與完整經過仍待鑑定。",
+          "background": "俄軍20日對烏克蘭發動大規模飛彈與無人機攻擊，波蘭及北約部隊同步提高警戒。跨境飛行物事件使戰事外溢風險與北約東翼防空再受關注。",
+          "detail": [
+            "波蘭副總理兼國防部長表示，空襲期間有三個物體進入波蘭領空並在境內三處落下；其中一枚被初步辨識為俄製Kh-101巡弋飛彈，另兩件物體的鑑定仍在進行。",
+            "波蘭國防部稱，戰機與防空系統曾啟動應對，事件沒有造成人員傷亡或關鍵基礎設施損害。總理圖斯克稱事件可能是蓄意挑釁，但這是政治判斷，尚非調查結論。",
+            "盧布林地區檢察官辦公室證實，Nowy Lipowiec有不明飛行物墜落，現場正在採證；當局也在核實其他地點的通報。"
+          ],
+          "article": [
+            "俄羅斯20日對烏克蘭發動大規模空襲之際，波蘭通報多個飛行物進入其領空並在境內墜落。事件發生在烏克蘭邊境附近，波蘭軍方與安全部門隨即展開處置。",
+            "波蘭國防部長表示，三個物體分別落在境內三處，其中一枚初步辨識為俄製Kh-101巡弋飛彈；政府稱沒有波蘭民眾受傷，也沒有關鍵基礎設施受損。軍方曾出動戰機並啟動相關防空系統。",
+            "檢察機關已在Nowy Lipowiec展開調查，並表示物體的確切性質與來源仍需透過現場檢驗確認。因此，官方目前的初步辨識和最後調查結論仍須區分。",
+            "總理圖斯克認為事件可能是蓄意挑釁，並指出當時波蘭正舉行多國軍事演訓；這項說法尚待證據支持。事件凸顯俄烏戰事可能造成跨境安全風險，也使北約東翼的警戒與防空協調受到關注。"
+          ],
+          "keyPoints": [
+            "波蘭國防部稱三個飛行物進入領空並在境內三處落下。",
+            "官方初步辨識其中一件為俄製Kh-101飛彈，其他物體仍待調查。",
+            "波蘭當局表示無人受傷，關鍵基礎設施未受損。",
+            "檢方已採證；墜落物確切來源及事件意圖尚未有最終結論。"
+          ],
+          "impact": "若調查確認飛彈或無人機由俄軍空襲越境，將加深北約東翼安全疑慮並推升俄波及俄北約緊張。",
+          "watch": "關注波蘭檢方鑑定結果、政府是否正式認定來源，以及北約是否採取進一步防空或外交措施。",
+          "verification": "初步消息",
+          "verificationEvidence": "波蘭國防部20日表示有三個物體進入領空、其中一件初步辨識為Kh-101，並稱無人傷亡；盧布林地區檢察官證實一處有不明飛行物墜落且正在鑑定。AP與Reuters報導了官員說法，但主要依據同一波蘭官方資訊，不能視為獨立鑑定。事件意圖及完整物體來源仍未確認。",
+          "relatedSources": [
+            {
+              "source": "波蘭國防部",
+              "url": "https://www.gov.pl/web/obrona-narodowa/wicepremier-w-kosiniak-kamysz-o-naruszeniu-polskiej-przestrzeni-powietrznej"
+            },
+            {
+              "source": "盧布林地區檢察官辦公室",
+              "url": "https://www.gov.pl/web/po-lublin/komunikat-o-wszczeciu-sledztwa-po-upadku-niezidentyfikowanego-obiektu-w-powiecie-bilgorajskim"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/433e18f00cbd37a2a9da94e60fce0e07"
+            }
+          ]
+        },
         {
           "category": "政治",
           "title": "卓榮泰決定不副署老農津貼加碼修法，行政立法權限爭議升高",
