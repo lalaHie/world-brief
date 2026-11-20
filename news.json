@@ -2864,8 +2864,96 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 10:54",
+      "updated": "2026-11-20 11:48",
       "stories": [
+        {
+          "category": "財經",
+          "title": "亞洲股市全面承壓，日韓股市早盤跌逾4%",
+          "original": "Asia shares drop on AI worries, echoing Wall Street's decline despite the strong Anthropic debut",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/c4c3f4878b12989347f8a930ed813dad",
+          "published": "2026-11-20 11:17",
+          "summary": "亞洲股市20日早盤跟隨美股跌勢，日經225與韓國KOSPI盤中均一度下跌逾4%，市場對AI類股估值及投資前景仍有疑慮。",
+          "background": "美股19日全面走低，儘管Anthropic上市首日上漲，仍未扭轉整體市場情緒。",
+          "detail": [
+            "美聯社報導，日經225與KOSPI於早盤均一度下跌約4.5%。",
+            "路透社指出，亞太股市指標本週跌幅可能創2020年以來最差週表現；當日交易尚未結束。"
+          ],
+          "article": [
+            "亞洲主要股市20日早盤普遍下跌，科技與半導體相關股票面臨賣壓。美聯社報導，日本與韓國主要指數一度下跌約4.5%。",
+            "路透社指出，市場仍在評估AI企業投資成本與未來獲利，區域股市本週面臨明顯跌勢。",
+            "各市場仍在交易，盤中數據可能變動。投資者亦關注匯率、利率政策與企業財務表現。"
+          ],
+          "keyPoints": [
+            "日經225盤中一度跌約4.5%。",
+            "韓國KOSPI盤中一度跌約4.5%。",
+            "亞洲股市承受科技股賣壓。"
+          ],
+          "impact": "區域股市波動可能影響股票及匯率市場風險情緒。",
+          "watch": "關注各市場收盤及金融政策動向。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-20/"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg/960px-The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:The_Entrance_of_Tokyo_Stock_Exchange_Main_Building_20240329.jpg",
+            "caption": "東京證券交易所入口（2024年3月29日資料照片）",
+            "credit": "Suicasmo",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "陸委會駁斥新華社川習會台灣議題報導，籲美方說明",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/acn/202611200050.aspx",
+          "published": "2026-11-20 10:13",
+          "summary": "陸委會主委邱垂正表示，經初步查證，新華社引述川普在川習會上的台灣議題發言並非事實，相關立場應由美方說明。",
+          "background": "美中領袖19日在深圳APEC場邊會晤，中國官媒會後發布相關談話內容。",
+          "detail": [
+            "中央社與聯合報均報導，邱垂正表示政府透過外交管道進行初步查證，與中方報導有出入。",
+            "另據路透社，川普接受媒體訪問時稱美中雙方希望就AI安全規範合作，具體安排尚未公布。"
+          ],
+          "article": [
+            "陸委會20日回應中國官媒有關深圳川習會的報導。主委邱垂正表示，經政府初步查證，相關報導並非事實，應由美方親自說明。",
+            "由於會談內容的不同說法涉及台灣議題，政府表示持續與美方溝通。現階段應區分各方發布的說法與獨立確認的會談結果。",
+            "在其他議題上，川普接受訪問時表示，雙方希望就人工智慧安全監管進行合作。相關細節尚待後續公開。"
+          ],
+          "keyPoints": [
+            "陸委會20日回應新華社報導。",
+            "陸委會稱初步查證後與中方說法不符。",
+            "政府與美方保持溝通。",
+            "川普另稱雙方對AI安全規範有合作意願。"
+          ],
+          "impact": "各方對會談內容的說明可能影響台美及美中外交關係。",
+          "watch": "關注美方正式說明及後續外交溝通。",
+          "relatedSources": [
+            {
+              "source": "聯合報",
+              "url": "https://udn.com/news/story/7331/9890601"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/technology/trump-says-he-chinas-xi-want-moderate-ai-rules-2026-11-19/"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/President_Trump_at_the_G20_%2848162296741%29.jpg/960px-President_Trump_at_the_G20_%2848162296741%29.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:President_Trump_at_the_G20_(48162296741).jpg",
+            "caption": "川普與習近平於大阪G20會晤（2019年6月29日資料照片，非深圳會談現場）",
+            "credit": "The White House／Shealah Craighead",
+            "license": "公眾領域",
+            "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "財經",
           "title": "台股早盤再跌逾1,400點，一度失守3萬7千點",
@@ -2878,20 +2966,22 @@
           "detail": [
             "聯合新聞網及其他台灣媒體報導，加權指數20日開低，早盤一度跌破37,000點。",
             "金管會新增限制部分股票平盤下放空的措施自20日起實施，市場仍出現波動。早盤點位並非當日收盤結果。",
-            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。"
+            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。",
+            "10:45經濟日報報導，盤中跌幅進一步擴大至逾2,200點，為歷史第5大盤中跌點。此仍非收盤數據。"
           ],
           "article": [
             "台北股市20日延續前一交易日的跌勢，開盤下跌780.76點，早盤賣壓進一步加重，一度跌至36,988.35點。",
             "聯合新聞網報導，隔夜美國主要股價指數全面下挫，科技及AI相關股票的市場情緒持續受到考驗，台股亦受影響。",
             "由於當日交易尚未結束，早盤點位可能繼續變動。投資人關注權值股表現以及金融主管機關相關措施的後續影響。",
-            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。"
+            "中央社09:15報導，台股早盤跌幅一度擴大至逾1,600點。",
+            "10:45經濟日報報導，盤中跌幅進一步擴大至逾2,200點，為歷史第5大盤中跌點。此仍非收盤數據。"
           ],
           "keyPoints": [
             "開盤下跌780.76點。",
             "早盤低點一度為36,988.35點。",
             "前一交易日收盤下跌1,768.02點。",
             "目前為早盤行情，非收盤結果。",
-            "中央社後續報導早盤跌幅逾1,600點。"
+            "10:45經濟日報報導盤中跌幅擴至逾2,200點。"
           ],
           "impact": "股市持續波動可能影響投資信心及亞洲科技產業估值。",
           "watch": "關注當日收盤、成交量及金管會相關市場措施。",
@@ -2908,6 +2998,11 @@
               "source": "中央社",
               "url": "https://www.cna.com.tw/news/afe/202611200034.aspx",
               "published": "2026-11-20 09:15"
+            },
+            {
+              "source": "經濟日報",
+              "url": "https://money.udn.com/money/story/5612/9890741?from=edn_newestlist_rank",
+              "published": "2026-11-20 10:45"
             }
           ],
           "image": {
