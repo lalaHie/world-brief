@@ -2864,8 +2864,55 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 07:55",
+      "updated": "2026-11-20 08:49",
       "stories": [
+        {
+          "category": "財經",
+          "title": "日本10月核心通膨升至2.2%，連續兩個月高於央行目標",
+          "original": "Japan's core inflation accelerates in October, cementing rate hike expectations",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/business/japans-core-inflation-accelerates-october-cementing-rate-hike-expectations-2026-11-19/",
+          "published": "2026-11-20 07:43",
+          "summary": "日本公布10月核心消費者物價指數年增2.2%，高於9月的2.1%，連續兩個月超過日本銀行2%通膨目標。",
+          "background": "日本銀行正評估物價、匯率與經濟成長，現行政策利率為1.25%。",
+          "detail": [
+            "路透社報導，10月不含生鮮食品的核心CPI年增2.2%，略低於市場預估的2.3%。",
+            "另項排除生鮮食品及能源的指數年增2.2%，低於9月的2.4%，顯示價格壓力並非所有指標同步升高。"
+          ],
+          "article": [
+            "日本20日發布10月物價數據，核心消費者物價指數較去年同月上漲2.2%，較9月略為加快。這也是該指標連續第二個月高於日本銀行設定的2%目標。",
+            "路透社指出，若進一步排除能源價格，10月通膨年增率為2.2%，低於前一個月。不同指標的變化將影響央行評估物價走勢的判斷。",
+            "隨著能源成本與日圓匯率等因素持續受到關注，市場預期日本銀行可能在12月政策會議討論再次調升利率，但實際決定仍須等待央行公告。"
+          ],
+          "keyPoints": [
+            "10月核心CPI年增2.2%。",
+            "9月核心CPI年增2.1%。",
+            "核心CPI連兩個月高於2%目標。",
+            "日本銀行12月將召開政策會議。"
+          ],
+          "impact": "日本貨幣政策預期可能影響日圓匯率、債券與亞洲金融市場。",
+          "watch": "關注日本銀行12月政策會議、薪資、匯率及後續物價數據。",
+          "relatedSources": [
+            {
+              "source": "Investing.com",
+              "url": "https://ng.investing.com/news/economic-indicators/japan-cpi-inflation-rises-in-oct-core-print-slightly-misses-estimates-2819786"
+            },
+            {
+              "source": "WSJ",
+              "url": "https://www.wsj.com/economy/japan-consumer-inflation-accelerates-amid-rate-hike-views-15cf7577"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Bank_of_Japan_Head_Office%2CChuo-city%2CTokyo%2CJapan.jpg/960px-Bank_of_Japan_Head_Office%2CChuo-city%2CTokyo%2CJapan.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Bank_of_Japan_Head_Office,Chuo-city,Tokyo,Japan.jpg",
+            "caption": "日本銀行東京總部（2010年6月5日資料照片）",
+            "credit": "katorisi",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "財經",
           "title": "美股全面重挫，道瓊下跌逾1,100點、那斯達克跌逾2%",
