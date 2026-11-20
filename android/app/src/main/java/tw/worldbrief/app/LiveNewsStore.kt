@@ -29,7 +29,9 @@ object LiveNewsStore {
         listOf("政治" to "politics", "財經" to "business", "生活" to "life", "社會" to "society",
             "地方" to "local", "軍事" to "def", "文化" to "art", "體育" to "sports")
             .map { Feed("自由時報", it.first, "https://news.ltn.com.tw/rss/" + it.second + ".xml") } +
-        listOf(Feed("民報", "台灣", "https://www.peoplemedia.tw/rss/%E5%8D%B3%E6%99%82"))
+        listOf(Feed("民報", "台灣", "https://www.peoplemedia.tw/rss/%E5%8D%B3%E6%99%82"),
+            Feed("公視新聞", "台灣", "https://news.pts.org.tw/xml/newsfeed.xml"),
+            Feed("報導者", "台灣", "https://www.twreporter.org/a/rss2.xml"))
     private val worldFeeds = listOf(
         Feed("BBC", "國際", "https://feeds.bbci.co.uk/news/world/rss.xml", "en"),
         Feed("BBC", "財經", "https://feeds.bbci.co.uk/news/business/rss.xml", "en"),

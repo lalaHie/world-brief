@@ -202,6 +202,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     var category by remember { mutableStateOf("全部") }
     var query by remember { mutableStateOf("") }
     var search by remember { mutableStateOf(false) }
+    var verifiedOnly by remember { mutableStateOf(false) }
     var ascending by remember { mutableStateOf(false) }
     var images by remember { mutableStateOf(prefs?.getBoolean("images", true) ?: true) }
     var selected by remember { mutableStateOf<News?>(null) }
@@ -277,7 +278,14 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     }
     val displayed = (if (tab == "即時") live.news else edition.news).distinctBy { it.id }
     val categories = listOf("全部") + displayed.map { it.category }.distinct()
-    val filtered = displayed.filter { (category == "全部" || it.category == category) && (it.title + it.summary + it.source).contains(query, ignoreCase = true) }
+    val filtered = displayed.filter {
+        (category == "全部" || it.category == category) &&
+        (!verifiedOnly || (it.verification == "已核對" && it.verificationEvidence.isNotBlank())) &&
+        (it.title + it.summary + it.source).contains(query, ignoreCase = true)
+    }.let { list ->
+        if (tab == "今日" && !verifiedOnly && category == "全部" && query.isBlank()) list.filter { it.id != edition.news.firstOrNull()?.id }
+        else list
+    }
     val activeRefreshing = if (tab == "即時") liveRefreshing else refreshing
     Scaffold(containerColor = background, topBar = {
         TopAppBar(title = { Row(verticalAlignment = Alignment.CenterVertically) { Image(painterResource(R.drawable.brand_logo), "晨", Modifier.size(48.dp)); Spacer(Modifier.width(10.dp)); Text("世界晨報", fontFamily = FontFamily.Serif, fontWeight = FontWeight.Bold, color = primary) } },
@@ -286,7 +294,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     }, bottomBar = {
         NavigationBar(containerColor = surface) {
             listOf("今日" to "⌂", "即時" to "ϟ", "設定" to "⚙").forEach { (name, icon) ->
-                NavigationBarItem(selected = tab == name, onClick = { tab = name; category = "全部"; query = ""; search = false; ascending = false }, icon = { Text(icon, fontSize = 24.sp) }, label = { Text(name) })
+                NavigationBarItem(selected = tab == name, onClick = { tab = name; category = "全部"; query = ""; search = false; ascending = false; verifiedOnly = false }, icon = { Text(icon, fontSize = 24.sp) }, label = { Text(name) })
             }
         }
     }) { padding ->
@@ -355,7 +363,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                 LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     if (tab == "今日") {
                         item { Text("WORLD BRIEF · 每小時更新", color = primary, fontWeight = FontWeight.Bold, fontSize = 12.sp); Text(edition.updated.ifBlank { "讀取本機新聞" } + " · " + status, fontSize = 12.sp) }
-                        edition.news.firstOrNull()?.let { lead -> item {
+                        edition.news.firstOrNull()?.takeUnless { verifiedOnly }?.let { lead -> item {
                             Card(colors = CardDefaults.cardColors(containerColor = surface), shape = RoundedCornerShape(12.dp), modifier = Modifier.fillMaxWidth().clickable { selected = lead }) {
                                 if (images && lead.image.isNotBlank()) NewsPhoto(lead, 220)
                                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -366,7 +374,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                                 }
                             }
                         } }
-                        item {
+                        if (!verifiedOnly) item {
                             OutlinedButton(onClick = { dailyDigest = !dailyDigest }, modifier = Modifier.fillMaxWidth()) { Text(if (dailyDigest) "收起今日五分鐘" else "今日五分鐘 · 五則重點") }
                             if (dailyDigest) {
                                 val latestDay = edition.news.firstOrNull()?.date
@@ -388,17 +396,22 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                                     else OutlinedButton(onClick = { international = value; category = "全部"; live = LiveEdition(emptyList(), ""); liveStatus = "正在更新" }, modifier = Modifier.weight(1f)) { Text(label) }
                                 }
                             }
-                            Text(if (international) "BBC · The Guardian · 中央社 · 自由時報｜每 5 分鐘檢查" else "中央社 · 自由時報 · 民報｜每 5 分鐘檢查", color = primary, fontSize = 12.sp)
+                            Text(if (international) "BBC · The Guardian · 中央社 · 自由時報｜每 5 分鐘檢查" else "中央社 · 自由時報 · 公視 · 報導者 · 民報｜每 5 分鐘檢查", color = primary, fontSize = 12.sp)
                             Text(live.updated.ifBlank { "等待首次更新" } + " · " + liveStatus, fontSize = 12.sp)
                             Text(if (international) "英文標題自動機器翻譯，首次需透過 Wi-Fi 下載模型；內文可按需翻譯。" else "依公共利益與台灣關聯篩選，提供媒體標題、前言及原文連結。", color = Color.Gray, fontSize = 12.sp)
                         }
                     }
-                    item { LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) { items(categories) { c -> FilterChip(selected = c == category, onClick = { category = c }, label = { Text(c) }) } } }
+                    item {
+                        LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            item { FilterChip(selected = verifiedOnly, onClick = { verifiedOnly = !verifiedOnly }, label = { Text("僅已核對") }) }
+                            items(categories) { c -> FilterChip(selected = c == category, onClick = { category = c }, label = { Text(c) }) }
+                        }
+                    }
                     item { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) { Text(if (category == "全部") "全部新聞" else category + "新聞", fontWeight = FontWeight.Bold, fontSize = 20.sp); TextButton(onClick = { ascending = !ascending }) { Text(if (ascending) "舊 → 新" else "新 → 舊") } } }
                     items(if (ascending) filtered.reversed() else filtered, key = { it.id }) { n ->
                         EditorialRow(n, images, compact || tab == "即時", onClick = { selected = n })
                     }
-                    if (filtered.isEmpty()) item { Text(if (activeRefreshing) "正在讀取新聞…" else "目前沒有符合條件的新聞，請下拉更新。", modifier = Modifier.padding(16.dp)) }
+                    if (filtered.isEmpty()) item { Text(if (activeRefreshing) "正在讀取新聞…" else if (verifiedOnly) "目前沒有附獨立查證依據的新聞。可取消篩選查看初步消息。" else "目前沒有符合條件的新聞，請下拉更新。", modifier = Modifier.padding(16.dp)) }
                 }
                 }
             }
