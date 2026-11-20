@@ -1,0 +1,36 @@
+name: World Brief news push
+on:
+  push:
+    branches: [main]
+    paths: [news.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: world-brief-news-push
+  cancel-in-progress: false
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    env:
+      FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+        if: env.FCM_SERVICE_ACCOUNT != ''
+      - name: Install sender dependency
+        if: env.FCM_SERVICE_ACCOUNT != ''
+        run: python -m pip install firebase-admin==6.8.0
+      - name: Send one new headline or manual test
+        if: env.FCM_SERVICE_ACCOUNT != ''
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: python scripts/send_news_push.py
+      - name: Await Firebase configuration
+        if: env.FCM_SERVICE_ACCOUNT == ''
+        run: echo "Firebase credentials not configured; no notifications sent."
