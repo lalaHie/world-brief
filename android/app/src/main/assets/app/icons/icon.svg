@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="34" fill="#176b68"/><circle cx="89" cy="39" r="20" fill="#edbd71"/><path d="M18 91c13-20 27-30 43-30s30 10 49 30v18H18z" fill="#f5f0e7"/><path d="M21 92c14-13 28-19 42-19s28 6 44 19" fill="none" stroke="#df9b4d" stroke-width="6" stroke-linecap="round"/><text x="64" y="85" text-anchor="middle" font-size="35" font-family="sans-serif" font-weight="800" fill="#164e53">晨</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="晨字日出枝葉標誌">
+  <rect width="128" height="128" rx="34" fill="#176b68"/>
+  <g fill="none" stroke="#e5ad59" stroke-width="4" stroke-linecap="round">
+    <path d="M64 9v8M42 17l4 7M86 17l-4 7M29 35l8 2M99 35l-8 2"/>
+  </g>
+  <path d="M64 18c12 0 22 10 22 22H42c0-12 10-22 22-22Z" fill="#e5ad59"/>
+  <text x="64" y="105" text-anchor="middle" font-family="Noto Sans CJK TC, sans-serif" font-size="76" font-weight="800" fill="#f5f0e7">晨</text>
+  <g fill="none" stroke="#91c7a5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 76v30M64 88 48 78M64 94l17-12M64 100l-13 7"/>
+  </g>
+  <g fill="#91c7a5">
+    <path d="M48 78c-7-5-13-4-16 1 6 5 11 5 16-1Zm33 4c6-6 12-7 16-2-5 6-11 7-16 2Zm-30 25c-6-2-11 0-13 5 6 2 10 0 13-5Z"/>
+  </g>
+</svg>
