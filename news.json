@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 16:53",
+      "updated": "2026-11-20 17:46",
       "stories": [
         {
           "category": "國際",
@@ -2910,6 +2910,94 @@
             "credit": "Steven Lek",
             "license": "CC BY-SA 4.0",
             "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "財經",
+          "title": "台灣10月外銷訂單達1238.2億美元創新高，年增78.3%",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/afe/202611200201.aspx",
+          "published": "2026-11-20 16:20",
+          "summary": "經濟部公布10月外銷訂單再創單月紀錄，連續21個月年增，資訊通信與電子需求持續強勁。",
+          "background": "AI伺服器及高效能運算投資近年帶動台灣科技產業接單成長。",
+          "detail": [
+            "10月接單金額1238.2億美元，較去年同月增加78.3%，超出經濟部此前預估。",
+            "今年前10月累計9430.2億美元，較去年同期增加58.6%。資訊通信與電子產品為主要成長動力。"
+          ],
+          "article": [
+            "台灣10月外銷訂單再度刷新紀錄。經濟部20日公布統計，單月金額達1238.2億美元，年增78.3%。",
+            "資訊通信類訂單較去年同月增加107.2%，電子類則增加89.8%。AI運算設備及相關零組件需求支撐接單表現。",
+            "今年前10月接單總量超過9400億美元。值得注意的是，面板等部分產業仍面對需求壓力，產業成長幅度並不一致。"
+          ],
+          "keyPoints": [
+            "10月外銷訂單1238.2億美元。",
+            "年增78.3%，連續21個月正成長。",
+            "前10月累計9430.2億美元。",
+            "資訊通信產品訂單年增107.2%。"
+          ],
+          "impact": "反映台灣出口導向產業與全球AI投資需求，亦影響經濟成長展望。",
+          "watch": "關注後續接單、實際出口及不同產業的景氣差異。",
+          "relatedSources": [
+            {
+              "source": "鉅亨網",
+              "url": "https://news.cnyes.com/news/id/6663480"
+            },
+            {
+              "source": "太報",
+              "url": "https://www.taisounds.com/news/content/80/310930"
+            }
+          ],
+          "image": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Kaohsiung_international_container_terminal.jpg/500px-Kaohsiung_international_container_terminal.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaohsiung_international_container_terminal.jpg",
+            "caption": "高雄國際貨櫃碼頭（2018年2月9日資料照）",
+            "credit": "Eric Deng",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "APEC台灣代表團揭17次對中交涉，爭取平等參與及安全保障",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611200196.aspx",
+          "published": "2026-11-20 16:08",
+          "summary": "台灣代表團20日說明深圳APEC會議成果，指出自2024年底以來對中進行17次交涉，以維護會員權益及人員安全。",
+          "background": "2026年APEC經濟領袖會議18至19日在深圳舉行，台灣由施振榮率團參加。",
+          "detail": [
+            "代表團表示，籌備期間主要關切會員平等地位以及人員入出境與安全保障。",
+            "對於邀請函的相關安排，台灣代表團認為屬特殊情況，不應成為未來慣例。"
+          ],
+          "article": [
+            "台灣APEC代表團19日晚間返抵台灣，20日說明參會成果及籌備期間與主辦方協商的情況。",
+            "據代表團說明，自2024年底起與中國方面進行17次正式及非正式諮商，重點為確保參與權益與人員安全。",
+            "施振榮在會議期間傳達台灣對全球供應鏈、區域和平與經濟合作的立場。代表團也強調，本屆邀請函安排不應被視為日後參與APEC的先例。"
+          ],
+          "keyPoints": [
+            "今年APEC領袖會議在深圳舉行。",
+            "台灣代表團由施振榮率領。",
+            "籌備期間與中方交涉17次。",
+            "代表團主張特殊邀請安排不應成為先例。"
+          ],
+          "impact": "涉及台灣參與區域多邊經濟機制的權益，以及兩岸與國際經貿互動。",
+          "watch": "關注未來APEC主辦安排與台灣對外經貿合作後續。",
+          "relatedSources": [
+            {
+              "source": "經濟日報",
+              "url": "https://money.udn.com/money/story/7307/9891499"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/%E6%96%BD%E6%8C%AF%E6%A6%AE%E4%BB%A3%E8%A1%A8.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:施振榮代表.jpg",
+            "caption": "APEC台灣領袖代表施振榮（2026年11月12日資料照）",
+            "credit": "總統府",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
             "kind": "related"
           }
         },
@@ -3267,6 +3355,49 @@
             "credit": "The White House／Shealah Craighead",
             "license": "公眾領域",
             "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "環境",
+          "title": "美國參院通過能源審查改革，要求資料中心負擔電網升級費用",
+          "original": "Senate approves bill to speed up permitting reviews, force data centers to pay for energy costs",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/b41c2017e4a9fe2e6de92ec77a4cdd0a",
+          "published": "2026-11-20 10:04",
+          "summary": "美國參議院以62票對33票通過跨黨派能源改革案，擬加快能源基礎建設審查並要求資料中心承擔相關用電成本。法案仍須眾議院審議。",
+          "background": "AI算力擴張推升資料中心用電需求，引發電網投資與電費分攤問題。",
+          "detail": [
+            "法案涵蓋發電與輸電設施等能源建設的許可程序，旨在縮短審查時間。",
+            "環境團體對部分環境法規調整及司法審查限制表達疑慮。"
+          ],
+          "article": [
+            "美國參議院19日通過能源基礎建設許可改革法案，希望增加能源供給，因應快速成長的電力需求。",
+            "法案要求資料中心承擔相關電網升級費用，涉及AI產業與一般家庭之間能源成本如何分配的政策辯論。",
+            "支持者認為加速建設有助於改善供電能力，批評者則擔心環境保護程序遭削弱。法案目前仍需眾議院處理。"
+          ],
+          "keyPoints": [
+            "參議院表決62票贊成、33票反對。",
+            "擬加快能源建設審查。",
+            "資料中心須承擔相關電網升級成本。",
+            "尚未完成國會立法程序。"
+          ],
+          "impact": "可能影響美國資料中心投資、能源建設及電費分攤制度。",
+          "watch": "關注眾議院審議、最終法案內容及環境審查規範。",
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611200140.aspx"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Capitol_washington_dc.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Capitol_washington_dc.jpg",
+            "caption": "美國華盛頓國會大廈（2018年7月18日資料照）",
+            "credit": "Mathieu Landretti",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
             "kind": "related"
           }
         },
