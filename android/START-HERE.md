@@ -1,4 +1,4 @@
-# 世界晨報 — 原生 Android 版 1.1
+# 世界晨報 — 原生 Android 版 1.2
 
 ## 用 Android Studio 開啟
 1. 解壓縮 ZIP。
@@ -10,6 +10,7 @@
 預覽使用示範資料；實際執行會先讀取內建或已下載的新聞，再從 GitHub Pages 同步。背景更新由 Android WorkManager 排程，系統可能依省電設定延後執行。
 
 ## 架構
+- V1.2 依報刊設計稿重做首頁：大型晨字標誌、報頭、單欄大圖與金色標題線、金色分類列、左圖右字新聞列，以及自訂金線導覽。頭條優先採用當日有合法來源圖片的新聞；沒有相關圖片時仍顯示文字，不使用無關配圖。
 - Kotlin / Jetpack Compose / Material 3
 - 新聞仍來自 https://lalahie.github.io/world-brief/news.json
 - 本機快取、搜尋、動態分類、頭條卡片及獨立閱讀頁面

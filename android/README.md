@@ -1,4 +1,4 @@
-# 世界晨報 Android 1.1
+# 世界晨報 Android 1.2
 
 原生 Kotlin / Jetpack Compose 新聞閱讀器。使用 Android Studio 開啟 `android/` 目錄，Gradle JDK 選擇 17 或 21，安裝 Android SDK 35，再選擇裝置及 `app` 執行配置。
 
