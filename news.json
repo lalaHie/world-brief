@@ -2864,8 +2864,140 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 15:53",
+      "updated": "2026-11-20 16:53",
       "stories": [
+        {
+          "category": "國際",
+          "title": "緬甸政府反對國際法院洛興雅種族滅絕裁決",
+          "original": "Myanmar calls ICJ ruling on genocide 'unfair'",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/asia-pacific/myanmar-calls-icj-ruling-genocide-unfair-2026-11-20/",
+          "published": "2026-11-20 16:45",
+          "summary": "緬甸政府20日否認國際法院認定其須對洛興雅人種族滅絕負責的裁決，批評結果不公平。",
+          "background": "甘比亞2019年就緬甸2017年軍事行動向國際法院提起訴訟。",
+          "detail": [
+            "國際法院19日認定緬甸違反種族滅絕公約，這是該法院首次認定國家須為種族滅絕負責。",
+            "裁判具法律拘束力，但後續履行與賠償安排仍待確認。"
+          ],
+          "article": [
+            "緬甸政府發言人20日公開反對前一天海牙國際法院的判決，認為該國遭到不公正指控。",
+            "甘比亞七年前提出訴訟，指控緬甸對洛興雅少數族群的迫害違反國際公約。法院認定緬甸須負國家責任。",
+            "人權組織呼籲緬甸遵守裁決，並保障受害者與難民權益；國際社會將面對如何促使判決落實的問題。"
+          ],
+          "keyPoints": [
+            "國際法院19日公布裁決。",
+            "緬甸政府20日反對裁決。",
+            "甘比亞於2019年提起訴訟。",
+            "賠償與履行安排仍需追蹤。"
+          ],
+          "impact": "具國際法先例意義，涉及難民與人權保障。",
+          "watch": "關注緬甸履行裁決及後續賠償程序。",
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611190371.aspx"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/30df77b12bf3f911f1100e77ebe3973a"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Peace_Palace_The_Hague_1.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Peace_Palace_The_Hague_1.jpg",
+            "caption": "荷蘭海牙和平宮、國際法院所在地（2018年6月26日資料照）",
+            "credit": "Steven Lek",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "政治",
+          "title": "立法院通過6076億元追加預算，油電凍漲決議至2028年1月底",
+          "source": "中央社",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611200186.aspx",
+          "published": "2026-11-20 15:53",
+          "summary": "立法院20日三讀今年中央政府追加預算，保留全部歲出，並通過要求油電價格維持不變至2028年1月底的主決議。",
+          "background": "行政院9月提出追加預算，涵蓋民生、福利、待遇、重建與國防等項目。",
+          "detail": [
+            "本次追加歲出約6076億元、歲入828億元，另有約2086億元債務舉借增額。",
+            "中油及台電撥補合計約1725億元，中油增資約2338億元；軍公教加給也獲通過。"
+          ],
+          "article": [
+            "立法院完成2026年度中央政府追加預算審議，確認追加支出約6076億元。原列支出項目均獲保留。",
+            "能源事業取得合計逾4000億元的撥補與增資預算，院會並通過油電價格凍漲的主決議。",
+            "其他經費涉及國防、社福與公務人員待遇，其中部分津貼及加給將自今年7月起回溯計算。"
+          ],
+          "keyPoints": [
+            "追加歲出6076億元。",
+            "追加歲入828億元。",
+            "中油增資及油電撥補經費獲通過。",
+            "院會要求2028年1月底前油電價格不調漲。"
+          ],
+          "impact": "涉及全民能源支出、政府財政與社會福利。",
+          "watch": "觀察預算執行、能源事業財務與主決議落實情況。",
+          "relatedSources": [
+            {
+              "source": "聯合報",
+              "url": "https://udn.com/news/story/6656/9891451?from=udn_mobile_indexrecommend"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Legislative_Yuan_Building_and_cityscape.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Legislative_Yuan_Building_and_cityscape.jpg",
+            "caption": "立法院建築與周遭景觀（2024年6月26日資料照）",
+            "credit": "Yu tptw",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
+        {
+          "category": "台灣",
+          "title": "九合一選舉前夕，台灣通報Meta近2700個疑似介選帳號",
+          "original": "Taiwan tells Meta thousands of China-linked accounts seek to influence elections",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/china/taiwan-tells-meta-thousands-china-linked-accounts-seek-influence-elections-2026-11-20/",
+          "published": "2026-11-20 13:30",
+          "summary": "路透社援引官員與政府報告，指出台灣已向Meta通報近2700個疑似涉外國選舉影響行動的社群帳號。",
+          "background": "台灣11月28日將舉行地方選舉，選舉資訊環境受到關注。",
+          "detail": [
+            "報導指出，台灣官員在社群平台Threads發現疑似協同行動帳號，並向Meta提出通報。",
+            "目前相關判斷來自官員與政府報告，並非所有帳號均已經獨立證實其操作者或意圖。"
+          ],
+          "article": [
+            "地方選舉進入最後階段，路透社20日報導台灣當局已通知Meta，要求關注近2700個可疑帳號。",
+            "報導引述政府評估，認為這些帳號可能與中國方面的資訊影響行動有關。官員擔心此類活動可能干擾選舉討論與民眾對民主程序的信任。",
+            "有關帳號的實際歸屬仍應依後續調查與平台公告判斷。選民宜透過可信的多方來源核對選舉消息。"
+          ],
+          "keyPoints": [
+            "台灣11月28日舉行地方選舉。",
+            "官員向Meta通報近2700個可疑帳號。",
+            "情報評估涉及疑似中國相關影響行動。",
+            "帳號歸屬仍待後續確認。"
+          ],
+          "impact": "涉及選舉公正、社群平台治理與資訊可信度。",
+          "watch": "關注平台處理結果、官方調查及選舉資訊澄清。",
+          "relatedSources": [
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aipl/202611200154.aspx"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Meta_Headquarters_Sign.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Meta_Headquarters_Sign.jpg",
+            "caption": "Meta美國總部入口標誌（2022年5月12日資料照）",
+            "credit": "Nokia621",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "台灣",
           "title": "賴清德接見法國國會訪團，盼深化海纜安全與科技合作",
@@ -2996,34 +3128,44 @@
         },
         {
           "category": "台灣",
-          "title": "普發現金2萬元案出現變數，民眾黨團表態不支持",
+          "title": "立法院三讀普發現金2萬元條例，50票贊成、46票反對",
           "source": "中央社",
           "lang": "中文",
           "url": "https://www.cna.com.tw/news/aipl/202611200066.aspx",
           "published": "2026-11-20 11:12",
-          "summary": "國民黨團原擬20日推動普發2萬元特別條例三讀，民眾黨團表示應先完備法制化，對草案持反對立場。",
+          "summary": "立法院20日下午通過普發2萬元特別條例；民眾黨與民進黨反對。實際發放仍須完成特別預算程序。",
           "background": "行政院已提出2027年普發1萬元的預算規劃；國民黨團另提出2萬元特別條例草案。",
           "detail": [
             "中央社指出，民眾黨團總召陳清龍表達反對立場，強調應兼顧財政負擔與法制規範。",
-            "聯合新聞網報導朝野協商未達共識。民眾黨團尚未公布具體投票方式，草案仍未完成三讀。"
+            "上午朝野協商未達共識，民眾黨反對草案；下午院會以50票贊成、46票反對完成三讀。",
+            "條例生效後一個月內須送交特別預算，待特別預算生效後三個月內完成發放。"
           ],
           "article": [
             "立法院20日預定處理國民黨團提出的普發現金2萬元相關草案。民眾黨團在院會前表態不支持現行方案，使立法進度出現變數。",
             "民眾黨團主張應先完善制度，並考量財政負擔。朝野對發放金額、財源及法律程序仍有不同意見。",
-            "行政院另有每人1萬元的預算規劃，目前同樣涉及預算審議程序。兩項方案的最終結果及實際入帳時間仍待確認。"
+            "行政院另有每人1萬元的預算規劃。20日下午國民黨版2萬元條例以50票對46票通過，兩黨反對未能阻止三讀，實際入帳日期仍未確定。",
+            "依三讀條文，行政院須再編列特別預算交立法院審議。發放時程以該預算生效為起算點，民眾目前仍需等待正式公告。"
           ],
           "keyPoints": [
-            "國民黨團提案普發2萬元。",
-            "民眾黨團20日表示反對現行方案。",
-            "朝野協商未達共識。",
-            "尚未確認三讀通過。"
+            "立法院以50票贊成、46票反對完成三讀。",
+            "民眾黨8席與民進黨立委投下反對票。",
+            "每人發放金額為新台幣2萬元。",
+            "特別預算生效後三個月內發放完畢。"
           ],
           "impact": "可能影響普發現金相關立法進度及政府財政規劃。",
-          "watch": "關注立法院會表決結果及後續正式公告。",
+          "watch": "關注條例公布、行政院特別預算編列及實際發放公告。",
           "relatedSources": [
             {
               "source": "聯合新聞網",
               "url": "https://udn.com/news/story/6656/9890725"
+            },
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aipl/202611200188.aspx"
+            },
+            {
+              "source": "經濟日報",
+              "url": "https://money.udn.com/money/story/7307/9891537"
             }
           ],
           "image": {
