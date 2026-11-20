@@ -2864,7 +2864,7 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 21:48",
+      "updated": "2026-11-20 22:52",
       "stories": [
         {
           "category": "軍事",
@@ -3995,33 +3995,48 @@
         },
         {
           "category": "國際",
-          "title": "基輔遭攻擊傳民眾死亡，荷蘭與奧地利使館受損",
-          "source": "中央社",
-          "lang": "中文",
+          "title": "俄軍大規模空襲烏克蘭至少8死，基輔及交通能源設施受損",
+          "source": "中央社；Reuters",
+          "lang": "EN",
           "url": "https://www.cna.com.tw/news/aopl/202611200009.aspx",
           "published": "2026-11-20 04:07",
-          "summary": "烏克蘭基輔19日遭俄方攻擊，當地政府通報至少1人死亡，荷蘭及奧地利使館建物受損。荷蘭政府已召見俄羅斯大使。",
-          "background": "事件發生於國際領袖就俄烏和平談判展開外交磋商之際，凸顯當地平民及外交人員仍面臨安全風險。",
+          "summary": "俄羅斯20日對烏克蘭發動大規模飛彈與無人機攻擊，Reuters報導至少8人死亡，基輔與利維夫均有傷亡及設施受損；另有飛行物進入波蘭領空，波蘭當局正調查。各地傷亡數字仍可能更新。",
+          "background": "俄方總統普丁此前表示將回應克里米亞大橋遇襲。這波攻擊波及烏克蘭多地，並引發波蘭境內墜落物及領空安全事件。",
           "detail": [
-            "中央社引述法新社報導，基輔當地政府確認一人死亡；兩國使館及文化資產亦受到波及。",
-            "路透社證實，荷蘭政府因使館受損召見俄羅斯大使，荷蘭外交部表示其派駐人員無人受傷。"
+            "Reuters報導，俄軍以飛彈與無人機攻擊烏克蘭多地，當局通報至少8人死亡，能源設施受襲；基輔一處供水設施遇襲，造成3名員工死亡，部分地區水壓下降。",
+            "利維夫市長表示，Sknyliv鐵路站遭攻擊造成2人死亡、至少10人受傷。不同地區的傷亡數字由地方官員提供，仍可能隨救援及核實而更新。",
+            "波蘭國防部表示，攻擊期間有三個物體進入波蘭領空並落在境內；官方初步辨識其中包括Kh-101飛彈，檢方仍在調查物體來源與完整情況。"
           ],
           "article": [
-            "烏克蘭首都基輔19日發生攻擊事件。中央社引述當地政府指出，事件造成至少一人死亡。",
-            "荷蘭及奧地利使館亦確認建築受到波及。路透社報導，荷蘭政府已召見俄羅斯大使，表達對事件的關切。",
-            "在美中俄峰會與烏克蘭盟友柏林會議召開的背景下，這起事件引發對平民、外交人員及文化資產安全的關注。"
+            "俄羅斯20日對烏克蘭發動大規模飛彈與無人機攻擊。Reuters引述烏克蘭地方官員表示，至少8人死亡，攻擊波及能源與交通等設施。",
+            "基輔一處供水設施遭襲，地方官員通報3名員工死亡，部分地區水壓下降。利維夫市長則表示，Sknyliv鐵路站遇襲造成2人死亡、至少10人受傷。",
+            "同一波攻擊也帶來跨境安全事件。波蘭國防部稱有三個飛行物進入領空並落在境內；一件初步辨識為俄製Kh-101飛彈，但檢方表示仍須鑑定。波蘭方面稱無人受傷。",
+            "各地傷亡及損害資料仍依賴地方當局通報，可能持續修正。波蘭總理所稱蓄意挑釁是其判斷，尚非調查定論。"
           ],
           "keyPoints": [
-            "基輔當局通報至少1人死亡。",
-            "荷蘭及奧地利使館受損。",
-            "荷蘭政府召見俄羅斯大使。"
+            "Reuters報導烏克蘭全境至少8人死亡，傷亡數字仍可能更新。",
+            "基輔供水設施遇襲，地方官員通報3名員工死亡。",
+            "利維夫鐵路站遇襲，市長通報2死、至少10傷。",
+            "波蘭稱三個物體越境墜落，物體來源仍在調查。"
           ],
-          "impact": "事件可能加深外交緊張並凸顯戰事對民眾安全的持續影響。",
-          "watch": "關注民眾救援、外交回應與和平斡旋進展。",
+          "impact": "攻擊加重烏克蘭民眾與能源交通設施的安全風險，波蘭境內墜落物也提高戰事外溢及北約東翼警戒壓力。",
+          "watch": "關注各地傷亡更新、能源供應與交通修復、波蘭調查結論及北約後續回應。",
           "relatedSources": [
             {
               "source": "Reuters",
-              "url": "https://www.reuters.com/world/netherlands-summons-russian-ambassador-kyiv-embassy-hit-2026-11-19/"
+              "url": "https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/"
+            },
+            {
+              "source": "波蘭國防部",
+              "url": "https://www.gov.pl/web/obrona-narodowa/wicepremier-w-kosiniak-kamysz-o-naruszeniu-polskiej-przestrzeni-powietrznej"
+            },
+            {
+              "source": "盧布林地區檢察官辦公室",
+              "url": "https://www.gov.pl/web/po-lublin/komunikat-o-wszczeciu-sledztwa-po-upadku-niezidentyfikowanego-obiektu-w-powiecie-bilgorajskim"
+            },
+            {
+              "source": "AP",
+              "url": "https://apnews.com/article/433e18f00cbd37a2a9da94e60fce0e07"
             }
           ],
           "image": {
@@ -4032,7 +4047,10 @@
             "license": "CC0 1.0",
             "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
             "kind": "related"
-          }
+          },
+          "original": "Eight killed in Ukraine as Russia hits back after Crimea bridge attacks",
+          "verification": "初步消息",
+          "verificationEvidence": "Reuters於11月20日報導至少8人死亡，並分別引述基輔及利維夫地方官員說明設施受損與傷亡；波蘭國防部、檢方另公布領空與墜落物調查資訊。傷亡數字及墜落物來源仍可能更新，且官方通報尚非獨立現場核驗。"
         },
         {
           "category": "科技",
