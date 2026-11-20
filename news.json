@@ -2864,8 +2864,54 @@
     },
     "2026-11-20": {
       "date": "2026-11-20",
-      "updated": "2026-11-20 08:49",
+      "updated": "2026-11-20 09:48",
       "stories": [
+        {
+          "category": "財經",
+          "title": "台股早盤再跌逾1,400點，一度失守3萬7千點",
+          "source": "聯合新聞網",
+          "lang": "中文",
+          "url": "https://udn.com/news/story/7251/9890536",
+          "published": "2026-11-20 09:05",
+          "summary": "台股20日開盤跳空下跌780.76點，早盤一度下探36,988.35點，較前一交易日收盤下跌逾1,400點。",
+          "background": "前一交易日台股收38,426.89點、下跌1,768.02點；美股隔夜全面走低，市場持續關注AI相關股票及全球利率前景。",
+          "detail": [
+            "聯合新聞網及其他台灣媒體報導，加權指數20日開低，早盤一度跌破37,000點。",
+            "金管會新增限制部分股票平盤下放空的措施自20日起實施，市場仍出現波動。早盤點位並非當日收盤結果。"
+          ],
+          "article": [
+            "台北股市20日延續前一交易日的跌勢，開盤下跌780.76點，早盤賣壓進一步加重，一度跌至36,988.35點。",
+            "聯合新聞網報導，隔夜美國主要股價指數全面下挫，科技及AI相關股票的市場情緒持續受到考驗，台股亦受影響。",
+            "由於當日交易尚未結束，早盤點位可能繼續變動。投資人關注權值股表現以及金融主管機關相關措施的後續影響。"
+          ],
+          "keyPoints": [
+            "開盤下跌780.76點。",
+            "早盤低點一度為36,988.35點。",
+            "前一交易日收盤下跌1,768.02點。",
+            "目前為早盤行情，非收盤結果。"
+          ],
+          "impact": "股市持續波動可能影響投資信心及亞洲科技產業估值。",
+          "watch": "關注當日收盤、成交量及金管會相關市場措施。",
+          "relatedSources": [
+            {
+              "source": "壹蘋新聞網",
+              "url": "https://news.nextapple.com/finance/20261120/3B709B36E659F6006ABD4C9C2E9F69CA"
+            },
+            {
+              "source": "NOWnews／Yahoo",
+              "url": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E8%B7%8C%E7%A0%B438k-%E9%96%8B%E7%9B%A4%E9%87%8D%E6%8C%AB780%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C60%E5%85%83-010956782.html"
+            }
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Taiwan_Stock_Exchange_Press_Conference_Room_in_1st_Floor,_Taipei_101_20160422.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:Taiwan_Stock_Exchange_Press_Conference_Room_in_1st_Floor,_Taipei_101_20160422.jpg",
+            "caption": "台灣證券交易所簡報室（2016年4月22日資料照片，非本日行情畫面）",
+            "credit": "玄史生",
+            "license": "CC0 1.0",
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "kind": "related"
+          }
+        },
         {
           "category": "財經",
           "title": "日本10月核心通膨升至2.2%，連續兩個月高於央行目標",
