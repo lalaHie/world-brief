@@ -4305,7 +4305,7 @@
     },
     "2026-11-21": {
       "date": "2026-11-21",
-      "updated": "2026-11-22 07:42",
+      "updated": "2026-11-22 07:48",
       "stories": [
         {
           "category": "國際",
@@ -4391,6 +4391,129 @@
             {
               "source": "Reuters",
               "url": "https://www.reuters.com/markets/commodities/eu-indonesia-sign-trade-deal-after-10-years-negotiations-2026-11-21/"
+            }
+          ]
+        },
+        {
+          "category": "軍事",
+          "title": "俄羅斯貨船在芬蘭灣遭無人機擊中起火，船員撤離",
+          "original": "Russian cargo ship ablaze in Baltic Sea after drone strike, crew evacuates",
+          "source": "Reuters；原始資料：芬蘭海岸防衛隊",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/russia-says-cargo-vessel-struck-by-drones-finland-says-it-is-fire-its-waters-2026-11-21/",
+          "published": "2026-11-21 19:50",
+          "summary": "俄羅斯貨船 Sparta II 在芬蘭灣遭無人機擊中後起火，芬蘭方面表示船隻漂入其水域並由芬方主導救援，16名船員已撤離。芬蘭軍方人士稱烏克蘭可能涉入，但責任歸屬尚未獲獨立確認。",
+          "background": "芬蘭灣位於芬蘭、愛沙尼亞與俄羅斯之間，連接波羅的海與俄羅斯港口。俄烏戰事期間，無人機與海上攻擊事件增加，令北約周邊海空域安全受到關注。",
+          "detail": [
+            "Reuters報導，俄羅斯籍貨船Sparta II在國際水域遭無人機攻擊並起火，船隻其後漂入芬蘭水域。芬蘭海岸防衛隊表示，16名船員先乘救生艇撤離，之後轉移至附近俄羅斯船隻。",
+            "芬蘭官方新聞稿確認，芬蘭海岸防衛隊持續主導芬蘭灣救援。芬蘭軍方發言人評估烏克蘭可能是攻擊方，但尚未說明攻擊動機；烏克蘭方面未在所查資料中承認責任。",
+            "芬蘭為確保民用安全與救援，對芬蘭灣東部實施臨時海空交通限制。貨船起火及漂入芬蘭水域使事件牽涉海上救援、環境風險與北約周邊安全。"
+          ],
+          "article": [
+            "俄羅斯籍貨船Sparta II於11月21日在芬蘭灣遭無人機擊中後起火，隨後漂入芬蘭水域。芬蘭海岸防衛隊公布救援資訊，表示船員乘救生艇離船，再轉移至附近船隻。",
+            "芬蘭海岸防衛隊表示救援行動由芬方主導。Reuters報導，船上16名船員已撤離；芬蘭並採取臨時海空交通限制，以保護民眾並讓救援與安全行動進行。",
+            "芬蘭軍方發言人認為烏克蘭可能涉入，但目前責任歸屬尚未獲獨立確認。事故原因、船體損壞程度及是否造成海洋污染，仍需等調查與後續官方通報。",
+            "事件發生在俄烏戰事持續影響波羅的海安全的背景下。芬蘭灣鄰近俄羅斯與北約成員國，海上攻擊及無人機活動可能帶來更廣泛的航運與區域安全風險。"
+          ],
+          "keyPoints": [
+            "俄羅斯貨船Sparta II遭無人機擊中後起火，並漂入芬蘭水域。",
+            "芬蘭海岸防衛隊表示救援行動由芬方主導，16名船員已撤離。",
+            "芬蘭軍方稱烏克蘭可能涉入，但責任歸屬尚未獨立確認。",
+            "芬蘭對芬蘭灣東部實施臨時海空交通限制。"
+          ],
+          "impact": "事件可能加劇波羅的海航運及北約周邊安全疑慮，並帶來船舶污染與區域升級風險。",
+          "watch": "關注芬蘭調查結果、船體火勢與污染評估，以及烏克蘭或俄羅斯是否提供更多證據或正式回應。",
+          "verification": "已核對",
+          "verificationEvidence": "芬蘭海岸防衛隊官方新聞稿確認Sparta II救援行動及船員撤離；Reuters報導船舶遭無人機擊中起火。芬蘭方面對烏克蘭可能涉入的判斷仍是初步歸因，尚未獨立確認，本文未將其寫成確定責任。",
+          "relatedSources": [
+            {
+              "source": "原始資料：芬蘭海岸防衛隊",
+              "url": "https://www.epressi.com/tiedotteet/turvallisuus/the-finnish-border-guard-continues-to-lead-the-rescue-operations-in-the-gulf-of-finland..html"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/russia-says-cargo-vessel-struck-by-drones-finland-says-it-is-fire-its-waters-2026-11-21/"
+            }
+          ]
+        },
+        {
+          "category": "自然災害",
+          "title": "帝汶海發生規模6.8地震，USGS測得震源深度約143公里",
+          "original": "Magnitude 6.8 earthquake strikes Banda Sea near Timor-Leste, GFZ says",
+          "source": "Reuters；原始資料：USGS",
+          "lang": "EN",
+          "url": "https://www.reuters.com/business/environment/magnitude-68-earthquake-strikes-banda-sea-near-timor-leste-gfz-says-2026-11-21/",
+          "published": "2026-11-21 18:05",
+          "summary": "帝汶海附近發生規模6.8地震。USGS測得震央位於洛斯帕洛斯東北方約103公里、深度約143公里；德國地球科學研究中心也測得規模6.8，但震央位置與深度估值不同。所查來源未提供確定傷亡或災損資訊。",
+          "background": "帝汶海位於印尼、東帝汶與澳洲之間，屬地震活動頻繁區域。深源地震仍可能被周邊居民感受到，實際影響需以地方災情通報為準。",
+          "detail": [
+            "USGS記錄地震發生於11月21日09:42 UTC，規模6.8，震源深度143.4公里，位置在東帝汶洛斯帕洛斯東北方約103公里。",
+            "Reuters引述德國地球科學研究中心（GFZ）資料，同樣報告規模6.8地震，但其震央距帝力約226公里、深度估值約117公里；不同機構的定位及深度解算略有差異。",
+            "USGS頁面將事件列為已審核，並顯示PAGER警示為綠色。所查報導未確認傷亡或重大損害，後續仍應以東帝汶及周邊官方災情更新為準。"
+          ],
+          "article": [
+            "帝汶海附近11月21日發生規模6.8地震。美國地質調查所（USGS）記錄震央位於東帝汶洛斯帕洛斯東北方約103公里，震源深度約143公里。",
+            "德國地球科學研究中心也測得規模6.8，但公布的震央距離與震源深度略有不同。這類差異來自各機構採用的資料與定位模型不同，並不改變兩者都記錄到同一場強震的事實。",
+            "USGS將事件標為已審核，PAGER警示為綠色。現有資料尚未提供確認的傷亡或重大災損數字；周邊政府後續通報將決定實際影響評估。"
+          ],
+          "keyPoints": [
+            "USGS記錄規模6.8地震，發生於2026年11月21日09:42 UTC。",
+            "USGS估計震源深度約143.4公里，震央在洛斯帕洛斯東北方約103公里。",
+            "GFZ同樣測得規模6.8，但位置與深度估值略有差異。",
+            "目前所查資料未確認傷亡或重大災損。"
+          ],
+          "impact": "規模6.8地震可能影響東帝汶及周邊島嶼，實際災情與基礎設施影響仍待官方確認。",
+          "watch": "關注東帝汶及印尼官方災情、USGS後續修訂資料，以及是否出現餘震或海嘯相關公告。",
+          "verification": "已核對",
+          "verificationEvidence": "USGS事件頁記錄規模6.8、時間、震央及深度並標示已審核；Reuters另引述GFZ報告同為規模6.8。兩機構對位置和深度估值略有差異，現有來源未確認傷亡或災損。",
+          "relatedSources": [
+            {
+              "source": "原始資料：USGS",
+              "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij"
+            },
+            {
+              "source": "Reuters（引述GFZ）",
+              "url": "https://www.reuters.com/business/environment/magnitude-68-earthquake-strikes-banda-sea-near-timor-leste-gfz-says-2026-11-21/"
+            }
+          ]
+        },
+        {
+          "category": "財經",
+          "title": "台股重挫後行政院要求穩定市場，籲強化企業融資與國安基金力道",
+          "source": "中央社 CNA；原始資料：行政院",
+          "lang": "中文",
+          "url": "https://www.cna.com.tw/news/aipl/202611210106.aspx",
+          "published": "2026-11-21 16:36",
+          "summary": "台股加權指數20日重挫2,393.60點、跌幅6.23%，收在36,033.29點，創近7個月收盤新低。行政院長卓榮泰召集財經首長，要求強化企業融資及信用保證支持，並研議市場穩定措施。",
+          "background": "近期全球股市與AI相關產業評價波動，台灣股市也出現明顯回檔。政府已啟動國安基金並採取限空措施，行政院此次會議要求財金部會持續評估市場與產業資金狀況。",
+          "detail": [
+            "中央社報導，台股加權指數11月20日下跌2,393.60點，收36,033.29點，跌幅6.23%，為近7個月低點。",
+            "行政院長卓榮泰21日召集財經部會首長，要求財政部關注產業資金流動、加強企業融資與信用保證支持，並提升國安基金穩定市場的準備。",
+            "行政院發言人轉述部會評估，近期跌勢與國際政經因素及全球市場下跌有關，政府認為台灣經濟基本面仍穩健；這是行政部門的判斷，後續市場表現仍需觀察。"
+          ],
+          "article": [
+            "台灣股市在11月20日大幅下跌，加權指數收在36,033.29點，單日下跌2,393.60點、跌幅6.23%，創近7個月收盤新低。",
+            "面對市場波動，行政院長卓榮泰隔日上午召集財經相關首長開會，要求財政部關注企業資金流動並強化融資及信用保證支持，也要求金融監理機關研議穩定市場措施。",
+            "行政院轉述部會看法，認為近期震盪主要受國際市場與政經因素影響，台灣經濟基本面仍穩健。政府同時表示將關注匯率、產業資金與市場交易秩序；後續政策與股市反應仍待觀察。"
+          ],
+          "keyPoints": [
+            "台股11月20日下跌2,393.60點，跌幅6.23%。",
+            "加權指數收36,033.29點，創近7個月收盤新低。",
+            "行政院要求強化企業融資、信用保證及市場穩定措施。",
+            "政府將持續關注匯率、資金流動與交易秩序。"
+          ],
+          "impact": "若波動持續，可能影響投資人信心、企業融資及科技產業資金安排；政府介入措施的規模與效果將受市場關注。",
+          "watch": "留意國安基金及金管會後續措施、下個交易日台股走勢，以及企業融資與市場流動性變化。",
+          "verification": "初步消息",
+          "verificationEvidence": "中央社報導提供台股收盤指數及行政院會議內容，並說明資訊來自行政院提供的資料；另有中央社英文版報導相同會議，但兩者同屬同一通訊社及官方說法，未取得行政院原始公告直連，故標「初步消息」。",
+          "relatedSources": [
+            {
+              "source": "中央社 CNA",
+              "url": "https://www.cna.com.tw/news/aipl/202611210106.aspx"
+            },
+            {
+              "source": "CNA英文版 Focus Taiwan（同一通訊社）",
+              "url": "https://focustaiwan.tw/business/202611210010"
             }
           ]
         },
@@ -4613,7 +4736,7 @@
     },
     "2026-11-22": {
       "date": "2026-11-22",
-      "updated": "2026-11-22 07:42",
+      "updated": "2026-11-22 07:48",
       "stories": [
         {
           "category": "社會",
@@ -4650,6 +4773,52 @@
             {
               "source": "NAN（轉述NEMA聲明）",
               "url": "https://nannews.ng/nema-rescues-24-from-bayelsa-boat-mishap/"
+            }
+          ]
+        },
+        {
+          "category": "國際",
+          "title": "墨西哥逮捕FBI十大通緝毒梟，西納羅亞州行動後爆發暴力",
+          "original": "Mexican cartel boss 'El Chapo Isidro' rose from small time trafficker to drug lord before detention",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/ef859ae1345d776d7ea0e13bb68528b9",
+          "published": "2026-11-22 03:00",
+          "summary": "墨西哥軍方在西納羅亞州逮捕被稱為「Chapo Isidro」的Fausto Isidro Meza Flores，他名列FBI十大通緝逃犯。逮捕行動後當地發生槍戰與道路封鎖；官方表示行動造成軍人及嫌疑人死亡，相關數字以墨西哥政府公告為依據。",
+          "background": "Meza Flores被美國指控涉及跨境毒品走私，並被列入FBI十大通緝名單。墨西哥政府近期加強打擊販毒組織，相關行動可能引發地方勢力衝突及民眾安全風險。",
+          "detail": [
+            "美聯社報導，墨西哥軍方在西納羅亞州拘捕Fausto Isidro Meza Flores及同一組織的其他成員。Reuters亦報導墨西哥安全官員確認逮捕，並指出他是FBI十大通緝逃犯之一。",
+            "墨西哥國防部表示，行動後發生武裝衝突與道路封鎖，並通報四名軍人及七名攻擊者死亡、多人被捕。這些傷亡數字來自政府公告，仍應以後續調查和官方更新為準。",
+            "美國FBI與國務院資料將Meza Flores列為重大毒品案件通緝對象。逮捕可能改變西納羅亞販毒組織的權力平衡，但其後續安全影響及是否引發更多報復行動尚待觀察。"
+          ],
+          "article": [
+            "墨西哥軍方於西納羅亞州逮捕Fausto Isidro Meza Flores，綽號「Chapo Isidro」。美聯社及Reuters均報導此事，墨西哥安全部門稱他是販毒組織重要人物，並與其他組織成員一同被拘捕。",
+            "逮捕行動後，西納羅亞州部分地區傳出武裝衝突與道路封鎖。墨西哥國防部公布行動傷亡及逮捕數字，當地安全部門也部署力量處理後續狀況。",
+            "美國FBI將Meza Flores列入十大通緝逃犯名單，並指控其涉及多種毒品走私。逮捕消息可能引起販毒組織內部權力變化，但是否會造成持續報復或更大範圍暴力，仍無法由目前資料判定。",
+            "目前公開的逮捕與傷亡資訊主要來自墨西哥政府公告及媒體轉述；由於尚未取得可直接核對的官方原始公告連結，傷亡細節仍標為初步消息。"
+          ],
+          "keyPoints": [
+            "墨西哥軍方在西納羅亞州逮捕Fausto Isidro Meza Flores。",
+            "他名列FBI十大通緝逃犯名單，涉毒指控尚待司法程序處理。",
+            "政府通報逮捕行動後發生槍戰與道路封鎖，傷亡數字仍待後續確認。",
+            "逮捕後販毒組織權力變化及安全局勢尚不明。"
+          ],
+          "impact": "逮捕重大販毒組織人物可能影響墨西哥地方治安及跨境毒品走私網絡，也可能引發組織內部衝突。",
+          "watch": "關注西納羅亞州後續治安、墨西哥政府對傷亡與逮捕的正式更新，以及美墨司法合作或引渡進度。",
+          "verification": "初步消息",
+          "verificationEvidence": "AP與Reuters均報導逮捕，並轉述墨西哥安全部門／國防部說法；墨西哥媒體也刊載國防部公告內容，但本次未取得可直接核對的官方原始連結，故整體標「初步消息」。FBI官方頁面可確認其曾列十大通緝名單；行動傷亡與後續安全影響仍以官方更新為準。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/americas/mexico-captures-top-drug-lord-el-chapo-isidro-latest-string-captures-2026-11-21/"
+            },
+            {
+              "source": "FBI官方通緝資料",
+              "url": "https://www.fbi.gov/wanted/topten/ten-most-wanted-fugitives-faq/ten-most-wanted-501"
+            },
+            {
+              "source": "墨西哥媒體轉述國防部公告",
+              "url": "https://hls.informador.mx/mexico/defensa-confirma-detencion-del-chapo-isidro-en-sinaloa-20261121-0035.html"
             }
           ]
         }
