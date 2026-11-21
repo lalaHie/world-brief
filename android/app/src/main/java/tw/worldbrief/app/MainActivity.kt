@@ -129,6 +129,7 @@ object NewsStore {
             val out = file.startWrite()
             try { out.write(raw.toByteArray(Charsets.UTF_8)); file.finishWrite(out) }
             catch (e: Exception) { file.failWrite(out); throw e }
+            NewsArchive.save(context, edition.news)
             return edition
         } finally { connection.disconnect() }
     }
@@ -139,9 +140,10 @@ class HourlyNewsWorker(context: Context, params: WorkerParameters) : CoroutineWo
         try {
             val edition = NewsStore.refresh(applicationContext)
             NewsNotifications.notifyNew(applicationContext, edition)
+            applicationContext.getSharedPreferences("news", Context.MODE_PRIVATE).edit().putString("workerStatus", "成功 · " + java.util.Date().toString()).apply()
             Result.success()
         }
-        catch (_: Exception) { Result.retry() }
+        catch (_: Exception) { applicationContext.getSharedPreferences("news",Context.MODE_PRIVATE).edit().putString("workerStatus","失敗 · 將重試").apply(); Result.retry() }
     }
 }
 
@@ -153,7 +155,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         requested = intent.getStringExtra(EXTRA_STORY_URL)
         NewsNotifications.subscribe(this)
-        WorkManager.getInstance(this).enqueueUniquePeriodicWork("hourly-news", ExistingPeriodicWorkPolicy.KEEP,
+        WorkManager.getInstance(this).enqueueUniquePeriodicWork("hourly-news", ExistingPeriodicWorkPolicy.UPDATE,
             PeriodicWorkRequestBuilder<HourlyNewsWorker>(1, TimeUnit.HOURS)
                 .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()).build())
         setContent { WorldBriefTheme { NewsApp(requested = requested, consumeRequest = { requested = null }) } }
@@ -256,7 +258,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     }
     LaunchedEffect(Unit) {
         if (preview == null) {
-            runCatching { withContext(Dispatchers.IO) { NewsStore.local(context) } }.onSuccess { edition = it }
+            runCatching { withContext(Dispatchers.IO) { NewsStore.local(context).also { NewsArchive.save(context,it.news); listOf(false,true).forEach { mode -> NewsArchive.save(context,LiveNewsStore.local(context,mode).news) } } } }.onSuccess { edition = it }
             refreshToken++
             while (true) {
                 delay(60 * 60 * 1000L)
@@ -289,6 +291,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     BackHandler(selected != null) { selected = null }
     val current = selected
     if (current != null) {
+        LaunchedEffect(current.id) { if(preview==null) withContext(Dispatchers.IO) { NewsArchive.save(context,listOf(current)); NewsArchive.markRead(context,current) } }
         ArticlePage(current, edition.news + live.news, images, onBack = { selected = null }, onOpen = { selected = it })
         return
     }
@@ -315,8 +318,12 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     }) { padding ->
         Column(Modifier.fillMaxSize().padding(padding)) {
             if (activeRefreshing) LinearProgressIndicator(Modifier.fillMaxWidth())
-            if (tab == "設定") {
+            if (tab == "追蹤") { TrackingPage { selected=it } }
+            else if (tab == "知識庫") { KnowledgePage { selected=it } }
+            else if (tab == "設定") {
                 Column(Modifier.verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
+                    PersonalSettings()
+                    HorizontalDivider()
                     SectionLabel("閱讀設定")
                     SettingSwitch("深色模式", dark, onChange = onDark)
                     Text("字體大小", fontWeight = FontWeight.Bold)
@@ -361,6 +368,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                         }
                     }
                     Text(if (NewsNotifications.configured(context)) "Firebase 推播已設定" else "尚未連接 Firebase：目前使用 Android 定期同步通知。", fontSize = 13.sp, color = Color.Gray)
+                    NotificationDiagnostics()
                     HorizontalDivider()
                     SectionLabel("新聞來源")
                     LiveNewsStore.sourceNames.forEach { name ->
@@ -375,7 +383,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                         OutlinedTextField(value = customFeeds, onValueChange = { customFeeds = it }, modifier = Modifier.fillMaxWidth(), minLines = 3, label = { Text("自訂新聞來源") })
                         Button(onClick = { prefs?.edit()?.putString("customFeeds", customFeeds)?.apply(); editSources = false }) { Text("儲存來源") }
                     }
-                    Text("版本 1.2.0 · 個人非商業閱讀", fontSize = 12.sp, color = Color.Gray)
+                    Text("版本 2.0.0 · 個人非商業閱讀", fontSize = 12.sp, color = Color.Gray)
                     Text(status)
                 }
             } else {
@@ -436,7 +444,7 @@ private fun NewspaperMasthead(tab: String, onSearch: () -> Unit) {
         Box(Modifier.width(1.dp).height(27.dp).background(colors.onSurfaceVariant.copy(alpha = .6f)))
         Spacer(Modifier.width(11.dp))
         Text("世界晨報", Modifier.weight(1f), fontFamily = FontFamily.Serif, fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = colors.primary, letterSpacing = 1.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        if (tab != "設定") IconButton(onClick = onSearch) { Icon(Icons.Default.Search, "搜尋新聞", modifier = Modifier.size(29.dp), tint = colors.onBackground) }
+        if (tab == "今日" || tab == "即時") IconButton(onClick = onSearch) { Icon(Icons.Default.Search, "搜尋新聞", modifier = Modifier.size(29.dp), tint = colors.onBackground) }
     }
 }
 
@@ -446,13 +454,13 @@ private fun NewspaperNavigation(tab: String, onTab: (String) -> Unit) {
     Column(Modifier.fillMaxWidth().background(colors.background)) {
         HorizontalDivider(color = colors.outlineVariant)
         Row(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 10.dp)) {
-            listOf("今日", "即時", "設定").forEach { name ->
+            listOf("今日", "即時", "追蹤", "知識庫", "設定").forEach { name ->
                 val active = name == tab
-                val tint = if (active) colors.primary else colors.onSurfaceVariant
+                val tint = if (active) editorialGold else colors.onSurfaceVariant
                 Column(Modifier.weight(1f).clickable(role = Role.Tab) { onTab(name) }.padding(top = 8.dp, bottom = 4.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(3.dp)) {
                     NewspaperTabIcon(name, tint, active)
                     Text(name, fontSize = 13.sp, fontWeight = if (active) FontWeight.Bold else FontWeight.Medium, color = tint)
-                    Box(Modifier.width(57.dp).height(3.dp).clip(RoundedCornerShape(2.dp)).background(if (active) editorialGold else Color.Transparent))
+                    Box(Modifier.width(45.dp).height(3.dp).clip(RoundedCornerShape(2.dp)).background(if (active) editorialGold else Color.Transparent))
                 }
             }
         }
@@ -467,7 +475,11 @@ private fun NewspaperTabIcon(name: String, tint: Color, active: Boolean) {
     }
     Canvas(Modifier.size(25.dp)) {
         val w = size.width; val h = size.height; val sw = 1.8.dp.toPx()
-        if (name == "今日") {
+        if (name == "追蹤") {
+            val shape=Path().apply{moveTo(w*.5f,h*.08f);lineTo(w*.94f,h*.33f);lineTo(w*.5f,h*.58f);lineTo(w*.06f,h*.33f);close()};drawPath(shape,tint,style=Stroke(sw));drawLine(tint,Offset(w*.06f,h*.55f),Offset(w*.5f,h*.8f),sw);drawLine(tint,Offset(w*.5f,h*.8f),Offset(w*.94f,h*.55f),sw)
+        } else if(name == "知識庫") {
+            drawRoundRect(tint,Offset(w*.08f,h*.14f),Size(w*.84f,h*.72f),CornerRadius(2.dp.toPx()),style=Stroke(sw));drawLine(tint,Offset(w*.5f,h*.14f),Offset(w*.5f,h*.86f),sw)
+        } else if (name == "今日") {
             val left = Offset(w * .12f, h * .10f); val dimensions = Size(w * .76f, h * .80f); val corner = CornerRadius(3.dp.toPx())
             if (active) drawRoundRect(tint, left, dimensions, corner) else drawRoundRect(tint, left, dimensions, corner, style = Stroke(sw))
             val detail = if (active) paper else tint
@@ -546,7 +558,7 @@ private fun verificationLabel(news: News): String = when {
 }
 
 @Composable
-private fun EditorialRow(news: News, images: Boolean, compact: Boolean, onClick: () -> Unit) {
+internal fun EditorialRow(news: News, images: Boolean, compact: Boolean, onClick: () -> Unit) {
     val title = translatedTitle(news)
     Column(Modifier.fillMaxWidth().clickable(onClick = onClick)) {
         Row(Modifier.padding(vertical = 9.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -636,6 +648,7 @@ private fun ArticlePage(news: News, all: List<News>, images: Boolean, onBack: ()
             if (images && news.image.isNotBlank()) item { NewsPhoto(news, 220, showCaption = true) }
             item { SectionLabel(if (news.isLive) "媒體摘要" else "事件摘要") }
             items(visibleBody) { Text(it, fontSize = 17.sp, lineHeight = 29.sp) }
+            item { ArticleAi(news) }
             if (news.keyPoints.isNotEmpty()) item { SectionLabel("重點整理"); news.keyPoints.forEach { Text("• " + it, Modifier.padding(vertical = 3.dp)) } }
             if (news.background.isNotBlank() && news.background !in news.body) item { SectionLabel("事件背景"); Text(news.background) }
             if (news.impact.isNotBlank()) item { SectionLabel("為什麼重要"); Text(news.impact) }

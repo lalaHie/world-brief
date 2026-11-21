@@ -1,0 +1,1 @@
+<full-backup-content><exclude domain="sharedpref" path="ai-private.xml"/><exclude domain="sharedpref" path="firebase-client.xml"/><exclude domain="sharedpref" path="news.xml"/></full-backup-content>

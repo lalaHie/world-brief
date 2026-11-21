@@ -5,7 +5,10 @@
         <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent>
     </queries>
     <application
+        android:name=".WorldBriefApplication"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:label="世界晨報"
         android:icon="@drawable/brand_logo"
         android:theme="@style/AppTheme"

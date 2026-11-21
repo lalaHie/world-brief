@@ -138,6 +138,7 @@ object LiveNewsStore {
             .put("relatedSources", JSONArray().apply { n.relatedSources.forEach { link -> put(JSONObject().put("source", link.source).put("url", link.url)) } })) }
         context.getSharedPreferences(if (international) "live-world" else "live-news", Context.MODE_PRIVATE).edit()
             .putString("items", array.toString()).putString("updated", result.updated).apply()
+        kotlinx.coroutines.withContext(Dispatchers.IO) { NewsArchive.save(context,news) }
         result
     }
     fun local(context: Context, international: Boolean = false): LiveEdition {

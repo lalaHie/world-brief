@@ -30,28 +30,30 @@ object NewsNotifications {
     fun configured(context: Context) = FirebaseApp.getApps(context).isNotEmpty()
     fun subscribe(context: Context) {
         if (!configured(context)) return
-        val enabled = context.getSharedPreferences("news", Context.MODE_PRIVATE).getBoolean("push", false)
-        if (enabled) FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
-        else FirebaseMessaging.getInstance().unsubscribeFromTopic(TOPIC)
+        val prefs = context.getSharedPreferences("news", Context.MODE_PRIVATE)
+        val enabled = prefs.getBoolean("push", false)
+        val task = if (enabled) FirebaseMessaging.getInstance().subscribeToTopic(TOPIC) else FirebaseMessaging.getInstance().unsubscribeFromTopic(TOPIC)
+        task.addOnCompleteListener { prefs.edit().putString("fcmStatus", if(it.isSuccessful) if(enabled) "已訂閱（仍需伺服器測試）" else "已取消訂閱" else "訂閱失敗，請確認網路及 Firebase 設定").apply() }
     }
     @Synchronized fun notifyNew(context: Context, edition: Edition) {
-        if (configured(context)) return
         val prefs = context.getSharedPreferences("news", Context.MODE_PRIVATE)
         val previouslySeen = prefs.getStringSet("notificationSeen", null)
         val ids = edition.news.map { it.id }.toSet()
         prefs.edit().putStringSet("notificationSeen", ids).apply()
         if (previouslySeen == null) return
         val categories = prefs.getStringSet("notifyCategories", emptySet()).orEmpty()
-        edition.news.firstOrNull { it.id !in previouslySeen && (categories.isEmpty() || it.category in categories) }?.let {
+        val topics = prefs.getStringSet("topics",emptySet()).orEmpty()
+        val fresh = edition.news.filter { it.id !in previouslySeen && (categories.isEmpty() || it.category in categories) }
+        (fresh.firstOrNull { n -> topics.any { (n.title+n.summary).contains(it,true) } } ?: fresh.firstOrNull())?.let {
             show(context, it.title, it.summary, it.url, it.image, it.id, false, it.category)
         }
     }
-    fun show(context: Context, title: String, summary: String, url: String, image: String, id: String, urgent: Boolean, category: String = "") {
+    @Synchronized fun show(context: Context, title: String, summary: String, url: String, image: String, id: String, urgent: Boolean, category: String = "", remoteTest: Boolean = false, imageUpdate: Boolean = true) {
         val prefs = context.getSharedPreferences("news", Context.MODE_PRIVATE)
-        if (!prefs.getBoolean("push", false) || !(if (urgent) prefs.getBoolean("urgent", true) else prefs.getBoolean("hourly", true))) return
+        if (!prefs.getBoolean("push", false) || (!remoteTest && !(if (urgent) prefs.getBoolean("urgent", true) else prefs.getBoolean("hourly", true)))) return
         val categories = prefs.getStringSet("notifyCategories", emptySet()).orEmpty()
-        if (categories.isNotEmpty() && category !in categories) return
-        if (prefs.getBoolean("quiet", false)) {
+        if (!remoteTest && categories.isNotEmpty() && category !in categories) return
+        if (!remoteTest && prefs.getBoolean("quiet", false)) {
             val now = Calendar.getInstance(TimeZone.getTimeZone("Asia/Taipei"))
             val minute = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE)
             val start = prefs.getInt("quietStart", 22 * 60)
@@ -61,18 +63,33 @@ object NewsNotifications {
         }
         if (Build.VERSION.SDK_INT >= 33 && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) return
         val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        if (Build.VERSION.SDK_INT >= 26) manager.createNotificationChannel(NotificationChannel(CHANNEL, "新聞通知", NotificationManager.IMPORTANCE_DEFAULT))
+        createChannels(manager)
+        if (!androidx.core.app.NotificationManagerCompat.from(context).areNotificationsEnabled()) return
+        val identifier = if (url.isNotBlank()) url.substringBefore('#') else id
+        val hash = identifier.hashCode()
+        val recent = prefs.getStringSet("sentNotifications",emptySet()).orEmpty()
+        if (!remoteTest && identifier in recent) return
+        val channel = if (urgent || remoteTest) "world-brief-breaking-v2" else CHANNEL
         val intent = Intent(context, MainActivity::class.java).putExtra(MainActivity.EXTRA_STORY_URL, url)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-        val pending = PendingIntent.getActivity(context, id.hashCode(), intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
-        val builder = NotificationCompat.Builder(context, CHANNEL)
+        val pending = PendingIntent.getActivity(context, hash, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        val builder = NotificationCompat.Builder(context, channel)
             .setSmallIcon(R.drawable.ic_news_notification)
             .setContentTitle(title).setContentText(summary).setAutoCancel(true).setContentIntent(pending)
-            .setStyle(NotificationCompat.BigTextStyle().bigText(summary))
-        if (prefs.getBoolean("notificationImages", true)) {
+            .setStyle(NotificationCompat.BigTextStyle().bigText(summary)).setPriority(if (urgent || remoteTest) NotificationCompat.PRIORITY_HIGH else NotificationCompat.PRIORITY_DEFAULT)
+        manager.notify(hash, builder.build())
+        if (!remoteTest) prefs.edit().putStringSet("sentNotifications", (recent.toList().takeLast(499) + identifier).toSet()).apply()
+        if (imageUpdate && prefs.getBoolean("notificationImages", true)) {
             picture(image)?.let { builder.setStyle(NotificationCompat.BigPictureStyle().bigPicture(it).setSummaryText(summary)) }
+            manager.notify(hash, builder.setOnlyAlertOnce(true).build())
         }
-        manager.notify(id.hashCode(), builder.build())
+    }
+    private fun createChannels(manager: NotificationManager) { if (Build.VERSION.SDK_INT >= 26) { manager.createNotificationChannel(NotificationChannel(CHANNEL,"每小時新聞",NotificationManager.IMPORTANCE_DEFAULT));manager.createNotificationChannel(NotificationChannel("world-brief-breaking-v2","重大新聞與推播測試",NotificationManager.IMPORTANCE_HIGH)) } }
+    fun test(context:Context): String {
+        if (!androidx.core.app.NotificationManagerCompat.from(context).areNotificationsEnabled()) return "系統通知未允許，請先啟用。"
+        val manager=context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager;createChannels(manager)
+        manager.notify(202020,NotificationCompat.Builder(context,"world-brief-breaking-v2").setSmallIcon(R.drawable.ic_news_notification).setContentTitle("世界晨報｜本機通知測試").setContentText("若能看見此訊息，手機通知權限正常。這不是遠端 FCM 測試。").setPriority(NotificationCompat.PRIORITY_HIGH).setAutoCancel(true).build())
+        return "已發送本機測試；請檢查通知欄。"
     }
     private fun picture(url: String): Bitmap? {
         return runCatching {
@@ -108,11 +125,9 @@ class NewsMessagingService : FirebaseMessagingService() {
         val d = message.data
         val title = d["title"] ?: return
         val id = d["id"] ?: message.messageId ?: title
-        val work = OneTimeWorkRequestBuilder<PushNewsWorker>()
-            .setInputData(workDataOf("title" to title.take(200), "summary" to d["summary"].orEmpty().take(500),
-                "url" to d["url"].orEmpty().take(1500), "image" to d["image"].orEmpty().take(1500),
-                "id" to id.take(200), "category" to d["category"].orEmpty().take(50), "urgent" to (d["type"] == "breaking"))).build()
-        WorkManager.getInstance(this).enqueueUniqueWork("news-push-" + id.hashCode(), ExistingWorkPolicy.KEEP, work)
+        getSharedPreferences("news",Context.MODE_PRIVATE).edit().putString("fcmStatus","已收到遠端訊息 · " + java.util.Date().toString()).apply()
+        // Post promptly during the FCM callback; do not wait for another background worker or image download.
+        NewsNotifications.show(this,title,d["summary"].orEmpty(),d["url"].orEmpty(),d["image"].orEmpty(),id,d["type"]=="breaking",d["category"].orEmpty(),remoteTest=id=="world-brief-fcm-test",imageUpdate=false)
     }
 }
 

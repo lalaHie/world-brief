@@ -1,4 +1,4 @@
-# 世界晨報 — 原生 Android 版 1.2
+# 世界晨報 — 原生 Android 版 2.0
 
 ## 用 Android Studio 開啟
 1. 解壓縮 ZIP。
@@ -10,6 +10,9 @@
 預覽使用示範資料；實際執行會先讀取內建或已下載的新聞，再從 GitHub Pages 同步。背景更新由 Android WorkManager 排程，系統可能依省電設定延後執行。
 
 ## 架構
+- V2.0：五頁報刊導覽、SQLite 歷史資料庫、未讀篩選、關鍵字時間軸、Gemini 手動精準翻譯／分析／問答、Android 檔案選擇器備份及還原（可選 Google Drive）、OPPO 通知診斷。Gemini 每日 App 上限 15 次新請求，金鑰僅由使用者自行在裝置輸入、Keystore 加密保存；不內附，也不偵測 Google 實際計費。請自行確認 API 專案未啟用付費。
+- 下載版 APK 可從「設定 → 新聞推播通知 → 匯入 google-services.json」匯入原本 Firebase 客戶端檔案並訂閱。遠端發送仍需 GitHub Actions 的 FCM_SERVICE_ACCOUNT 密碼庫和真機測試；本機通知測試不代表遠端成功。
+- 備份：設定內選擇 JSON 備份檔，Google Drive 必須已裝置登入並出現在 Android 檔案選擇器。若提供者允許持久授權，會排程每天更新該檔；未提供時可手動重新選擇。不是直接 Drive API 帳號同步。還原合併資料、不刪除現有新聞。
 - V1.2 依報刊設計稿重做首頁：大型晨字標誌、報頭、單欄大圖與金色標題線、金色分類列、左圖右字新聞列，以及自訂金線導覽。頭條優先採用當日有合法來源圖片的新聞；沒有相關圖片時仍顯示文字，不使用無關配圖。
 - Kotlin / Jetpack Compose / Material 3
 - 新聞仍來自 https://lalahie.github.io/world-brief/news.json
