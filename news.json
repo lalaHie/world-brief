@@ -4305,8 +4305,95 @@
     },
     "2026-11-21": {
       "date": "2026-11-21",
-      "updated": "2026-11-21 15:48",
+      "updated": "2026-11-22 07:42",
       "stories": [
+        {
+          "category": "國際",
+          "title": "荷姆茲海峽兩起油輪遇襲，伊朗稱卡達代表團赴德黑蘭會談",
+          "original": "Qatari delegation visits Tehran for talks, Iranian official says",
+          "source": "Reuters；原始通報：UKMTO",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/middle-east/qatari-delegation-visits-tehran-talks-iranian-official-says-2026-11-21/",
+          "published": "2026-11-21 23:00",
+          "summary": "UKMTO在阿曼卡薩布附近通報兩起油輪遭不明投射物擊中的事件，兩起均未通報人員傷亡，環境影響尚不明。另有伊朗副外長稱，卡達代表團前一晚赴德黑蘭與伊方會談；目前未公布會談細節，卡達方面的確認也尚未見於所查來源。",
+          "background": "荷姆茲海峽位於波斯灣出口，是全球重要能源運輸通道。美伊戰事及海峽通行限制已使航運安全與區域能源供應受到關注，卡達則持續扮演美伊間的斡旋方。",
+          "detail": [
+            "英國海事貿易行動辦公室（UKMTO）11月21日接獲兩起通報：一艘向外航行的油輪在卡薩布以北約11海里遭不明物體擊中船尾；另一艘油輪在卡薩布以東約17海里、機艙遭擊中。當時無傷亡通報，環境影響未明，且未能確認兩份通報是否涉及同一艘船。",
+            "同日，伊朗副外長加里巴巴迪表示，卡達代表團前一晚赴德黑蘭並與伊方會談。Reuters報導指伊朗仍與包括卡達在內的調停方保持聯繫，但公開資訊未交代談判成果或下一步安排。",
+            "伊朗海軍另稱一艘油輪在受限制海域觸雷起火；Reuters表示無法獨立確認該說法是否與UKMTO通報的兩起事件相關，因此不將其當作已確認的同一事件。",
+            "兩起航運安全通報與外交接觸同時出現，凸顯海峽安全和停戰斡旋並行發展。後續需留意船舶損害、污染情況、航運改道及各方是否公開確認談判進展。"
+          ],
+          "article": [
+            "荷姆茲海峽附近11月21日接連傳出兩起油輪遇襲通報。英國海事貿易行動辦公室（UKMTO）表示，一艘向外航行的油輪在阿曼卡薩布以北約11海里遭不明投射物擊中船尾；另一艘油輪在卡薩布以東約17海里、機艙遭擊中。兩起事件當時都沒有傷亡通報，環境影響仍待確認，且尚不清楚兩份通報是否指向同一艘船。",
+            "同一天，伊朗副外長加里巴巴迪表示，卡達代表團前一晚赴德黑蘭並與伊朗官員會談。伊朗稱仍與卡達等調停方保持聯繫，但目前沒有公開會談成果、議程或後續時程，卡達方面的確認也尚未出現在所查來源中。",
+            "伊朗海軍另聲稱一艘油輪在受限制海域觸雷起火；Reuters無法獨立確認這項說法是否與UKMTO通報的油輪事件相同。現階段應把UKMTO確認的兩起船舶遇襲通報，與伊朗對另一艘船的說法分開看待。",
+            "荷姆茲海峽承載重要能源運輸，航運風險若持續，可能推升保險、運費與能源市場的不確定性。接下來的關鍵是船舶損害與污染調查結果，以及卡達斡旋是否帶來可確認的外交進展。"
+          ],
+          "keyPoints": [
+            "UKMTO通報卡薩布附近兩起油輪遭不明投射物擊中事件。",
+            "兩起UKMTO通報均未報告傷亡；環境影響尚未確認。",
+            "伊朗副外長稱卡達代表團曾赴德黑蘭會談，但未公布結果。",
+            "Reuters未能確認伊朗所稱油輪觸雷事件是否與UKMTO通報相同。"
+          ],
+          "impact": "荷姆茲海峽航運安全惡化可能增加區域能源運輸及全球油市風險；斡旋進展則可能影響衝突是否降溫。",
+          "watch": "追蹤UKMTO後續通報、船舶損害與環境評估，以及卡達或伊朗是否公布會談成果。",
+          "verification": "初步消息",
+          "verificationEvidence": "UKMTO兩份官方通報（215-26、216-26）直接確認卡薩布附近兩起油輪受擊報告、無傷亡通報及環境影響未明。卡達代表團會談部分由Reuters引述伊朗副外長說法，尚未見卡達方面公開確認；伊朗海軍另稱油輪觸雷，Reuters無法確認其與UKMTO事件是否相同，因此整則標為「初步消息」。",
+          "relatedSources": [
+            {
+              "source": "UKMTO 官方通報 215-26",
+              "url": "https://www.ukmto.org/-/media/ukmto/products/20261121-ukmto_warning_215-26.pdf"
+            },
+            {
+              "source": "UKMTO 官方通報 216-26",
+              "url": "https://www.ukmto.org/-/media/ukmto/products/20261121-ukmto_warning_216-26.pdf"
+            },
+            {
+              "source": "Reuters：兩起油輪事件",
+              "url": "https://www.reuters.com/business/energy/tanker-hit-by-unknown-projectile-near-omans-khasab-ukmto-says-2026-11-21/"
+            }
+          ]
+        },
+        {
+          "category": "財經",
+          "title": "歐盟與印尼簽署全面經濟夥伴及投資保護協定",
+          "original": "EU and Indonesia sign trade deal after 10 years of negotiations",
+          "source": "Reuters；原始資料：歐盟執委會",
+          "lang": "EN",
+          "url": "https://www.reuters.com/markets/commodities/eu-indonesia-sign-trade-deal-after-10-years-negotiations-2026-11-21/",
+          "published": "2026-11-21 21:37",
+          "summary": "歐盟與印尼簽署全面經濟夥伴協定（CEPA）及投資保護協定（IPA），為雙方自2016年啟動談判後的重要進展。協定後續仍須完成各自批准程序，生效與實際市場影響取決於後續落實。",
+          "background": "歐盟與印尼自2016年展開CEPA談判，協定目標包括擴大市場准入、促進雙邊貿易與投資，並納入永續發展方向。",
+          "detail": [
+            "歐盟執委會表示，歐盟與印尼於11月21日簽署CEPA及IPA。Reuters報導，簽署儀式結束歷時約十年的談判。",
+            "CEPA旨在增加雙邊市場准入、貿易與投資；IPA則建立投資保護安排。協定簽署代表談判成果進入後續程序，並不等於已立即生效。",
+            "歐盟官方資料顯示，談判於2016年7月正式啟動。協定仍須經相關批准與實施步驟，具體企業受益程度要視條文落實及各方市場調整而定。"
+          ],
+          "article": [
+            "歐盟與印尼11月21日簽署全面經濟夥伴協定（CEPA）及投資保護協定（IPA）。歐盟執委會公告確認簽署，Reuters報導這項成果是在雙方展開多年談判後達成。",
+            "歐盟官方資料指出，CEPA談判於2016年7月啟動，目標是拓展市場准入、提高雙邊貿易與投資，並推動永續發展。IPA則為投資保護建立制度性框架。",
+            "簽署是重要一步，但協定是否以及何時生效仍取決於後續批准與執行程序。市場開放範圍、企業實際成本變化及投資流向，也要等各方落實條文後才能評估。"
+          ],
+          "keyPoints": [
+            "歐盟與印尼簽署CEPA及IPA兩項協定。",
+            "CEPA談判於2016年7月啟動，簽署為多年談判後的重要進展。",
+            "協定仍須完成後續批准及實施程序，簽署不代表立即生效。"
+          ],
+          "impact": "若後續批准並落實，協定可能擴大歐盟與印尼的市場准入、貿易及投資往來。",
+          "watch": "關注雙方批准程序、協定生效時間，以及市場開放與投資保護條款的執行情形。",
+          "verification": "已核對",
+          "verificationEvidence": "歐盟執委會官方貿易網站公告協定於2026年11月21日簽署，並說明CEPA談判於2016年啟動；Reuters獨立報導同日簽署及談判歷程。協定後續批准與生效時程仍待確認。",
+          "relatedSources": [
+            {
+              "source": "原始資料：歐盟執委會",
+              "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/indonesia/eu-indonesia-agreements_en"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/markets/commodities/eu-indonesia-sign-trade-deal-after-10-years-negotiations-2026-11-21/"
+            }
+          ]
+        },
         {
           "category": "軍事",
           "title": "聯合國常規武器公約同意兩年內續談自主武器規範，未形成具約束力條約",
@@ -4519,6 +4606,54 @@
             {
               "source": "TaiwanPlus",
               "url": "https://www.taiwanplus.com/news/world-news/europe/261120015/report-china-pressured-eu-lawmakers-over-taiwan"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-11-22": {
+      "date": "2026-11-22",
+      "updated": "2026-11-22 07:42",
+      "stories": [
+        {
+          "category": "社會",
+          "title": "奈及利亞船難死亡人數升至至少24人，搜救仍在進行",
+          "original": "At least 24 dead in Nigeria when boat capsizes while carrying people to a funeral",
+          "source": "AP",
+          "lang": "EN",
+          "url": "https://apnews.com/article/ba1929311805c37ede05f8496f2826c0",
+          "published": "2026-11-22 04:32",
+          "summary": "奈及利亞緊急服務部門表示，一艘載送民眾前往葬禮的船隻在巴耶爾薩州翻覆，至少24人死亡，搜救仍在進行。官方尚未公布船上總人數及失蹤者數量；警方初步研判事故可能與機械故障有關。",
+          "background": "事故發生於奈及利亞南部河道。當地船難過去常與超載、船況不佳及救生衣不足等安全問題有關；本案調查仍在進行，事故責任與船上人數尚未確定。",
+          "detail": [
+            "美聯社引述奈及利亞國家緊急管理署（NEMA）發言人說，船隻於週五在巴耶爾薩州翻覆，乘客當時正前往另一社區參加葬禮。至少24人死亡，搜救行動仍持續。",
+            "警方先前表示另有24名生還者獲救並接受醫療處置；官方尚未說明船上原有多少人，也未公布仍失蹤人數。警方初步資訊指向機械故障，但事故原因仍待調查。",
+            "船隻管理人已遭拘留，警方稱船長在事故後離開現場；相關說法尚屬調查中的初步資訊。巴耶爾薩州政府呼籲船公司與乘客遵守安全規範。"
+          ],
+          "article": [
+            "奈及利亞南部巴耶爾薩州一艘載客船週五翻覆，乘客原定前往另一社區參加葬禮。美聯社引述奈及利亞國家緊急管理署發言人稱，至少24人死亡，搜救人員仍在現場搜尋。",
+            "警方先前通報另有24人獲救並接受醫療處置；但當局尚未公布船上總人數或失蹤者數量，因此傷亡統計仍可能變動。警方的初步說法指向機械故障，事故原因及責任仍在調查。",
+            "警方表示，船隻管理人已被拘留，船長則在事故後離開現場；這些資訊目前仍是調查階段的通報。州政府已呼籲船舶營運者與乘客遵守安全規定。",
+            "奈及利亞河道交通事故常見，超載、船況與救生設備不足一直是安全風險。本案後續調查及當地是否加強航行安全執法，將影響公共安全政策討論。"
+          ],
+          "keyPoints": [
+            "巴耶爾薩州一艘載送葬禮乘客的船隻週五翻覆。",
+            "NEMA通報至少24人死亡；搜救仍在進行。",
+            "警方稱另有24名生還者獲救，船上總人數及失蹤者數量未公布。",
+            "事故原因仍在調查，警方初步資訊指向機械故障。"
+          ],
+          "impact": "重大船難造成多人死亡，突顯河道交通安全、船舶維護、乘載管理與救生設備執行問題。",
+          "watch": "關注搜救結果、最終乘客與傷亡數字、事故調查結論，以及州政府或中央是否採取船運安全措施。",
+          "verification": "初步消息",
+          "verificationEvidence": "AP報導引述NEMA發言人的官方通報，稱至少24人死亡且搜救持續；NAN亦報導NEMA聲明提到24名生還者及搜救安排。兩者均以同一官方通報為來源，尚未取得獨立現場核查或NEMA原始公告直連，船上總人數、失蹤人數和事故原因仍未確定，故標「初步消息」。",
+          "relatedSources": [
+            {
+              "source": "NAN（轉述NEMA聲明）",
+              "url": "https://nannews.ng/nema-rescues-24-from-bayelsa-boat-mishap/"
+            },
+            {
+              "source": "Reuters（事故初期警方通報）",
+              "url": "https://www.reuters.com/world/africa/nigeria-rescue-teams-search-survivors-after-funeral-barge-capsizes-bayelsa-2026-11-20/"
             }
           ]
         }
