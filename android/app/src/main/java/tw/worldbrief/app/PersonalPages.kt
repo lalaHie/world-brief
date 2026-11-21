@@ -80,6 +80,12 @@ import kotlinx.coroutines.withContext
     }
 }
 
+@Composable fun RevisionHistory(news: News) {
+    val c=LocalContext.current;var versions by remember(news.id){mutableStateOf(emptyList<Pair<String,News>>())};var expanded by remember(news.id){mutableStateOf(false)}
+    LaunchedEffect(news.id){versions=withContext(Dispatchers.IO){NewsArchive.revisionHistory(c,news)}}
+    if(versions.isNotEmpty()){TextButton(onClick={expanded=!expanded}){Text(if(expanded) "收起修改紀錄" else "查看 ${versions.size} 則歷史版本")};if(expanded)versions.forEach{(stamp,n)->Text("本機保存時間：$stamp",fontSize=11.sp,color=MaterialTheme.colorScheme.secondary);Text(n.title,fontWeight=FontWeight.Bold);Text(n.summary,fontSize=13.sp);HorizontalDivider()}}
+}
+
 @Composable fun PersonalSettings() {
     val c=LocalContext.current;val prefs=remember{c.getSharedPreferences("news",Context.MODE_PRIVATE)};val scope=rememberCoroutineScope();var key by remember{mutableStateOf("")};var model by remember{mutableStateOf(PersonalAi.model(c))};var configured by remember{mutableStateOf(PersonalAi.configured(c))};var status by remember{mutableStateOf("")};var backupUri by remember{mutableStateOf(prefs.getString("backupUri",null))};var size by remember{mutableStateOf(0L)}
     LaunchedEffect(status){size=withContext(Dispatchers.IO){NewsArchive.size(c)}}
@@ -93,7 +99,8 @@ import kotlinx.coroutines.withContext
     Row{Button(onClick={runCatching{PersonalAi.model(c,model);if(key.isNotBlank())PersonalAi.saveKey(c,key);key="";configured=PersonalAi.configured(c);status="已儲存設定"}.onFailure{status="無法儲存設定"}}){Text("儲存")};TextButton(onClick={PersonalAi.saveKey(c,"");configured=false;status="已移除金鑰"}){Text("移除金鑰")}}
     Text("每日最多 15 次新 AI 請求（已用 ${PersonalAi.usage(c)} 次）。只在手動操作時向 Google 傳送選取的新聞及問題；請使用未啟用付費的專案。App 上限不代表免費額度保證。",fontSize=12.sp)
     TextButton(onClick={c.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("https://aistudio.google.com/apikey")))}){Text("前往 Google AI Studio ↗")}
-    HorizontalDivider();Text("新聞資料庫：${size/1024} KB",fontWeight=FontWeight.Bold); Text("今日新聞長期保存；即時新聞保留七天。備份不包含 API Key。",fontSize=12.sp)
+    HorizontalDivider();Text("新聞資料庫：${size/1024} KB",fontWeight=FontWeight.Bold); Text("今日新聞長期保存；即時新聞保留七天。圖片磁碟快取上限 200 MB。備份不包含 API Key。",fontSize=12.sp)
+    val backed=prefs.getLong("lastBackup",0);Text(if(backed>0) "最近備份：${java.text.SimpleDateFormat("yyyy-MM-dd HH:mm",java.util.Locale.TAIWAN).format(java.util.Date(backed))}" else "尚未建立備份",fontSize=12.sp)
     OutlinedButton(onClick={create.launch("世界晨報-備份.json")},modifier=Modifier.fillMaxWidth()){Text("選擇 Google Drive／本機備份檔")}
     if(backupUri!=null) OutlinedButton(onClick={backup(Uri.parse(backupUri))},modifier=Modifier.fillMaxWidth()){Text("立即備份（每日背景排程已設定）")}
     OutlinedButton(onClick={restore.launch(arrayOf("application/json","text/plain","application/octet-stream"))},modifier=Modifier.fillMaxWidth()){Text("從 Drive 或本機還原")}
@@ -111,10 +118,12 @@ import kotlinx.coroutines.withContext
     Text("系統通知：${if(allowed) "允許" else "未允許"}  ·  電池最佳化：${if(unrestricted) "已排除" else "仍可能限制"}",fontSize=12.sp)
     Text("背景更新：${prefs.getString("workerStatus","尚無紀錄")}\nFCM：${prefs.getString("fcmStatus",if(NewsNotifications.configured(c)) "等待訂閱" else "尚未配置")}",fontSize=12.sp)
     OutlinedButton(onClick={status=NewsNotifications.test(c)},modifier=Modifier.fillMaxWidth()){Text("發送本機通知測試")}
+    OutlinedButton(onClick={val request=androidx.work.OneTimeWorkRequestBuilder<BackgroundNotificationTest>().setInitialDelay(1,java.util.concurrent.TimeUnit.MINUTES).build();androidx.work.WorkManager.getInstance(c).enqueueUniqueWork("notification-test",androidx.work.ExistingWorkPolicy.REPLACE,request);status="請鎖定螢幕，約一分鐘後檢查通知（可能受省電延後）"},modifier=Modifier.fillMaxWidth()){Text("一分鐘背景通知測試")}
     OutlinedButton(onClick={NewsNotifications.subscribe(c);status="已請求重新訂閱；請稍後查看狀態"},modifier=Modifier.fillMaxWidth()){Text("重新註冊 Firebase 推播")}
     if(!NewsNotifications.configured(c)) OutlinedButton(onClick={firebase.launch(arrayOf("application/json","text/plain","application/octet-stream"))},modifier=Modifier.fillMaxWidth()){Text("匯入 google-services.json")}
     TextButton(onClick={open(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,c.packageName))}){Text("開啟系統通知設定")}
     TextButton(onClick={open(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:${c.packageName}")))}){Text("開啟 App 電池／自動啟動設定")}
     Text("OPPO 請允許背景活動、自動啟動；不要強制停止 App。背景排程仍不保證準時，遠端 FCM 須完成伺服器憑證。",fontSize=12.sp)
+    listOf("topicPush" to "關注關鍵字新聞通知（背景每小時檢查）","briefMorning" to "每日晨報（約早上 7 點）","briefEvening" to "每日晚報（約晚上 9 點）").forEach{(name,label)->var enabled by remember(name){mutableStateOf(prefs.getBoolean(name,false))};Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){Text(label,Modifier.weight(1f),fontSize=14.sp);Switch(enabled,{enabled=it;prefs.edit().putBoolean(name,it).apply()})}}
     if(status.isNotBlank())Text(status,fontSize=12.sp)
 }

@@ -5,9 +5,13 @@ import android.content.Context
 import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import org.json.JSONObject
+import coil.ImageLoader
+import coil.ImageLoaderFactory
+import coil.disk.DiskCache
 
-class WorldBriefApplication : Application() {
+class WorldBriefApplication : Application(), ImageLoaderFactory {
     override fun onCreate() { super.onCreate(); runCatching { FirebaseSetup.initialize(this) } }
+    override fun newImageLoader():ImageLoader=ImageLoader.Builder(this).diskCache { DiskCache.Builder().directory(cacheDir.resolve("news_images")).maxSizeBytes(200L*1024*1024).build() }.build()
 }
 
 object FirebaseSetup {

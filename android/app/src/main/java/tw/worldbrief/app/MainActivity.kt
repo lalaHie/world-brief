@@ -140,6 +140,12 @@ class HourlyNewsWorker(context: Context, params: WorkerParameters) : CoroutineWo
         try {
             val edition = NewsStore.refresh(applicationContext)
             NewsNotifications.notifyNew(applicationContext, edition)
+            val prefs=applicationContext.getSharedPreferences("news",Context.MODE_PRIVATE)
+            if(prefs.getBoolean("topicPush",false) && prefs.getStringSet("topics",emptySet()).orEmpty().isNotEmpty()) {
+                val live=listOf(false,true).flatMap { mode -> runCatching { LiveNewsStore.refresh(applicationContext,mode).news }.getOrDefault(emptyList()) }
+                NewsNotifications.notifyTracked(applicationContext,live)
+            }
+            NewsNotifications.digest(applicationContext,edition)
             applicationContext.getSharedPreferences("news", Context.MODE_PRIVATE).edit().putString("workerStatus", "成功 · " + java.util.Date().toString()).apply()
             Result.success()
         }
@@ -291,7 +297,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     BackHandler(selected != null) { selected = null }
     val current = selected
     if (current != null) {
-        LaunchedEffect(current.id) { if(preview==null) withContext(Dispatchers.IO) { NewsArchive.save(context,listOf(current)); NewsArchive.markRead(context,current) } }
+        LaunchedEffect(current.id) { if(preview==null) withContext(Dispatchers.IO) { NewsArchive.markRead(context,current) } }
         ArticlePage(current, edition.news + live.news, images, onBack = { selected = null }, onOpen = { selected = it })
         return
     }
@@ -438,6 +444,7 @@ private fun timeLabel(minutes: Int) = String.format(Locale.TAIWAN, "%02d:%02d", 
 @Composable
 private fun NewspaperMasthead(tab: String, onSearch: () -> Unit) {
     val colors = MaterialTheme.colorScheme
+    if(tab == "追蹤" || tab == "知識庫") { Spacer(Modifier.fillMaxWidth().statusBarsPadding());return }
     Row(Modifier.fillMaxWidth().background(colors.background).statusBarsPadding().padding(horizontal = 18.dp), verticalAlignment = Alignment.CenterVertically) {
         Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(76.dp))
         Spacer(Modifier.width(6.dp))
@@ -649,6 +656,7 @@ private fun ArticlePage(news: News, all: List<News>, images: Boolean, onBack: ()
             item { SectionLabel(if (news.isLive) "媒體摘要" else "事件摘要") }
             items(visibleBody) { Text(it, fontSize = 17.sp, lineHeight = 29.sp) }
             item { ArticleAi(news) }
+            item { RevisionHistory(news) }
             if (news.keyPoints.isNotEmpty()) item { SectionLabel("重點整理"); news.keyPoints.forEach { Text("• " + it, Modifier.padding(vertical = 3.dp)) } }
             if (news.background.isNotBlank() && news.background !in news.body) item { SectionLabel("事件背景"); Text(news.background) }
             if (news.impact.isNotBlank()) item { SectionLabel("為什麼重要"); Text(news.impact) }

@@ -36,7 +36,7 @@ object NewsArchive {
         return News(s("id"), s("date"), s("time"), s("category"), s("title"), s("summary"), s("source"), s("url"), s("image"), s("caption"), s("original"), list("body"), s("impact"), s("watch"), s("language").ifBlank { "zh" }, o.optBoolean("live"), links, list("keyPoints"), s("background"), s("verification"), s("verificationEvidence"))
     }
     private fun identity(n: News) = n.url.substringBefore('#').ifBlank { n.id }
-    @Synchronized fun save(c: Context, news: List<News>) {
+    @Synchronized fun save(c: Context, news: List<News>, keepExisting: Boolean = false) {
         val db = db(c); db.beginTransaction()
         try {
             news.forEach { n ->
@@ -44,6 +44,7 @@ object NewsArchive {
                 val encoded = encode(n).toString()
                 var old: String? = null; var read = 0; var previousLive = false
                 db.rawQuery("SELECT data,read,live FROM stories WHERE id=?", arrayOf(id)).use { if (it.moveToFirst()) { old = it.getString(0); read = it.getInt(1); previousLive = it.getInt(2) == 1 } }
+                if (keepExisting && old != null) return@forEach
                 if (old != null && !previousLive && n.isLive) return@forEach
                 if (old != null && old != encoded) {
                     db.insertWithOnConflict("revisions", null, ContentValues().apply { put("id", id); put("stamp", System.currentTimeMillis().toString()); put("data", old) }, SQLiteDatabase.CONFLICT_IGNORE)
@@ -64,6 +65,7 @@ object NewsArchive {
     }
     fun markRead(c: Context, n: News) { db(c).update("stories", ContentValues().apply { put("read", 1) }, "id=?", arrayOf(identity(n))) }
     fun revisions(c: Context, n: News): Int = db(c).rawQuery("SELECT count(*) FROM revisions WHERE id=?", arrayOf(identity(n))).use { it.moveToFirst(); it.getInt(0) }
+    fun revisionHistory(c: Context, n: News): List<Pair<String,News>> = db(c).query("revisions",arrayOf("stamp","data"),"id=?",arrayOf(identity(n)),null,null,"stamp DESC","30").use { cursor -> buildList { while(cursor.moveToNext()) runCatching { java.text.SimpleDateFormat("yyyy-MM-dd HH:mm",Locale.TAIWAN).apply{timeZone=TimeZone.getTimeZone("Asia/Taipei")}.format(Date(cursor.getString(0).toLong())) to decode(JSONObject(cursor.getString(1))) }.getOrNull()?.let{add(it)} } }
     fun cached(c: Context, id: String): String? = db(c).rawQuery("SELECT answer FROM ai_cache WHERE id=?", arrayOf(id)).use { if (it.moveToFirst()) it.getString(0) else null }
     fun cache(c: Context, id: String, answer: String) { db(c).insertWithOnConflict("ai_cache", null, ContentValues().apply { put("id", id); put("answer", answer) }, SQLiteDatabase.CONFLICT_REPLACE) }
     fun export(c: Context): JSONObject {
@@ -79,7 +81,7 @@ object NewsArchive {
         require(root.optString("format") == "worldbrief-v2") { "不是世界晨報備份檔" }
         val a = root.getJSONArray("stories"); require(a.length() <= 300000)
         val items = (0 until a.length()).map { decode(a.getJSONObject(it)) }
-        save(c, items)
+        save(c, items,keepExisting=true)
         for (i in items.indices) if (a.getJSONObject(i).optInt("read") == 1) markRead(c, items[i])
         root.optJSONArray("ai")?.let { for (i in 0 until it.length()) { val o = it.getJSONObject(i); cache(c,o.getString("id"),o.getString("answer")) } }
         root.optJSONArray("revisions")?.let { for (i in 0 until it.length()) { val o = it.getJSONObject(i); db(c).insertWithOnConflict("revisions",null,ContentValues().apply { put("id",o.getString("id"));put("stamp",o.getString("stamp"));put("data",o.getString("data")) }, SQLiteDatabase.CONFLICT_IGNORE) } }
@@ -95,7 +97,7 @@ object ArchiveBackup {
         c.contentResolver.openOutputStream(uri, "wt")?.use { it.write(bytes) } ?: error("無法寫入備份")
         c.getSharedPreferences("news",Context.MODE_PRIVATE).edit().putLong("lastBackup", System.currentTimeMillis()).apply()
     }
-    fun restore(c: Context, uri: Uri) { val bytes = c.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: error("無法讀取備份"); require(bytes.size <= 150_000_000); NewsArchive.restore(c,JSONObject(bytes.toString(Charsets.UTF_8))) }
+    fun restore(c: Context, uri: Uri) { val bytes = c.contentResolver.openInputStream(uri)?.use { input -> val out=java.io.ByteArrayOutputStream();val buf=ByteArray(8192);while(true){val len=input.read(buf);if(len<0)break;require(out.size()+len<=50_000_000){"備份超過 50 MB 還原限制"};out.write(buf,0,len)};out.toByteArray() } ?: error("無法讀取備份"); NewsArchive.restore(c,JSONObject(bytes.toString(Charsets.UTF_8))) }
     fun schedule(c: Context) { WorkManager.getInstance(c).enqueueUniquePeriodicWork("archive-backup", ExistingPeriodicWorkPolicy.UPDATE, PeriodicWorkRequestBuilder<ArchiveBackupWorker>(1, TimeUnit.DAYS).setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()).build()) }
 }
 class ArchiveBackupWorker(c: Context, p: WorkerParameters): CoroutineWorker(c,p) {
