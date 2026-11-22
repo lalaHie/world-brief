@@ -547,11 +547,11 @@ private fun NewspaperMasthead(tab: String, onSearch: () -> Unit) {
     val isHome = tab == "今日"
     Row(Modifier.fillMaxWidth().background(colors.background).padding(horizontal = if (isHome) 0.dp else 18.dp),
         verticalAlignment = Alignment.CenterVertically) {
-        Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(if (isHome) 44.dp else 76.dp))
+        Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(if (isHome) 55.dp else 76.dp))
         Spacer(Modifier.width(6.dp))
         Box(Modifier.width(1.dp).height(27.dp).background(colors.onSurfaceVariant.copy(alpha = .6f)))
         Spacer(Modifier.width(11.dp))
-        Text("世界晨報", Modifier.weight(1f), fontFamily = FontFamily.Serif, fontSize = if (isHome) 21.sp else 28.sp, fontWeight = FontWeight.ExtraBold, color = colors.primary, letterSpacing = 1.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Text("世界晨報", Modifier.weight(1f), fontFamily = FontFamily.Serif, fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = colors.primary, letterSpacing = 1.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
         if (tab == "今日" || tab == "即時") IconButton(onClick = onSearch) { Icon(Icons.Default.Search, "搜尋新聞", modifier = Modifier.size(29.dp), tint = colors.onBackground) }
     }
 }
@@ -564,11 +564,18 @@ private fun NewspaperNavigation(tab: String, onTab: (String) -> Unit) {
         Row(Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 10.dp)) {
             listOf("今日", "即時", "追蹤", "知識庫", "設定").forEach { name ->
                 val active = name == tab
-                val tint = if (active) editorialGold else colors.onSurfaceVariant
-                Column(Modifier.weight(1f).clickable(role = Role.Tab) { onTab(name) }.padding(top = 8.dp, bottom = 4.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                val tint = if (active) colors.primary else colors.onSurfaceVariant
+                Column(
+                    Modifier.weight(1f).padding(horizontal = 2.dp, vertical = 4.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(if (active) colors.primary.copy(alpha = 0.13f) else Color.Transparent)
+                        .clickable(role = Role.Tab) { onTab(name) }
+                        .padding(vertical = 6.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(3.dp)
+                ) {
                     NewspaperTabIcon(name, tint, active)
                     Text(name, fontSize = 13.sp, fontWeight = if (active) FontWeight.Bold else FontWeight.Medium, color = tint)
-                    Box(Modifier.width(45.dp).height(3.dp).clip(RoundedCornerShape(2.dp)).background(if (active) editorialGold else Color.Transparent))
                 }
             }
         }

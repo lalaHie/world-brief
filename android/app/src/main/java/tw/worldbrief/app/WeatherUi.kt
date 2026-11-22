@@ -1,6 +1,7 @@
 package tw.worldbrief.app
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -8,15 +9,23 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
@@ -27,7 +36,6 @@ internal fun HomeWeatherCard(place: WeatherPlace, report: WeatherReport?, onOpen
     val forecast = report?.forecast
     val current = forecast?.current
     val station = report?.station
-    val day = forecast?.days?.firstOrNull()
     Surface(
         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
             .clickable(role = Role.Button, onClickLabel = "開啟完整預報", onClick = onOpen),
@@ -36,21 +44,15 @@ internal fun HomeWeatherCard(place: WeatherPlace, report: WeatherReport?, onOpen
         Column(Modifier.background(Brush.verticalGradient(listOf(Color(0xFF16776A), Color(0xFF05433B))))
             .padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                Icon(Icons.Filled.LocationOn, contentDescription = null, modifier = Modifier.size(18.dp))
                 Text(place.name, Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
                 Text("完整預報 ›", fontSize = 13.sp)
             }
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text(degrees(station?.temperature ?: current?.temperature), fontSize = 36.sp,
-                    lineHeight = 42.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
-                Column {
-                    Text("${weatherSymbol(current?.code, current?.isDay != false)} ${weatherLabel(current?.code)}", fontWeight = FontWeight.SemiBold)
-                    if (day != null && !report.cached) Text("低 ${degrees(day.low)} ／ 高 ${degrees(day.high)}", fontSize = 13.sp)
-                }
-            }
+            WeatherSummary(report, modifier = Modifier.fillMaxWidth(), fontSize = 44)
             Text(weatherSource(report), fontSize = 11.sp, color = Color(0xFFE2F1EA))
             if (forecast != null && !report.cached) {
                 HorizontalDivider(color = Color.White.copy(alpha = 0.28f))
-                LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                     item { WeatherHourCell("現在", current?.code, station?.temperature ?: current?.temperature, null, current?.isDay != false) }
                     items(forecast.hours.take(5), key = { it.time }) {
                         WeatherHourCell(it.time.takeLast(5), it.code, it.temperature, null, it.isDay)
@@ -114,57 +116,79 @@ internal fun WeatherDetails(
             })
     }
     val forecast = report?.forecast
-    Scaffold(topBar = {
-        TopAppBar(title = { Text("天氣") },
-            navigationIcon = { TextButton(onClick = onBack) { Text("‹ 返回") } },
-            actions = { TextButton(onClick = onRefresh) { Text("更新") } })
+    val colors = MaterialTheme.colorScheme
+    val dark = colors.background.luminance() < 0.4f
+    val summaryBackground = if (dark) Color(0xFF29443A) else Color(0xFFE5EDD9)
+    val tileBackground = if (dark) Color(0xFF243B34) else Color(0xFFEAF0E2)
+    val rainColor = if (dark) Color(0xFF9DCEFF) else Color(0xFF07599D)
+    val days = forecast?.days.orEmpty()
+    val weekMinimum = days.mapNotNull { it.low }.minOrNull()
+    val weekMaximum = days.mapNotNull { it.high }.maxOrNull()
+    Scaffold(containerColor = colors.background, topBar = {
+        TopAppBar(
+            title = { Text("天氣", fontWeight = FontWeight.Bold) },
+            navigationIcon = {
+                IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回") }
+            },
+            actions = {
+                OutlinedButton(onClick = { locations = true },
+                    modifier = Modifier.widthIn(max = 175.dp).padding(end = 12.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp)) {
+                    Text("${place.name} ▾", maxLines = 1, overflow = TextOverflow.Ellipsis)
+                }
+            },
+            colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.background)
+        )
     }) { padding ->
         LazyColumn(Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            verticalArrangement = Arrangement.spacedBy(10.dp)) {
             item {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()) {
-                    TextButton(onClick = { locations = true }) { Text("${place.name} ▾") }
-                    TextButton(onClick = { configure = true }) { Text("實況設定") }
-                }
-                val current = forecast?.current
-                Text("${weatherSymbol(current?.code, current?.isDay != false)}  ${degrees(report?.station?.temperature ?: current?.temperature)}  ${weatherLabel(current?.code)}",
-                    fontSize = 27.sp, fontWeight = FontWeight.Bold)
-                Text(weatherSource(report), fontSize = 12.sp)
-                forecast?.days?.firstOrNull()?.let {
-                    val label = if (report.cached) it.date else "今日"
-                    Text("$label 低 ${degrees(it.low)} ／ 高 ${degrees(it.high)}", fontSize = 13.sp)
+                Surface(shape = RoundedCornerShape(14.dp), color = summaryBackground, modifier = Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(15.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        WeatherSummary(report, modifier = Modifier.fillMaxWidth(), fontSize = 40)
+                        Text(weatherSource(report), fontSize = 11.sp, color = colors.onSurfaceVariant)
+                    }
                 }
             }
-            if (forecast != null) {
-                if (forecast.hours.isNotEmpty() && !report.cached) item {
-                    Text("逐時預報 · 未來 24 小時", style = MaterialTheme.typography.titleLarge)
-                    Spacer(Modifier.height(8.dp))
-                    LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                        items(forecast.hours, key = { it.time }) {
-                            Surface(shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.surfaceVariant) {
-                                Box(Modifier.padding(horizontal = 8.dp, vertical = 10.dp)) {
-                                    WeatherHourCell(it.time.takeLast(5), it.code, it.temperature, it.rain, it.isDay)
-                                }
+            if (forecast != null && forecast.hours.isNotEmpty() && report.cached == false) item {
+                WeatherSectionTitle("逐時預報", "未來 24 小時")
+                Spacer(Modifier.height(8.dp))
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
+                    items(forecast.hours, key = { it.time }) { hour ->
+                        Surface(shape = RoundedCornerShape(10.dp), color = tileBackground) {
+                            Box(Modifier.padding(horizontal = 10.dp, vertical = 8.dp)) {
+                                WeatherHourCell(hour.time.takeLast(5), hour.code, hour.temperature, hour.rain, hour.isDay,
+                                    showRain = true, rainColor = rainColor)
                             }
                         }
                     }
                 }
-                if (forecast.days.isNotEmpty()) {
-                    item { Text("一週預報", style = MaterialTheme.typography.titleLarge) }
-                    items(forecast.days, key = { it.date }) { day ->
-                        Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(10.dp),
-                            verticalAlignment = Alignment.CenterVertically) {
-                            Text(weatherDateLabel(day.date), Modifier.weight(0.8f), fontWeight = FontWeight.Medium)
-                            Text("${weatherSymbol(day.code)} ${weatherLabel(day.code)}", Modifier.weight(1.45f), fontSize = 13.sp)
-                            Text(rainLabel(day.rain), Modifier.weight(0.6f), fontSize = 13.sp)
-                            Text("${degrees(day.low)} / ${degrees(day.high)}", Modifier.weight(1f), fontSize = 13.sp)
-                        }
-                        HorizontalDivider()
+            }
+            if (days.isNotEmpty()) {
+                item { WeatherSectionTitle("一週預報") }
+                items(days, key = { it.date }) { day ->
+                    Row(Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(7.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text(if (day == days.first() && report?.cached == false) "今天" else weatherDateLabel(day.date),
+                            Modifier.weight(0.79f), fontSize = 14.sp, fontWeight = FontWeight.Medium)
+                        Text(weatherSymbol(day.code), Modifier.weight(0.62f), fontSize = 19.sp)
+                        Text(if (day.rain == null) "—" else "💧${rainLabel(day.rain)}",
+                            Modifier.weight(1f), fontSize = 13.sp, color = rainColor)
+                        Text(degrees(day.low), Modifier.weight(0.59f), fontSize = 14.sp)
+                        WeeklyTemperatureRange(day, weekMinimum, weekMaximum,
+                            modifier = Modifier.weight(1.25f).height(10.dp))
+                        Text(degrees(day.high), Modifier.weight(0.59f), fontSize = 14.sp)
                     }
+                    HorizontalDivider(color = colors.outlineVariant)
                 }
-                item {
-                    TextButton(onClick = { links.openUri("https://open-meteo.com/") }) { Text("預報與天氣圖示：Open‑Meteo ↗") }
+            }
+            item {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                    TextButton(onClick = { configure = true }) { Text("實況設定") }
+                    TextButton(onClick = onRefresh) { Text("更新預報") }
+                }
+                if (forecast != null) TextButton(onClick = { links.openUri("https://open-meteo.com/") }) {
+                    Text("預報來源：Open‑Meteo ↗")
                 }
             }
         }
@@ -172,13 +196,63 @@ internal fun WeatherDetails(
 }
 
 @Composable
-private fun WeatherHourCell(time: String, code: Int?, temperature: Int?, rain: Int?, isDay: Boolean) {
+private fun WeatherSummary(report: WeatherReport?, modifier: Modifier, fontSize: Int) {
+    val forecast = report?.forecast
+    val current = forecast?.current
+    val temperature = report?.station?.temperature ?: current?.temperature
+    Row(modifier, horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(temperature?.let { "$it°C" } ?: "—", fontSize = fontSize.sp, lineHeight = (fontSize + 6).sp,
+            fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+        Text(weatherSymbol(current?.code, current?.isDay != false), fontSize = 27.sp)
+        Column {
+            Text(weatherLabel(current?.code), fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+            forecast?.days?.firstOrNull()?.takeUnless { report.cached }?.let {
+                Text("低 ${degrees(it.low)} ／ 高 ${degrees(it.high)}", fontSize = 12.sp)
+            }
+        }
+    }
+}
+
+@Composable
+private fun WeatherSectionTitle(title: String, subtitle: String? = null) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Surface(shape = RoundedCornerShape(3.dp), color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.width(4.dp).height(18.dp)) {}
+        Text(title, Modifier.weight(1f), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        subtitle?.let { Text(it, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+    }
+}
+
+@Composable
+private fun WeeklyTemperatureRange(day: WeatherDay, minimum: Int?, maximum: Int?, modifier: Modifier) {
+    val base = MaterialTheme.colorScheme.primary
+    Canvas(modifier.clearAndSetSemantics {}) {
+        if (day.low != null && day.high != null && day.high >= day.low && minimum != null && maximum != null) {
+            val start = size.height / 2
+            val span = (maximum - minimum).coerceAtLeast(1)
+            val width = (size.width - size.height).coerceAtLeast(0f)
+            val left = start + (day.low - minimum).toFloat() / span * width
+            val right = start + (day.high - minimum).toFloat() / span * width
+            drawLine(base.copy(alpha = 0.12f), Offset(start, center.y), Offset(start + width, center.y),
+                strokeWidth = size.height, cap = StrokeCap.Round)
+            drawLine(base.copy(alpha = 0.64f), Offset(left, center.y), Offset(right, center.y),
+                strokeWidth = size.height, cap = StrokeCap.Round)
+        }
+    }
+}
+
+@Composable
+private fun WeatherHourCell(
+    time: String, code: Int?, temperature: Int?, rain: Int?, isDay: Boolean,
+    showRain: Boolean = false, rainColor: Color = Color.Unspecified
+) {
     Column(Modifier.widthIn(min = 42.dp), horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Text(time, fontSize = 11.sp)
         Text(weatherSymbol(code, isDay), fontSize = 19.sp)
         Text(degrees(temperature), fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
-        if (rain != null) Text(rainLabel(rain), fontSize = 11.sp)
+        if (showRain) Text(if (rain == null) "—" else "💧${rainLabel(rain)}", fontSize = 11.sp, color = rainColor)
     }
 }
 
