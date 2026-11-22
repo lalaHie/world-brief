@@ -4782,7 +4782,7 @@
     },
     "2026-11-22": {
       "date": "2026-11-22",
-      "updated": "2026-11-22 20:49",
+      "updated": "2026-11-22 21:51",
       "stories": [
         {
           "category": "社會",
@@ -5060,15 +5060,15 @@
           ],
           "impact": "本屆未能形成新政治共識，削弱全球氣候外交推進新行動的訊號；既有國際氣候義務仍然有效。",
           "watch": "關注UNFCCC後續是否恢復談判、各國如何推進既有巴黎協定承諾，以及氣候融資與減排議題是否另行協商。",
-          "verification": "初步消息",
-          "verificationEvidence": "Reuters最新報導引述COP31主席在閉幕全會明確表示未達共識、決議未獲採納，並記錄歐盟及巴拿馬反對立場；AP獨立檢視草案文字，確認未提化石燃料。尚未直接取得UNFCCC正式會議決議原文，故整體標「初步消息」；未通過決議不影響先前承諾的範圍以Reuters所述為據。",
+          "verification": "已核對",
+          "verificationEvidence": "Reuters報導COP31主席於閉幕全會表示因未達共識、決議未獲採納；AP亦獨立報導聯合國氣候談判未能達成整體協議。兩家不同通訊社支持「本屆未通過政治決議」核心事實。草案未提化石燃料則由AP檢視文本確認；各國對碳移除及資金安排的細節仍以正式文件為準。",
           "relatedSources": [
             {
               "source": "Reuters（閉幕結果）",
               "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/"
             },
             {
-              "source": "Associated Press（草案內容）",
+              "source": "Associated Press（未達協議及草案內容）",
               "url": "https://apnews.com/article/f6e36c4caf13ec6fed57c9f077cbd067"
             }
           ]
