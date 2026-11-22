@@ -4782,7 +4782,7 @@
     },
     "2026-11-22": {
       "date": "2026-11-22",
-      "updated": "2026-11-22 12:53",
+      "updated": "2026-11-22 13:50",
       "stories": [
         {
           "category": "社會",
@@ -5028,6 +5028,43 @@
             {
               "source": "Reuters（經媒體轉載）",
               "url": "https://www.streetinsider.com/Reuters/FCC%2Bvotes%2Bto%2Bban%2BChinese%2Btelecoms%2Bfrom%2Bdirect%2Baccess%2Bto%2BUS%2Bphone%2Bnumbers/27375117.html"
+            }
+          ]
+        },
+        {
+          "category": "環境",
+          "title": "COP31主席稱氣候談判接近最終協議，化石燃料與調適資金仍是焦點",
+          "original": "COP31 climate talks close to final deal, says summit president",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/",
+          "published": "2026-11-22 07:40",
+          "summary": "COP31主席表示，安塔利亞氣候談判已提出各方可能接受的新協議草案，聚焦化石燃料及協助開發中國家氣候調適的資金；截至Reuters報導時，協議仍待各方提出異議並正式通過。",
+          "background": "近200個代表團參與談判，會議已超過原定期限。各國需在氣候脆弱國家的調適需求與依賴化石燃料經濟體的立場間尋求共識。",
+          "detail": [
+            "Reuters報導，土耳其與澳洲共同主持的COP31談判於週日凌晨提出新版協議文本，主席穆拉特・庫倫稱相信各方可以接受。",
+            "新文本修改先前被批評缺乏企圖心的草案，主席表示已處理化石燃料相關疑慮，以及開發中國家調適資金問題。",
+            "報導刊出時，各方仍可在格林威治時間03:00前提出異議，並預定06:00召開會議啟動批准程序；因此當時尚不能視為協議已正式通過。"
+          ],
+          "article": [
+            "最新進展｜台灣時間11月22日07時40分，Reuters報導COP31主席稱談判代表提出一份各方可能接受的新文本，預定當日上午再開會推進協議批准。",
+            "談判在土耳其安塔利亞舉行，由澳洲主導磋商、土耳其協助主持，近200個代表團參與。會議已超過原定週五期限，先前草案因未提及終止化石燃料使用而遭部分代表批評。",
+            "主席庫倫表示，新版文本處理化石燃料及協助開發中國家支付氣候調適費用等爭議。這是主席對協商成果的說明，並不代表所有代表團已正式接受。",
+            "Reuters報導刊出時，各國仍有時間提出異議，並安排於格林威治時間06:00召開會議啟動批准程序。協議是否獲通過、最終文字如何處理化石燃料及資金安排，仍須以會議後續決議為準。"
+          ],
+          "keyPoints": [
+            "COP31在土耳其安塔利亞舉行，近200個代表團參與。",
+            "主席稱新版文本處理化石燃料及氣候調適資金爭議。",
+            "報導時協議仍待異議程序與正式批准，尚未確認通過。"
+          ],
+          "impact": "若達成共識，將影響全球減碳政策方向及開發中國家取得氣候調適資金的安排；文本力度仍是關鍵。",
+          "watch": "追蹤代表團異議、COP31正式表決結果，以及最終文本對化石燃料與調適融資的具體承諾。",
+          "verification": "初步消息",
+          "verificationEvidence": "Reuters引述COP31主席對新版協議與預定批准程序的說明；本稿反映報導當時談判進度，未將尚未完成的正式表決寫成既成結果。需要以COP31正式決議核對最終通過與文本內容。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/"
             }
           ]
         }
