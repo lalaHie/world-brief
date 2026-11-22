@@ -11,6 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -52,27 +53,48 @@ internal fun <T> observePreference(
     HorizontalDivider(Modifier.padding(vertical=8.dp))
 }
 
-@Composable fun TrackingPage(onOpen: (News)->Unit) {
-    val c=LocalContext.current; val prefs=remember { c.getSharedPreferences("news",Context.MODE_PRIVATE) }
-    var topics by remember { mutableStateOf(prefs.getStringSet("topics",emptySet()).orEmpty().toSet()) }
-    var input by remember { mutableStateOf("") }; var archive by remember { mutableStateOf(emptyList<News>()) }
-    var expanded by remember { mutableStateOf(setOf<String>()) }
-    val archiveVersion by NewsArchive.changes.collectAsState()
-    LaunchedEffect(archiveVersion) { archive=withContext(Dispatchers.IO){NewsArchive.search(c,limit=2000)} }
-    LazyColumn(Modifier.fillMaxSize(),contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
-        item { PageTitle("事件追蹤","關注清單 · 最新進展"); Row(verticalAlignment=Alignment.CenterVertically) { OutlinedTextField(input,{input=it},Modifier.weight(1f),label={Text("新增關鍵字")},singleLine=true); TextButton(onClick={val t=input.trim().take(60);if(t.isNotBlank() && topics.size<50){topics=topics+t; prefs.edit().putStringSet("topics",topics).apply(); input=""}}){Text("新增")}} }
-        if(topics.isEmpty()) item { Text("加入關心的主題，例如半導體、台積電或日本經濟，便可看到歷史新聞時間軸。",fontSize=14.sp) }
-        items(topics.sorted()) { topic ->
-            val matches=archive.filter{(it.title+" "+it.summary+" "+it.category).contains(topic,true)}
-            OutlinedCard(Modifier.fillMaxWidth(),shape=RoundedCornerShape(6.dp),colors=CardDefaults.outlinedCardColors(containerColor=MaterialTheme.colorScheme.background)) {
-                Column(Modifier.padding(13.dp)) {
-                    Row(verticalAlignment=Alignment.CenterVertically){Text(topic,fontFamily=FontFamily.Serif,fontSize=21.sp,fontWeight=FontWeight.Bold,modifier=Modifier.weight(1f)); Text("${matches.size} 則",color=MaterialTheme.colorScheme.secondary);TextButton(onClick={topics=topics-topic;prefs.edit().putStringSet("topics",topics).apply()}){Text("移除")}}
-                    Text("關鍵字相關報導（非自動確認同一事件）",fontSize=11.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-                    matches.take(if(topic in expanded) 40 else 3).forEach { n -> Row(Modifier.fillMaxWidth().clickable{onOpen(n)}.padding(vertical=9.dp),horizontalArrangement=Arrangement.spacedBy(10.dp)) { Box(Modifier.width(3.dp).height(40.dp).background(MaterialTheme.colorScheme.secondary));Column{Text(listOf(n.date, n.time, n.source).filter { it.isNotBlank() }.joinToString(" · "),fontSize=11.sp);Text(n.title,fontWeight=FontWeight.Bold)}};HorizontalDivider() }
-                    if(matches.size>3) TextButton(onClick={expanded=if(topic in expanded) expanded-topic else expanded+topic}){Text(if(topic in expanded) "收起" else "更多進展")}
-                }
-            }
+@Composable
+internal fun FollowedTopicControls(topics: Set<String>, onTopicsChanged: (Set<String>) -> Unit) {
+    var manage by remember { mutableStateOf(false) }
+    var input by remember { mutableStateOf("") }
+    val term = input.trim().take(60)
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        LazyRow(Modifier.weight(1f), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            items(topics.sorted()) { FollowedTopicLabel(it) }
         }
+        TextButton(onClick = { manage = true }) { Text("管理關鍵字") }
+    }
+    if (manage) {
+        AlertDialog(
+            onDismissRequest = { manage = false; input = "" },
+            title = { Text("管理關鍵字") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedTextField(input, { input = it }, label = { Text("新增關鍵字") },
+                        placeholder = { Text("例如 AI、半導體、資安") }, singleLine = true)
+                    TextButton(enabled = term.isNotBlank() && topics.size < 50 && topics.none { it.equals(term, true) },
+                        onClick = { onTopicsChanged(topics + term); input = "" }) { Text("新增") }
+                    LazyColumn(Modifier.heightIn(max = 230.dp)) {
+                        items(topics.sorted()) { keyword ->
+                            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                                Text(keyword, Modifier.weight(1f))
+                                TextButton(onClick = { onTopicsChanged(topics - keyword) }) { Text("移除") }
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = { TextButton(onClick = { manage = false; input = "" }) { Text("完成") } }
+        )
+    }
+}
+
+@Composable
+internal fun FollowedTopicLabel(label: String) {
+    val colors = MaterialTheme.colorScheme
+    Surface(color = colors.primary.copy(alpha = 0.13f), contentColor = colors.primary,
+        shape = RoundedCornerShape(8.dp)) {
+        Text(label, modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp), maxLines = 1, fontSize = 11.sp)
     }
 }
 
@@ -243,7 +265,7 @@ internal fun <T> observePreference(
     HorizontalDivider();Text("新聞資料庫：${size/1024} KB",fontWeight=FontWeight.Bold); Text("今日新聞長期保存；即時新聞保留七天。圖片磁碟快取上限 200 MB。備份不包含 API Key。",fontSize=12.sp)
     Text(if (backed > 0) "最近備份：${taipeiTimestamp(backed)}" else "尚未建立備份", fontSize = 12.sp)
     backupStatus?.let { Text(it, fontSize = 12.sp, color = MaterialTheme.colorScheme.error) }
-    OutlinedButton(onClick = { create.launch("世界晨報-備份.json") }, enabled = !busy,
+    OutlinedButton(onClick = { create.launch("晨讀-備份.json") }, enabled = !busy,
         modifier = Modifier.fillMaxWidth()) { Text("選擇 Google Drive／本機備份檔") }
     backupUri?.let { uri ->
         val writable = ArchiveBackup.canWriteAutomatically(c, uri)

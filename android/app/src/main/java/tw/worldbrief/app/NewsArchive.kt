@@ -116,7 +116,7 @@ object NewsArchive {
             .put("topics", JSONArray(prefs.getStringSet("topics", emptySet()).orEmpty().toList()))
     }
     @Synchronized fun restore(c: Context, root: JSONObject) {
-        require(root.optString("format") == "worldbrief-v2") { "不是世界晨報備份檔" }
+        require(root.optString("format") == "worldbrief-v2") { "不是可用的晨讀備份檔" }
         val stories = root.getJSONArray("stories")
         require(stories.length() <= 300000)
         val items = (0 until stories.length()).map { decode(stories.getJSONObject(it)) }

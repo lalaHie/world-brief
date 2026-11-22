@@ -9,8 +9,8 @@
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:label="世界晨報"
-        android:icon="@drawable/brand_logo"
+        android:label="@string/app_name"
+        android:icon="@mipmap/morning_read_launcher"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">
         <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_news_notification" />
@@ -32,7 +32,7 @@
         <receiver
             android:name=".HeadlineWidget"
             android:exported="true"
-            android:label="世界晨報頭條">
+            android:label="@string/widget_label">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="tw.worldbrief.app.ACTION_REFRESH" />

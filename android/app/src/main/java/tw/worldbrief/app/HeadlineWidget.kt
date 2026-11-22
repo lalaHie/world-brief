@@ -79,7 +79,7 @@ class WidgetRefreshWorker(context: Context, params: WorkerParameters) : Coroutin
         val muted = Color.parseColor(if (dark) "#C3CCC4" else "#68746C")
         val rv = RemoteViews(c.packageName, R.layout.widget_headline)
         val lead = news.firstOrNull()
-        rv.setTextViewText(R.id.widget_brand, "世界晨報 · " + mode)
+        rv.setTextViewText(R.id.widget_brand, c.getString(R.string.app_name) + " · " + mode)
         rv.setTextViewText(R.id.widget_category, lead?.category ?: "新聞")
         rv.setTextViewText(R.id.widget_title, lead?.title ?: "暫無新聞")
         rv.setTextViewText(R.id.widget_summary, lead?.summary ?: "點擊更新以讀取最新新聞。")

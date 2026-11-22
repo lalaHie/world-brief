@@ -60,7 +60,7 @@ object NewsNotifications {
         val kind=when{hour in 7..9 && p.getBoolean("briefMorning",false)->"晨報";hour in 21..23 && p.getBoolean("briefEvening",false)->"晚報";else->return}
         val key="digest-$day-$kind";if(p.getString("lastDigest$kind",null)==key || !p.getBoolean("push",false))return
         val fresh=edition.news.filter{it.date==day}.take(5);if(fresh.isEmpty())return
-        show(c,"世界晨報｜$kind",fresh.mapIndexed{i,n->"${i+1}. ${n.title}"}.joinToString("\n"),"","",key,false,"",digest=true)
+        show(c,"${c.getString(R.string.app_name)}｜$kind",fresh.mapIndexed{i,n->"${i+1}. ${n.title}"}.joinToString("\n"),"","",key,false,"",digest=true)
         p.edit().putString("lastDigest$kind",key).apply()
     }
     @Synchronized fun show(context: Context, title: String, summary: String, url: String, image: String, id: String, urgent: Boolean, category: String = "", remoteTest: Boolean = false, imageUpdate: Boolean = true, tracked: Boolean = false, digest: Boolean = false) {
@@ -115,7 +115,7 @@ object NewsNotifications {
     fun test(context:Context): String {
         if (!androidx.core.app.NotificationManagerCompat.from(context).areNotificationsEnabled()) return "系統通知未允許，請先啟用。"
         val manager=context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager;createChannels(manager)
-        manager.notify(202020,NotificationCompat.Builder(context,"world-brief-breaking-v2").setSmallIcon(R.drawable.ic_news_notification).setContentTitle("世界晨報｜本機通知測試").setContentText("若能看見此訊息，手機通知權限正常。這不是遠端 FCM 測試。").setPriority(NotificationCompat.PRIORITY_HIGH).setAutoCancel(true).build())
+        manager.notify(202020,NotificationCompat.Builder(context,"world-brief-breaking-v2").setSmallIcon(R.drawable.ic_news_notification).setContentTitle("${context.getString(R.string.app_name)}｜本機通知測試").setContentText("若能看見此訊息，手機通知權限正常。這不是遠端 FCM 測試。").setPriority(NotificationCompat.PRIORITY_HIGH).setAutoCancel(true).build())
         return "已發送本機測試；請檢查通知欄。"
     }
     private fun picture(url: String): Bitmap? {
