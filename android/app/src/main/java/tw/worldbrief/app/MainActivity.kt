@@ -10,6 +10,7 @@ import android.speech.tts.TextToSpeech
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.compose.BackHandler
@@ -30,6 +31,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -63,6 +65,7 @@ import java.util.Locale
 
 private val teal = Color(0xFF075A4F)
 private val paper = Color(0xFFFDF5E6)
+private val darkPaper = Color(0xFF151E20)
 private val ink = Color(0xFF163632)
 private val card = Color(0xFFFFFDF8)
 private val editorialGold = Color(0xFFAC7A25)
@@ -166,14 +169,30 @@ class MainActivity : ComponentActivity() {
     private var requested by mutableStateOf<String?>(null)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        applySystemBarStyle(getSharedPreferences("news", MODE_PRIVATE).getBoolean("darkMode", false))
         requested = intent.getStringExtra(EXTRA_STORY_URL)
         NewsNotifications.subscribe(this)
         WorkManager.getInstance(this).enqueueUniquePeriodicWork("hourly-news", ExistingPeriodicWorkPolicy.UPDATE,
             PeriodicWorkRequestBuilder<HourlyNewsWorker>(1, TimeUnit.HOURS)
                 .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()).build())
-        setContent { WorldBriefTheme { NewsApp(requested = requested, consumeRequest = { requested = null }) } }
+        setContent {
+            NewsApp(
+                requested = requested,
+                consumeRequest = { requested = null },
+                onThemeChanged = ::applySystemBarStyle
+            )
+        }
     }
+
+    private fun applySystemBarStyle(dark: Boolean) {
+        val darkScrim = darkPaper.toArgb()
+        val statusBar = if (dark) SystemBarStyle.dark(Color.Transparent.toArgb())
+            else SystemBarStyle.light(Color.Transparent.toArgb(), darkScrim)
+        val navigationBar = if (dark) SystemBarStyle.dark(darkScrim)
+            else SystemBarStyle.light(paper.toArgb(), darkScrim)
+        enableEdgeToEdge(statusBarStyle = statusBar, navigationBarStyle = navigationBar)
+    }
+
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
@@ -183,23 +202,35 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun WorldBriefTheme(dark: Boolean = false, content: @Composable () -> Unit) {
-    val colors = if (dark) darkColorScheme(primary = Color(0xFF91C9B9), secondary = Color(0xFFE9B65D), background = Color(0xFF151E20), surface = Color(0xFF202B2C), onSurface = Color(0xFFF2EEE3), onBackground = Color(0xFFF2EEE3))
+    val colors = if (dark) darkColorScheme(primary = Color(0xFF91C9B9), secondary = Color(0xFFE9B65D), background = darkPaper, surface = Color(0xFF202B2C), onSurface = Color(0xFFF2EEE3), onBackground = Color(0xFFF2EEE3))
     else lightColorScheme(primary = teal, secondary = Color(0xFF9B6E24), background = paper, surface = card, onSurface = ink, onBackground = ink, onSurfaceVariant = Color(0xFF544F45), outlineVariant = Color(0xFFDFD5C4), secondaryContainer = Color(0xFFDDECE5), onSecondaryContainer = teal)
     MaterialTheme(colorScheme = colors, content = content)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun NewsApp(requested: String? = null, consumeRequest: () -> Unit = {}, preview: Edition? = null) {
+fun NewsApp(
+    requested: String? = null,
+    consumeRequest: () -> Unit = {},
+    preview: Edition? = null,
+    onThemeChanged: (Boolean) -> Unit = {}
+) {
     val context = LocalContext.current
     val prefs = remember { if (preview == null) context.getSharedPreferences("news", Context.MODE_PRIVATE) else null }
     var dark by remember { mutableStateOf(prefs?.getBoolean("darkMode", false) ?: false) }
     var fontSize by remember { mutableIntStateOf(prefs?.getInt("fontSize", 1) ?: 1) }
     val density = LocalDensity.current
+    LaunchedEffect(dark) { onThemeChanged(dark) }
     WorldBriefTheme(dark) {
-        CompositionLocalProvider(LocalDensity provides Density(density.density, density.fontScale * listOf(0.9f, 1f, 1.18f).getOrElse(fontSize) { 1f })) {
-            NewsAppContent(requested, consumeRequest, preview, dark, { dark = it; prefs?.edit()?.putBoolean("darkMode", it)?.apply() },
-                fontSize, { fontSize = it; prefs?.edit()?.putInt("fontSize", it)?.apply() })
+        Box(
+            Modifier.fillMaxSize()
+                .background(MaterialTheme.colorScheme.background)
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal))
+        ) {
+            CompositionLocalProvider(LocalDensity provides Density(density.density, density.fontScale * listOf(0.9f, 1f, 1.18f).getOrElse(fontSize) { 1f })) {
+                NewsAppContent(requested, consumeRequest, preview, dark, { dark = it; prefs?.edit()?.putBoolean("darkMode", it)?.apply() },
+                    fontSize, { fontSize = it; prefs?.edit()?.putInt("fontSize", it)?.apply() })
+            }
         }
     }
 }
@@ -473,8 +504,8 @@ private fun timeLabel(minutes: Int) = String.format(Locale.TAIWAN, "%02d:%02d", 
 @Composable
 private fun NewspaperMasthead(tab: String, onSearch: () -> Unit) {
     val colors = MaterialTheme.colorScheme
-    if(tab == "追蹤" || tab == "知識庫") { Spacer(Modifier.fillMaxWidth().statusBarsPadding());return }
-    Row(Modifier.fillMaxWidth().background(colors.background).statusBarsPadding().padding(horizontal = 18.dp), verticalAlignment = Alignment.CenterVertically) {
+    if (tab == "追蹤" || tab == "知識庫") return
+    Row(Modifier.fillMaxWidth().background(colors.background).padding(horizontal = 18.dp), verticalAlignment = Alignment.CenterVertically) {
         Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(76.dp))
         Spacer(Modifier.width(6.dp))
         Box(Modifier.width(1.dp).height(27.dp).background(colors.onSurfaceVariant.copy(alpha = .6f)))
