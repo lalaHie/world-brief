@@ -22,6 +22,8 @@ import javax.crypto.SecretKey
 import javax.crypto.spec.GCMParameterSpec
 
 object PersonalAi {
+    const val DEFAULT_MODEL = "gemini-4-hydrogen"
+    private const val LEGACY_DEFAULT_MODEL = "gemini-2.5-flash"
     private const val ALIAS = "worldbrief-gemini-key"
     private val mutex = Mutex()
     private fun prefs(c: Context) = c.getSharedPreferences("ai-private",Context.MODE_PRIVATE)
@@ -45,7 +47,17 @@ object PersonalAi {
     }
     private fun day() = SimpleDateFormat("yyyy-MM-dd",Locale.US).apply { timeZone = TimeZone.getTimeZone("Asia/Taipei") }.format(Date())
     fun usage(c: Context) = if (prefs(c).getString("day","") == day()) prefs(c).getInt("count",0) else 0
-    fun model(c: Context) = prefs(c).getString("model","gemini-2.5-flash").orEmpty()
+    fun model(c: Context): String = resolveModel(prefs(c).getString("model", null))
+
+    internal fun resolveModel(savedModel: String?): String =
+        if (savedModel.isNullOrBlank() || savedModel == LEGACY_DEFAULT_MODEL) DEFAULT_MODEL else savedModel
+
+    internal fun generationConfig(model: String): JSONObject =
+        if (model.startsWith("gemini-4-")) {
+            JSONObject().put("thinkingConfig", JSONObject().put("thinkingLevel", "low"))
+        } else {
+            JSONObject().put("maxOutputTokens", 1800).put("temperature", 0.2)
+        }
     fun model(c: Context, value: String) { require(Regex("[a-zA-Z0-9._-]{1,100}").matches(value)); prefs(c).edit().putString("model",value).apply() }
     private fun source(n: News, limit: Int): String = buildString {
         appendLine("標題：${n.title}")
@@ -78,10 +90,13 @@ object PersonalAi {
                 "無法儲存請求紀錄，請檢查裝置可用空間"
             }
             val con = URL("https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent").openConnection() as HttpURLConnection
-            con.requestMethod = "POST"; con.connectTimeout = 15000; con.readTimeout = 45000; con.doOutput = true
+            con.requestMethod = "POST"
+            con.connectTimeout = 15000
+            con.readTimeout = if (model.startsWith("gemini-4-")) 90000 else 45000
+            con.doOutput = true
             con.setRequestProperty("Content-Type","application/json"); con.setRequestProperty("x-goog-api-key",api)
             try {
-                val payload = JSONObject().put("contents",JSONArray().put(JSONObject().put("parts",JSONArray().put(JSONObject().put("text",prompt))))).put("generationConfig",JSONObject().put("maxOutputTokens",1800).put("temperature",0.2))
+                val payload = JSONObject().put("contents",JSONArray().put(JSONObject().put("parts",JSONArray().put(JSONObject().put("text",prompt))))).put("generationConfig", generationConfig(model))
                 con.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
                 val status = con.responseCode
                 require(status in 200..299) {

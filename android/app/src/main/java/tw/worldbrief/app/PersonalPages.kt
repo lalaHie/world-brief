@@ -237,8 +237,8 @@ internal fun <T> observePreference(
     PageTitle("AI 與資料管理","Gemini · 本機資料庫 · Google Drive")
     Text(if(configured) "Gemini 金鑰已儲存於此裝置" else "尚未設定 Gemini API Key",fontWeight=FontWeight.Bold)
     OutlinedTextField(key,{key=it},Modifier.fillMaxWidth(),label={Text("個人 API Key")},visualTransformation=PasswordVisualTransformation(),singleLine=true)
-    OutlinedTextField(model,{model=it},Modifier.fillMaxWidth(),label={Text("Gemini 模型名稱")},singleLine=true)
-    Row{Button(onClick={runCatching{PersonalAi.model(c,model);if(key.isNotBlank())PersonalAi.saveKey(c,key);key="";configured=PersonalAi.configured(c);status="已儲存設定"}.onFailure{status="無法儲存設定"}}){Text("儲存")};TextButton(onClick={PersonalAi.saveKey(c,"");configured=false;status="已移除金鑰"}){Text("移除金鑰")}}
+    OutlinedTextField(model,{model=it},Modifier.fillMaxWidth(),label={Text("Gemini 模型名稱")},supportingText={Text("預設使用 Gemini 4 Hydrogen")},singleLine=true)
+    Row{Button(onClick={runCatching{PersonalAi.model(c,model);model=PersonalAi.model(c);if(key.isNotBlank())PersonalAi.saveKey(c,key);key="";configured=PersonalAi.configured(c);status="已儲存設定"}.onFailure{status="無法儲存設定"}}){Text("儲存")};TextButton(onClick={PersonalAi.saveKey(c,"");configured=false;status="已移除金鑰"}){Text("移除金鑰")}}
     Text("每日最多 15 次新 AI 請求（已用 ${PersonalAi.usage(c)} 次）。只在手動操作時向 Google 傳送選取的新聞及問題；請使用未啟用付費的專案。App 上限不代表免費額度保證。",fontSize=12.sp)
     TextButton(onClick={c.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("https://aistudio.google.com/apikey")))}){Text("前往 Google AI Studio ↗")}
     HorizontalDivider();Text("新聞資料庫：${size/1024} KB",fontWeight=FontWeight.Bold); Text("今日新聞長期保存；即時新聞保留七天。圖片磁碟快取上限 200 MB。備份不包含 API Key。",fontSize=12.sp)
