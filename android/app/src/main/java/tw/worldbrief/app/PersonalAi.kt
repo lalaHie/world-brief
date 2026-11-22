@@ -1,9 +1,6 @@
 package tw.worldbrief.app
 
 import android.content.Context
-import android.security.keystore.KeyGenParameterSpec
-import android.security.keystore.KeyProperties
-import android.util.Base64
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -12,39 +9,19 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
-import java.security.KeyStore
 import java.security.MessageDigest
 import java.text.SimpleDateFormat
 import java.util.*
-import javax.crypto.Cipher
-import javax.crypto.KeyGenerator
-import javax.crypto.SecretKey
-import javax.crypto.spec.GCMParameterSpec
 
 object PersonalAi {
     const val DEFAULT_MODEL = "gemini-4-hydrogen"
     private const val LEGACY_DEFAULT_MODEL = "gemini-2.5-flash"
-    private const val ALIAS = "worldbrief-gemini-key"
     private val mutex = Mutex()
     private fun prefs(c: Context) = c.getSharedPreferences("ai-private",Context.MODE_PRIVATE)
-    private fun key(): SecretKey {
-        val store = KeyStore.getInstance("AndroidKeyStore").apply { load(null) }
-        (store.getKey(ALIAS,null) as? SecretKey)?.let { return it }
-        return KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES,"AndroidKeyStore").apply {
-            init(KeyGenParameterSpec.Builder(ALIAS,KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT).setBlockModes(KeyProperties.BLOCK_MODE_GCM).setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE).build())
-        }.generateKey()
-    }
-    fun saveKey(c: Context, value: String) {
-        if (value.isBlank()) { prefs(c).edit().remove("cipher").remove("iv").apply(); return }
-        val cipher = Cipher.getInstance("AES/GCM/NoPadding").apply { init(Cipher.ENCRYPT_MODE,key()) }
-        prefs(c).edit().putString("cipher",Base64.encodeToString(cipher.doFinal(value.trim().toByteArray()),Base64.NO_WRAP)).putString("iv",Base64.encodeToString(cipher.iv,Base64.NO_WRAP)).apply()
-    }
-    fun configured(c: Context) = prefs(c).contains("cipher")
-    private fun readKey(c: Context): String {
-        val p = prefs(c); val data = p.getString("cipher",null) ?: error("請先在設定頁填入個人 Gemini API Key")
-        val iv = Base64.decode(p.getString("iv",null),Base64.NO_WRAP)
-        return Cipher.getInstance("AES/GCM/NoPadding").apply { init(Cipher.DECRYPT_MODE,key(),GCMParameterSpec(128,iv)) }.doFinal(Base64.decode(data,Base64.NO_WRAP)).toString(Charsets.UTF_8)
-    }
+    private val key = DeviceSecret("ai-private", "worldbrief-gemini-key")
+    fun saveKey(c: Context, value: String) = key.save(c, value)
+    fun configured(c: Context) = key.configured(c)
+    private fun readKey(c: Context): String = key.read(c) ?: error("請先在設定頁填入個人 Gemini API Key")
     private fun day() = SimpleDateFormat("yyyy-MM-dd",Locale.US).apply { timeZone = TimeZone.getTimeZone("Asia/Taipei") }.format(Date())
     fun usage(c: Context) = if (prefs(c).getString("day","") == day()) prefs(c).getInt("count",0) else 0
     fun model(c: Context): String = resolveModel(prefs(c).getString("model", null))

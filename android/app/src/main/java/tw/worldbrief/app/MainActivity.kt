@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -259,6 +260,13 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     var notifyCategories by remember { mutableStateOf(prefs?.getStringSet("notifyCategories", emptySet())?.toSet().orEmpty()) }
     var editSources by remember { mutableStateOf(false) }
     var tab by remember { mutableStateOf("今日") }
+    var weatherOpen by remember { mutableStateOf(false) }
+    var place by remember {
+        mutableStateOf(weatherPlaces.firstOrNull { it.name == prefs?.getString("weatherPlace", null) } ?: weatherPlaces.first())
+    }
+    var weatherRefresh by remember { mutableIntStateOf(0) }
+    var weatherReport by remember(place) { mutableStateOf<WeatherReport?>(null) }
+    val homeListState = rememberLazyListState()
     var category by remember { mutableStateOf("全部") }
     var query by remember { mutableStateOf("") }
     var search by remember { mutableStateOf(false) }
@@ -354,6 +362,15 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
             }
         }
     }
+    LaunchedEffect(place, weatherRefresh, tab == "今日" || weatherOpen) {
+        if (preview == null && (tab == "今日" || weatherOpen)) {
+            weatherReport = WeatherStore.load(context, place, force = weatherRefresh > 0)
+            while (true) {
+                delay(30 * 60 * 1000L)
+                weatherReport = WeatherStore.load(context, place, force = false)
+            }
+        }
+    }
     BackHandler(selected != null) { selected = null }
     val current = selected
     if (current != null) {
@@ -361,24 +378,24 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
         ArticlePage(current, edition.news + live.news, images, onBack = { selected = null }, onOpen = { selected = it })
         return
     }
+    if (weatherOpen) {
+        WeatherDetails(place, weatherReport, onPlace = { next ->
+            place = next
+            prefs?.edit()?.putString("weatherPlace", next.name)?.apply()
+        }, onRefresh = { weatherRefresh++ }, onBack = { weatherOpen = false })
+        return
+    }
     val displayed = (if (tab == "即時") live.news else edition.news).distinctBy { it.id }
     val categories = listOf("全部") + displayed.map { it.category }.distinct()
-    val showLead = tab == "今日" && category == "全部" && !verifiedOnly && query.isBlank()
-    // Prefer an illustrated story from the latest edition, rather than borrowing an unrelated image.
-    val lead = edition.news.firstOrNull()?.let { first ->
-        if (images) edition.news.firstOrNull { it.date == first.date && it.image.startsWith("https://") } ?: first else first
-    }
+    val showDigest = tab == "今日" && category == "全部" && !verifiedOnly && query.isBlank()
     val filtered = displayed.filter {
         (category == "全部" || it.category == category) &&
         (!verifiedOnly || (it.verification == "已核對" && it.verificationEvidence.isNotBlank())) &&
         (it.title + it.summary + it.source).contains(query, ignoreCase = true)
-    }.let { list ->
-        if (showLead) list.filter { it.id != lead?.id }
-        else list
     }
     val activeRefreshing = if (tab == "即時") liveRefreshing else refreshing
     Scaffold(containerColor = background, topBar = {
-        NewspaperMasthead(tab, onSearch = { search = !search })
+        if (tab != "今日") NewspaperMasthead(tab, onSearch = { search = !search })
     }, bottomBar = {
         NewspaperNavigation(tab) { name -> tab = name; category = "全部"; query = ""; search = false; ascending = false; verifiedOnly = false }
     }) { padding ->
@@ -453,25 +470,47 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                     Text(status)
                 }
             } else {
-                if (search) OutlinedTextField(value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp), placeholder = { Text("搜尋新聞") }, singleLine = true)
-                PullToRefreshBox(isRefreshing = activeRefreshing, onRefresh = { if (!activeRefreshing) { if (tab == "即時") liveToken++ else refreshToken++ } }, modifier = Modifier.fillMaxSize()) {
-                LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 5.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(0.dp)) {
+                if (search && tab != "今日") {
+                    OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                        placeholder = { Text("搜尋新聞") }, singleLine = true)
+                }
+                PullToRefreshBox(isRefreshing = activeRefreshing, onRefresh = {
+                    if (!activeRefreshing) {
+                        if (tab == "即時") liveToken++ else {
+                            refreshToken++
+                            weatherRefresh++
+                        }
+                    }
+                }, modifier = Modifier.fillMaxSize()) {
+                LazyColumn(Modifier.fillMaxSize(), state = if (tab == "今日") homeListState else rememberLazyListState(),
+                    contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 5.dp, bottom = 12.dp)) {
                     if (tab == "今日") {
-                        item { EditionLine(edition.updated, status, lastSync) }
-                        if (showLead && lead != null) item { NewspaperLead(lead, images) { selected = lead } }
-                        if (showLead) item {
-                            Row(Modifier.fillMaxWidth().clickable { dailyDigest = !dailyDigest }.padding(vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) { Text("今日五分鐘", color = primary, fontWeight = FontWeight.Bold, fontSize = 12.sp); Spacer(Modifier.weight(1f)); Text(if (dailyDigest) "收起 ↑" else "五則重點 →", color = MaterialTheme.colorScheme.secondary, fontSize = 12.sp) }
-                            if (dailyDigest) {
-                                val latestDay = edition.news.firstOrNull()?.date
-                                edition.news.filter { it.date == latestDay }.take(5).forEachIndexed { i, n ->
-                                    Column(Modifier.fillMaxWidth().clickable { selected = n }.padding(vertical = 8.dp)) {
-                                        Text("${i + 1}. ${n.title}", fontWeight = FontWeight.Bold)
-                                        Text(n.summary, fontSize = 13.sp, maxLines = 3)
+                        item { HomeWeatherCard(place, weatherReport) { weatherOpen = true } }
+                        item {
+                            NewspaperMasthead(tab, onSearch = { search = !search })
+                            Text("今日要聞", fontSize = 25.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(vertical = 5.dp))
+                            EditionLine(edition.updated, status, lastSync)
+                            if (search) OutlinedTextField(query, { query = it }, Modifier.fillMaxWidth(),
+                                placeholder = { Text("搜尋新聞") }, singleLine = true)
+                            NewspaperCategories(categories, category) { category = it }
+                        }
+                        if (showDigest && edition.news.isNotEmpty()) item {
+                            val latestDay = edition.news.first().date
+                            Surface(shape = RoundedCornerShape(12.dp), color = MaterialTheme.colorScheme.secondaryContainer,
+                                modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp)) {
+                                Column(Modifier.padding(12.dp)) {
+                                    Row(Modifier.fillMaxWidth().clickable { dailyDigest = !dailyDigest }.padding(vertical = 6.dp)) {
+                                        Text("今日五分鐘", fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                                        Text(if (dailyDigest) "收起 ↑" else "全部重點 ›", fontSize = 12.sp)
                                     }
-                                    HorizontalDivider()
+                                    edition.news.filter { it.date == latestDay }.take(if (dailyDigest) 5 else 2).forEach { n ->
+                                        Column(Modifier.fillMaxWidth().clickable { selected = n }.padding(vertical = 5.dp)) {
+                                            Text("•  ${n.title}", fontSize = 14.sp)
+                                            if (dailyDigest) Text(n.summary, fontSize = 13.sp, maxLines = 3)
+                                        }
+                                    }
                                 }
                             }
-                            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                         }
                     } else {
                         item {
@@ -483,10 +522,10 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                             }
                             Text(if (international) "BBC · The Guardian · 中央社 · 自由時報｜每 5 分鐘檢查" else "中央社 · 自由時報 · 公視 · 報導者 · 民報｜每 5 分鐘檢查", color = primary, fontSize = 12.sp)
                             Text(live.updated.ifBlank { "等待首次更新" } + " · " + liveStatus, fontSize = 12.sp)
-                            Text(if (international) "英文標題自動機器翻譯，首次需透過 Wi-Fi 下載模型；內文可按需翻譯。" else "依公共利益與台灣關聯篩選，提供媒體標題、前言及原文連結。", color = Color.Gray, fontSize = 12.sp)
+                            Text(if (international) "英文標題自動機器翻譯，首次需透過 Wi-Fi 下載模型；內文開啟文章時會自動翻譯摘要。" else "依公共利益與台灣關聯篩選，提供媒體標題、前言及原文連結。", color = Color.Gray, fontSize = 12.sp)
                         }
                     }
-                    item { NewspaperCategories(categories, category) { category = it } }
+                    if (tab != "今日") item { NewspaperCategories(categories, category) { category = it } }
                     item { Row(Modifier.fillMaxWidth().padding(vertical = 6.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) { Text(if (category == "全部") "全部新聞" else category + "新聞", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = primary); Row(verticalAlignment = Alignment.CenterVertically) { Text(if (verifiedOnly) "✓ 僅已核對" else "查證篩選", color = if (verifiedOnly) editorialGold else MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp, modifier = Modifier.clickable { verifiedOnly = !verifiedOnly }.padding(6.dp)); Text(if (ascending) "舊 → 新" else "新 → 舊", color = primary, fontSize = 11.sp, modifier = Modifier.clickable { ascending = !ascending }.padding(6.dp)) } } }
                     items(if (ascending) filtered.reversed() else filtered, key = { it.id }) { n ->
                         EditorialRow(n, images, compact || tab == "即時", onClick = { selected = n })
@@ -505,12 +544,14 @@ private fun timeLabel(minutes: Int) = String.format(Locale.TAIWAN, "%02d:%02d", 
 private fun NewspaperMasthead(tab: String, onSearch: () -> Unit) {
     val colors = MaterialTheme.colorScheme
     if (tab == "追蹤" || tab == "知識庫") return
-    Row(Modifier.fillMaxWidth().background(colors.background).padding(horizontal = 18.dp), verticalAlignment = Alignment.CenterVertically) {
-        Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(76.dp))
+    val isHome = tab == "今日"
+    Row(Modifier.fillMaxWidth().background(colors.background).padding(horizontal = if (isHome) 0.dp else 18.dp),
+        verticalAlignment = Alignment.CenterVertically) {
+        Image(painterResource(R.drawable.brand_logo), "世界晨報標誌", Modifier.size(if (isHome) 44.dp else 76.dp))
         Spacer(Modifier.width(6.dp))
         Box(Modifier.width(1.dp).height(27.dp).background(colors.onSurfaceVariant.copy(alpha = .6f)))
         Spacer(Modifier.width(11.dp))
-        Text("世界晨報", Modifier.weight(1f), fontFamily = FontFamily.Serif, fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = colors.primary, letterSpacing = 1.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Text("世界晨報", Modifier.weight(1f), fontFamily = FontFamily.Serif, fontSize = if (isHome) 21.sp else 28.sp, fontWeight = FontWeight.ExtraBold, color = colors.primary, letterSpacing = 1.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
         if (tab == "今日" || tab == "即時") IconButton(onClick = onSearch) { Icon(Icons.Default.Search, "搜尋新聞", modifier = Modifier.size(29.dp), tint = colors.onBackground) }
     }
 }
@@ -574,22 +615,6 @@ private fun EditionLine(updated: String, status: String, lastSync: Long) {
 }
 
 @Composable
-private fun NewspaperLead(news: News, images: Boolean, onClick: () -> Unit) {
-    val colors = MaterialTheme.colorScheme
-    Column(Modifier.fillMaxWidth().clickable(onClick = onClick).padding(top = 10.dp, bottom = 7.dp)) {
-        if (images && news.image.isNotBlank()) NewsPhoto(news, 204)
-        Row(Modifier.fillMaxWidth().padding(top = 10.dp, bottom = 6.dp), verticalAlignment = Alignment.Top) {
-            Box(Modifier.width(4.dp).height(56.dp).background(editorialGold))
-            Spacer(Modifier.width(11.dp))
-            Text(news.title, fontSize = 25.sp, lineHeight = 30.sp, fontFamily = FontFamily.Serif, fontWeight = FontWeight.ExtraBold, color = colors.onBackground, modifier = Modifier.weight(1f), maxLines = 4, overflow = TextOverflow.Ellipsis)
-        }
-        Text(news.summary, fontSize = 15.sp, lineHeight = 22.sp, color = colors.onSurfaceVariant, modifier = Modifier.padding(start = 15.dp), maxLines = 3, overflow = TextOverflow.Ellipsis)
-        Row(Modifier.fillMaxWidth().padding(top = 6.dp), horizontalArrangement = Arrangement.End) { Text("${news.category}  |  ${news.source} · ${news.time}", fontSize = 11.sp, color = colors.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis) }
-        HorizontalDivider(Modifier.padding(top = 9.dp), color = colors.outlineVariant)
-    }
-}
-
-@Composable
 private fun NewspaperCategories(categories: List<String>, selected: String, onSelect: (String) -> Unit) {
     val colors = MaterialTheme.colorScheme
     LazyRow(Modifier.fillMaxWidth().padding(vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -645,14 +670,31 @@ internal fun EditorialRow(news: News, images: Boolean, compact: Boolean, onClick
 @Composable
 private fun ArticlePage(news: News, all: List<News>, images: Boolean, onBack: () -> Unit, onOpen: (News) -> Unit) {
     val context = LocalContext.current
-    val scope = rememberCoroutineScope()
-    val title = translatedTitle(news)
-    var translated by remember(news.id) { mutableStateOf<List<String>?>(null) }
+    val needsTranslation = news.language != "zh"
+    val body = news.body.filter { it.isNotBlank() }.ifEmpty { listOf(news.summary).filter { it.isNotBlank() } }
+    var translation by remember(news) { mutableStateOf<List<String>?>(null) }
     var showOriginal by remember(news.id) { mutableStateOf(false) }
     var translating by remember(news.id) { mutableStateOf(false) }
-    var translationError by remember(news.id) { mutableStateOf("") }
-    val body = news.body.filter { it.isNotBlank() }.ifEmpty { listOf(news.summary).filter { it.isNotBlank() } }
-    val visibleBody = if (!showOriginal) translated ?: body else body
+    var translationError by remember(news.id) { mutableStateOf(false) }
+    var translationRetry by remember(news.id) { mutableIntStateOf(0) }
+    var showAnalysis by remember(news.id) { mutableStateOf(false) }
+    val visibleTranslation = translation.takeUnless { showOriginal }
+    val title = visibleTranslation?.firstOrNull() ?: news.title
+    val visibleBody = visibleTranslation?.drop(1) ?: body
+    LaunchedEffect(news, translationRetry) {
+        if (!needsTranslation || translation != null) return@LaunchedEffect
+        translating = true
+        translationError = false
+        try {
+            translation = LocalTranslation.translateAll(context, listOf(news.title) + body, news.language)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            translationError = true
+        } finally {
+            translating = false
+        }
+    }
     var tts by remember { mutableStateOf<TextToSpeech?>(null) }
     var ttsReady by remember { mutableStateOf(false) }
     var speechStatus by remember { mutableStateOf("") }
@@ -673,14 +715,29 @@ private fun ArticlePage(news: News, all: List<News>, images: Boolean, onBack: ()
     }) { padding ->
         LazyColumn(Modifier.fillMaxSize().padding(padding), contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(15.dp)) {
             item {
+                if (needsTranslation) {
+                    SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
+                        SegmentedButton(selected = !showOriginal, onClick = { showOriginal = false },
+                            shape = SegmentedButtonDefaults.itemShape(0, 2)) { Text("繁中") }
+                        SegmentedButton(selected = showOriginal, onClick = { showOriginal = true },
+                            shape = SegmentedButtonDefaults.itemShape(1, 2)) { Text("原文") }
+                    }
+                    if (!showOriginal) {
+                        when {
+                            translating -> Text("正在準備裝置端翻譯，首次需透過 Wi-Fi 下載模型。", fontSize = 12.sp)
+                            translationError -> TextButton(onClick = { translationRetry++ }) { Text("目前顯示原文 · 重試翻譯") }
+                            translation != null -> Text(if (news.isLive) "裝置端機器翻譯 · 摘要" else "裝置端機器翻譯", fontSize = 12.sp)
+                        }
+                    }
+                }
                 Text(news.category + " · " + news.date + " " + news.time, color = MaterialTheme.colorScheme.primary, fontSize = 12.sp)
                 Text(title, fontFamily = FontFamily.Serif, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-                if (news.original.isNotBlank() || news.language != "zh") Text(news.original.ifBlank { news.title }, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
+                if (!needsTranslation && news.original.isNotBlank()) Text(news.original, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
                 Text(news.source, fontSize = 13.sp)
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedButton(enabled = ttsReady, onClick = {
                         tts?.let { engine ->
-                            val locale = if (news.language != "zh" && (translated == null || showOriginal)) Locale.ENGLISH else Locale.TAIWAN
+                            val locale = if (news.language != "zh" && (visibleTranslation == null)) Locale.ENGLISH else Locale.TAIWAN
                             if (engine.setLanguage(locale) < 0) speechStatus = "請先在 Android 安裝此語言的語音資料"
                             else {
                                 engine.stop()
@@ -695,27 +752,16 @@ private fun ArticlePage(news: News, all: List<News>, images: Boolean, onBack: ()
                     TextButton(onClick = { tts?.stop(); speechStatus = "已停止" }) { Text("停止") }
                 }
                 if (speechStatus.isNotBlank()) Text(speechStatus, fontSize = 12.sp)
-                if (news.language != "zh") {
-                    Button(enabled = !translating, onClick = {
-                        if (translated != null) showOriginal = !showOriginal
-                        else {
-                            translating = true; translationError = ""
-                            scope.launch {
-                                try { translated = body.map { LocalTranslation.translate(context, it, news.language) }; showOriginal = false }
-                                catch (e: kotlinx.coroutines.CancellationException) { throw e }
-                                catch (_: Exception) { translationError = "翻譯未完成，請確認 Wi-Fi 或稍後重試。" }
-                                finally { translating = false }
-                            }
-                        }
-                    }) { Text(if (translating) "下載模型／翻譯中…" else if (translated != null && !showOriginal) "查看原文" else "翻譯成繁體中文") }
-                    if (translationError.isNotBlank()) Text(translationError, color = MaterialTheme.colorScheme.error)
-                    Text("機器翻譯可能有誤；以原文為準。", fontSize = 12.sp)
-                }
             }
             if (images && news.image.isNotBlank()) item { NewsPhoto(news, 220, showCaption = true) }
             item { SectionLabel(if (news.isLive) "媒體摘要" else "事件摘要") }
             items(visibleBody) { Text(it, fontSize = 17.sp, lineHeight = 29.sp) }
-            item { ArticleAi(news) }
+            item {
+                OutlinedButton(onClick = { showAnalysis = !showAnalysis }, modifier = Modifier.fillMaxWidth()) {
+                    Text(if (showAnalysis) "收起深度分析與問答" else "分析這則新聞")
+                }
+                if (showAnalysis) ArticleAi(news)
+            }
             item { RevisionHistory(news) }
             if (news.keyPoints.isNotEmpty()) item { SectionLabel("重點整理"); news.keyPoints.forEach { Text("• " + it, Modifier.padding(vertical = 3.dp)) } }
             if (news.background.isNotBlank() && news.background !in news.body) item { SectionLabel("事件背景"); Text(news.background) }

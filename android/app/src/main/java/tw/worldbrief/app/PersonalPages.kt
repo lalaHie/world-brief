@@ -151,7 +151,6 @@ internal fun <T> observePreference(
         Column(Modifier.padding(12.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
             Text("✦ Gemini 深度閱讀",fontFamily=FontFamily.Serif,fontWeight=FontWeight.Bold,fontSize=20.sp,color=MaterialTheme.colorScheme.secondary)
             Text("僅分析 App 已取得的新聞內容；AI 推論不是查證結果。",fontSize=12.sp)
-            OutlinedButton(onClick={run("若有原始標題，優先使用原始標題；將已提供的外文新聞文字譯為台灣繁體中文，保留原意、數字與專業術語。若只提供繁中編譯或摘要，請標示可翻譯的範圍")},enabled=!busy,modifier=Modifier.fillMaxWidth()){Text("精準翻譯")}
             OutlinedButton(onClick={run("依重點摘要、事件背景、為什麼重要、對台灣可能影響、後續觀察五個項目分析；不足資料請標明")},enabled=!busy,modifier=Modifier.fillMaxWidth()){Text("深度分析")}
             OutlinedTextField(question,{question=it},Modifier.fillMaxWidth(),label={Text("針對這則新聞提問")});TextButton(onClick={run(question)},enabled=!busy && question.isNotBlank()){Text("送出問題")}
             if(busy) LinearProgressIndicator(Modifier.fillMaxWidth());if(output.isNotBlank()) Text(output,lineHeight=23.sp)
