@@ -4782,7 +4782,7 @@
     },
     "2026-11-22": {
       "date": "2026-11-22",
-      "updated": "2026-11-22 21:51",
+      "updated": "2026-11-22 22:48",
       "stories": [
         {
           "category": "社會",
@@ -5070,6 +5070,52 @@
             {
               "source": "Associated Press（未達協議及草案內容）",
               "url": "https://apnews.com/article/f6e36c4caf13ec6fed57c9f077cbd067"
+            }
+          ]
+        },
+        {
+          "category": "科學",
+          "title": "歐日合作探測器BepiColombo抵達水星軌道，八年航程進入新階段",
+          "original": "Little Mercury gets its first visitor in years as a pair of spacecraft loop into orbit",
+          "source": "中央社；原始資料：歐洲太空總署（ESA）",
+          "lang": "EN",
+          "url": "https://www.cna.com.tw/news/ait/202611220116.aspx",
+          "published": "2026-11-22 16:18",
+          "summary": "歐洲與日本合作的BepiColombo探測器歷經約8年航程，已進入水星軌道。兩艘探測器仍相連，預計12月分離；正式科學觀測將在後續階段展開。",
+          "background": "水星距太陽近、環境極端，探測器需經多次行星飛掠調整軌道。BepiColombo由ESA與日本宇宙航空研究開發機構（JAXA）合作，搭載歐洲水星行星軌道器MPO及日本水星磁層軌道器Mio。",
+          "detail": [
+            "ESA與中央社報導，BepiColombo於2018年發射，經過約8年飛行後於11月21日進入水星軌道，完成關鍵軌道插入階段。",
+            "目前MPO與Mio仍連接在一起，ESA表示兩者預定於12月9至10日分離，之後各自進入任務軌道。",
+            "抵達水星軌道不代表完整科學任務已立即開始；ESA規劃在後續完成軌道調整與探測器分離後逐步展開觀測。"
+          ],
+          "article": [
+            "歐洲太空總署（ESA）與日本宇宙航空研究開發機構（JAXA）合作的BepiColombo任務，於11月21日進入水星軌道，結束長達約8年的太空航程。中央社與美聯社均報導這項任務已抵達水星。",
+            "探測器於2018年發射，航程中多次飛掠地球、金星及水星，以調整速度與軌道。這項任務由兩艘科學探測器組成：ESA的MPO與JAXA的Mio，目前仍連接在一起。",
+            "ESA的任務時程指出，兩艘探測器預計於12月9至10日分離，並各自進入不同的水星軌道。這使歐洲與日本的儀器能從不同軌道環境研究水星表面、內部及磁層。",
+            "此次軌道插入是任務的重要里程碑，但不等於所有科學觀測已全面開始。後續需完成分離及軌道調整，才能進入主要科學任務階段。"
+          ],
+          "keyPoints": [
+            "BepiColombo於11月21日進入水星軌道。",
+            "任務由ESA的MPO與JAXA的Mio兩艘探測器組成。",
+            "兩艘探測器仍相連，預定12月9至10日分離。",
+            "軌道抵達後仍需完成任務部署，主要科學觀測尚待後續階段。"
+          ],
+          "impact": "任務可為水星的地質、內部結構及磁層研究提供新資料，並深化對太陽系內側行星形成的認識。",
+          "watch": "關注兩艘探測器分離、軌道部署及ESA與JAXA公布首批科學觀測資料的時間。",
+          "verification": "已核對",
+          "verificationEvidence": "ESA任務時程確認MPO與Mio於2026年11月21日進入水星軌道，並預定12月9至10日分離；AP與中央社獨立報導任務完成軌道抵達。主要觀測開始時間與最終任務時程仍以ESA/JAXA後續公告為準。",
+          "relatedSources": [
+            {
+              "source": "ESA官方任務時程",
+              "url": "https://www.esa.int/media/bepicolombo-arrival-at-mercury-timeline"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/0c80bbf2039ed4f6ee4a34426b3594a0"
+            },
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/ait/202611220116.aspx"
             }
           ]
         }
