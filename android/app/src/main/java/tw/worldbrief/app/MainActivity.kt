@@ -50,6 +50,7 @@ import androidx.compose.ui.unit.sp
 import androidx.work.*
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
@@ -79,6 +80,9 @@ data class Edition(val news: List<News>, val updated: String)
 object NewsStore {
     private const val FEED = "https://lalahie.github.io/world-brief/news.json"
     private const val FILE = "latest-news.json"
+    const val LAST_SYNC = "lastNewsSync"
+
+    private fun cache(context: Context) = android.util.AtomicFile(java.io.File(context.filesDir, FILE))
     fun parse(text: String): Edition {
         val root = JSONObject(text).getJSONObject("editions")
         val dates = root.keys().asSequence().sortedDescending().toList()
@@ -92,16 +96,18 @@ object NewsStore {
                     return if (arr != null) (0 until arr.length()).map { arr.optString(it) }.filter { it.isNotBlank() }
                     else listOf(field(k)).filter { it.isNotBlank() }
                 }
+                val title = field("title")
+                if (title.isBlank()) return@mapNotNull null
                 val img = s.optJSONObject("image")
-                val url = field("url")
+                val url = field("url").trim()
                 val links = s.optJSONArray("relatedSources")
                 val related = (0 until (links?.length() ?: 0)).mapNotNull { index ->
                     val link = links?.optJSONObject(index) ?: return@mapNotNull null
                     val address = link.optString("url")
                     if (address.startsWith("https://")) SourceLink(link.optString("source", "相關來源"), address) else null
                 }.distinctBy { it.url }
-                News(url.ifBlank { date + ":" + field("title") }, date, field("published").drop(11).take(5),
-                    field("category").ifBlank { "其他" }, field("title"), field("summary"),
+                News(url.ifBlank { "$date:$title" }, date, field("published").drop(11).take(5),
+                    field("category").ifBlank { "其他" }, title, field("summary"),
                     field("source"), url, img?.optString("url").orEmpty(),
                     listOf(img?.optString("caption"), img?.optString("credit"), img?.optString("license")).filter { !it.isNullOrBlank() }.joinToString(" · "),
                     field("original"), paragraphs("article").ifEmpty { listOf(field("summary")) + paragraphs("detail") + paragraphs("background") },
@@ -109,11 +115,11 @@ object NewsStore {
                     keyPoints = paragraphs("keyPoints"), background = field("background"),
                     verification = field("verification"), verificationEvidence = field("verificationEvidence"))
             }
-        }.sortedByDescending { it.date + it.time }
+        }.sortedByDescending { it.date + it.time }.distinctBy(NewsArchive::identity)
         return Edition(news, dates.firstOrNull()?.let { root.getJSONObject(it).optString("updated") }.orEmpty())
     }
-    fun local(context: Context): Edition = runCatching {
-        parse(context.openFileInput(FILE).bufferedReader().use { it.readText() })
+    @Synchronized fun local(context: Context): Edition = runCatching {
+        parse(cache(context).openRead().bufferedReader().use { it.readText() }).also { check(it.news.isNotEmpty()) }
     }.getOrElse { parse(context.assets.open("app/news.json").bufferedReader().use { it.readText() }) }
     @Synchronized fun refresh(context: Context): Edition {
         val connection = (URL(FEED + "?ts=" + System.currentTimeMillis()).openConnection() as HttpURLConnection)
@@ -125,11 +131,13 @@ object NewsStore {
             val raw = connection.inputStream.bufferedReader().use { it.readText() }
             val edition = parse(raw)
             require(edition.news.isNotEmpty())
-            val file = android.util.AtomicFile(java.io.File(context.filesDir, FILE))
+            NewsArchive.save(context, edition.news)
+            val file = cache(context)
             val out = file.startWrite()
             try { out.write(raw.toByteArray(Charsets.UTF_8)); file.finishWrite(out) }
             catch (e: Exception) { file.failWrite(out); throw e }
-            NewsArchive.save(context, edition.news)
+            context.getSharedPreferences("news", Context.MODE_PRIVATE).edit()
+                .putLong(LAST_SYNC, System.currentTimeMillis()).apply()
             return edition
         } finally { connection.disconnect() }
     }
@@ -146,7 +154,7 @@ class HourlyNewsWorker(context: Context, params: WorkerParameters) : CoroutineWo
                 NewsNotifications.notifyTracked(applicationContext,live)
             }
             NewsNotifications.digest(applicationContext,edition)
-            applicationContext.getSharedPreferences("news", Context.MODE_PRIVATE).edit().putString("workerStatus", "成功 · " + java.util.Date().toString()).apply()
+            applicationContext.getSharedPreferences("news", Context.MODE_PRIVATE).edit().putString("workerStatus", "成功 · " + taipeiTimestamp(System.currentTimeMillis())).apply()
             Result.success()
         }
         catch (_: Exception) { applicationContext.getSharedPreferences("news",Context.MODE_PRIVATE).edit().putString("workerStatus","失敗 · 將重試").apply(); Result.retry() }
@@ -230,6 +238,15 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     var selected by remember { mutableStateOf<News?>(null) }
     var refreshing by remember { mutableStateOf(false) }
     var status by remember { mutableStateOf("") }
+    val lastSync = observePreference(prefs, NewsStore.LAST_SYNC) { it?.getLong(NewsStore.LAST_SYNC, 0L) ?: 0L }
+    LaunchedEffect(lastSync) {
+        if (lastSync > 0) {
+            withContext(Dispatchers.IO) { runCatching { NewsStore.local(context) }.getOrNull() }?.let {
+                edition = it
+                if (!refreshing) status = "同步完成"
+            }
+        }
+    }
     var refreshToken by remember { mutableIntStateOf(0) }
     var push by remember { mutableStateOf(prefs?.getBoolean("push", false) ?: false) }
     var urgent by remember { mutableStateOf(prefs?.getBoolean("urgent", true) ?: true) }
@@ -264,7 +281,16 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
     }
     LaunchedEffect(Unit) {
         if (preview == null) {
-            runCatching { withContext(Dispatchers.IO) { NewsStore.local(context).also { NewsArchive.save(context,it.news); listOf(false,true).forEach { mode -> NewsArchive.save(context,LiveNewsStore.local(context,mode).news) } } } }.onSuccess { edition = it }
+            val cached = withContext(Dispatchers.IO) { runCatching { NewsStore.local(context) }.getOrNull() }
+            if (cached != null) {
+                edition = cached
+                withContext(Dispatchers.IO) {
+                    runCatching { NewsArchive.save(context, cached.news, keepExisting = true) }
+                    listOf(false, true).forEach { mode ->
+                        runCatching { NewsArchive.save(context, LiveNewsStore.local(context, mode).news, keepExisting = true) }
+                    }
+                }
+            }
             refreshToken++
             while (true) {
                 delay(60 * 60 * 1000L)
@@ -277,9 +303,12 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
         refreshing = true
         status = "正在同步最新新聞…"
         try {
-            edition = withContext(Dispatchers.IO) { NewsStore.refresh(context).also { NewsNotifications.notifyNew(context, it) } }
+            edition = withContext(Dispatchers.IO) {
+                NewsStore.refresh(context).also { runCatching { NewsNotifications.notifyNew(context, it) } }
+            }
             status = "同步完成"
         }
+        catch (e: CancellationException) { throw e }
         catch (_: Exception) { status = "更新失敗 · 保留本機新聞" }
         finally { refreshing = false }
     }
@@ -389,7 +418,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                         OutlinedTextField(value = customFeeds, onValueChange = { customFeeds = it }, modifier = Modifier.fillMaxWidth(), minLines = 3, label = { Text("自訂新聞來源") })
                         Button(onClick = { prefs?.edit()?.putString("customFeeds", customFeeds)?.apply(); editSources = false }) { Text("儲存來源") }
                     }
-                    Text("版本 2.0.0 · 個人非商業閱讀", fontSize = 12.sp, color = Color.Gray)
+                    Text("版本 ${BuildConfig.VERSION_NAME} · 個人非商業閱讀", fontSize = 12.sp, color = Color.Gray)
                     Text(status)
                 }
             } else {
@@ -397,7 +426,7 @@ private fun NewsAppContent(requested: String?, consumeRequest: () -> Unit, previ
                 PullToRefreshBox(isRefreshing = activeRefreshing, onRefresh = { if (!activeRefreshing) { if (tab == "即時") liveToken++ else refreshToken++ } }, modifier = Modifier.fillMaxSize()) {
                 LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 5.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(0.dp)) {
                     if (tab == "今日") {
-                        item { EditionLine(edition.updated, status) }
+                        item { EditionLine(edition.updated, status, lastSync) }
                         if (showLead && lead != null) item { NewspaperLead(lead, images) { selected = lead } }
                         if (showLead) item {
                             Row(Modifier.fillMaxWidth().clickable { dailyDigest = !dailyDigest }.padding(vertical = 7.dp), verticalAlignment = Alignment.CenterVertically) { Text("今日五分鐘", color = primary, fontWeight = FontWeight.Bold, fontSize = 12.sp); Spacer(Modifier.weight(1f)); Text(if (dailyDigest) "收起 ↑" else "五則重點 →", color = MaterialTheme.colorScheme.secondary, fontSize = 12.sp) }
@@ -502,12 +531,12 @@ private fun NewspaperTabIcon(name: String, tint: Color, active: Boolean) {
 }
 
 @Composable
-private fun EditionLine(updated: String, status: String) {
+private fun EditionLine(updated: String, status: String, lastSync: Long) {
     val colors = MaterialTheme.colorScheme
-    Row(Modifier.fillMaxWidth().padding(bottom = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(updated.ifBlank { "讀取本機新聞" }, fontSize = 11.sp, color = colors.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Spacer(Modifier.width(8.dp)); Box(Modifier.width(1.dp).height(13.dp).background(colors.outlineVariant)); Spacer(Modifier.width(8.dp))
-        Text("全球要聞 · 深度觀點 · 每日精選", fontSize = 11.sp, color = colors.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f))
+    Column(Modifier.fillMaxWidth().padding(bottom = 8.dp)) {
+        Text(updated.ifBlank { "讀取本機新聞" }, fontSize = 11.sp, color = colors.onSurfaceVariant)
+        Text(if (lastSync > 0) "上次同步 ${taipeiTimestamp(lastSync)}" else "尚未同步網站新聞",
+            fontSize = 11.sp, color = colors.onSurfaceVariant)
     }
     if (status.startsWith("更新失敗")) Text(status, fontSize = 11.sp, color = colors.error, modifier = Modifier.padding(bottom = 4.dp))
     HorizontalDivider(color = colors.outlineVariant)
