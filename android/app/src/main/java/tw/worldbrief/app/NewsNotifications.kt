@@ -60,7 +60,7 @@ object NewsNotifications {
         val kind=when{hour in 7..9 && p.getBoolean("briefMorning",false)->"晨報";hour in 21..23 && p.getBoolean("briefEvening",false)->"晚報";else->return}
         val key="digest-$day-$kind";if(p.getString("lastDigest$kind",null)==key || !p.getBoolean("push",false))return
         val fresh=edition.news.filter{it.date==day}.take(5);if(fresh.isEmpty())return
-        show(c,"世界晨報｜$kind",fresh.mapIndexed{i,n->"${i+1}. ${n.title}"}.joinToString("\n"),"","",key,false,"",digest=true)
+        show(c,"${c.getString(R.string.app_name)}｜$kind",fresh.mapIndexed{i,n->"${i+1}. ${n.title}"}.joinToString("\n"),"","",key,false,"",digest=true)
         p.edit().putString("lastDigest$kind",key).apply()
     }
     @Synchronized fun show(context: Context, title: String, summary: String, url: String, image: String, id: String, urgent: Boolean, category: String = "", remoteTest: Boolean = false, imageUpdate: Boolean = true, tracked: Boolean = false, digest: Boolean = false) {
@@ -115,7 +115,7 @@ object NewsNotifications {
     fun test(context:Context): String {
         if (!androidx.core.app.NotificationManagerCompat.from(context).areNotificationsEnabled()) return "系統通知未允許，請先啟用。"
         val manager=context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager;createChannels(manager)
-        manager.notify(202020,NotificationCompat.Builder(context,"world-brief-breaking-v2").setSmallIcon(R.drawable.ic_news_notification).setContentTitle("世界晨報｜本機通知測試").setContentText("若能看見此訊息，手機通知權限正常。這不是遠端 FCM 測試。").setPriority(NotificationCompat.PRIORITY_HIGH).setAutoCancel(true).build())
+        manager.notify(202020,NotificationCompat.Builder(context,"world-brief-breaking-v2").setSmallIcon(R.drawable.ic_news_notification).setContentTitle("${context.getString(R.string.app_name)}｜本機通知測試").setContentText("若能看見此訊息，手機通知權限正常。這不是遠端 FCM 測試。").setPriority(NotificationCompat.PRIORITY_HIGH).setAutoCancel(true).build())
         return "已發送本機測試；請檢查通知欄。"
     }
     private fun picture(url: String): Bitmap? {
@@ -150,8 +150,14 @@ class NotificationImageWorker(c:Context,p:WorkerParameters):CoroutineWorker(c,p)
     override suspend fun doWork():Result=withContext(Dispatchers.IO){runCatching{NewsNotifications.enhance(applicationContext,inputData.getString("title").orEmpty(),inputData.getString("summary").orEmpty(),inputData.getString("url").orEmpty(),inputData.getString("image").orEmpty(),inputData.getInt("hash",0),inputData.getString("channel")?:NewsNotifications.CHANNEL)};Result.success()}
 }
 
-class BackgroundNotificationTest(c:Context,p:WorkerParameters):Worker(c,p){
-    override fun doWork():Result { applicationContext.getSharedPreferences("news",Context.MODE_PRIVATE).edit().putString("workerStatus","背景測試已執行 · "+java.util.Date().toString()).apply();NewsNotifications.test(applicationContext);return Result.success() }
+class BackgroundNotificationTest(c: Context, p: WorkerParameters) : Worker(c, p) {
+    override fun doWork(): Result {
+        val outcome = NewsNotifications.test(applicationContext)
+        applicationContext.getSharedPreferences("news", Context.MODE_PRIVATE).edit()
+            .putString("notificationTestStatus", "${taipeiTimestamp(System.currentTimeMillis())} · $outcome")
+            .apply()
+        return Result.success()
+    }
 }
 
 class NewsMessagingService : FirebaseMessagingService() {
@@ -160,7 +166,7 @@ class NewsMessagingService : FirebaseMessagingService() {
         val d = message.data
         val title = d["title"] ?: return
         val id = d["id"] ?: message.messageId ?: title
-        getSharedPreferences("news",Context.MODE_PRIVATE).edit().putString("fcmStatus","已收到遠端訊息 · " + java.util.Date().toString()).apply()
+        getSharedPreferences("news",Context.MODE_PRIVATE).edit().putLong("lastRemoteNews", System.currentTimeMillis()).apply()
         // Post promptly during the FCM callback; do not wait for another background worker or image download.
         NewsNotifications.show(this,title,d["summary"].orEmpty(),d["url"].orEmpty(),d["image"].orEmpty(),id,d["type"]=="breaking",d["category"].orEmpty(),remoteTest=id=="world-brief-fcm-test",imageUpdate=false)
     }

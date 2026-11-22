@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">世界晨報</string>
-    <string name="widget_description">世界晨報：可調整大小，顯示今日、台灣或國際新聞</string>
+    <string name="app_name">晨讀</string>
+    <string name="widget_description">晨讀：可調整大小，顯示今日、台灣或國際新聞</string>
+    <string name="widget_label">晨讀頭條</string>
+    <string name="widget_loading">晨讀 · 更新中</string>
+    <color name="morning_read_icon_background">#FAF9F5</color>
 </resources>

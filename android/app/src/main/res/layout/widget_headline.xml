@@ -2,8 +2,8 @@
     android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@drawable/widget_background" android:orientation="vertical" android:padding="10dp">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
-        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/brand_logo" android:contentDescription="世界晨報" />
-        <TextView android:id="@+id/widget_brand" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_weight="1" android:fontFamily="serif" android:text="世界晨報" android:textColor="#163632" android:textSize="12sp" android:textStyle="bold" />
+        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/morning_read_mark" android:contentDescription="@string/app_name" />
+        <TextView android:id="@+id/widget_brand" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_weight="1" android:fontFamily="serif" android:text="@string/app_name" android:textColor="#163632" android:textSize="12sp" android:textStyle="bold" />
         <TextView android:id="@+id/widget_refresh" android:layout_width="30dp" android:layout_height="30dp" android:contentDescription="更新新聞" android:gravity="center" android:text="↻" android:textColor="#176B68" android:textSize="22sp" />
     </LinearLayout>
     <TextView android:id="@+id/widget_category" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="焦點新聞" android:textColor="#916421" android:textSize="10sp" android:textStyle="bold" android:layout_marginTop="3dp" />
@@ -20,5 +20,5 @@
         <TextView android:id="@+id/widget_more2" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:ellipsize="end" android:textSize="12sp" android:paddingVertical="3dp" />
         <TextView android:id="@+id/widget_more3" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:ellipsize="end" android:textSize="12sp" android:paddingVertical="3dp" />
     </LinearLayout>
-    <TextView android:id="@+id/widget_footer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="1" android:ellipsize="end" android:text="世界晨報 · 更新中" android:textColor="#68746C" android:textSize="10sp" />
+    <TextView android:id="@+id/widget_footer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="1" android:ellipsize="end" android:text="@string/widget_loading" android:textColor="#68746C" android:textSize="10sp" />
 </LinearLayout>

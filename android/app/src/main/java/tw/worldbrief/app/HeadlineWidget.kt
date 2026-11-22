@@ -38,12 +38,12 @@ class WidgetRefreshWorker(context: Context, params: WorkerParameters) : Coroutin
         val pref = c.getSharedPreferences("news", Context.MODE_PRIVATE)
         val mode = pref.getString("widgetMode", "今日") ?: "今日"
         val cached = runCatching {
-            if (mode == "今日") NewsStore.local(c).news else LiveNewsStore.local(c, mode == "國際").news
+            if (mode == "今日") latestEdition(NewsStore.local(c).news) else LiveNewsStore.local(c, mode == "國際").news
         }.getOrDefault(emptyList())
         ids.forEach { render(c, manager, it, mode, cached, null, "更新中") }
         var stale = false
         val news = try {
-            if (mode == "今日") NewsStore.refresh(c).news else LiveNewsStore.refresh(c, mode == "國際").news
+            if (mode == "今日") latestEdition(NewsStore.refresh(c).news) else LiveNewsStore.refresh(c, mode == "國際").news
         } catch (e: kotlinx.coroutines.CancellationException) { throw e }
         catch (_: Exception) { stale = true; cached }
         val latest = news.firstOrNull()
@@ -51,6 +51,11 @@ class WidgetRefreshWorker(context: Context, params: WorkerParameters) : Coroutin
         val bitmap = if (needPhoto && pref.getBoolean("images", true) && latest != null) image(c, latest.image) else null
         ids.forEach { render(c, manager, it, mode, news, bitmap, if (stale) "本機快取" else "更新完成") }
         Result.success()
+    }
+
+    private fun latestEdition(news: List<News>): List<News> {
+        val latestDate = news.firstOrNull()?.date ?: return emptyList()
+        return news.takeWhile { it.date == latestDate }
     }
 
     private suspend fun image(c: Context, url: String): Bitmap? {
@@ -67,21 +72,21 @@ class WidgetRefreshWorker(context: Context, params: WorkerParameters) : Coroutin
         val width = options.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH, 150)
         val height = options.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT, 110)
         val wide = width >= 220
-        val large = wide && height >= 245
+        val large = height >= 245
         val dark = (c.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
         val foreground = Color.parseColor(if (dark) "#F2EEE3" else "#163632")
         val accent = Color.parseColor(if (dark) "#E6BE77" else "#916421")
         val muted = Color.parseColor(if (dark) "#C3CCC4" else "#68746C")
         val rv = RemoteViews(c.packageName, R.layout.widget_headline)
         val lead = news.firstOrNull()
-        rv.setTextViewText(R.id.widget_brand, "世界晨報 · " + mode)
+        rv.setTextViewText(R.id.widget_brand, c.getString(R.string.app_name) + " · " + mode)
         rv.setTextViewText(R.id.widget_category, lead?.category ?: "新聞")
         rv.setTextViewText(R.id.widget_title, lead?.title ?: "暫無新聞")
         rv.setTextViewText(R.id.widget_summary, lead?.summary ?: "點擊更新以讀取最新新聞。")
-        rv.setTextViewText(R.id.widget_footer, listOfNotNull(lead?.source, lead?.time, status).joinToString(" · "))
+        rv.setTextViewText(R.id.widget_footer, listOfNotNull(status, lead?.source, lead?.time).filter { it.isNotBlank() }.joinToString(" · "))
         rv.setViewVisibility(R.id.widget_summary, if (wide && (!large || height >= 290)) View.VISIBLE else View.GONE)
         rv.setViewVisibility(R.id.widget_photo, if (wide && !large && bitmap != null) View.VISIBLE else View.GONE)
-        rv.setViewVisibility(R.id.widget_large_photo, if (large && bitmap != null) View.VISIBLE else View.GONE)
+        rv.setViewVisibility(R.id.widget_large_photo, if (wide && height >= 320 && bitmap != null) View.VISIBLE else View.GONE)
         if (bitmap != null) {
             if (large) rv.setImageViewBitmap(R.id.widget_large_photo, bitmap)
             else if (wide) rv.setImageViewBitmap(R.id.widget_photo, bitmap)

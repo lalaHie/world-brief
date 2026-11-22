@@ -8,6 +8,7 @@ import com.google.mlkit.nl.translate.Translation
 import com.google.mlkit.nl.translate.TranslatorOptions
 import com.ibm.icu.text.Transliterator
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -16,24 +17,40 @@ import java.util.concurrent.TimeUnit
 
 object LocalTranslation {
     private val mutex = Mutex()
-    suspend fun translate(context: Context, text: String, language: String): String = withContext(Dispatchers.IO) {
-        if (text.isBlank() || language == "zh") return@withContext text
-        val key = MessageDigest.getInstance("SHA-256").digest((language + "|" + text).toByteArray()).joinToString("") { "%02x".format(it) }
-        val prefs = context.getSharedPreferences("translations", Context.MODE_PRIVATE)
-        prefs.getString(key, null)?.let { return@withContext it }
-        mutex.withLock {
-            prefs.getString(key, null)?.let { return@withLock it }
-            val source = TranslateLanguage.fromLanguageTag(language) ?: error("不支援這個語言")
-            val translator = Translation.getClient(TranslatorOptions.Builder().setSourceLanguage(source).setTargetLanguage(TranslateLanguage.CHINESE).build())
-            try {
-                Tasks.await(translator.downloadModelIfNeeded(DownloadConditions.Builder().requireWifi().build()), 120, TimeUnit.SECONDS)
-                val translated = Tasks.await(translator.translate(text), 45, TimeUnit.SECONDS)
-                val traditional = Transliterator.getInstance("Simplified-Traditional").transliterate(translated)
-                prefs.edit().putString(key, traditional).apply()
-                traditional
-            } finally { translator.close() }
+    suspend fun translate(context: Context, text: String, language: String): String =
+        translateAll(context, listOf(text), language).single()
+
+    suspend fun translateAll(context: Context, texts: List<String>, language: String): List<String> =
+        withContext(Dispatchers.IO) {
+            if (language == "zh" || texts.all { it.isBlank() }) return@withContext texts
+            val prefs = context.getSharedPreferences("translations", Context.MODE_PRIVATE)
+            val keys = texts.map { text ->
+                MessageDigest.getInstance("SHA-256").digest((language + "|" + text).toByteArray())
+                    .joinToString("") { "%02x".format(it) }
+            }
+            fun cached(index: Int) = if (texts[index].isBlank()) texts[index] else prefs.getString(keys[index], null)
+            if (texts.indices.all { cached(it) != null }) return@withContext texts.indices.map { cached(it)!! }
+            mutex.withLock {
+                if (texts.indices.all { cached(it) != null }) return@withLock texts.indices.map { cached(it)!! }
+                val source = TranslateLanguage.fromLanguageTag(language) ?: error("不支援這個語言")
+                val options = TranslatorOptions.Builder().setSourceLanguage(source)
+                    .setTargetLanguage(TranslateLanguage.CHINESE).build()
+                val translator = Translation.getClient(options)
+                try {
+                    Tasks.await(translator.downloadModelIfNeeded(DownloadConditions.Builder().requireWifi().build()), 120, TimeUnit.SECONDS)
+                    val toTraditional = Transliterator.getInstance("Simplified-Traditional")
+                    texts.indices.map { index ->
+                        kotlinx.coroutines.currentCoroutineContext().ensureActive()
+                        cached(index) ?: run {
+                            val result = Tasks.await(translator.translate(texts[index]), 45, TimeUnit.SECONDS)
+                            toTraditional.transliterate(result).also { prefs.edit().putString(keys[index], it).apply() }
+                        }
+                    }
+                } finally {
+                    translator.close()
+                }
+            }
         }
-    }
 }
 
 object EventLinks {
