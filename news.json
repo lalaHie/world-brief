@@ -5165,7 +5165,7 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 11:47",
+      "updated": "2026-11-23 12:51",
       "stories": [
         {
           "category": "環境",
@@ -5422,6 +5422,57 @@
             {
               "source": "Associated Press",
               "url": "https://apnews.com/article/291d2e6c33441c06963c4807c32eb7cd"
+            }
+          ]
+        },
+        {
+          "category": "軍事",
+          "title": "俄軍襲擊基輔州多地，住宅樓搜救與傷亡數字持續更新",
+          "original": "Ukraine reports death toll from Russian attack on Kyiv region has risen to 12",
+          "source": "RTE／AFP",
+          "lang": "EN",
+          "url": "https://www.rte.ie/news/2026/1123/1600244-russian-attack/",
+          "published": "2026-11-23 10:16",
+          "summary": "烏克蘭官員稱，俄軍夜間襲擊基輔州多處，住宅樓遭擊中後救援人員持續搜索；AFP報導稱區域至少12人死亡。不同媒體依採訪及更新時間列出的傷亡數字不一，仍須以官方後續統計為準。",
+          "background": "俄羅斯持續以無人機及飛彈攻擊烏克蘭。基輔州當局表示，杜梅爾一棟五層住宅樓在11月22日遭擊中，搜救工作期間死亡人數多次上修。",
+          "detail": [
+            "基輔州官員表示，杜梅爾住宅樓部分坍塌，救援人員在瓦礫中尋找失聯居民；烏克蘭國家緊急服務局稱死者包括一名青少年，另有兒童獲救送醫。",
+            "AFP經RTE刊載的報導稱，截至其更新時，基輔州多處遇襲至少12人死亡，其中杜梅爾住宅樓至少9人；另有超市及民宅遭襲。Reuters與AP較早報導的數字較低，反映搜救期間統計仍在變動。",
+            "烏克蘭官員另稱，襲擊波及電力設施。現階段各地傷亡的最終總數、部分地點的具體傷亡分項仍待官方彙整確認。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月23日）：AFP經RTE刊載的最新報導稱，俄軍夜間襲擊基輔州多處，至少12人死亡；不同媒體在搜救進行中發布的數字不一致，最終傷亡仍待官方確認。",
+            "烏克蘭官員表示，杜梅爾一棟五層住宅樓在11月22日遭無人機擊中並部分坍塌。救援人員在現場搜索失聯居民，國家緊急服務局稱死者包括一名青少年；一名兒童從瓦礫中獲救並送醫。",
+            "除杜梅爾外，烏方官員也通報基輔州其他地點受襲，包括維什涅韋的超市及比拉策爾克瓦的民宅。烏克蘭方面表示，超市遇襲造成死傷，民宅遭擊中後起火。",
+            "Reuters與AP較早報導的死亡人數低於AFP後續報導，主要反映搜救與傷亡確認仍在進行。烏克蘭內政部及地方官員的通報也在不同時點更新，因此目前不宜把單一報導中的總數視為最終統計。",
+            "烏克蘭官員另稱，襲擊損及能源設施。對居民而言，住宅損毀、冬季能源供應及搜救安全均是直接影響；後續應追蹤官方傷亡彙整及受損設施恢復情形。"
+          ],
+          "keyPoints": [
+            "襲擊發生於2026年11月22日，杜梅爾五層住宅樓受損並進行搜救。",
+            "AFP經RTE刊載報導稱基輔州多地至少12人死亡。",
+            "較早的Reuters與AP報導所列數字較低，死亡數字仍須以後續官方彙整為準。",
+            "烏克蘭官員另通報超市、民宅及電力設施受襲。"
+          ],
+          "impact": "住宅區死傷及能源設施受損加深基輔州民眾的人身安全與冬季供電風險。",
+          "watch": "關注烏克蘭緊急服務局及基輔州政府的最終傷亡統計、搜救是否結束，以及電力設施修復狀況。",
+          "verification": "存在爭議",
+          "verificationEvidence": "烏克蘭內政部11月22日通報杜梅爾住宅樓遭無人機擊中及當時傷亡；Reuters、AP及AFP後續報導均記載基輔州受襲與搜救，但發稿時點不同，列出的死亡人數由較早報導的較低數字上升至AFP報導的至少12人。襲擊與搜救已由多家來源報導，最終死亡總數及各地分項仍待官方統一確認。",
+          "relatedSources": [
+            {
+              "source": "烏克蘭內政部（官方通報）",
+              "url": "https://mvs.gov.ua/news/unaslidok-vlucannia-rosiiskim-udarnim-bezpilotnikom-po-budinku-v-dimeri-zaginuli-cetvero-liudei-deviatero-mozut-zalisatisia-pid-zavalami"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/least-14-people-missing-after-russian-drone-hit-building-kyiv-region-zelenskiy-2026-11-22/"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/14fecc1c55d601bb9f5b5fc8c9fb0b94"
+            },
+            {
+              "source": "AFP（RTE刊載）",
+              "url": "https://www.rte.ie/news/2026/1123/1600244-russian-attack/"
             }
           ]
         }
