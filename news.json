@@ -5165,7 +5165,7 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 12:51",
+      "updated": "2026-11-23 13:53",
       "stories": [
         {
           "category": "環境",
@@ -5473,6 +5473,144 @@
             {
               "source": "AFP（RTE刊載）",
               "url": "https://www.rte.ie/news/2026/1123/1600244-russian-attack/"
+            }
+          ]
+        },
+        {
+          "category": "科技",
+          "title": "韓國三星證券通報8241名客戶個資外洩",
+          "original": "Personal information of more than 8,000 clients at Samsung Securities breached",
+          "source": "中央社、Yonhap",
+          "lang": "EN",
+          "url": "https://en.yna.co.kr/view/AEN20261123002900320",
+          "published": "2026-11-23 11:12",
+          "summary": "三星證券表示，外部未授權者入侵其客戶意見回覆系統，8241名客戶個資遭外洩；公司稱其他客戶資料未受影響，調查與通報仍在進行。",
+          "background": "韓國金融業近期接連發生資安事件，金融監理機關已要求業者強化防護與後續應變。",
+          "detail": [
+            "三星證券表示，11月21日發現有人未授權存取其客戶回覆網站，受影響資料涉及8241名客戶。",
+            "公司稱事件侷限於客戶意見回覆系統，並已採取阻擋措施及向主管機關通報；目前公開資訊尚未完整說明入侵方式與資料是否遭進一步利用。",
+            "中央社、Yonhap及韓國媒體報導的核心數字一致。後續仍須留意監管調查結果、受影響資料種類及客戶防詐措施。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月23日）：三星證券證實客戶意見回覆系統遭外部未授權存取，8241名客戶個資外洩。公司表示，目前未發現該系統以外的客戶資料受影響。",
+            "Yonhap引述三星證券說法指出，公司於11月21日發現入侵，並採取阻斷措施及通報相關機關。韓國中央社、Yonhap與韓國媒體報導的受影響人數相同。",
+            "現有公開資訊尚未交代入侵者身分、資料被取得的具體方式，以及是否有資料在網路流傳或被用於詐騙。這些事項須由公司與主管機關調查確認。",
+            "此案發生在韓國金融機構遭遇多起資安事件之際。客戶應留意官方通知及可疑聯絡，監管機關的調查結果將有助釐清資料外洩範圍與防護缺口。"
+          ],
+          "keyPoints": [
+            "三星證券通報8241名客戶資料外洩。",
+            "公司稱遭入侵的是客戶意見回覆系統。",
+            "公司表示已阻斷未授權存取並向主管機關通報。",
+            "入侵方式及資料是否遭濫用尚未公開確認。"
+          ],
+          "impact": "金融業客戶資料外洩會增加身分冒用與釣魚詐騙風險，也可能促使韓國監管機關加強金融機構資安要求。",
+          "watch": "關注金融監理機關調查、外洩資料欄位、受影響客戶通知及是否出現後續詐騙。",
+          "verification": "已核對",
+          "verificationEvidence": "三星證券對外說明經Yonhap、中央社及Korea JoongAng Daily報導，確認受影響人數為8241人且事件涉及客戶回覆系統。尚未確認入侵者身分、完整資料欄位及是否有外流資料遭利用。",
+          "relatedSources": [
+            {
+              "source": "Yonhap",
+              "url": "https://en.yna.co.kr/view/AEN20261123002900320"
+            },
+            {
+              "source": "中央社",
+              "url": "https://www.cna.com.tw/news/aopl/202611230048.aspx"
+            },
+            {
+              "source": "Korea JoongAng Daily",
+              "url": "https://www.koreajoongangdaily.com/business/samsung-securities-data-breach-exposes-personal-information-of-8241-clients/12985500"
+            }
+          ]
+        },
+        {
+          "category": "社會",
+          "title": "印尼糖果工廠大火，警方確認24死、搜救失聯員工",
+          "original": "Indonesia says 24 killed in factory blaze as rescuers search for dozens missing",
+          "source": "Reuters（原始資料：印尼警方）",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/asia-pacific/indonesia-says-24-killed-factory-blaze-rescuers-search-dozens-missing-2026-11-23/",
+          "published": "2026-11-23 11:49",
+          "summary": "印尼警方確認工廠火災至少24人死亡，救援人員仍在坍塌且不穩定的廠房搜索失聯員工；遺體辨識需透過DNA等程序，最終名單尚未完成。",
+          "background": "火災於11月21日發生在萬丹省芝干德的PT Fonusa Agung Mulia糖果工廠。火勢造成廠房受損，搜救期間曾發現多袋遺體，但早期無法立即確認死亡人數。",
+          "detail": [
+            "路透社引述印尼官員報導，警方已確認至少24人死亡，搜救人員仍在廠區搜尋失聯者。廠房結構不穩及部分區域難以進入，使救援作業受限。",
+            "警方指出，部分遺體因火勢嚴重而無法目視辨認，正採集DNA樣本與家屬比對；因此目前的確認數字與最終身分名單仍可能更新。",
+            "較早AP報導提及現場移出24袋遺體，但當時官員表示尚不能據此認定死者數量；路透社其後報導印尼方面已確認24死。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月23日）：印尼官員確認，萬丹省芝干德一間糖果工廠火災至少造成24人死亡，搜救人員仍在廠房殘骸中尋找失聯員工。",
+            "火災於11月21日發生在PT Fonusa Agung Mulia工廠。大火燒毀部分廠房，殘存結構不穩，救援隊須在安全條件允許下清理與搜索。",
+            "警方表示，部分遺體受火勢影響，無法僅憑外觀確認身分，當局正透過DNA樣本及家屬資料進行辨識。故死者身分與失聯人數仍待後續核對。",
+            "AP較早報導時指出現場找到24袋遺體，但官方當時提醒袋數不能直接等同死者數；路透社其後引述官方確認死亡人數至少24人。火災原因及完整傷亡名單仍待調查。"
+          ],
+          "keyPoints": [
+            "火災發生於印尼萬丹省芝干德的糖果工廠。",
+            "印尼官員確認至少24人死亡，仍有員工失聯。",
+            "警方正以DNA等方式辨識遺體。",
+            "廠房結構不穩，搜救仍受現場安全條件影響。"
+          ],
+          "impact": "重大工業火災造成大量傷亡與員工失聯，後續調查將牽涉工廠消防、職場安全及災害應變責任。",
+          "watch": "關注搜救完成時間、失聯者核對、起火原因與工廠消防安全調查。",
+          "verification": "已核對",
+          "verificationEvidence": "印尼警方及相關官員經Reuters報導確認至少24人死亡；AP較早報導記錄現場移出24袋遺體並說明當時尚未確定死亡總數。火災地點與搜救工作亦見印尼警方及地方政府通報；最終傷亡名冊與起火原因仍待調查。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/asia-pacific/indonesia-says-24-killed-factory-blaze-rescuers-search-dozens-missing-2026-11-23/"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/fb73ec65390a34dc1e4aff4f87d6d111"
+            },
+            {
+              "source": "萬丹省警方（官方通報）",
+              "url": "https://tribratanews.banten.polri.go.id/polda-banten-terus-evakuasi-korban-kebakaran-pt-fonusa-agung-mulia-24-kantong-jenazah-telah-ditemukan/"
+            },
+            {
+              "source": "萬丹省政府",
+              "url": "https://bantenprov.go.id/berita/tinjau-kebakaran-pabrik-di-cikande-gubernur-banten-andra-soni-pastikan-pendinginan-dan-evakuasi-berjalan-aman"
+            }
+          ]
+        },
+        {
+          "category": "環境",
+          "title": "COP31氣候談判未能達成總體協議，化石燃料文字成主要分歧",
+          "original": "COP31 climate talks collapse as EU and others reject deal",
+          "source": "Reuters",
+          "lang": "EN",
+          "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/",
+          "published": "2026-11-23 07:40",
+          "summary": "COP31閉幕談判未能就總體政治協議取得共識，歐盟及部分國家拒絕支持未明確提及化石燃料的草案；氣候資金及減排承諾也存在分歧。",
+          "background": "COP31在土耳其安塔利亞舉行，由土耳其與澳洲共同主持。聯合國氣候談判須以共識推進，能源轉型及資金責任長期是各國主要爭論。",
+          "detail": [
+            "Reuters報導，談判延長至原訂會期之後，主辦方提出的最後草案仍未能取得共識，歐盟及其他代表拒絕支持其內容。",
+            "爭議之一是草案未明確提及化石燃料；不同國家對能源轉型速度、減排責任及氣候資金安排立場相左。",
+            "會議沒有形成具體總體協議，不代表各國退出《巴黎協定》或既有氣候承諾；後續仍須透過聯合國氣候機制及各國政策推進。"
+          ],
+          "article": [
+            "COP31在土耳其安塔利亞的閉幕談判未能達成總體政治協議。Reuters報導，歐盟及其他國家拒絕支持土耳其與澳洲共同主持方提出的最後草案，認為內容不足以推動氣候行動。",
+            "談判進入延長時段後，各方仍無法就草案文字形成共識。歐盟代表反對草案沒有明確提及化石燃料；產油國則對相關措辭持保留態度。",
+            "除化石燃料外，減排責任及氣候資金安排也是各方立場分歧的部分。這些爭議反映各國對能源安全、經濟成本與氣候脆弱國家需求的不同優先順序。",
+            "未能通過總體協議是本次會議的重大挫折，但既有國際氣候承諾並未因此自動失效。後續須觀察各國如何透過雙邊合作、國內政策及下一輪聯合國談判補足共識缺口。"
+          ],
+          "keyPoints": [
+            "COP31在延長談判後仍未達成總體政治協議。",
+            "歐盟及其他國家拒絕支持最後草案。",
+            "化石燃料文字、減排責任與氣候資金是主要分歧。",
+            "會議未達協議不等於既有《巴黎協定》承諾取消。"
+          ],
+          "impact": "談判破局削弱多邊氣候外交的短期協調能力，也增加各國氣候融資與能源轉型政策的不確定性。",
+          "watch": "關注COP主席團後續說明、各國是否提出替代合作安排，以及下一輪氣候談判如何處理化石燃料與氣候資金。",
+          "verification": "已核對",
+          "verificationEvidence": "Reuters及多家不同媒體報導COP31未能就總體決議達成共識，歐盟等拒絕草案；公開會議結果確認未形成所提政治協議。談判失敗原因各方說法及責任歸因仍具政治立場差異，正文僅陳述已報導的分歧。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/"
+            },
+            {
+              "source": "Reuters（會後回應）",
+              "url": "https://www.reuters.com/sustainability/cop/cop31-climate-deal-balance-after-fractious-talks-2026-11-22/"
             }
           ]
         }
