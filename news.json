@@ -5184,8 +5184,59 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 22:55",
+      "updated": "2026-11-23 23:51",
       "stories": [
+        {
+          "category": "科技",
+          "title": "CrowdStrike以439億美元全股票交易收購Zscaler",
+          "original": "CrowdStrike snaps up Zscaler in $44 billion deal as cyber threats mount",
+          "source": "Reuters（原始資料：CrowdStrike、Zscaler、SEC）",
+          "lang": "EN",
+          "url": "https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/",
+          "published": "2026-11-23 18:36",
+          "summary": "資安公司CrowdStrike將以全股票交易收購雲端資安業者Zscaler，交易企業價值約439億美元，是資安產業迄今最大併購案之一。兩家公司表示，合併後將整合端點防護、雲端網路安全與零信任服務；交易仍須完成監管及股東等程序。",
+          "background": "資安業者面對雲端服務、AI工具與企業網路環境擴張，近年積極整合產品平台。CrowdStrike主打端點偵測與回應，Zscaler提供雲端安全及零信任網路服務。",
+          "detail": [
+            "CrowdStrike與Zscaler於11月23日宣布已簽署最終合併協議。CrowdStrike將以全股票方式收購Zscaler，依CrowdStrike 11月20日收盤價計算，交易企業價值約439億美元；兩家公司董事會均已一致批准。",
+            "Reuters報導，交易旨在把Zscaler的網路安全及零信任能力整合進CrowdStrike的Falcon平台。公司稱合併後年度經常性收入將超過100億美元，並預期達成年化10億美元營收綜效；這些是企業預測，仍須視整合及交易完成情形而定。",
+            "兩家公司表示，交易完成尚待股東及監管機關批准，並須滿足其他交割條件。監管審查、客戶與合作夥伴反應、產品整合及人才留任，都是交易完成與後續效益的變數。",
+            "若交易完成，資安市場將形成更大型的整合平台，可能改變企業採購及同業競爭格局。產品整合也可能擴大單一供應商的服務範圍，同時提高客戶對互通性、集中風險及價格的關注。"
+          ],
+          "article": [
+            "CrowdStrike宣布將以全股票交易收購雲端資安公司Zscaler，依CrowdStrike 11月20日收盤股價計算，交易企業價值約439億美元。兩家公司董事會均已一致批准協議。",
+            "CrowdStrike的Falcon平台以端點防護與威脅偵測為核心，Zscaler則提供雲端網路安全及零信任服務。兩家公司表示，合併目的在整合不同層面的防護工具，並擴大企業客戶可採用的資安服務。",
+            "公司預估合併後年度經常性收入超過100億美元，並設定年化10億美元營收綜效目標。這些是管理層對交易效益的預期，不代表已實現的收入或節省。",
+            "交易仍須經股東與監管機關批准，並完成其他交割條件。後續須觀察審查時程、產品整合、客戶選擇及資安市場競爭變化。"
+          ],
+          "keyPoints": [
+            "CrowdStrike將以全股票交易收購Zscaler，企業價值約439億美元。",
+            "交易已獲兩家公司董事會一致批准，仍待監管及股東程序。",
+            "公司預估合併後年度經常性收入超過100億美元，並提出年化10億美元綜效目標。",
+            "CrowdStrike與Zscaler分別提供端點防護和雲端零信任網路安全服務。"
+          ],
+          "impact": "交易可能重塑全球資安服務供應商版圖，影響企業資安採購、平台整合與供應商集中程度。若雙方能整合產品，客戶可獲得更廣泛的防護；但預期綜效與市場影響仍待交易完成後驗證。",
+          "watch": "關注監管機關與股東審查、預定交割時間、產品整合路線，以及客戶是否接受單一供應商平台；不要把公司預測的營收綜效當成已實現成果。",
+          "verification": "已核對",
+          "verificationEvidence": "CrowdStrike及Zscaler於各自官方投資人關係網站發布共同公告，SEC文件亦載明合併協議與約439億美元估值；Reuters與AP分別報導相同核心條件。兩家公司公布的綜效及收入數字屬前瞻估計，尚非已實現結果；交易能否完成仍取決於監管、股東及其他交割條件。",
+          "relatedSources": [
+            {
+              "source": "CrowdStrike（官方公告）",
+              "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-zscaler-bringing-network-security-and-zero"
+            },
+            {
+              "source": "Zscaler（官方公告）",
+              "url": "https://www.zscaler.com/press/crowdstrike-acquire-zscaler-bringing-network-security-and-zero-trust-falcon-platform"
+            },
+            {
+              "source": "美國證券交易委員會（CrowdStrike 8-K）",
+              "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000035/crwd-20261123xex991.htm"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/cf5a66aaa14f98763eabfb767ff8727c"
+            }
+          ]
+        },
         {
           "category": "科技",
           "title": "NVIDIA董事會恢復黃仁勳執行長職務",
