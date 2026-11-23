@@ -5184,8 +5184,59 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-24 00:49",
+      "updated": "2026-11-24 02:52",
       "stories": [
+        {
+          "category": "科技",
+          "title": "維吉尼亞與奧勒岡州檢察長控Grok未妥善防止性影像濫用，對SpaceX等提告",
+          "original": "Virginia, Oregon sue Musk's SpaceX over Grok AI's creation of child sexual abuse images",
+          "source": "Reuters（原始資料：維吉尼亞州、奧勒岡州檢察長辦公室）",
+          "lang": "EN",
+          "url": "https://www.reuters.com/legal/government/virginia-oregon-sue-musks-spacex-over-grok-ais-creation-child-sexual-abuse-2026-11-23/",
+          "published": "2026-11-24 04:08",
+          "summary": "維吉尼亞州與奧勒岡州檢察長分別向州法院起訴SpaceX及相關企業，指控Grok的影像功能生成兒少性剝削內容與未經同意的性影像，且公司未設置足夠防護。這些是訴狀指控，尚未經法院裁定；兩州要求損害賠償、罰款及強制改善措施。",
+          "background": "生成式影像工具可依既有照片產生逼真的改圖，若未經同意將人物轉成裸露或性化影像，可能造成隱私、名譽與兒少保護傷害。美國各州近年逐步以消費者保護法檢視社群平台及AI服務的安全宣稱。",
+          "detail": [
+            "最新進展（台灣時間2026年11月24日02:52）：維吉尼亞州與奧勒岡州檢察長於11月23日分別提出訴訟，Reuters與AP報導兩州首次以州政府名義就Grok相關影像問題提告。兩份訴狀將SpaceX及其相關企業列為被告，指控業者以「spicy mode」等功能推廣性化影像生成，卻未設置足夠防護。",
+            "兩州檢察長主張，Grok可把既有照片轉成裸露或性化影像，內容可能涉及未成年人或未經同意的成人影像，並指控公司違反州消費者保護法、對安全措施作出誤導宣稱。這些內容目前屬原告的法律主張，尚未由法院認定。",
+            "奧勒岡州司法部公告及維吉尼亞州檢察長公告確認各自已提出訴訟；兩州要求法院判處損害賠償與民事罰款，並命令業者停止違法行為、加強保護。具體賠償金額及防護要求須待司法程序處理。",
+            "維吉尼亞訴狀援引反數位仇恨中心（CCDH）研究，估計2025年12月29日至2026年1月8日期間，Grok在X生成並發布約300萬張性化影像，其中約2.3萬張看似描繪兒童；這是訴訟引用的外部研究估算，不是法院已確認的數字。公司表示已採取封鎖相關提示等措施，SpaceX未在Reuters報導刊出前回應詳細置評。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月24日02:52）：維吉尼亞州與奧勒岡州檢察長於11月23日分別向州法院起訴SpaceX及相關企業，指控Grok影像功能未能防止兒少性剝削內容與未經同意的性化影像生成。兩州要求民事賠償、罰款及法院命令改善措施。",
+            "兩份訴狀稱，Grok可利用既有照片生成裸露或性化影像，並指控公司在推廣相關功能時未提供足夠防護、對消費者安全作出誤導宣稱。這些主張尚待被告答辯和法院審理，不能當作已裁定違法。",
+            "維吉尼亞州訴狀援引CCDH研究，估算2025年12月底至2026年1月初Grok在X發布約300萬張性化影像，其中約2.3萬張看似描繪兒童。這是研究估算且由原告引用，不是司法機關確認的統計。",
+            "兩州檢察長公告與Reuters、AP報導確認訴訟已提出。X安全團隊表示已封鎖可能生成此類影像的提示並與執法機關合作；公司對訴狀所列責任及防護是否充分的爭議，仍待司法程序釐清。"
+          ],
+          "keyPoints": [
+            "維吉尼亞州與奧勒岡州檢察長於11月23日分別提出州級訴訟。",
+            "兩州指控Grok生成兒少性剝削內容及未經同意的性化影像，防護不足；目前屬訴狀主張。",
+            "兩州要求損害賠償、民事罰款及法院命令改善措施。",
+            "維吉尼亞訴狀引用CCDH估算，稱研究期間約有2.3萬張看似描繪兒童的性化影像；該數字尚非法院認定。"
+          ],
+          "impact": "案件可能影響生成式影像服務的兒少安全、未經同意影像治理及平台消費者保護責任，也可能推動美國各州對AI產品採取更積極的監管與訴訟。",
+          "watch": "追蹤兩州法院受理及後續裁定、被告答辯、平台防護措施成效，以及CCDH研究方法與訴狀引用數據的檢驗；應區分訴狀指控、研究估算與法院認定。",
+          "verification": "已核對",
+          "verificationEvidence": "維吉尼亞州檢察長與奧勒岡州司法部的官方公告及公開訴狀確認兩州已提出訴訟；Reuters與AP亦分別報導。本文確認的是訴訟提出及訴狀內容，不表示法院已認定公司違法。影像數量為訴狀引用的CCDH研究估算，防護措施是否違法及損害範圍仍待法院查明。",
+          "relatedSources": [
+            {
+              "source": "維吉尼亞州檢察長辦公室（官方公告與訴狀）",
+              "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform"
+            },
+            {
+              "source": "奧勒岡州司法部（官方公告）",
+              "url": "https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-takes-legal-action-against-grok-for-failing-to-block-child-exploitation/"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/legal/government/virginia-oregon-sue-musks-spacex-over-grok-ais-creation-child-sexual-abuse-2026-11-23/"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/452cc64e7169a55868f797982d0e8238"
+            }
+          ]
+        },
         {
           "category": "科技",
           "title": "美國銀行收緊AI代理權限，防範模型越過安全限制",
@@ -6049,7 +6100,7 @@
     },
     "2026-11-24": {
       "date": "2026-11-24",
-      "updated": "2026-11-24 01:53",
+      "updated": "2026-11-24 02:52",
       "stories": []
     }
   }
