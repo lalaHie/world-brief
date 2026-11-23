@@ -5165,8 +5165,48 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 07:50",
+      "updated": "2026-11-23 08:47",
       "stories": [
+        {
+          "category": "科技",
+          "title": "美國情報總監據報兼任代理國家網路總監",
+          "original": "Scoop: DNI Jay Clayton to double as acting cyber chief",
+          "source": "Axios（原始資料：白宮）",
+          "lang": "EN",
+          "url": "https://www.axios.com/2026/11/23/jay-clayton-acting-national-cyber-director",
+          "published": "2026-11-23 08:31",
+          "summary": "Axios引述白宮官員報導，美國國家情報總監Jay Clayton將暫兼代理國家網路總監，直至國會確認正式人選。白宮已公布提名Kirsten Davies出任正式主管，但代理任命目前尚未見白宮正式公告。",
+          "background": "美國白宮國家網路總監辦公室負責跨政府網路安全政策協調。此前白宮宣布提名國防部首席資訊官Kirsten Davies接任該職，她仍待參議院確認。",
+          "detail": [
+            "Axios引述一名白宮官員稱，Clayton將在Davies等待參議院確認期間代理國家網路總監；報導稱兩項重要國安職務將暫由Clayton兼任。",
+            "白宮11月20日公布Davies獲提名的消息，Clayton當時曾公開表示期待與她合作。白宮該份公告確認Davies獲提名，但未提及Clayton代理兼任安排。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月23日）：Axios引述一名白宮官員報導，美國國家情報總監Jay Clayton將兼任代理國家網路總監，直到正式人選Kirsten Davies完成參議院確認程序。",
+            "白宮在11月20日宣布提名國防部首席資訊官Davies領導白宮國家網路總監辦公室。她的提名尚待參議院確認；白宮當時的公告沒有說明代理期間由誰主持辦公室。",
+            "若此安排落實，情報總監與網路安全政策協調職務將短期集中於同一人，可能影響跨部門協調及政策決策節奏。Axios稱Clayton已與相關國安部門合作，但此為該報引述官員的說法。",
+            "截至目前，兼任代理職務的消息僅見Axios報導，未找到白宮正式公告或第二個獨立來源確認。正式任命狀態及開始日期仍待官方說明。"
+          ],
+          "keyPoints": [
+            "白宮已提名Kirsten Davies出任國家網路總監，仍待參議院確認。",
+            "Axios引述白宮官員稱Jay Clayton將暫任代理網路總監。",
+            "白宮公開提名公告未提及Clayton的代理安排。"
+          ],
+          "impact": "若確認，可能暫時把情報與聯邦網路安全政策協調責任集中於同一位官員，影響政府應對資安事件及部門合作。",
+          "watch": "關注白宮是否正式宣布代理任命、Davies的參議院確認進度及國家網路總監辦公室後續政策。",
+          "verification": "初步消息",
+          "verificationEvidence": "白宮11月20日正式公告確認提名Kirsten Davies出任國家網路總監，但未提及代理安排；「Jay Clayton將代理兼任」目前依據為Axios引述未具名白宮官員，尚未獲白宮公告或其他獨立來源證實。",
+          "relatedSources": [
+            {
+              "source": "Axios",
+              "url": "https://www.axios.com/2026/11/23/jay-clayton-acting-national-cyber-director"
+            },
+            {
+              "source": "The White House",
+              "url": "https://www.whitehouse.gov/releases/2026/11/president-trump-taps-pentagon-cyber-chief-kirsten-davies-as-national-cyber-director/"
+            }
+          ]
+        },
         {
           "category": "健康",
           "title": "剛果民主共和國伊圖里省武裝衝突阻礙伊波拉疫情應變",
