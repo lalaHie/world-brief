@@ -2,7 +2,7 @@
   "editions": {
     "2026-11-19": {
       "date": "2026-11-19",
-      "updated": "2026-11-19 23:48",
+      "updated": "2026-11-23 22:55",
       "stories": [
         {
           "category": "環境",
@@ -408,24 +408,27 @@
           "lang": "EN",
           "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
           "published": "2026-11-19 16:03",
-          "summary": "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
-          "background": "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
+          "summary": "最新進展（台灣時間2026年11月23日22:55）：歐盟執委會確認，針對執委會的網路攻擊波及EU Academy學習平台，使用者個資外洩，已知包含姓名與電子郵件；外洩規模仍在調查，平台已暫停公開存取。",
+          "background": "歐盟執委會11月19日證實遭遇使用AI工具的網路攻擊，當時仍在調查影響範圍。執委會11月23日進一步確認外部使用者使用的EU Academy也受波及。",
           "detail": [
-            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
-            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+            "最新進展（台灣時間2026年11月23日22:55）：歐盟執委會發言人在官方記者會確認，網路攻擊影響EU Academy平台並導致使用者個資外洩；已知資料包含姓名與電子郵件。官方表示外洩規模仍在調查，平台已暫停公開存取。",
+            "執委會說，EU Academy使用者已透過平台網站收到通知；目前沒有公布受影響人數，也未確認攻擊者身分。執委會另表示已依程序通知歐洲資料保護監督機關。",
+            "這項進展擴大了11月19日公開的執委會網路攻擊影響範圍。當時執委會表示已採取預防措施並持續調查；截至目前，官方沒有公布其他系統是否也有個資遭竊的證據。"
           ],
           "article": [
-            "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
-            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
-            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+            "最新進展（台灣時間2026年11月23日22:55）：歐盟執委會確認，針對執委會的網路攻擊波及EU Academy學習平台，使用者個資外洩，已知包含姓名與電子郵件。執委會表示外洩範圍仍在調查，並已暫停平台公開存取。",
+            "執委會發言人在11月23日官方記者會說，EU Academy使用者已在平台網站看到通知。現階段官方沒有公布受影響人數，亦未指認攻擊者；執委會表示已通知歐洲資料保護監督機關。",
+            "執委會11月19日曾確認遭遇網路攻擊，表示偵測到攻擊活動後已採取預防措施，部分服務一度停用。當時官方尚未證實個資外洩，因此這次對EU Academy資料受影響的確認，是事件公開後的重要新增資訊。",
+            "EU Academy提供歐盟政策及相關課程，使用者包括歐盟機構以外人士。個資外洩可能增加釣魚訊息等後續風險；受影響帳戶數、資料是否還包括其他欄位，以及攻擊來源仍待調查。"
           ],
           "keyPoints": [
-            "路透社引述Politico報導，歐盟執行委員會遭到網路攻擊，可能牽涉個人資料外洩。",
-            "執委會方面認為攻勢大部分已受到控制，但實際損害及受影響範圍仍在釐清。",
-            "發言人表示已採取因應措施並通知相關人士，執委會亦召開危機管理會議。"
+            "歐盟執委會確認EU Academy遭網攻波及並發生使用者個資外洩。",
+            "官方已知外洩資料包含姓名與電子郵件；受影響人數仍未知。",
+            "EU Academy已暫停公開存取，並在網站發布使用者通知。",
+            "攻擊者身分及其他執委會系統是否有資料外洩仍在調查。"
           ],
-          "impact": "公共機構資訊安全與個人資料保護受到關注。",
-          "watch": "等待官方調查結果及受影響人員通知。",
+          "impact": "EU Academy外部使用者的個資與帳戶安全受到影響；事件也使歐盟機構的網路防護、資料外洩通報及AI輔助攻擊風險受到關注。",
+          "watch": "關注歐盟執委會公布的受影響人數、外洩資料範圍、帳戶防護建議與攻擊歸因；目前不應將尚未證實的其他系統受害或攻擊者身分寫成定論。",
           "image": {
             "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Berlaymont_building_Brussels.jpg",
             "source": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_Brussels.jpg",
@@ -435,7 +438,23 @@
             "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
             "kind": "related"
           },
-          "original": "EU Commission targeted in cyberattack, Politico reports"
+          "original": "EU Commission targeted in cyberattack, Politico reports",
+          "verification": "已核對",
+          "verificationEvidence": "歐盟執委會11月23日官方記者會確認EU Academy受攻擊波及、使用者個資外洩，並指出姓名與電子郵件在外洩資料中；Reuters與AP報導相符。執委會同時表示外洩規模仍在調查、沒有公布受影響人數，也未歸因攻擊者。",
+          "relatedSources": [
+            {
+              "source": "European Commission（官方記者會逐字／影音紀錄）",
+              "url": "https://audiovisual.ec.europa.eu/de/media/video/I-298395"
+            },
+            {
+              "source": "Reuters（EU Academy個資外洩）",
+              "url": "https://www.reuters.com/world/eu-academy-platform-disabled-after-cyber-attack-commission-spokesperson-says-2026-11-23/"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/02e1f69e46ad9f82484b66b2f86df53b"
+            }
+          ]
         },
         {
           "category": "國際",
@@ -5165,8 +5184,59 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 21:48",
+      "updated": "2026-11-23 22:55",
       "stories": [
+        {
+          "category": "科技",
+          "title": "NVIDIA董事會恢復黃仁勳執行長職務",
+          "original": "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director",
+          "source": "Reuters（原始資料：NVIDIA、SEC）",
+          "lang": "EN",
+          "url": "https://www.reuters.com/business/wall-street-futures-rebound-after-rough-week-ai-linked-shares-2026-11-23/",
+          "published": "2026-11-23 15:55",
+          "summary": "NVIDIA董事會宣布即刻恢復黃仁勳的總裁、執行長及董事職務。公司表示董事會在重新討論並聽取美國政府高層意見後，認定他能繼續領導公司且不構成國安風險；這項決定推翻他11月中旬辭任後董事會原先不考慮復任的公開立場。",
+          "background": "NVIDIA在11月11日接受黃仁勳辭去總裁、執行長與董事職務，財務長Colette Kress暫代執行長。公司後來成立董事會委員會處理國安及出口管制監督；董事會11月23日宣布復任。",
+          "detail": [
+            "NVIDIA公告稱，董事會一致決議即刻恢復黃仁勳的總裁、執行長與董事職務。董事會表示，經過與黃仁勳多次討論及聽取美國政府高層意見後，認為他仍適任，復任不構成國家安全風險。",
+            "這項決定距黃仁勳11月11日辭任僅約兩週。SEC提交的8-K文件記載，董事會於11月22日決議復任；財務長Colette Kress將繼續擔任執行副總裁及財務長。",
+            "Reuters報導，復任消息帶動NVIDIA及AI相關股票盤前反彈。市場反應反映投資人對領導穩定性的看法，但不能單獨證明公司面臨的出口管制、國安調查或治理疑慮已經消失。",
+            "董事會改變先前不考慮復任的公開立場，使公司治理程序及政府意見如何納入決策受到關注。NVIDIA公告沒有公開政府提供意見的細節；董事會委員會及相關調查的後續仍待觀察。"
+          ],
+          "article": [
+            "NVIDIA董事會宣布，即刻恢復黃仁勳的總裁、執行長及董事職務。公司表示，董事會經過多次討論並聽取美國政府高層意見後，認為黃仁勳仍適合領導公司，且復任不構成國家安全風險。",
+            "SEC提交的8-K文件記載，董事會於11月22日決議復任。黃仁勳在11月11日辭任上述職務後，財務長Colette Kress曾暫代執行長；她將繼續擔任執行副總裁及財務長。",
+            "Reuters報導，消息公布後NVIDIA及AI相關股票盤前上揚。股價變化顯示市場對領導層穩定性的反應，並不代表出口管制及公司治理相關問題已獲解決。",
+            "董事會這次改變先前不考慮復任的公開立場。外界接下來仍將關注董事會調查、政府提供意見的範圍，以及公司如何維持出口管制和國安監督。"
+          ],
+          "keyPoints": [
+            "NVIDIA董事會一致決議恢復黃仁勳的總裁、執行長及董事職務，立即生效。",
+            "SEC文件記載董事會於2026年11月22日作出復任決定。",
+            "Colette Kress繼續擔任NVIDIA執行副總裁及財務長。",
+            "公司稱董事會聽取美國政府高層意見，認為復任不構成國安風險。"
+          ],
+          "impact": "NVIDIA是AI加速器與資料中心晶片供應鏈的核心企業，執行長更迭會影響投資人對策略延續、客戶合作及公司治理的評估，也可能牽動全球AI及半導體市場情緒。",
+          "watch": "關注董事會調查及國安、出口管制監督安排，並區分公司公告所述判斷與尚未公開的政府意見細節；短線股價反應不代表相關風險已排除。",
+          "verification": "已核對",
+          "verificationEvidence": "SEC 8-K記載NVIDIA董事會於2026年11月22日恢復黃仁勳的總裁、執行長及董事職務；NVIDIA新聞稿及Reuters報導均確認決定與即刻生效。董事會稱曾聽取美國政府高層意見並認定復任不構成國安風險，此為公司公布的判斷，政府提供意見的細節未公開。",
+          "relatedSources": [
+            {
+              "source": "NVIDIA（董事會公告）",
+              "url": "https://nvidianews.nvidia.com/_gallery/download_pdf/6b04462d3d63321add7499dc/"
+            },
+            {
+              "source": "美國證券交易委員會（NVIDIA Form 8-K）",
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/49ba1beba78fa4ed2bd5898029f79c91"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/business/wall-street-futures-rebound-after-rough-week-ai-linked-shares-2026-11-23/"
+            }
+          ]
+        },
         {
           "category": "軍事",
           "title": "波蘭檢方稱闖入領空的三件飛行物均為俄製Kh-101巡弋飛彈",
