@@ -5184,7 +5184,7 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-24 03:52",
+      "updated": "2026-11-24 03:55",
       "stories": [
         {
           "category": "科技",
@@ -6105,7 +6105,7 @@
     },
     "2026-11-24": {
       "date": "2026-11-24",
-      "updated": "2026-11-24 03:52",
+      "updated": "2026-11-24 03:55",
       "stories": [
         {
           "category": "科技",
@@ -6199,7 +6199,16 @@
               "url": "https://www.wdsu.com/article/amtrak-train-derails-after-collision-with-18-wheeler-in-lafayette/74503233",
               "published": "2026-11-23 23:46"
             }
-          ]
+          ],
+          "image": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Amtrak_locomotive.jpg?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+            "source": "https://commons.wikimedia.org/wiki/File:Amtrak_locomotive.jpg",
+            "caption": "related 資料照片，非路易斯安那州事故現場；畫面為Amtrak列車，拍攝日期：2005年4月24日。",
+            "credit": "Rick from Boulder, USA",
+            "license": "Creative Commons Attribution 2.0 Generic (CC BY 2.0)",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "kind": "related"
+          }
         }
       ]
     }
