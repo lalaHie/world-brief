@@ -5551,8 +5551,8 @@
           ],
           "impact": "重大工業火災造成大量傷亡與員工失聯，後續調查將牽涉工廠消防、職場安全及災害應變責任。",
           "watch": "關注搜救完成時間、失聯者核對、起火原因與工廠消防安全調查。",
-          "verification": "已核對",
-          "verificationEvidence": "印尼警方及相關官員經Reuters報導確認至少24人死亡；AP較早報導記錄現場移出24袋遺體並說明當時尚未確定死亡總數。火災地點與搜救工作亦見印尼警方及地方政府通報；最終傷亡名冊與起火原因仍待調查。",
+          "verification": "初步消息",
+          "verificationEvidence": "Reuters引述印尼官員報導至少24人死亡，印尼警方官方通報確認火災、遺體袋及搜救；AP較早報導指出當時尚不能依遺體袋數確認死者數。死亡人數依後續官方辨識可能變更，最終名單仍待公布。",
           "relatedSources": [
             {
               "source": "Reuters",
@@ -5602,15 +5602,19 @@
           "impact": "談判破局削弱多邊氣候外交的短期協調能力，也增加各國氣候融資與能源轉型政策的不確定性。",
           "watch": "關注COP主席團後續說明、各國是否提出替代合作安排，以及下一輪氣候談判如何處理化石燃料與氣候資金。",
           "verification": "已核對",
-          "verificationEvidence": "Reuters及多家不同媒體報導COP31未能就總體決議達成共識，歐盟等拒絕草案；公開會議結果確認未形成所提政治協議。談判失敗原因各方說法及責任歸因仍具政治立場差異，正文僅陳述已報導的分歧。",
+          "verificationEvidence": "Reuters與AP分別報導COP31未能就總體協議達成共識；聯合國氣候變化綱要公約（UNFCCC）公布秘書長執行秘書閉幕致詞，確認會議未形成共識。草案各項爭議的責任歸因仍有政治立場差異，本文只整理已公開的分歧。",
           "relatedSources": [
             {
               "source": "Reuters",
               "url": "https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/"
             },
             {
-              "source": "Reuters（會後回應）",
-              "url": "https://www.reuters.com/sustainability/cop/cop31-climate-deal-balance-after-fractious-talks-2026-11-22/"
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/baed7f1491d16a00ee9b60a35596e1f6"
+            },
+            {
+              "source": "UNFCCC（閉幕致詞）",
+              "url": "https://unfccc.int/news/un-climate-change-executive-secretary-simon-stiell-remarks-at-the-closing-plenary-of-cop31"
             }
           ]
         }
