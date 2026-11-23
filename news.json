@@ -5165,7 +5165,7 @@
     },
     "2026-11-23": {
       "date": "2026-11-23",
-      "updated": "2026-11-23 14:50",
+      "updated": "2026-11-23 15:49",
       "stories": [
         {
           "category": "環境",
@@ -5618,6 +5618,59 @@
             {
               "source": "UNFCCC（閉幕致詞）",
               "url": "https://unfccc.int/news/un-climate-change-executive-secretary-simon-stiell-remarks-at-the-closing-plenary-of-cop31"
+            }
+          ]
+        },
+        {
+          "category": "軍事",
+          "title": "利比亞班加西港俄羅斯軍艦遭疑似無人艇攻擊後傾覆，另有商船遇襲",
+          "original": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
+          "source": "Associated Press、Reuters",
+          "lang": "EN",
+          "url": "https://apnews.com/article/59f6f304f3053c69c8cc890138a94d1b",
+          "published": "2026-11-22 23:28",
+          "summary": "利比亞班加西港一艘俄羅斯海軍護衛艦在爆炸及火災後嚴重受損，衛星影像顯示船身傾覆、部分沉沒；東部當局懷疑遭無人機攻擊，但未有人承認責任。Reuters另報導港外一艘馬爾他籍商船也遇襲。",
+          "background": "俄羅斯軍艦停靠班加西港補給期間遇襲，事件發生於俄烏戰事延伸至黑海以外海域之際。利比亞東西部由不同政治當局控制，東部當局與俄羅斯有合作關係。",
+          "detail": [
+            "利比亞東部當局表示，初步調查認為班加西海軍基地一艘俄羅斯船隻發生爆炸，疑似由無人機造成。美聯社引述兩名利比亞軍方官員稱，受損船隻為俄羅斯海軍護衛艦Merkury，爆炸引發基地火災。",
+            "Reuters引述衛星影像供應商Vantor指出，船隻大部分已傾覆並沉入水中，只有船首仍露出水面。報導亦稱，爆炸造成俄羅斯及利比亞人員受傷，傷者約10人；截至報導時未有死亡消息。",
+            "Reuters另引述利比亞軍方消息人士稱，稍後一艘懸掛馬爾他旗的商船在班加西外海遭無人艇攻擊。襲擊者身分與兩起事件是否相關，均未獲確認。",
+            "俄羅斯及烏克蘭當時均未正式回應，亦無組織宣稱負責。東部當局表示將與俄方調查；因此攻擊來源及是否由烏方執行仍屬未證實指控。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月23日）：Reuters及美聯社報導，班加西港一艘俄羅斯海軍護衛艦遭爆炸及火災重創。衛星影像顯示船身傾覆並部分沉沒；目前沒有組織承認攻擊，也未有俄方或烏方正式確認責任。",
+            "利比亞東部當局表示，初步調查懷疑爆炸由無人機攻擊引起。美聯社引述兩名東部軍方官員稱，受損船隻是俄羅斯海軍護衛艦Merkury，當時停靠班加西港補給。當局稱基地設施火災已撲滅，並將與俄羅斯共同調查。",
+            "Reuters引述衛星影像供應商Vantor稱，船體大部分已傾覆、沉入水中；Reuters另引述醫療來源報導約10人受傷。畫面與影像支持船舶嚴重受損，但襲擊者身分及使用的武器仍未獲獨立確認。",
+            "同日稍後，Reuters引述利比亞軍方消息人士稱，另一艘馬爾他籍商船在班加西外海遭無人艇攻擊。兩起事件是否有關聯、商船所載貨物及攻擊方均不明。",
+            "若確認軍艦與商船均遭海上無人系統攻擊，將顯示俄烏戰事的海上風險延伸至地中海及利比亞港口周邊；目前攻擊歸屬仍需等待調查，不能視為已證實的烏克蘭行動。"
+          ],
+          "keyPoints": [
+            "利比亞東部當局稱，俄羅斯船隻在班加西港爆炸起火，初步懷疑遭無人機攻擊。",
+            "AP引述利比亞軍方官員將受損艦艇指為俄羅斯護衛艦Merkury。",
+            "Reuters引述衛星影像分析稱船隻傾覆並部分沉沒，約10人受傷。",
+            "Reuters另報導一艘馬爾他籍商船在班加西外海遇襲。",
+            "目前無人承認責任，俄方與烏方均未正式確認涉入。"
+          ],
+          "impact": "事件可能擴大俄烏衝突的海上安全風險，並使利比亞港口與地中海商業航線面臨更高軍事化威脅。",
+          "watch": "關注利比亞東部當局與俄羅斯聯合調查、船艦身分及損害確認、商船遇襲情況，以及是否有任何一方承認責任。",
+          "verification": "初步消息",
+          "verificationEvidence": "AP報導引述兩名利比亞東部軍方官員稱俄艦遭疑似海上無人機攻擊；Reuters引述利比亞東部當局初步調查及Vantor衛星影像確認爆炸、船體傾覆等情況，並另引軍方消息人士通報商船遇襲。攻擊歸屬未獲確認，無人承認責任，俄烏官方均未正式表態。",
+          "relatedSources": [
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/59f6f304f3053c69c8cc890138a94d1b"
+            },
+            {
+              "source": "Reuters（俄艦事件及商船遇襲）",
+              "url": "https://www.reuters.com/world/middle-east/libyas-eastern-government-suspects-drone-attack-caused-explosion-russian-ship-2026-11-22/"
+            },
+            {
+              "source": "The Guardian",
+              "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya"
+            },
+            {
+              "source": "Libya東部當局聲明（Reuters報導）",
+              "url": "https://www.al-monitor.com/originals/2026/11/libyas-eastern-government-suspects-drone-attack-caused-explosion-russian-ship"
             }
           ]
         }
