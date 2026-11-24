@@ -6146,7 +6146,7 @@
     },
     "2026-11-24": {
       "date": "2026-11-24",
-      "updated": "2026-11-24 10:50",
+      "updated": "2026-11-24 11:50",
       "stories": [
         {
           "category": "軍事",
@@ -6395,7 +6395,7 @@
           "source": "Reuters、Associated Press；原始聲明：烏克蘭安全局",
           "lang": "EN",
           "url": "https://www.reuters.com/world/europe/zelenskiy-says-ukraine-sank-russian-corvette-near-libyas-coast-hit-cargo-ship-2026-11-23/",
-          "published": "2026-11-24 15:53",
+          "published": "2026-11-24 07:53",
           "summary": "烏克蘭總統澤倫斯基稱，烏方在利比亞港口以海上無人艇攻擊俄羅斯護衛艦，並擊中一艘貨船；俄艦是否沉沒的細節仍以烏方說法為主，Reuters與AP均報導此事件。",
           "background": "俄烏戰爭持續擴大到遠離前線的海域。烏克蘭方面稱受襲俄艦曾護航運送軍事裝備的貨船；利比亞東部政府與俄羅斯維持合作，港口停靠情況牽涉區域安全與軍事補給。",
           "detail": [
@@ -6431,6 +6431,54 @@
             {
               "source": "烏克蘭安全局（行動聲明）",
               "url": "https://ssu.gov.ua/"
+            }
+          ]
+        },
+        {
+          "category": "科技",
+          "title": "黃仁勳復任輝達執行長，台股早盤創史上最大盤中漲點",
+          "original": "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director",
+          "source": "NVIDIA官方公告、Reuters、中央社",
+          "lang": "EN",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx",
+          "published": "2026-11-24 05:00",
+          "summary": "輝達董事會宣布黃仁勳即日起復任總裁兼執行長，消息帶動AI與半導體股強彈；台股早盤一度大漲逾3,300點，創史上最大盤中漲點。股價反彈反映市場情緒，並不代表AI投資疑慮或公司治理調查已經消失。",
+          "background": "黃仁勳11月12日卸下輝達總裁、執行長及董事職務，由財務長柯蕾特・克瑞斯暫代執行長。輝達董事會11月23日宣布復任；近期市場同時受到AI投資前景、半導體股波動與相關調查消息影響。",
+          "detail": [
+            "最新進展（台灣時間2026年11月24日11:50）：輝達官方公告指出，董事會已決議由黃仁勳即日起復任總裁、執行長及董事。Reuters報導復任消息引發亞洲科技股反彈；中央社報導台股早盤大漲逾3,300點。",
+            "台股加權指數開盤上漲2,337.02點，之後盤中漲幅一度超過3,300點並重返4萬點。中央社指出台積電開盤上漲200元至2,230元，觸及10%漲停；多檔大型電子與半導體股同步走強。",
+            "市場回升緊接此前AI相關股票大幅下挫。Reuters引述市場人士指出，領導層不確定性暫時消退提振情緒，但AI資本支出、資料中心建設監管及半導體股估值等基本面問題仍待觀察。",
+            "復任並未終止輝達董事會先前啟動的獨立調查。至於股市反彈能否延續，仍須觀察後續交易、公司治理調查及AI需求與投資數據。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月24日11:50）：輝達董事會宣布黃仁勳即日起復任總裁、執行長及董事。這項決定帶動亞洲市場對AI與半導體股的買盤回升。",
+            "台灣股市早盤出現劇烈反彈。中央社報導，加權指數盤中一度上漲逾3,300點，創史上最大盤中漲點並重返4萬點；台積電開盤上漲200元至2,230元，觸及漲停。指數與個股數字為盤中資料，收盤表現可能不同。",
+            "這次反彈發生在AI相關股票近期遭遇大幅賣壓之後。Reuters報導稱，投資人將黃仁勳回任視為降低輝達領導層不確定性的訊號，但市場人士也提醒，AI投資回報、資料中心建設規範及企業支出成長等疑問仍未解決。",
+            "輝達11月12日曾公告黃仁勳卸任，由財務長柯蕾特・克瑞斯暫代；11月23日，公司正式宣布復任。董事會此前表示將對相關報導所涉事項進行獨立調查，黃仁勳復任不代表調查結束。",
+            "因此，單日急漲主要說明市場情緒快速反轉，不能單憑漲幅判定AI產業風險已解除。後續需觀察輝達調查進度、公司營運資訊、AI基礎建設支出，以及台股收盤和外資交易情形。"
+          ],
+          "keyPoints": [
+            "輝達官方宣布黃仁勳即日起復任總裁、執行長及董事。",
+            "台股加權指數早盤一度上漲逾3,300點，為史上最大盤中漲點。",
+            "台積電開盤上漲200元至2,230元並觸及漲停；該數字為盤中資料。",
+            "市場反彈未消除AI投資前景疑慮，輝達董事會獨立調查仍需追蹤。"
+          ],
+          "impact": "輝達是AI加速器與資料中心供應鏈的核心企業，領導層變動會影響投資人對產業資本支出與供應商訂單的預期；台股大型半導體權值股劇烈波動，也可能放大市場風險。",
+          "watch": "留意台股收盤與後續交易、輝達董事會獨立調查結果、AI資料中心支出和晶片需求的實際數據。不要將盤中漲幅當成收盤結果或產業基本面已反轉的證據。",
+          "verification": "已核對",
+          "verificationEvidence": "輝達官方公告確認黃仁勳即日起復任總裁、執行長及董事；Reuters獨立報導其復任及亞洲市場反應。中央社報導台股早盤指數與台積電開盤數據。股市漲勢成因屬市場反應及分析，並非單一因素已被證明為直接因果；盤中數據不等同收盤。",
+          "relatedSources": [
+            {
+              "source": "輝達（官方公告）",
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.investing.com/news/stock-market-news/analysts-comment-on-market-impact-of-huangs-return-as-nvidia-ceo-5046890"
+            },
+            {
+              "source": "中央社／Focus Taiwan",
+              "url": "https://focustaiwan.tw/business/202611240003"
             }
           ]
         }
