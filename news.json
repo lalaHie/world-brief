@@ -6146,7 +6146,7 @@
     },
     "2026-11-24": {
       "date": "2026-11-24",
-      "updated": "2026-11-24 15:50",
+      "updated": "2026-11-24 16:50",
       "stories": [
         {
           "category": "軍事",
@@ -6604,6 +6604,57 @@
             {
               "source": "Reuters（轉述《雪梨晨鋒報》）",
               "url": "https://www.reuters.com/world/china/solomon-islands-plans-replace-china-security-pact-with-australia-treaty-report-2026-11-24/"
+            }
+          ]
+        },
+        {
+          "category": "自然災害",
+          "title": "河內餐館爆炸死傷數字仍有差異，救援與事故調查持續",
+          "original": "Hanoi eatery blast kills 3 and injures more than a dozen",
+          "source": "越南政府新聞網、越南通訊社、Associated Press、Reuters",
+          "lang": "EN",
+          "url": "https://baochinhphu.vn/khan-truong-khac-phuc-hau-qua-vu-no-tai-dong-da-ha-noi-102261124132108005.htm",
+          "published": "2026-11-24 14:20",
+          "summary": "越南河內棟多郡一家餐飲店24日上午發生爆炸，造成建物受損及鄰近住宅受波及，救援與調查仍在進行。死傷數字尚有差異：越南政府公告初步統計3死11傷，越南通訊社後續報導5死11傷，Reuters則報導至少6死10傷。",
+          "background": "事故發生於河內人口密集的棟多郡Nguyen Van Tuyet街。警方初步懷疑與瓦斯爆炸有關，但正式原因尚待調查；周邊建物結構安全及是否仍有人受困也需現場單位確認。",
+          "detail": [
+            "最新進展（台灣時間2026年11月24日16:50）：越南通訊社VietnamPlus引述河內衛生部門與警方資料，稱截至當地12時事故已造成5人死亡、11人受傷；越南政府新聞網當日稍早發布總理第75號公文，列初步統計為3死11傷。Reuters報導警方與國營媒體提供的數字為至少6死10傷，三方統計不一致。",
+            "爆炸約於當地上午8時發生在棟多郡Nguyen Van Tuyet街一家餐飲店。AP引述VnExpress與警方資訊，稱爆炸疑與瓦斯外洩有關，店面及附近房屋受損，救難人員仍在搜尋及清理瓦礫；爆炸確切原因尚未定論。",
+            "官方公文要求河內市及相關部會全力救援、照護傷者並調查事故。各來源的統計時間與通報管道不同，死傷數字可能仍在變動；現階段不宜將單一數字當作最終結果。",
+            "事件涉及密集住宅區的餐飲場所與瓦斯安全，後續應以河內警方、衛生部門及救援單位更新確認傷亡、受損建物與事故原因。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月24日16:50）：河內棟多郡一家餐飲店上午發生爆炸，救援及調查仍在進行。越南政府新聞網稍早公布總理公文，記載初步3人死亡、11人受傷；越南通訊社後續引述河內衛生與公安部門，更新為5死11傷；Reuters報導至少6死10傷。",
+            "爆炸發生於Nguyen Van Tuyet街，約在當地上午8時。Associated Press報導引述VnExpress與警方資料，稱現場餐飲店及附近住宅受損，救難人員使用設備搜尋瓦礫，並將結構不安全的鄰近建物居民撤離。",
+            "警方初步懷疑爆炸與瓦斯有關，但事故原因仍在調查。不同媒體所列傷亡數字可能因通報時間、統計口徑或消息來源不同而異，現有資料不足以判定哪一組數字是最終結果。",
+            "越南政府已要求河內市與相關單位加速救援、照護傷者及查明原因。後續需追蹤官方最新傷亡統計、建物安全檢查及瓦斯設施調查結果。"
+          ],
+          "keyPoints": [
+            "爆炸於2026年11月24日上午發生在河內棟多郡Nguyen Van Tuyet街一家餐飲店。",
+            "越南政府新聞網初步通報3死11傷；越南通訊社後續報導5死11傷。",
+            "Reuters報導至少6死10傷，與越南官方數據有差異。",
+            "警方初步懷疑瓦斯爆炸，事故原因尚未完成調查。"
+          ],
+          "impact": "爆炸造成住宅區死傷並波及鄰近建物，事故調查可能涉及餐飲場所瓦斯設備、建築安全及周邊居民安置。",
+          "watch": "追蹤河內警方、衛生部門與救援單位的統一傷亡更新、建物安全評估及爆炸成因。現有不同來源的數字不一致，暫不採單一數字作為定論。",
+          "verification": "存在爭議",
+          "verificationEvidence": "越南政府新聞網公布總理第75號公文，記載初步3死11傷；越南通訊社VietnamPlus於當地12時引述官方衛生與公安部門報導5死11傷；Reuters同日引述警方及國營媒體報導至少6死10傷。事故發生與地點可由多來源確認，但傷亡統計互有差異，且原因仍在調查。",
+          "relatedSources": [
+            {
+              "source": "越南政府新聞網（總理第75號公文）",
+              "url": "https://baochinhphu.vn/khan-truong-khac-phuc-hau-qua-vu-no-tai-dong-da-ha-noi-102261124132108005.htm"
+            },
+            {
+              "source": "VietnamPlus／越南通訊社",
+              "url": "https://www.vietnamplus.vn/vu-no-pho-nguyen-van-tuyet-tiep-tuc-cong-tac-cuu-ho-post1150310.vnp"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/cb339f6ed24c5c751124ae9916bf4bc7"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/asia-pacific/explosion-kills-6-injures-10-vietnam-capital-hanoi-2026-11-24/"
             }
           ]
         }
