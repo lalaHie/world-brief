@@ -6146,7 +6146,7 @@
     },
     "2026-11-24": {
       "date": "2026-11-24",
-      "updated": "2026-11-24 09:55",
+      "updated": "2026-11-24 10:50",
       "stories": [
         {
           "category": "軍事",
@@ -6345,6 +6345,94 @@
             "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
             "kind": "related"
           }
+        },
+        {
+          "category": "國際",
+          "title": "歐盟提出第22輪對俄制裁方案，擬限制俄國銀行、加密平台與參賽資格",
+          "original": "Statement by President von der Leyen on the 22nd package of sanctions against Russia",
+          "source": "原始資料：歐盟執委會；Reuters",
+          "lang": "EN",
+          "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_26_2563/STATEMENT_26_2563_EN.pdf",
+          "published": "2026-11-24 02:00",
+          "summary": "歐盟執委會提出第22輪對俄制裁方案，重點包括擴大銀行交易限制、加強加密支付管制，以及禁止俄羅斯隊伍與選手以俄國旗號參加歐盟境內體育賽事。方案仍須成員國一致同意，尚未生效。",
+          "background": "歐盟自俄羅斯全面入侵烏克蘭後持續以金融、能源、貿易及個人制裁削弱俄方戰爭資金來源。本輪方案也著重堵住透過第三國規避制裁的管道。",
+          "detail": [
+            "最新進展（台灣時間2026年11月24日10:50）：歐盟執委會主席馮德萊恩公布第22輪對俄制裁方案，提議對約60家俄羅斯銀行擴大交易禁令並移出SWIFT，另加強對加密貨幣及支付網絡的限制。",
+            "方案也提議禁止俄羅斯隊伍與選手以俄國旗號參加歐盟境內體育賽事、收緊簽證規則，並禁止歐盟公民在俄羅斯企業擔任職務。歐盟表示將加強執法並處理第三國協助規避制裁的情況。",
+            "這是執委會提出的方案而非已生效措施。制裁須由歐盟成員國一致同意；具體範圍、例外條款及生效時間仍待談判。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月24日10:50）：歐盟執委會提出第22輪對俄制裁方案，目標是加強限制俄羅斯取得金融服務、加密支付及參與歐盟活動的管道。方案尚待成員國批准。",
+            "馮德萊恩表示，提案將交易禁令擴至約60家俄羅斯銀行並將其排除於SWIFT之外，同時打擊加密貨幣與支付網絡。能源部分則擴大禁止歐洲企業協助俄羅斯建造、營運或維修能源設施。",
+            "其他措施包括禁止俄羅斯隊伍及選手以俄國旗號參加歐盟境內體育活動，並收緊簽證及限制歐盟公民在俄國企業任職。執委會也表示會關注透過第三國規避制裁的行為。",
+            "這些都是執委會提案，尚未成為具有約束力的新制裁。歐盟理事會需由成員國一致同意，最後文本可能調整，實際影響要待批准內容及執行細節確定。"
+          ],
+          "keyPoints": [
+            "歐盟執委會提出第22輪對俄制裁方案，尚待成員國一致同意。",
+            "提案擬限制約60家俄羅斯銀行並加強加密貨幣與支付網絡管制。",
+            "提案包括禁止俄羅斯隊伍與選手以俄國旗號參與歐盟境內體育賽事。",
+            "能源服務、簽證與第三國規避制裁也是提案範圍。"
+          ],
+          "impact": "若獲通過，方案將提高俄羅斯金融、能源及加密支付交易成本，也可能影響歐盟與第三國企業的合規責任；目前仍是提案，尚不能視為制裁已生效。",
+          "watch": "關注歐盟理事會是否一致批准、條文是否修改，以及對銀行、加密平台、能源服務和體育賽事的具體生效日期。",
+          "verification": "已核對",
+          "verificationEvidence": "歐盟執委會主席2026年11月23日官方聲明確認提出第22輪方案，列出銀行、加密網絡、能源服務及俄羅斯隊伍與選手相關措施。Reuters報導提案並指出須歐盟成員國同意；目前尚未批准生效。",
+          "relatedSources": [
+            {
+              "source": "歐盟執委會（官方聲明）",
+              "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_26_2563/STATEMENT_26_2563_EN.pdf"
+            },
+            {
+              "source": "Reuters",
+              "url": "https://www.marketscreener.com/news/eu-commission-proposes-ban-on-russian-athletes-ex-fighters-in-new-russia-sanctions-package-ce7851dadd8ff32d"
+            }
+          ]
+        },
+        {
+          "category": "軍事",
+          "title": "烏克蘭稱在利比亞港口以海上無人艇擊沉俄羅斯護衛艦",
+          "original": "Ukraine sinks Russian warship in Libya as conflict spreads beyond Europe",
+          "source": "Reuters、Associated Press；原始聲明：烏克蘭安全局",
+          "lang": "EN",
+          "url": "https://www.reuters.com/world/europe/zelenskiy-says-ukraine-sank-russian-corvette-near-libyas-coast-hit-cargo-ship-2026-11-23/",
+          "published": "2026-11-24 15:53",
+          "summary": "烏克蘭總統澤倫斯基稱，烏方在利比亞港口以海上無人艇攻擊俄羅斯護衛艦，並擊中一艘貨船；俄艦是否沉沒的細節仍以烏方說法為主，Reuters與AP均報導此事件。",
+          "background": "俄烏戰爭持續擴大到遠離前線的海域。烏克蘭方面稱受襲俄艦曾護航運送軍事裝備的貨船；利比亞東部政府與俄羅斯維持合作，港口停靠情況牽涉區域安全與軍事補給。",
+          "detail": [
+            "最新進展（台灣時間2026年11月24日10:50）：烏克蘭總統澤倫斯基表示，烏方海上無人艇在利比亞港口攻擊俄羅斯海軍護衛艦Merkury，並擊中貨船MV Angara。Reuters稱其核對了烏方公布的攻擊影像；AP引述利比亞官員稱兩架無人艇擊中護衛艦。",
+            "AP報導該艦停靠港口補給，利比亞官員稱至少4架無人艇遭攔截、2架擊中護衛艦。烏克蘭安全局稱MV Angara受制裁並曾運送俄羅斯軍事裝備，護衛艦曾為俄方船隊護航。",
+            "攻擊發生於利比亞東部港口附近，遠離烏克蘭戰場。俄羅斯方面尚未對護衛艦是否沉沒、損傷及船上人員狀況提出可獨立核實的完整說明。"
+          ],
+          "article": [
+            "最新進展（台灣時間2026年11月24日10:50）：烏克蘭總統澤倫斯基稱，烏方在利比亞港口以海上無人艇攻擊俄羅斯護衛艦Merkury，並擊中貨船MV Angara。Reuters報導其核對了烏方公布的影像；AP則引述利比亞官員描述攻擊過程。",
+            "烏克蘭安全局表示，MV Angara受制裁且曾用於運送俄羅斯軍事裝備，Merkury則曾為俄羅斯船隊護航。AP引述利比亞方面消息稱，護衛艦當時在港口補給，至少4架無人艇遭攔截、2架擊中目標。",
+            "事件使戰事影響範圍延伸至北非海域，也凸顯海上無人艇對遠距離軍事與補給船隊造成的威脅。俄方尚未公布該艦最終狀況，相關攻擊細節仍主要依據烏方及利比亞官員說法。",
+            "目前可確認多家媒體報導烏方宣稱發動攻擊並提供影像；艦艇是否沉沒、實際損害與人員傷亡仍待獨立確認。"
+          ],
+          "keyPoints": [
+            "澤倫斯基稱烏方海上無人艇攻擊利比亞港口的俄羅斯護衛艦Merkury及貨船MV Angara。",
+            "Reuters稱核對了烏方公布的影像；AP引述利比亞官員稱兩架無人艇擊中護衛艦。",
+            "烏方稱貨船曾運送俄軍裝備，俄方尚未公布可獨立核實的損害評估。",
+            "護衛艦是否沉沒及人員傷亡仍未完全確認。"
+          ],
+          "impact": "若攻擊及損害規模獲確認，將顯示俄烏戰爭的海上打擊能力可延伸至地中海與北非，影響俄方軍事補給及利比亞周邊安全。",
+          "watch": "關注俄方、利比亞港口當局或獨立衛星影像對艦艇狀況的確認，以及烏方是否公布更多攻擊證據。",
+          "verification": "初步消息",
+          "verificationEvidence": "Reuters報導烏克蘭方面宣稱攻擊並表示已核對公開影像；AP引述利比亞官員稱兩架無人艇擊中護衛艦。攻擊發生與多方報導相符，但損傷程度及護衛艦是否沉沒尚無獨立現場確認，俄方也未提供可核實的完整說法。",
+          "relatedSources": [
+            {
+              "source": "Reuters",
+              "url": "https://www.reuters.com/world/europe/zelenskiy-says-ukraine-sank-russian-corvette-near-libyas-coast-hit-cargo-ship-2026-11-23/"
+            },
+            {
+              "source": "Associated Press",
+              "url": "https://apnews.com/article/c382f8eb06dca7d87e89bc6c18ba7d61"
+            },
+            {
+              "source": "烏克蘭安全局（行動聲明）",
+              "url": "https://ssu.gov.ua/"
+            }
+          ]
         }
       ]
     }
